@@ -14,10 +14,13 @@ p {
  */
 blockquote {
     font-style:italic;
-    border-left: 1px solid $color-neutral-gray-50;
     color: $color-neutral-gray-50;
 	padding-left: 1rem;
 	margin-bottom: $spacing;
+}
+
+blockquote p {
+	font-family: "Gentium Book Basic", serif;
 }
 
 /**

@@ -2,11 +2,16 @@
   "items": [
     {
       "name": "$font-family-primary",
-      "value": "'Jost', sans-serif",
+      "value": "'Open Sans', sans-serif",
       "comment": ""
     },
     {
       "name": "$font-family-secondary",
+      "value": "'Jost', sans-serif",
+      "comment": ""
+    },
+    {
+      "name": "$font-family-tertiary",
       "value": "'Gentium Book Basic', serif",
       "comment": ""
     }

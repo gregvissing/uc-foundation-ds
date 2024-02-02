@@ -95,6 +95,8 @@ input[type=text], input[type=search], input[type="search"]::-webkit-search-cance
 input[type="checkbox"],
 input[type="radio"] {
     width: auto;
+    width: 20px;
+    height: 20px;
     margin-right: 0.3rem;
     border-color: $color-form-border;
 }
@@ -104,6 +106,7 @@ input[type="radio"] {
  */
 input[type="search"] {
     -webkit-appearance: none;
+    appearance: none;
     border-radius: 0;
 }
 
@@ -118,7 +121,6 @@ select {
     border: $border-thickness solid $color-form-border;
     border-radius: 0;
     padding: 0.5rem;
-    // height: 2rem;
     background: $color-form-bg;
     color: $color-form;
 

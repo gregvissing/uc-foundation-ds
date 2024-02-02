@@ -1,6 +1,16 @@
 {
   "items": [
     {
+      "name": "$color-brand-red",
+      "value": "#e00122",
+      "comment": ""
+    },
+    {
+      "name": "$color-brand-black",
+      "value": "#000000",
+      "comment": ""
+    },
+    {
       "name": "$color-brand-blue",
       "value": "#114689",
       "comment": ""
