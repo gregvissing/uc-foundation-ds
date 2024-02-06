@@ -52,6 +52,19 @@
  * Brand Colors
  * 1) Brand=specific colors
  */
+ :root {
+  --text-multiplier: 1.1;
+  --color-brand-red: #e00122;
+  --color-brand-black: #000;
+  --color-white: #fff;
+  --color-text: #222;
+  --color-ltGray: #ccc;
+  --color-dkGray: #666;
+  --color-callout-bg: #f3f3f3;
+  --color: 0,100%;
+  --color-tertiary: #0e3b5e;
+  --container-width: 1024px;
+ }
 /**
  * Neutral Colors
  * 1) Neutral colors are grayscale values used throughout the UI
@@ -442,7 +455,7 @@ body {
   line-height: 1.6;
   -webkit-text-size-adjust: 100%;
   /* 1 */
-  background-color: #fff;
+  background-color: var(--color-white);
   color: #131313;
 }
 
@@ -596,7 +609,7 @@ input, textarea {
   width: 100%;
   padding: 0.5rem;
   border: 1px solid #444;
-  background: #fff;
+  background: var(--color-white);
 }
 input:focus, textarea:focus {
   border-color: #131313;
@@ -647,7 +660,7 @@ select {
   border-radius: 0;
   padding: 0.5rem;
   /* height: 2rem; */
-  background: #fff;
+  background: var(--color-white);
   color: #131313;
 }
 select:focus {
@@ -720,7 +733,7 @@ hr {
   height: 3px;
   width: 95%;
   /* background: #ddd; */
-  background: #e00122;
+  background: var(--color-brand-red);
   margin: 2rem auto;
 }
 
@@ -920,9 +933,9 @@ tr {
  */
 .c-btn {
   display: inline-block;
-  border: 1px solid #e00122;
-  background: #e00122;
-  color: #fff;
+  border: 1px solid var(--color-brand-red);
+  background: var(--color-brand-red);
+  color: var(--color-white);
   line-height: 1;
   padding: 1rem 2rem;
   border: 0;
@@ -931,7 +944,7 @@ tr {
   transition: all 0.15s ease-out;
 }
 .c-btn:hover, .c-btn:focus {
-  color: #fff;
+  color: var(--color-white);
   background: #041544;
 }
 
@@ -964,7 +977,7 @@ tr {
 .c-btn__icon {
   width: 1rem;
   height: 1rem;
-  fill: #fff;
+  fill: var(--color-white);
   transition: fill 0.15s ease-out;
 }
 
@@ -1066,7 +1079,7 @@ tr {
     left: 0;
     height: 100%;
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%, #000 100%);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%, var(--color-brand-black) 100%);
   }
 }
 
@@ -1078,7 +1091,7 @@ tr {
   text-transform: uppercase;
   font-size: 3rem;
   background-color: #ba6333;
-  color: #fff;
+  color: var(--color-white);
   transition: all 0.15s ease-out;
 }
 @media all and (min-width: 35em) {
@@ -1118,7 +1131,7 @@ tr {
   width: 100%;
   text-transform: uppercase;
   letter-spacing: 1px;
-  color: #fff;
+  color: var(--color-white);
   padding: 0.5rem;
   font-size: 1.4rem;
   transition: all 0.15s ease-out;
@@ -1211,7 +1224,7 @@ tr {
   padding: 0.5rem;
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
-  color: #fff;
+  color: var(--color-white);
   background: #ba6333;
 }
 
@@ -1347,7 +1360,7 @@ tr {
 }
 
 .c-footer__credit, .c-footer__copyright {
-  color: #fff;
+  color: var(--color-white);
   text-transform: uppercase;
   font-family: "Jost", sans-serif;
   font-size: 0.85rem;
@@ -1385,7 +1398,7 @@ tr {
 }
 
 .c-footer-nav__link {
-  color: #fff;
+  color: var(--color-white);
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
   font-size: 1.2rem;
@@ -1520,7 +1533,7 @@ tr {
   color: #114689;
 }
 .c-logo--light .c-logo__left {
-  color: #fff;
+  color: var(--color-white);
 }
 
 .c-logo__right {
@@ -1672,7 +1685,7 @@ tr {
  *    a shortcut for demo purposes.
  */
 .c-promo-block {
-  color: #fff;
+  color: var(--color-white);
   position: relative;
   margin-top: -2rem;
   /* 1 */
@@ -1684,7 +1697,7 @@ tr {
 }
 .c-promo-block__media::before {
   content: "";
-  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, #000 100%);
+  background: linear-gradient(to left, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 40%, var(--color-brand-black) 100%);
   position: absolute;
   top: 0;
   right: 0;
@@ -1692,7 +1705,7 @@ tr {
   left: 0;
 }
 .c-promo-block--right .c-promo-block__media::before {
-  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%, #000 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 20%, var(--color-brand-black) 100%);
 }
 
 .c-promo-block__body {
@@ -1718,7 +1731,7 @@ tr {
 }
 
 .c-promo-block__link {
-  color: #fff;
+  color: var(--color-white);
 }
 .c-promo-block__link:hover, .c-promo-block__link:focus {
   color: #ba6333;
@@ -1778,7 +1791,7 @@ tr {
   margin-bottom: 0.5rem;
   color: #114689;
   border: 1px solid #114689;
-  background-color: #fff;
+  background-color: var(--color-white);
   position: relative;
 }
 @media all and (min-width: 28em) {
@@ -1791,7 +1804,7 @@ tr {
   border-color: #ddd;
 }
 .is-current .c-progress-tracker__number {
-  color: #fff;
+  color: var(--color-white);
   background-color: #114689;
   font-weight: bold;
 }

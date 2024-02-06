@@ -323,8 +323,8 @@
   margin-top: 6px !important;
   margin-left: 6px !important;
   border-radius: 50% !important;
-  background-color: #222 !important;
-  color: #fff !important;
+  background-color: var(--color-text) !important;
+  color: var(--color-white) !important;
   font-size: 16px !important;
   position: absolute;
   z-index: 100;

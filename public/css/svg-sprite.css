@@ -50,7 +50,7 @@
 }
 
 #atoms-icons .icon-boxes li h2 {
-  color: #000;
+  color: var(--color-brand-black);
   font-size: 0.75rem;
   white-space: inherit;
   text-overflow: unset;
