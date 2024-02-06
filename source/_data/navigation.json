@@ -33,6 +33,38 @@
                 {
                     "label" : "Key Initiatives",
                     "url" : "link.pages-category"
+                },
+                {
+                    "label" : "UC Health",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Emergency Department",
+                    "url" : "link.pages-category"
+                },                
+                {
+                    "label" : "UC Cancer Center",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "UC Gardner Neuroscience Institute",
+                    "url" : "link.pages-category"
+                },                
+                {
+                    "label" : "Scholarships",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Day One Ready",
+                    "url" : "link.pages-category"
+                },                
+                {
+                    "label" : "Recognition",
+                    "url" : "link.pages-category"
+                },                
+                {
+                    "label" : "Ways to Give",
+                    "url" : "link.pages-category"
                 }
             ]
         },
@@ -41,15 +73,15 @@
             "url" : "link.pages-category-men",
             "subNavItems" : [
                 {
-                    "label" : "$2 Billion Milestone",
+                    "label" : "Impact Stories",
                     "url" : "link.pages-category"
                 },
                 {
-                    "label" : "About the Campaign",
+                    "label" : "Annual Report",
                     "url" : "link.pages-category"
                 },
                 {
-                    "label" : "Key Initiatives",
+                    "label" : "Videos",
                     "url" : "link.pages-category"
                 }
             ]
@@ -59,15 +91,15 @@
             "url" : "link.pages-category-kids",
             "subNavItems" : [
                 {
-                    "label" : "$2 Billion Milestone",
+                    "label" : "Press Releases",
                     "url" : "link.pages-category"
                 },
                 {
-                    "label" : "About the Campaign",
+                    "label" : "News Archive",
                     "url" : "link.pages-category"
                 },
                 {
-                    "label" : "Key Initiatives",
+                    "label" : "Mantei Center",
                     "url" : "link.pages-category"
                 }
             ]
@@ -77,22 +109,39 @@
             "url" : "link.pages-category-on-sale",
             "subNavItems" : [
                 {
-                    "label" : "$2 Billion Milestone",
+                    "label" : "About Us",
                     "url" : "link.pages-category"
                 },
                 {
-                    "label" : "About the Campaign",
+                    "label" : "Careers",
                     "url" : "link.pages-category"
                 },
                 {
-                    "label" : "Key Initiatives",
+                    "label" : "Staff",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "President",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Board",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Anti-Racist Statement",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Brand Guide",
                     "url" : "link.pages-category"
                 }
             ]
         },
         {
             "label" : "Give Now",
-            "url" : "link.pages-category-on-sale"
+            "url" : "link.pages-category-on-sale",
+            "navClass" : "button-primary"
         }
         
     ],

@@ -1704,6 +1704,10 @@ ul.nav.main > li[class*="menuItem"] > button {
   letter-spacing: .25px !important;
 }
 
+.parent {
+  position: relative;
+}
+
 /**
  * Primary navigation link
  */
@@ -1724,6 +1728,22 @@ ul.nav.main > li[class*="menuItem"] > button {
   fill: #041544;
   height: 24px;
   width: 24px;
+}
+
+/**
+ * Sub-navigation 
+ */
+.nccUlMenuSub1 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
+  margin: 0;
+  background: rgba(255,255,255,.97);
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
 }
 
 /*------------------------------------*\
