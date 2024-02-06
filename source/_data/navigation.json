@@ -19,29 +19,82 @@
     ],
     "navItems" : [
         {
-            "label" : "Women",
-            "url" : "link.pages-category"
+            "label" : "Campaign",
+            "url" : "link.pages-category",
+            "subNavItems" : [
+                {
+                    "label" : "$2 Billion Milestone",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "About the Campaign",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Key Initiatives",
+                    "url" : "link.pages-category"
+                }
+            ]
         },
         {
-            "label" : "Men",
-            "url" : "link.pages-category-men"
+            "label" : "Impact",
+            "url" : "link.pages-category-men",
+            "subNavItems" : [
+                {
+                    "label" : "$2 Billion Milestone",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "About the Campaign",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Key Initiatives",
+                    "url" : "link.pages-category"
+                }
+            ]
         },
         {
-            "label" : "Kids",
-            "url" : "link.pages-category-kids"
+            "label" : "News",
+            "url" : "link.pages-category-kids",
+            "subNavItems" : [
+                {
+                    "label" : "$2 Billion Milestone",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "About the Campaign",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Key Initiatives",
+                    "url" : "link.pages-category"
+                }
+            ]
         },
         {
-            "label" : "On Sale",
+            "label" : "About",
+            "url" : "link.pages-category-on-sale",
+            "subNavItems" : [
+                {
+                    "label" : "$2 Billion Milestone",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "About the Campaign",
+                    "url" : "link.pages-category"
+                },
+                {
+                    "label" : "Key Initiatives",
+                    "url" : "link.pages-category"
+                }
+            ]
+        },
+        {
+            "label" : "Give Now",
             "url" : "link.pages-category-on-sale"
-        },
-        {
-            "label": false,
-            "navIcon": {
-                "iconPath": "../../images/icons/",
-                "navIcon": "shopping-cart"
-            },
-            "url" : "link.pages-cart"
         }
+        
     ],
     "footerNav" : [
         {

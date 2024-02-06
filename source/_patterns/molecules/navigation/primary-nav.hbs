@@ -1,11 +1,19 @@
 <nav class="c-primary-nav" role="navigation">
 
-    <ul class="c-primary-nav__list">
+    <ul class="nav flex main c-primary-nav__list">
 
         {{#each navItems }}
-		<li class="c-primary-nav__item {{ additionalClasses }}">
+		<li class="{{ additionalClasses }} menuItem{{@index}} {{#if subNavItems }}parent{{/ if }}">
+            <buttton aria-expanded="false" aria-controls="nav-964__ul-{{@index}}">
+                {{#if label }}{{ label }}{{/ if }}
+                <!--{{#with navIcon }}
+                <svg class="c-icon c-primary-nav__icon">
+                    <use xlink:href="{{ iconPath }}{{ navIcon }}.svg#{{ navIcon }}"></use>
+                </svg>
+                {{/ with }}-->
+            </button><!--end c-primary-nav__link-->
 
-			<a href="{{ url }}" class="c-primary-nav__link">
+			<!--<a href="{{ url }}" class="c-primary-nav__link">
                 {{#if label }}{{ label }}{{/ if }}
                 {{#with navIcon }}
                 <svg class="c-icon c-primary-nav__icon">
@@ -13,7 +21,25 @@
                 </svg>
                 {{/ with }}
             </a><!--end c-primary-nav__link-->
+            {{#if subNavItems }}
+                <ul id="nav-964__ul-{{@index}}" class="nccUlMenuSub1">
+                {{#each subNavItems }}
+                    <li class="c-primary-nav__item {{ additionalClasses }} menuItem{{@index}}">
+                    
+                        {{!-- <a href="{{ url }}" class="c-primary-nav__link"> --}}
+                        <a href="{{ url }}">
+                            {{#if label }}{{ label }}{{/ if }}
+                            {{!-- {{#with navIcon }}
+                            <svg class="c-icon c-primary-nav__icon">
+                                <use xlink:href="{{ iconPath }}{{ navIcon }}.svg#{{ navIcon }}"></use>
+                            </svg>
+                            {{/ with }} --}}
+                        </a><!--end c-primary-nav__link-->
 
+                    </li><!-- end c-primary-nav__list__item -->
+                {{/ each }}
+                </ul>
+            {{/ if }}
 		</li><!-- end c-primary-nav__list__item -->
         {{/ each }}
 
