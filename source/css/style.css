@@ -1205,14 +1205,14 @@ tr {
   position: relative;
   margin-bottom: 1rem;
 }
-.c-section__header::after {
+/* .c-section__header::after {
   content: "";
   display: block;
   flex: 1;
   height: 2px;
   margin-left: 1rem;
   background: #ba6333;
-}
+} */
 
 .c-section__title {
   font-size: 2rem;
@@ -1790,7 +1790,7 @@ nav#site-nav li.parent button[aria-expanded="true"]> svg {
 }
 
 .c-primary-nav__icon.c-icon {
-  fill: #041544;
+  fill: var(--color-brand-black);
   height: 24px;
   width: 24px;
 }
@@ -1956,7 +1956,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   font-weight: bold;
 }
 .is-disabled .c-progress-tracker__number {
-  color: #041544;
+  color: var(--color-brand-black);
   border-color: var(--color-brand-red);
 }
 .c-progress-tracker__number::before {
