@@ -1,0 +1,57 @@
+{
+    "hero": {
+        "url": "link.pages-detail",
+        "src": "https://placehold.co/1200x400",
+        "alt": "Group of shoes",
+        "width": "1200",
+        "height": "801"
+    },
+    "page": {
+        "title": "For Our Students, For Cincinnati's Future",
+        "description": "How To Guide: 3 Ways to Invest in a student's education to shape Cincinnati's future."
+    },
+    "intro": {
+        "paragraphs": "<p>With 50,000 students and a rapidly changing world, UC is accelerating our work to ensure each student succeeds.</p><p><span class='bold'>Why?</span> Because we know that a college degree is the best tool for generational change. And a UC degree is the best path to launch a career of meaning and impact.</p><p>Under a broad, university-wide vision, we are creating new scholarships and recruitment programs, adding student-centered resources, and elevating career readiness tools to empower the next generation of leaders.</p>"
+    },
+    "togetherCreate" : {
+        "heading": "Together, we will create:",
+        "items": [
+            {
+                "text": "<p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Giving_Hands.png' style='float: left; margin: 0 0.5em 0.5em 0; width: 75px;'>An <span class='bold'>opportunity</span> for every student who wants to earn a UC degree, free from financial barriers.</p>"
+            },
+            {
+                "text": "<p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Diversity_Inclusion_1.png' style='float: left; margin: 0 0.5em 0.5em 0; width: 75px;'>A <span class='bold'>community</span> where each Bearcat feels like they belong&mdash;and has the tools to thrive.</p>"
+            },
+            {
+                "text": "<p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Inclusion_Organizational_1.png' style='float: left; margin: 0 0.5em 0.5em 0; width: 75px;'>A <span class='bold'>path to success</span> that sets UC apart as the launching place for tomorrow's leaders and change-makers.</p>"
+            }
+        ]
+    },
+    "priorities": {
+        "heading": "Our Priorities"
+    },
+    "ucToday": {
+        "heading": "UC's largest class ever includes:",
+        "items": [
+            {
+                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Inclusion_Organizational_1.png'><p>More than <span>50,000 students</span></p>"
+            },
+            {
+                "text": "<p><span>26%</span> from underrepresented backgrounds</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Globe.png'>"
+            },
+            {
+                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Diversity_Inclusion_1.png'><p>Almost 1/5 <span>first-generation</span></p>"
+            },
+            {
+                "text": "<p><span>1,500</span> University Honors students across nine colleges.</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Graduation.png'>"
+            },
+            {
+                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_First_Place_Medallion.png'><p><span>1,355</span> veterans, military students and dependants</p>"
+            },
+            {
+                "text": "<p>Over <span>12,000</span> graduate, law and medical students</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Networking.png'>"
+            }
+        ]
+    },
+    "boldRedText": "<p class='red bold large'>There's a story unfolding at the University of Cincinnati, and every one of us who calls Greater Cincinnati home has a stake in what happens next.</p>"
+}
