@@ -221,6 +221,85 @@ header, footer, nav, section, article, figure {
   display: block;
 }
 
+
+/* ANDY BELL
+  Source:https://piccalil.li/blog/a-more-modern-css-reset/
+*/
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* END: ANDY BELL reset styles */
+
 /*------------------------------------*\
     #FONT REFERENCES
 \*------------------------------------*/
@@ -529,27 +608,45 @@ h1 {
  * Heading 2 base styles
  */
 h2 {
-  font-size: 1.2rem;
+  font-size: 2.5rem;
   font-weight: normal;
   line-height: 1.2;
+}
+
+@media all and (min-width: 47em) {
+  h2 {
+    font-size: 3.5rem;
+  }
 }
 
 /**
  * Heading 3 base styles
  */
 h3 {
-  font-size: 1.2rem;
+  font-size: 2rem;
   font-weight: normal;
   line-height: 1.2;
+}
+
+@media all and (min-width: 47em) {
+  h3 {
+    font-size: 3rem;
+  }
 }
 
 /**
  * Heading 4 base styles
  */
 h4 {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: normal;
   line-height: 1.2;
+}
+
+@media all and (min-width: 47em) {
+  h4 {
+    font-size: 2.5rem;
+  }
 }
 
 /*------------------------------------*\
@@ -863,6 +960,117 @@ th {
  */
 tr {
   vertical-align: top;
+}
+
+/*------------------------------------*\
+    #SHOW HIDE TEXT
+    Ex: Tabs, Accordions
+\*------------------------------------*/
+/*------------------------------------*\
+    #TABS
+\*------------------------------------*/
+
+.tabbed {
+    overflow: hidden; /* so we could easily hide the radio inputs */
+    margin: 32px 0;
+    padding-bottom: 16px;	
+}
+
+.tabbed [type="radio"] {
+    /* hiding the inputs */
+    display: none;
+}
+
+.tabs {
+    display: flex;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    border-bottom: 1px solid var(--color-ltGray);
+    width: 100%;
+}
+
+.tab {
+    width: 33.33%;
+}
+
+.tab > label {
+    display: block;
+    margin-bottom: -1px;
+    padding: 15px;
+    border: 1px solid var(--color-ltGray);
+    background: #eee;
+    color: var(--color-text);
+    font-size: 1.15em; 
+    font-weight: 600;
+    /* text-transform: uppercase; */
+    /* letter-spacing: 1px; */
+    cursor: pointer;	
+    transition: all 0.3s;
+}
+.tab:hover label {
+    border-top-color: var(--color-text);
+    color: var(--color-text);
+}
+
+.tab-content {
+    opacity: 0;
+    height: 0;
+    position: relative;
+    top: 0;
+    /* transition: all 0.3s; */
+    color: var(--color-text);
+    border: 1px solid var(--color-ltGray);
+    border-top: none;
+    padding: 1rem;
+}
+.tab-content h4 {
+	  margin: 0;
+}
+
+/* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
+.tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
+.tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
+.tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
+.tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
+.tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
+    border-bottom-color: var(--color-white);
+    border-top-color: var(--color-text);
+    background: #fff;
+    color: #222;
+    transition: all 0.3s;
+}
+
+.tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1),
+.tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2),
+.tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3),
+.tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4){
+    opacity: 1;
+    height: auto;
+    /* transition: all 0.3s; */
+}
+
+.tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1) h4,
+.tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2) h4,
+.tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3) h4,
+.tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) h4{
+	  margin-top: 1rem 0;
+}
+
+.tabbed [type="radio"]:nth-of-type(1):not(:checked) ~ .tab-content:nth-of-type(1),
+.tabbed [type="radio"]:nth-of-type(2):not(:checked) ~ .tab-content:nth-of-type(2),
+.tabbed [type="radio"]:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(3),
+.tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4){
+    opacity: 0;
+    height: 0;
+    /* transition: all 0.3s; */
+    padding: 0;
+}
+.tabbed [type="radio"]:nth-of-type(1):not(:checked) ~ .tab-content:nth-of-type(1) h4,
+.tabbed [type="radio"]:nth-of-type(2):not(:checked) ~ .tab-content:nth-of-type(2) h4,
+.tabbed [type="radio"]:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(3) h4,
+.tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4) h4{
+	  margin: 0;
 }
 
 /*------------------------------------*\
@@ -2214,6 +2422,10 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   background-color: var(--color-brand-red);
 }
 
+.red {
+  color: var(--color-brand-red);
+}
+
 .black-bg {
   background-color: var(--color-brand-black);
   color: var(--color-white);
@@ -2840,6 +3052,87 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
  */
 .u-padding-left-large {
   padding-left: 2rem !important;
+}
+
+
+/*------------------------------------*\
+    #EXCEPTIONS
+\*------------------------------------*/
+.flex.largest-class {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1%;
+}
+
+.flex.largest-class div {
+    width: 49%;
+    padding: 2rem;
+    border: 2px solid var(--color-ltGray);
+    margin-bottom: 1em;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.largest-class p {
+    font-size: 1.75em;    
+    line-height: 1.1;
+    text-align: center;
+    display: inline-block;
+    margin: 0;
+}
+
+/* .largest-class div:nth-child(odd) {
+    padding-right: 4em;
+    clip-path: polygon(0 0, 100% 0, 80% 100%, 0% 100%);
+} */
+
+/* .largest-class div:nth-child(even) {
+    transform: skew(-30deg);
+}
+
+.largest-class div:nth-child(even) p {
+    transform: skew(30deg);
+} */
+
+.largest-class div:nth-child(2),
+.largest-class div:nth-child(3),
+.largest-class div:nth-child(6) {
+    /* transform: skew(-30deg); */
+    border: 2px solid var(--color-brand-red);
+}
+
+/* .largest-class div:nth-child(3) {
+    background: var(--color-brand-red);
+    position: relative;
+} */
+
+/* .largest-class div:nth-child(3) p {
+    background: var(--color-white);
+    position: absolute;
+    top: 1px;
+    bottom: 1px;
+    left: 1px;
+    right: 1px;
+    margin: auto;
+    clip-path: polygon(0 0, 99.5% 0, 80% 100%, 0% 100%);
+    padding: 2rem;
+    line-height: 0.9;
+} */
+
+.largest-class div:nth-child(1),
+.largest-class div:nth-child(4),
+.largest-class div:nth-child(5) {
+    background-color: var(--color-ltGray);
+}
+
+.largest-class p span {
+    font-weight: bold;
+    font-size: 2em;
+}
+
+.largest-class img {
+    width: 100px;
 }
 
 /*# sourceMappingURL=style.css.map */
