@@ -1149,7 +1149,7 @@ tr {
  */
 .l-container {
   /* max-width: 80rem; */
-  max-width: 100%;
+  max-width: 1024px;
   width: 1024px;
   padding: 0 0.5rem;
   /* padding: 0 1rem; */
@@ -1157,12 +1157,14 @@ tr {
 }
 @media all and (min-width: 60em) {
   .l-container {
-    padding: 0 2rem;
+    /* padding: 0 2rem; */
+    padding: 0 0.5rem;
   }
 }
 
 .l-container--narrow {
   max-width: 45rem;
+  max-width: 1024px;
 }
 
 /**
