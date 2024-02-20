@@ -59,7 +59,7 @@
   --color-brand-red: #e00122;
   --color-brand-black: #000;
   --color-white: #fff;
-  --color-text: #222;
+  --color-text: #333;
   --color-ltGray: #ccc;
   --color-dkGray: #666;
   --color-callout-bg: #f3f3f3;
@@ -543,11 +543,11 @@ body {
   /* 1 */
   font-family: "Open Sans", sans-serif;
   font-size: 1rem;
-  line-height: 1.6;
+  line-height: 1;
   -webkit-text-size-adjust: 100%;
   /* 1 */
   background-color: var(--color-white);
-  color: #131313;
+  color: var(--color-text);
 }
 
 /*------------------------------------*\
@@ -585,15 +585,22 @@ ol, ul {
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
+* {
+  letter-spacing: 0.3px;
+}
+
 h1, h2, h3, h4 {
   font-family: "Jost", sans-serif;
+  letter-spacing: 0.25px;
+  line-height: 1.2;
+  margin-bottom: 20px;
   /* text-transform: uppercase; */
 }
 
 /**
  * Heading 1 base styles
  */
-h1 {
+/* h1 {
   font-size: 3rem;
   font-weight: normal;
   line-height: 1.2;
@@ -602,12 +609,12 @@ h1 {
   h1 {
     font-size: 4rem;
   }
-}
+} */
 
 /**
  * Heading 2 base styles
  */
-h2 {
+/* h2 {
   font-size: 2.5rem;
   font-weight: normal;
   line-height: 1.2;
@@ -617,12 +624,12 @@ h2 {
   h2 {
     font-size: 3.5rem;
   }
-}
+} */
 
 /**
  * Heading 3 base styles
  */
-h3 {
+/* h3 {
   font-size: 2rem;
   font-weight: normal;
   line-height: 1.2;
@@ -632,12 +639,12 @@ h3 {
   h3 {
     font-size: 3rem;
   }
-}
+} */
 
 /**
  * Heading 4 base styles
  */
-h4 {
+/* h4 {
   font-size: 1.5rem;
   font-weight: normal;
   line-height: 1.2;
@@ -647,6 +654,46 @@ h4 {
   h4 {
     font-size: 2.5rem;
   }
+} */
+
+/* UC.edu heading styles */
+h1 {
+    font-size: 1.80em;
+    font-weight: 750;
+}
+
+h2 {
+    font-size: 1.602em;
+    font-weight: 700;
+    color: var(--color-brand-red);
+}
+
+h3 {
+    font-size: 1.5em;
+    font-weight: 650;
+}
+
+h4 {
+    font-size: 1.266em;
+    font-weight: 600;
+}
+
+@media (min-width: 768px) {
+    h1 {
+        font-size: 2.48em;
+    }
+
+    h2 {
+        font-size: 2.074em;
+    }
+
+    h3 {
+        font-size: 1.75em;
+    }
+
+    h4 {
+        font-size: 1.44em;
+    }
 }
 
 /*------------------------------------*\
@@ -1786,6 +1833,134 @@ tr {
   }
 }
 
+.nav-toggle {
+  font: inherit;
+  border: none;
+  background: none;
+  display: flex;
+  gap: 0.5em;
+  align-items: center;
+  cursor: pointer;
+  padding: 0.75rem 1.5rem;
+  color: inherit;
+  font-weight: bold;
+  font-size: 1em !important;
+  background-color: var(--color-white) !important;
+  position: relative;
+}
+
+.nav-toggle[hidden] {
+  display: none;
+}
+
+.nav-toggle {
+  color: var(--color-text) !important;
+}
+
+
+
+.nav-closeBtn {
+  display: none !important
+}
+
+@media (max-width: 1150px) {
+  header .nav-closeBtn {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+    background-color: var(--color-white) !important;
+    border: none !important;
+    font-weight: bold !important;
+    display: flex !important;
+    gap: 0.5em;
+    align-items: center;
+    color: var(--color-text) !important;
+    text-transform: capitalize !important;
+    font-size: 1em !important;
+    padding: 0.85em !important;
+    line-height: 1;
+    height: 56px;
+  }
+
+  header > div {
+      padding: 0 10px !important;
+      display: flex;
+      justify-content: space-between;
+  }
+
+  header .nav-content:before {
+    content: "";
+    position: absolute;
+    left: 10px !important;
+    top: 1rem;
+    background-image: url(https://foundation.uc.edu/image/_2019-redesign/UCF_Logo_BlackRed.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 150px;
+    height: 30px;
+  }
+
+  header .nav-content {
+    position: fixed;
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    overflow-y: auto;
+    background: var(--color-white);
+    padding: 2px 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 0 150vmax rgba(0,0,0,0);
+    transform: translateX(100vw);
+    transition: transform .6s ease-out,box-shadow .6s ease-out;
+  }
+
+  header h1 a {
+    display: inline-block;
+    height: auto;
+    position: relative;
+    transition: all .4s ease-in-out;
+    height: 56px;
+    display: flex;
+    align-items: center;
+  }
+
+  header img, 
+  header h1 {
+    width: 175px !important;
+    height: auto !important;
+  }
+
+  header .nav-toggle[aria-expanded="true"]+ .nav-content {
+      transform: translateX(0);
+      box-shadow: 0 0 0 150vmax rgba(0,0,0,.75);
+  }
+
+  header nav ul.main {
+      margin: 0 0 1.5em !important;
+      flex-direction: column;
+      width: 100%;
+      gap: 0 !important;
+  }
+
+  nav#site-nav li.parent > button {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px !important;
+  }
+
+  header nav ul.main li:not(:last-child) {
+    border-bottom: 1px solid var(--color-brand-black);
+  }
+
+  nav#site-nav li {
+    width: 100%;
+    display: block;
+  }
+}
 /*------------------------------------*\
     #LOGO
 \*------------------------------------*/
