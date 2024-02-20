@@ -34,22 +34,22 @@
         "heading": "UC's largest class ever includes:",
         "items": [
             {
-                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Inclusion_Organizational_1.png'><p>More than <span>50,000 students</span></p>"
+                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Inclusion_Organizational_1.png'><p>More than<br><span>50,000 students</span></p>"
             },
             {
-                "text": "<p><span>26%</span> from underrepresented backgrounds</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Globe.png'>"
+                "text": "<p><span>26%</span> from <br>underrepresented backgrounds</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Globe.png'>"
             },
             {
-                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Diversity_Inclusion_1.png'><p>Almost 1/5 <span>first-generation</span></p>"
+                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Diversity_Inclusion_1.png'><p>Almost 1/5<br><span> first-generation</span></p>"
             },
             {
-                "text": "<p><span>1,500</span> University Honors students across nine colleges.</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Graduation.png'>"
+                "text": "<p><span>1,500</span> University Honors<br> students across nine colleges.</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Graduation.png'>"
             },
             {
-                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_First_Place_Medallion.png'><p><span>1,355</span> veterans, military students and dependants</p>"
+                "text": "<img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_First_Place_Medallion.png'><p><span>1,355</span> veterans, military<br> students and dependants</p>"
             },
             {
-                "text": "<p>Over <span>12,000</span> graduate, law and medical students</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Networking.png'>"
+                "text": "<p>Over <span>12,000</span> graduate, <br>law and medical students</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Networking.png'>"
             }
         ]
     },

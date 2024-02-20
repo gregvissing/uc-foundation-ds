@@ -3257,10 +3257,11 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 1em;
 }
 
 .largest-class p {
-    font-size: 1.75em;    
+    font-size: 1.25em;    
     line-height: 1.1;
     text-align: center;
     display: inline-block;
@@ -3313,7 +3314,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 
 .largest-class p span {
     font-weight: bold;
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .largest-class img {
