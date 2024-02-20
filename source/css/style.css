@@ -307,7 +307,7 @@ textarea:not([rows]) {
  * Referencing SCSS mixins by @fontsource library
  * Hardening references by – redundant, but specifically – declaring the variables previous to @include
  */
-@font-face {
+/* @font-face {
   font-family: "Open Sans";
   font-style: normal;
   font-display: swap;
@@ -334,7 +334,8 @@ textarea:not([rows]) {
   font-display: swap;
   font-weight: 700;
   src: url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
-}
+} */
+
 @font-face {
   font-family: "Jost";
   font-style: normal;
@@ -578,18 +579,27 @@ a:active {
 /**
  * Remove list styles from unordered and ordered lists
  */
-ol, ul {
+header ol,  header ul,
+footer ol,  header ul {
   list-style: none;
+}
+
+main ol, main ul {
+  padding-left: 1.5em;
 }
 
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
 * {
-  letter-spacing: 0.3px;
+    line-height: 1.6;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+    font-size: 18px;
 }
 
-h1, h2, h3, h4 {
+h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
   font-family: "Jost", sans-serif;
   letter-spacing: 0.25px;
   line-height: 1.2;
@@ -657,42 +667,42 @@ h1, h2, h3, h4 {
 } */
 
 /* UC.edu heading styles */
-h1 {
-    font-size: 1.80em;
-    font-weight: 750;
+h1, .h1 {
+    font-size: 1.80em !important;
+    font-weight: 750 !important;
 }
 
-h2 {
-    font-size: 1.602em;
-    font-weight: 700;
+h2, .h2 {
+    font-size: 1.602em !important;
+    font-weight: 700 !important;
     color: var(--color-brand-red);
 }
 
-h3 {
-    font-size: 1.5em;
-    font-weight: 650;
+h3, .h3 {
+    font-size: 1.5em !important;
+    font-weight: 650 !important;
 }
 
-h4 {
-    font-size: 1.266em;
-    font-weight: 600;
+h4, .h4 {
+    font-size: 1.266em !important;
+    font-weight: 600 !important;
 }
 
 @media (min-width: 768px) {
-    h1 {
-        font-size: 2.48em;
+    h1, .h1 {
+        font-size: 2.48em !important;
     }
 
-    h2 {
-        font-size: 2.074em;
+    h2, .h2 {
+        font-size: 2.074em !important;
     }
 
-    h3 {
-        font-size: 1.75em;
+    h3, .h3 {
+        font-size: 1.75em !important;
     }
 
-    h4 {
-        font-size: 1.44em;
+    h4, .h4 {
+        font-size: 1.44em !important;
     }
 }
 
