@@ -1153,7 +1153,7 @@ tr {
   width: 1024px;
   padding: 0 0.5rem;
   /* padding: 0 1rem; */
-  margin: 0 auto;
+  margin: 0 auto; 
 }
 @media all and (min-width: 60em) {
   .l-container {
