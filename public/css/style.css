@@ -1054,7 +1054,7 @@ tr {
 .tab > label {
     display: block;
     margin-bottom: -1px;
-    padding: 10px 25px; 
+    padding: 10px 2em; 
     border: 1px solid var(--color-ltGray);
     background: #eee;
     color: var(--color-text);
@@ -1064,9 +1064,11 @@ tr {
     /* letter-spacing: 1px; */
     cursor: pointer;	
     transition: all 0.3s;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .tab:hover label {
-    border-top-color: var(--color-text);
+    /* border-top-color: var(--color-text); */
     color: var(--color-text);
 }
 
@@ -1092,7 +1094,7 @@ tr {
 .tabbed [type="radio"]:nth-of-type(4):checked ~ .tabs .tab:nth-of-type(4) label,
 .tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label {
     border-bottom-color: var(--color-white);
-    border-top-color: var(--color-text);
+    /* border-top-color: var(--color-text); */
     background: #fff;
     color: #222;
     transition: all 0.3s;
@@ -3257,7 +3259,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 1em; 
 }
 
 .largest-class p {
