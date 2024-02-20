@@ -3124,7 +3124,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 .largest-class div:nth-child(4),
 .largest-class div:nth-child(5) {
     background-color: var(--color-ltGray);
-}
+} 
 
 .largest-class p span {
     font-weight: bold;
@@ -3133,6 +3133,6 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 
 .largest-class img {
     width: 100px;
-}
+} 
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,44 @@
+{{> organisms-header }}
+<main role="main">
+
+	<div class="l-container">
+		{{# hero }}
+		{{> molecules-hero width="1200" height="800" }}
+		{{/ hero }}
+
+		<div class="flow">
+			<h2>{{{ page.title }}}</h2>
+			<p class="large bold">{{{ page.description }}}</p>
+
+			<p class="large bold">{{{ intro.paragraphs }}}</p>
+
+			<h2 class="bold">{{{ togetherCreate.heading }}}</h2>			
+			
+			<div class="flex">
+				{{#each togetherCreate.items }}
+					<p>{{{ text }}}</p>
+				{{/ each }}
+			</div>
+		</div>
+
+		{{!-- <p>{{{ boldRedText }}}</p> --}}
+
+		<h2>{{{ priorities.heading }}}</h2>
+		{{> molecules-tabs }}
+
+		<h2>{{{ ucToday.heading }}}</h2>
+		<div class="largest-class flex">
+			{{#each ucToday.items }}
+				<div>{{{ text }}}</div>
+			{{/ each }}
+		</div>
+
+		{{#with saleSection}}
+		{{> organisms-stacked-block-section }}
+		{{/with}}
+
+	</div>
+
+
+</main>
+{{> organisms-footer }}
