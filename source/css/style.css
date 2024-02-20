@@ -1043,8 +1043,10 @@ tr {
     align-items: stretch;
     list-style: none;
     padding: 0;
-    border-bottom: 1px solid var(--color-ltGray);
+    /* border-bottom: 1px solid var(--color-ltGray); */
     width: 100%;
+
+    justify-content: space-between;
 }
 
 .tab {
@@ -1054,7 +1056,7 @@ tr {
 .tab > label {
     display: block;
     margin-bottom: -1px;
-    padding: 10px 1em;  
+    padding: 10px;  
     border: 1px solid var(--color-ltGray);
     background: #eee;
     color: var(--color-text);
@@ -1113,23 +1115,24 @@ tr {
 .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1) h4,
 .tabbed [type="radio"]:nth-of-type(2):checked ~ .tab-content:nth-of-type(2) h4,
 .tabbed [type="radio"]:nth-of-type(3):checked ~ .tab-content:nth-of-type(3) h4,
-.tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) h4{
+.tabbed [type="radio"]:nth-of-type(4):checked ~ .tab-content:nth-of-type(4) h4 {
 	  margin-top: 1rem 0;
 }
 
 .tabbed [type="radio"]:nth-of-type(1):not(:checked) ~ .tab-content:nth-of-type(1),
 .tabbed [type="radio"]:nth-of-type(2):not(:checked) ~ .tab-content:nth-of-type(2),
 .tabbed [type="radio"]:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(3),
-.tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4){
+.tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4) {
     opacity: 0;
     height: 0;
     /* transition: all 0.3s; */
     padding: 0;
+    border-bottom: none;
 }
 .tabbed [type="radio"]:nth-of-type(1):not(:checked) ~ .tab-content:nth-of-type(1) h4,
 .tabbed [type="radio"]:nth-of-type(2):not(:checked) ~ .tab-content:nth-of-type(2) h4,
 .tabbed [type="radio"]:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(3) h4,
-.tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4) h4{
+.tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4) h4 {
 	  margin: 0;
 }
 
@@ -1145,8 +1148,11 @@ tr {
  *    and centers the container
  */
 .l-container {
-  max-width: 80rem;
-  padding: 0 1rem;
+  /* max-width: 80rem; */
+  max-width: 100%;
+  width: 1024px;
+  padding: 0 0.5rem;
+  /* padding: 0 1rem; */
   margin: 0 auto;
 }
 @media all and (min-width: 60em) {
