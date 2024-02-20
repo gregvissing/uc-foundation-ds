@@ -3251,7 +3251,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 
 .flex.largest-class div {
     width: 49%;
-    padding: 2rem;
+    padding: 1rem;
     border: 2px solid var(--color-ltGray);
     margin-bottom: 1em;    
     display: flex;
