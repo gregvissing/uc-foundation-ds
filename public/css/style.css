@@ -580,7 +580,7 @@ a:active {
  * Remove list styles from unordered and ordered lists
  */
 header ol,  header ul,
-footer ol,  header ul {
+footer ol,  footer ul {
   list-style: none;
 }
 
