@@ -1199,7 +1199,7 @@ tr {
 @media all and (min-width: 60em) {
   .l-page-layout--two-column .l-page-layout__secondary {
     width: 30%;
-    margin-left: 2rem;
+    margin-left: 2rem; 
   }
 }
 .l-page-layout--reversed .l-page-layout__secondary {
