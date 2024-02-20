@@ -3257,7 +3257,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 1em;
+    gap: 1em; 
 }
 
 .largest-class p {
