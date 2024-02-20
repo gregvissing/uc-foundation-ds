@@ -1064,6 +1064,8 @@ tr {
     /* letter-spacing: 1px; */
     cursor: pointer;	
     transition: all 0.3s;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
 }
 .tab:hover label {
     border-top-color: var(--color-text);
