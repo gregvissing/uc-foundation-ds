@@ -2878,7 +2878,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
- 
+
 .skip-link:focus,
 .skip-link:active {
   position: absolute;
