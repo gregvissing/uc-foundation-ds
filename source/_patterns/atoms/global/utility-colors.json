@@ -23,7 +23,7 @@
     {
       "name": "color-tertiary",
       "value": "#0e3b5e",
-      "comment": ""
+      "comment": "Ex: Focus outline color"
     },
     {
       "name": "color-utility-warning",
