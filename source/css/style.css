@@ -2671,8 +2671,12 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 }
 
 /*------------------------------------*\
-    #UTILITIES
+    #UTILITY CLASSES
 \*------------------------------------*/
+
+.hide {
+  display: none !important;
+}
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em) !important;
