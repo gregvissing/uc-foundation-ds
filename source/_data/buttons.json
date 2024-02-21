@@ -1,6 +1,6 @@
 {
 	"buttonTag" : true,
-	"buttonText" : "Button",
+	"buttonText" : "Button Primary",
     "buttonGroup" : [
         {
 			"buttonTag": true,
@@ -9,7 +9,7 @@
         {
 			"additionalClasses": "c-btn--bare",
 			"buttonTag": true,
-			"buttonText": "Button"
+			"buttonText": "Button Bare"
 		}
     ]
 }
