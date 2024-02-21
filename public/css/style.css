@@ -65,7 +65,7 @@
   --color-callout-bg: #f3f3f3;
   --color: 0,100%;
   --color-tertiary: #0e3b5e;
-  --flow-space: 0.9rem; 
+  --flow-space: 0.9rem;
   --container-width: 1024px;
  }
 /**
@@ -180,6 +180,18 @@
 /*------------------------------------*\
     #LINKS
 \*------------------------------------*/
+.link,
+main a {
+  color: var(--color-brand-red);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-brand-red);
+}
+
+.link:hover,
+main a:hover {
+    border-bottom: 2px solid var(--color-brand-red);
+}
+
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
@@ -1344,6 +1356,7 @@ tr {
   text-transform: uppercase;
   text-align: center;
   transition: all 0.15s ease-out;
+  font-weight: 600;
 }
 .c-btn:hover, .c-btn:focus {
   color: var(--color-brand-red);
@@ -1351,10 +1364,11 @@ tr {
   border: 1px solid var(--color-brand-red);
 }
 
-.c-btn--bare {
+.c-btn--bare,
+.btn-secondary {
   background: none;
   color: var(--color-brand-red);
-  border: 1px solid transparent;
+  border: 1px solid var(--color-brand-red);
 }
 .c-btn--bare:hover, .c-btn--bare:focus {
   background: none;
@@ -1382,6 +1396,35 @@ tr {
   height: 1rem;
   fill: var(--color-white);
   transition: fill 0.15s ease-out;
+}
+
+.btn-link {
+  color: var(--color-white);
+  border-color: var(--color-brand-red);
+  background-color: var(--color-brand-red);
+  text-decoration: none;
+  margin: 5px;
+  padding: 7px 28px 7px 32px;
+  box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  border-width: 2px;
+  border-style: solid;
+  font-family: Jost, sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  text-transform: uppercase;
+  text-align: center;
+  transition: background .1s;
+  display: inline-block;
+}
+
+.btn-link:hover {
+  background-color: #B8011C !important;
+  border-color: #B8011C !important;
+  color: var(--color-white);
+  outline: 0;
+  text-decoration: underline;
+  border-width: 2px;
 }
 
 /*------------------------------------*\
@@ -2671,8 +2714,12 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 }
 
 /*------------------------------------*\
-    #UTILITIES
+    #UTILITY CLASSES
 \*------------------------------------*/
+
+.hide {
+  display: none !important;
+}
 
 .flow > * + * {
   margin-top: var(--flow-space, 1em) !important;
@@ -2874,7 +2921,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   clip: rect(0, 0, 0, 0);
   border: 0;
 }
-
+ 
 .skip-link:focus,
 .skip-link:active {
   position: absolute;

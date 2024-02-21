@@ -1,3 +1,4 @@
 {
-    "additionalClasses": "c-btn--bare"
-}
+    "additionalClasses": "c-btn--bare btn-secondary",
+    "buttonText": "Button Secondary"
+} 
