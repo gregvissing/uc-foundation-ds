@@ -2675,7 +2675,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 \*------------------------------------*/
 
 .hide {
-  display: none !important;
+  display: none !important; 
 }
 
 .flow > * + * {
