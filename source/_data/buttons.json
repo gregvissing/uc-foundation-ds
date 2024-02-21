@@ -7,9 +7,9 @@
 			"buttonText": "Button"
 		},
         {
-			"additionalClasses": "c-btn--bare",
+			"additionalClasses": "c-btn--bare btn-secondary",
 			"buttonTag": true,
-			"buttonText": "Button Bare"
+			"buttonText": "Button Secondary"
 		}
     ]
-} 
+}
