@@ -5,7 +5,7 @@
 			"colorName" : "Brand Blue",
 			"variable" : "$color-brand-blue"
 		}
-	],
+	], 
 	"neutralColors" : [
 		{
 			"colorHex" : "#ffffff",
