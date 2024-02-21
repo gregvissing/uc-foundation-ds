@@ -30,7 +30,7 @@
       "value": "#f00f00",
       "comment": "Text color of warnings on forms"
     }
-  ],
+  ], 
   "meta": {
     "description": "To add to these items, use Sass variables that start with <code>$color-utility-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
   }
