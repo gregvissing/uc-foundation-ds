@@ -60,9 +60,9 @@
 	],
 	"utilityColors" : [
 		{
-			"colorHex" : "#0192d0",
-			"colorName" : "Info",
-			"variable" : "$color-utility-info"
+			"colorHex" : "#333333",
+			"colorName" : "Text Color",
+			"variable" : "$color-text"
 		},
 		{
 			"colorHex" : "#d3f2ff",

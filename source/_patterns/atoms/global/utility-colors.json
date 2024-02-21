@@ -1,44 +1,34 @@
 {
   "items": [
     {
-      "name": "$color-utility-info",
-      "value": "#0192d0",
+      "name": "color-text",
+      "value": "#333333",
       "comment": ""
     },
     {
-      "name": "$color-utility-info-light",
-      "value": "#d3f2ff",
+      "name": "color-ltGray",
+      "value": "#cccccc",
       "comment": ""
     },
     {
-      "name": "$color-utility-error",
-      "value": "#b12a0b",
+      "name": "color-dkGray",
+      "value": "#666666",
+      "comment": "Background color of callout card element"
+    },
+    {
+      "name": "color-callout-bg",
+      "value": "#f3f3f3",
       "comment": ""
     },
     {
-      "name": "$color-utility-error-light",
-      "value": "#fdded8",
+      "name": "color-tertiary",
+      "value": "#0e3b5e",
       "comment": ""
     },
     {
-      "name": "$color-utility-success",
-      "value": "#03804d",
-      "comment": ""
-    },
-    {
-      "name": "$color-utility-success-light",
-      "value": "#d4f3e6",
-      "comment": ""
-    },
-    {
-      "name": "$color-utility-warning",
-      "value": "#a59b15",
-      "comment": ""
-    },
-    {
-      "name": "$color-utility-warning-light",
-      "value": "#fffecf",
-      "comment": ""
+      "name": "color-utility-warning",
+      "value": "#f00f00",
+      "comment": "Text color of warnings on forms"
     }
   ],
   "meta": {
