@@ -142,8 +142,7 @@
             "label" : "Give Now",
             "url" : "link.pages-category-on-sale",
             "navClass" : "button-primary"
-        }
-        
+        }        
     ],
     "footerNav" : [
         {

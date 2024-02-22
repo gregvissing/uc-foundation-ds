@@ -1,6 +1,6 @@
+@charset "UTF-8";
 @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
 
-@charset "UTF-8";
 /*------------------------------------*\
     #TABLE OF CONTENTS
 \*------------------------------------*/
@@ -181,14 +181,14 @@
     #LINKS
 \*------------------------------------*/
 .link,
-main a {
-  color: var(--color-brand-red);
+a:not(.patternLink) {
+  color: var(--color-brand-red) !important;
   text-decoration: none;
   border-bottom: 1px solid var(--color-brand-red);
 }
 
 .link:hover,
-main a:hover {
+a:not(.patternLink):hover {
     border-bottom: 2px solid var(--color-brand-red);
 }
 
@@ -958,8 +958,22 @@ button {
  * 1) Allows for images to flex with varying screen size
  */
 img {
-  max-width: 100%;
-  height: auto;
+    max-width: 100%;
+    height: auto;
+}
+
+.imageCaption img,
+.image img {
+    border-radius: 16px;
+    box-shadow: 0 7px 15px 5px rgba(0, 0, 0, 0.2);
+}
+
+.caption {
+    color: #595959;
+    font-size: .8em !important;
+    border-left: 5px solid #f3f3f3;
+    padding: 10px;
+    margin-top: 1em;
 }
 
 /*------------------------------------*\
@@ -971,6 +985,60 @@ img {
 p {
   margin-bottom: 1rem;
 }
+
+p.intro-text {
+    font-size: 24px;
+    letter-spacing: 0.3px;
+    line-height: 1.45;
+}
+
+/* Byline styles */
+.byline .author {
+    margin-bottom: 20px;
+    border-top: 1px solid #efefef;
+    border-bottom: 1px solid #efefef;
+    height: 54px;
+}
+
+.byline .author,
+.byline .story {
+    line-height: 50px;
+    margin: 0 auto 15px;
+    clear: both;
+    width: 100%;
+    padding: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.byline .author *,
+.byline .story * {
+    height: 35px;
+    line-height: 50px;
+    padding: 0 15px;
+    display: inline-block;
+    text-decoration: none !important;
+    border-bottom: none;
+}
+
+.byline .author .name {
+    padding-left: 0px;
+}
+
+@media (min-width: 768px) {
+    .byline .author,
+    .byline .story {
+        padding: 0;
+    }
+
+    .byline .author *,
+    .byline .story * {
+        padding: 0 15px;
+        height: 52px;
+    }
+}
+
+
 
 /**
  * Blockquote base styles
@@ -1080,6 +1148,16 @@ pre code {
 code[class*=language-],
 pre[class*=language-] {
   font-family: monospace !important;
+}
+
+.text.floating-img .image.floating.left {
+    float: left;
+    margin: 10px 20px 10px 0 !important;
+}
+
+.text.floating-img .image.floating.right {
+  float: right;
+  margin: 10px 0px 10px 10px !important;
 }
 
 /*------------------------------------*\
@@ -1223,6 +1301,169 @@ tr {
 .tabbed [type="radio"]:nth-of-type(3):not(:checked) ~ .tab-content:nth-of-type(3) h4,
 .tabbed [type="radio"]:nth-of-type(4):not(:checked) ~ .tab-content:nth-of-type(4) h4 {
 	  margin: 0;
+}
+
+.tabbed ul,
+.tabbed ol {
+    padding-left: 1.5em;
+}
+
+/*------------------------------------*\
+    #ACCORDIONS
+\*------------------------------------*/
+
+/**
+ * Accordion container element
+ */
+.accordion {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.accordion:first-of-type {
+    margin-top: 1em;
+}
+
+.accordion:last-of-type {
+    margin-bottom: 1em;
+}
+
+.accordion > li {
+	  margin: 0;
+}
+
+/**
+ * Add zero-width space. needed to ensure Safari + VO respect list semantics.
+ * Set the before content to position absolute to negate any visible space
+ * the before content could add to the document.
+ */
+.accordion > li:before {
+    content: "\200B";
+    position: absolute;
+}
+
+/**
+ * Accordion Heading
+ */
+.accordion__heading {
+    border: 1px solid var(--color-brand-black);
+    font-size: inherit;
+    margin: -1px 0 0;
+}
+
+.accordion__trigger {
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: #fafafa;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--color-text);
+    cursor: pointer;
+    display: block;
+    font-size: inherit;
+    margin: 0;
+    padding: .5em 2em .5em 1em;
+    position: relative;
+    text-align: left;
+    width: 100%;
+    z-index: 2;
+}
+
+.accordion__trigger:after {
+    border-left: .4em solid transparent;
+    border-right: .4em solid transparent;
+    border-top: .5em solid var(--color-brand-black);
+    bottom: 0;
+    content: '';
+    height: 0;
+    margin: auto;
+    position: absolute;
+    right: 1em;
+    top: 0;
+    transition: transform .2s ease-in-out;
+    transform-origin: center center;
+    transform: rotate(0deg);
+    width: 0;
+}
+
+.accordion__trigger:hover:after,
+.accordion__trigger:focus:after,
+.accordion__trigger[aria-expanded="true"]:after {
+	  border-top-color: var(--color-white);
+}
+
+.accordion__trigger[aria-expanded="true"]:after {
+	  transform: rotate(180deg);
+}
+
+/**
+ * This is needed to allow a double tap iOS 11
+ * Safari + VO to function correctly, if there
+ * are multiple elements (wrapper spans) to layout
+ * text nodes within the accordion button.
+
+	-- This is not needed if a button only contains text
+	   and no other child nodes wrapping the text --
+
+.accordion__trigger > * {
+	pointer-events: none;
+}
+ */
+
+.accordion__trigger:hover,
+.accordion__trigger:focus {
+    background-color: var(--color-brand-black);
+    color: var(--color-white);
+    outline: none;
+}
+
+.accordion__trigger:focus {
+	  box-shadow: inset 0 0 0 2px var(--color-tertiary);
+}
+
+.accordion__trigger[aria-disabled="true"]:hover {
+    background-color: var(--color-brand-black);
+    color: var(--color-white);
+    cursor: not-allowed;
+}
+
+.accordion__trigger[aria-disabled="true"]:focus {
+	  background-color: var(--color-brand-black);
+}
+
+.accordion__panel {
+    background-color: inherit;
+    max-height: 0vh;
+    overflow: hidden;
+    padding: 0.001em 1.25em;
+    position: relative;
+    visibility: hidden;
+    z-index: 1;
+}
+
+.accordion__panel--transition {
+    transition:
+      max-height .2s ease-in-out,
+      padding-top .2s ease-in-out,
+      padding-bottom .2s ease-in-out;
+}
+
+.accordion__panel > :last-child {
+	  margin-bottom: 0;
+}
+
+.accordion__panel[aria-hidden="false"] {
+    max-height: 100vh;
+    overflow: auto;
+    padding: 1.25em;
+    visibility: visible;
+}
+
+.accordion__trigger[aria-expanded="true"] {
+    background: var(--color-brand-black);
+    color: var(--color-white);
 }
 
 /*------------------------------------*\
@@ -1398,8 +1639,8 @@ tr {
   transition: fill 0.15s ease-out;
 }
 
-.btn-link {
-  color: var(--color-white);
+a.btn-link {
+  color: var(--color-white) !important;
   border-color: var(--color-brand-red);
   background-color: var(--color-brand-red);
   text-decoration: none;
@@ -2772,8 +3013,17 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 }
 
 .callout-card {
-  padding: 2em 3em;
-  margin: 0;
+  background-color: #f3f3f3;
+  width: 100%;
+  margin-bottom: 20px;
+  display: inline-block;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 7px 15px 4px rgba(0, 0, 0, 0.2);
+}
+
+.callout-card h2 {
+  color: var(--color-text);
 }
 
 .relative {

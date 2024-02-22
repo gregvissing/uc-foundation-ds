@@ -1,0 +1,24 @@
+{
+	"accordionList": [
+		{
+			"additionalClasses": "",
+			"heading": "According Button Text 1",
+			"panelText": "Lorem ipsum dolor sit amet, veniam"
+		},
+		{
+			"additionalClasses": "",
+			"heading": "According Button Text 2",
+			"panelText": "Lorem ipsum dolor sit amet, veniam"
+		},
+		{
+			"additionalClasses": "",
+			"heading": "According Button Text 3",
+			"panelText": "Lorem ipsum dolor sit amet, veniam"
+		},
+		{
+			"additionalClasses": "",
+			"heading": "According Button Text 4",
+			"panelText": "Lorem ipsum dolor sit amet, veniam"
+		}
+    ]
+}
