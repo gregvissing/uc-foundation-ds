@@ -4,7 +4,7 @@
     "buttonGroup" : [
         {
 			"buttonTag": true,
-			"buttonText": "Button"
+			"buttonText": "Button Primary"
 		},
         {
 			"additionalClasses": "c-btn--bare btn-secondary",

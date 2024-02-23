@@ -181,15 +181,30 @@
     #LINKS
 \*------------------------------------*/
 .link,
-a:not(.patternLink) {
-  color: var(--color-brand-red) !important;
+a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.map-link) {
+  color: var(--color-brand-red);
   text-decoration: none;
   border-bottom: 1px solid var(--color-brand-red);
 }
 
 .link:hover,
-a:not(.patternLink):hover {
+a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.map-link):hover {
     border-bottom: 2px solid var(--color-brand-red);
+}
+
+h1.c-logo a:hover,
+h1.c-logo a {
+    border-bottom: none;
+    text-decoration: none;
+}
+
+footer[class*="footer"] a:not(.navbar-link):not(.email-link):not(.map-link) {
+    color: var(--color-white) !important;
+    border-bottom: 1px solid var(--color-white) !important;
+}
+
+footer[class*="footer"] a:not(.navbar-link):hover {
+  border-bottom: 2px solid var(--color-white) !important;
 }
 
 /*------------------------------------*\
@@ -1596,8 +1611,9 @@ tr {
   border: 0;
   text-transform: uppercase;
   text-align: center;
-  transition: all 0.15s ease-out;
+  transition: all 0.3s ease-out;
   font-weight: 600;
+  border: 1px solid var(--color-brand-red);
 }
 .c-btn:hover, .c-btn:focus {
   color: var(--color-brand-red);
@@ -1615,6 +1631,12 @@ tr {
   background: none;
   color: var(--color-brand-red);
   border-color: var(--color-brand-red);
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: var(--color-white);
+  background: var(--color-brand-red);
 }
 
 /*
@@ -2791,7 +2813,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   margin-bottom: 1rem;
 }
 .c-text-passage a {
-  text-decoration: underline;
+  /* text-decoration: underline; */
 }
 .c-text-passage blockquote {
   padding-left: 0.8rem;
