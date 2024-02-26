@@ -1,5 +1,5 @@
 @charset "UTF-8";
-@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css");
+/* @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"); */
 
 /*------------------------------------*\
     #TABLE OF CONTENTS
@@ -991,6 +991,23 @@ img {
     margin-top: 1em;
 }
 
+.featured-section .featured-section-content {
+    position: relative;
+    max-width: 93vw;
+    padding: 4% 2% 3%;
+    margin: -3em auto 0em;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 15px;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.43) 10px 10px 15px;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    clear: both;
+}
+
 /*------------------------------------*\
     #TEXT
 \*------------------------------------*/
@@ -1024,6 +1041,7 @@ p.intro-text {
     padding: 0 30px;
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
 
 .byline .author *,
@@ -1033,11 +1051,12 @@ p.intro-text {
     padding: 0 15px;
     display: inline-block;
     text-decoration: none !important;
-    border-bottom: none;
+    border-bottom: none !important;
 }
 
-.byline .author .name {
-    padding-left: 0px;
+.byline .story .sharing a {
+    margin: 0 5px;
+    padding: 0;
 }
 
 @media (min-width: 768px) {
@@ -1051,8 +1070,14 @@ p.intro-text {
         padding: 0 15px;
         height: 52px;
     }
-}
 
+    .byline .story .sharing,
+    .byline .story .sharing * {
+        height: unset;
+        padding: 0;
+        line-height: 1;
+    }
+}
 
 
 /**
@@ -1061,7 +1086,7 @@ p.intro-text {
 blockquote {
   font-style: italic;
   color: #808080;
-  padding-left: 1rem;
+  /* padding-left: 1rem; */
   margin-bottom: 1rem;
 
   border-left: 0;
@@ -1069,8 +1094,9 @@ blockquote {
   text-indent: -32px;
   margin-left: 50px;
   line-height: 1.2;
-  padding: 0 !important;
+  /* padding: 0 !important; */
   color: var(--color-brand-red);
+  padding: 40px 50px 40px 20px;
 }
 
 blockquote p {
@@ -1318,8 +1344,8 @@ tr {
 	  margin: 0;
 }
 
-.tabbed ul,
-.tabbed ol {
+.tabbed .tab-content ul,
+.tabbed .tab-content ol {
     padding-left: 1.5em;
 }
 
@@ -2812,9 +2838,9 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 .c-text-passage p {
   margin-bottom: 1rem;
 }
-.c-text-passage a {
-  /* text-decoration: underline; */
-}
+/* .c-text-passage a {
+  text-decoration: underline;
+} */
 .c-text-passage blockquote {
   padding-left: 0.8rem;
   color: #808080;
@@ -3669,7 +3695,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 
 .largest-class p {
     font-size: 1.25em;    
-    line-height: 1.1;
+    line-height: 1;
     text-align: center;
     display: inline-block;
     margin: 0;
@@ -3725,7 +3751,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 }
 
 .largest-class img {
-    width: 100px;
+    width: 75px;
 } 
 
 /*# sourceMappingURL=style.css.map */
