@@ -55,18 +55,19 @@
  * 1) Brand=specific colors
  */
  :root {
-  --text-multiplier: 1.1;
-  --color-brand-red: #e00122;
-  --color-brand-black: #000;
-  --color-white: #fff;
-  --color-text: #333;
-  --color-ltGray: #ccc;
-  --color-dkGray: #666;
-  --color-callout-bg: #f3f3f3;
-  --color: 0,100%;
-  --color-tertiary: #0e3b5e;
-  --flow-space: 0.9rem;
-  --container-width: 1024px;
+    --text-multiplier: 1.1;
+    --color-brand-red: #e00122;
+    --color-brand-black: #000;
+    --color-white: #fff;
+    --color-text: #333;
+    --color-ltGray: #ccc;
+    --color-dkGray: #666;
+    --color-callout-bg: #f3f3f3;
+    --color: 0,100%;
+    --color-tertiary: #0e3b5e;
+    --flow-space: 0.9rem;
+    --container-width: 1024px;
+    --button-border-radius: 4px;
  }
 /**
  * Neutral Colors
@@ -934,7 +935,7 @@ select {
   width: 100%;
   border: 1px solid #444;
   border-radius: 0;
-  padding: 0.5rem;
+  padding: 0.5rem !important;
   /* height: 2rem; */
   background: var(--color-white);
   color: #131313;
@@ -3753,5 +3754,228 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 .largest-class img {
     width: 75px;
 } 
+
+/* STANDARD DONATION FORM */
+
+div[id*="_UpdatePanel"] {
+    padding: 10px;
+    margin-bottom: 5em;
+}
+
+div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"] > .BBFormTable.DonationFormTable {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+div[id*="_UpdatePanel"] .DonationFieldCaption label {
+    font-family: "Jost", sans-serif;
+}
+
+div[id*="_UpdatePanel"] * {
+    padding: 0;
+    margin: 0;
+}
+
+/* AMOUNTS */
+tbody[id*="_TB_pnlDonation"] tr {
+    display: flex;
+    flex-direction: column;
+}
+
+tbody[id*="_TB_pnlDonation"] tr {
+    gap: 10px;
+}
+
+table[id*="_tblAmount"] > tbody {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+table[id*="_tblAmount"] > tbody tr:not(:last-child),
+table[id*="_rdoGiftType"] > tbody > tr {
+    width: 12%;
+}
+
+table[id*="_tblAmount"] > tbody tr:last-child {
+    width: 100%;
+}
+
+div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr:not(:last-child) td *,
+table[id*="_rdoGiftType"] td * {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+div[id*="_pnlDonationForm"] table[id*="_tblAmount"] td.vaBottom.BBFieldControlCell.DonationFieldControlCell,
+div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody>tr input[type="radio"],
+table[id*="_rdoGiftType"] input {
+    display: none;
+}
+
+div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label,
+table[id*="_rdoGiftType"] > tbody > tr label {
+    padding: 5px !important;
+    border: 1px solid var(--color-text);
+    cursor: pointer;
+    font-weight: bold;
+    line-height: 35px;
+}
+
+tr[id*="_trOther"] {
+    display: flex;
+    flex-direction: row !important;
+}
+
+tr[id*="_trOther"] td[id*="_tdOther"] {
+    width: 12%;
+}
+
+tr[id*="_trOther"] td[id*="_tdOther"] label {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell {
+    width: 24.55%;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell * {
+    height: 100%;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table {
+    margin: 0 !important;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr {
+    position: relative;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:first-child {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-brand-black);
+    color: var(--color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:first-child > span {
+    height: unset;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) input {
+    padding-left: 1.5em;
+}
+
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(3),
+tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:last-child {
+    display: none;
+}
+
+div[id*="_pnlDonationForm"] td input[type="radio"]:checked + label {
+    background: var(--color-text);
+    color: var(--color-white);
+    transition: all 250ms ease-in-out;
+}
+
+/* DESIGNATION */
+tr[id*="_trDesignation"] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* STANDARD DONATION BUTTONS */
+tbody[id*="_tbdCart"] tr[id*="_trAddToCart"] {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+tbody[id*="_tbdCart"] tr[id*="_trAddToCart"] td * {
+    display: inline-block;
+    width: unset;
+}
+
+div[id*="_UpdatePanel"] input.BBFormSubmitButton.DonationSubmitButton {
+    padding: 10px 20px;
+    border-radius: var(--button-border-radius);
+}
+
+div[id*="_UpdatePanel"] .BBListingHeading.DonationListingHeading span {
+    font-size: 2em;
+    font-weight: bold;
+    font-family: "Jost", sans-serif;
+}
+
+/* GIFT TYPE */
+tr[id*="_trGiftType"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+table[id*="_rdoGiftType"] > tbody {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+table[id*="_rdoGiftType"] > tbody > tr > td {
+    display: flex;
+}
+
+/* RECURRENCE */
+tr[id*="_trRecurrence"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+div[id*="_Recurrence_divFrequency"] > table > tbody {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* ANONYMOUS */
+tr[id*="_trAnonymous"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
+
+tr[id*="_trAnonymous"] td.BBFieldControlCell.DonationFieldControlCell span {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+/* SOURCE */
+tr[id*="_trSource"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    gap: 10px;
+}
 
 /*# sourceMappingURL=style.css.map */
