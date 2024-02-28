@@ -1,0 +1,37 @@
+{
+  "items": [
+    {
+      "name": "color-calhoun-maroon",
+      "value": "#890519",
+      "comment": ""
+    },
+    {
+      "name": "color-steger-silver",
+      "value": "#a7a5aa",
+      "comment": ""
+    },
+    {
+      "name": "color-main-street-mist",
+      "value": "#e0dfe3",
+      "comment": ""
+    },
+    {
+      "name": "color-bearcats-black",
+      "value": "#333333",
+      "comment": ""
+    },
+    {
+      "name": "color-gettler-gold",
+      "value": "#d1b179",
+      "comment": ""
+    },
+    {
+      "name": "color-tangeman-tan",
+      "value": "#eadbc1",
+      "comment": ""
+    }  
+  ],
+  "meta": {
+    "description": "To add to these items, use Sass variables that start with <code>$color-brand-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
+  }
+}

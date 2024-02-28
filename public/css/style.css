@@ -54,21 +54,23 @@
  * Brand Colors
  * 1) Brand=specific colors
  */
- :root {
+:root {
     --text-multiplier: 1.1;
     --color-brand-red: #e00122;
     --color-brand-black: #000;
     --color-white: #fff;
+    --color-calhoun-maroon: #890519;
+    --color-gettler-gold: #d1b179;
     --color-text: #333;
     --color-ltGray: #ccc;
     --color-dkGray: #666;
     --color-callout-bg: #f3f3f3;
     --color: 0,100%;
-    --color-tertiary: #0e3b5e;
+    --color-tertiary: var(--color-gettler-gold);
     --flow-space: 0.9rem;
     --container-width: 1024px;
     --button-border-radius: 4px;
- }
+}
 /**
  * Neutral Colors
  * 1) Neutral colors are grayscale values used throughout the UI
@@ -608,8 +610,23 @@ a:active {
  * Remove list styles from unordered and ordered lists
  */
 header ol,  header ul,
-footer ol,  footer ul {
+footer ol,  footer ul,
+.c-option-list {
   list-style: none;
+  padding: 0
+}
+
+ol {
+  list-style: auto;
+}
+
+ul {
+  list-style: initial;
+  padding-left: 2em;
+}
+
+ol, ul {
+    padding-left: 2em;
 }
 
 main ol, main ul {
@@ -1087,11 +1104,15 @@ p.intro-text {
 /**
  * Blockquote base styles
  */
+.pull-quote {
+    padding-right: 70px;
+}
+
 blockquote {
   font-style: italic;
   color: #808080;
   /* padding-left: 1rem; */
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 
   border-left: 0;
   font-weight: 300;
@@ -1128,6 +1149,21 @@ blockquote:before {
 
 blockquote:after {
   content: "”";
+}
+
+.pull-quote-attribution {
+    color: var(--color-brand-red);
+    text-align: right;
+    margin-right: 20px;
+}
+
+.pull-quote-attribution span {  
+    font-weight: bold;
+    font-family: "Gentium Book Basic", serif;
+}
+
+.pull-quote-attribution:before {
+    content: "–";
 }
 
 /**
@@ -1652,6 +1688,9 @@ tr {
   transition: all 0.3s ease-out;
   font-weight: 600;
   border: 1px solid var(--color-brand-red);
+  border-radius: var(--button-border-radius);
+  font-family: "Jost", sans-serif;
+  letter-spacing: 0.5px;
 }
 .c-btn:hover, .c-btn:focus {
   color: var(--color-brand-red);
@@ -1708,7 +1747,7 @@ a.btn-link {
   padding: 7px 28px 7px 32px;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
-  border-width: 2px;
+  border-width: 2px !important;
   border-style: solid;
   font-family: Jost, sans-serif;
   font-weight: 500;
@@ -1937,6 +1976,7 @@ a.btn-link {
 
 .c-stacked-block__body {
   flex: 1;
+  margin-top: 0.6rem;
 }
 
 .c-stacked-block__title {
@@ -1964,6 +2004,10 @@ a.btn-link {
 /* .c-stacked-block:hover .c-stacked-block__meta, .c-stacked-block:focus .c-stacked-block__meta {
   color: #ba6333;
 } */
+
+a.c-stacked-block {
+    border-bottom: none !important;
+}
 
 .c-stacked-block__badge {
   display: block;
@@ -2525,10 +2569,11 @@ a.btn-link {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  overflow: hidden;
-  margin-bottom: 1rem;
+  /* overflow: hidden; */
+  margin-bottom: 0;
   font-family: "Jost", sans-serif;
   text-transform: uppercase;
+  list-style: none;
 }
 
 .c-pagination__item {
@@ -2539,8 +2584,10 @@ a.btn-link {
 }
 
 .c-pagination__link {
-  padding: 1rem;
-  text-decoration: underline;
+  margin: 1rem;
+  color: var(--color-brand-red);
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-brand-red);
 }
 .c-pagination__item:first-child .c-pagination__link {
   padding-left: 0;
@@ -2562,6 +2609,12 @@ a.btn-link {
 /**
  * Primary navigation existing in the header and maybe the footer
  */
+
+.c-primary-nav ul {
+    list-style: none !important;
+    padding: 0;
+}
+
 @media all and (min-width: 32em) {
   .c-primary-nav {
     margin-left: auto;
@@ -3040,6 +3093,10 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 
 .hide {
   display: none !important;
+}
+
+b {
+    font-weight: bold !important;
 }
 
 .flow > * + * {

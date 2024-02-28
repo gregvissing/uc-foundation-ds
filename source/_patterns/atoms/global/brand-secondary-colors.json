@@ -1,13 +1,13 @@
 {
   "items": [
     {
-      "name": "$color-brand-red",
-      "value": "#e00122",
+      "name": "color-uc-dark-red",
+      "value": "#b8011c",
       "comment": ""
     },
     {
-      "name": "$color-brand-black",
-      "value": "#000000",
+      "name": "color-grey",
+      "value": "#f3f3f3",
       "comment": ""
     }  
   ],
