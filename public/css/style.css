@@ -807,7 +807,7 @@ textarea {
  */
 input, textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 0.5rem !important;
   border: 1px solid #444;
   background: var(--color-white);
 }
@@ -929,14 +929,17 @@ input[type=search] {
  * Select
  * 1) Remove default styling
  */
-select {
+select,
+select.BBFormSelectList.DonationSelectList {
   display: block;
   font-size: 1rem;
   width: 100%;
+  max-width: 100% !important;
   border: 1px solid #444;
   border-radius: 0;
   padding: 0.5rem !important;
   /* height: 2rem; */
+  height: 46px;
   background: var(--color-white);
   color: #131313;
 }
@@ -1528,10 +1531,18 @@ tr {
   margin: 0 auto;
 }
 @media all and (min-width: 60em) {
-  .l-container {
-    /* padding: 0 2rem; */
-    padding: 0 0.5rem;
-  }
+    .l-container {
+        /* padding: 0 2rem; */
+        padding: 0 0.5rem;
+    }
+}
+
+@media all and (max-width: 1024px) {
+    .l-container {
+        max-width: 100%;
+        min-width: 100%;
+        width: 100px;
+    }
 }
 
 .l-container--narrow {
@@ -2115,15 +2126,15 @@ a.btn-link {
 }
 
 @media all and (min-width: 47em) {
-  .c-footer__inner {
-    display: flex;
-  }
+    .c-footer__inner {
+        display: flex;
+    }
 }
 
 @media all and (min-width: 47em) {
-  .c-footer__bottom {
-    margin-left: auto;
-  }
+    .c-footer__bottom {
+        margin-left: auto;
+    }
 }
 
 .c-footer__credit, .c-footer__copyright {
@@ -2137,6 +2148,26 @@ a.btn-link {
 }
 .c-footer__credit a:hover, .c-footer__credit a:focus, .c-footer__copyright a:hover, .c-footer__copyright a:focus {
   color: #808080;
+}
+
+@media (max-width: 500px) {
+    footer, 
+    footer.c-footer {
+        padding: 1rem 0;
+        margin-top: 1rem;
+    }
+
+    footer .flex-row, 
+    footer.c-footer  .flex-row {
+        padding: 10px;
+        flex-direction: column;
+    }
+
+    footer .flex-row .one-third, 
+    footer.c-footer .flex-row .one-third {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
 }
 
 /*------------------------------------*\
@@ -3759,7 +3790,8 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
 
 div[id*="_UpdatePanel"] {
     padding: 10px;
-    margin-bottom: 5em;
+    margin: 0 auto 5em;
+    max-width: 800px;
 }
 
 div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"] > .BBFormTable.DonationFormTable {
@@ -3796,7 +3828,7 @@ table[id*="_tblAmount"] > tbody {
 
 table[id*="_tblAmount"] > tbody tr:not(:last-child),
 table[id*="_rdoGiftType"] > tbody > tr {
-    width: 12%;
+    width: 18%;
 }
 
 table[id*="_tblAmount"] > tbody tr:last-child {
@@ -3831,7 +3863,7 @@ tr[id*="_trOther"] {
 }
 
 tr[id*="_trOther"] td[id*="_tdOther"] {
-    width: 12%;
+    width: 18%;
 }
 
 tr[id*="_trOther"] td[id*="_tdOther"] label {
@@ -3841,7 +3873,7 @@ tr[id*="_trOther"] td[id*="_tdOther"] label {
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell {
-    width: 24.55%;
+    width: 37%;
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell * {
@@ -3866,7 +3898,7 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 5px;
+    padding: 5px 10px;
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:first-child > span {
@@ -3942,6 +3974,10 @@ table[id*="_rdoGiftType"] > tbody > tr > td {
     display: flex;
 }
 
+table[id*="_rdoGiftType"] > tbody > tr {
+    width: 50%;
+}
+
 /* RECURRENCE */
 tr[id*="_trRecurrence"] {
     display: flex;
@@ -3954,6 +3990,50 @@ div[id*="_Recurrence_divFrequency"] > table > tbody {
     display: flex;
     flex-direction: row;
     gap: 10px;
+}
+
+td[id*="_Recurrence_tdFrequency"] {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+td[id*="_Recurrence_tdFrequency"] > select, 
+td[id*="_Recurrence_tdFrequency"] > div {
+    width: 50% !important;
+}
+
+div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] {
+    width: 100%;
+}
+
+div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td.wsNowrap {
+    padding: 0 !important;
+    position: relative;
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 100% !important;
+    height: 46px;
+    overflow: hidden;
+}
+
+div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > label {
+    width: 50% !important;
+    line-height: 38px;
+}
+
+div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > input {
+    width: 50% !important;
+    margin-right: -10px;
+}
+
+div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > .ui-datepicker-trigger {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 35px;
 }
 
 /* ANONYMOUS */
@@ -3976,6 +4056,40 @@ tr[id*="_trSource"] {
     flex-direction: column;
     margin-bottom: 10px;
     gap: 10px;
+}
+
+span[id*="_lblAdditInformation"] {
+  display: none;
+}
+
+/* STANDARD DONATION FORM BUTTONS */
+
+.BBFormSubmitButton.DonationSubmitButton {
+    background: var(--color-brand-black);
+    color: var(--color-white);
+    font-weight: 500;
+}
+
+@media (max-width: 600px) {
+    table[id*="_tblAmount"] > tbody {
+        flex-direction: column;  
+    }
+
+    table[id*="_tblAmount"] > tbody tr:not(:last-child),
+    table[id*="_rdoGiftType"] > tbody > tr,
+    tr[id*="_trOther"] td[id*="_tdOther"],
+    tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell {
+        width: 100%;
+    }
+
+    td[id*="_Recurrence_tdFrequency"] {
+        flex-direction: column;
+    }
+
+    td[id*="_Recurrence_tdFrequency"] > select, 
+    td[id*="_Recurrence_tdFrequency"] > div {
+        width: 100% !important;
+    }
 }
 
 /*# sourceMappingURL=style.css.map */

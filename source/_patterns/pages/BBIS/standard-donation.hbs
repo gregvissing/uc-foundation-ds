@@ -190,7 +190,7 @@
         </script>
     </div>
     <div id="bbspLoadingOverlay" class="bbspLoadingOverlay">
-        <img src="/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
+        <img src="https://foundation.uc.edu/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
     </div>
 </div>
 
@@ -236,14 +236,14 @@
                     </td>
                 </tr>
             </tbody>
-            <tbody id="PC25882_TB_pnlDonation" class="DonationFormTable_DonationPanel donationInfo">
+            <tbody id="PC25882_TB_pnlDonation" class="DonationFormTable_DonationPanel">
                 <tr>
                     <td id="PC25882_thCaptionAmount" class="BBFieldCaption DonationFieldCaption" valign="top">
                         <label for="PC25882_txtAmount" id="PC25882_lblAmountCaption">Amount:</label>
                     </td>
                     <td class="BBFieldControlCell DonationFieldControlCell">
                         <table id="PC25882_tblAmount" class="taLeft" cellpadding="3">
-                            <tbody class="donationInfo">
+                            <tbody>
                                 <tr>
                                     <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="1052" amount="50.00"><input id="PC25882_rdo_1052_5" type="radio" name="PC25882$givingLevels" value="rdo_1052_5" onclick="rdo_OnClick(this);" aria-labelledby="PC25882_tblAmount"><label for="PC25882_rdo_1052_5">$50</label></span></td>
                                     <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$50.00</span><span class="BBConvertedCurrencyLabel"></span></td>
@@ -265,22 +265,22 @@
                                     <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$1,000.00</span><span class="BBConvertedCurrencyLabel"></span></td>
                                 </tr>
                                 <tr id="PC25882_trOther" style="display:;">
-                                    <td id="PC25882_tdOther" class="BBFieldControlCell DonationFieldControlCell"><span itemindex="-1"><input id="PC25882_rdoOther" type="radio" name="PC25882$givingLevels" value="rdoOther" onclick="rdo_OnClick(this);" aria-labelledby="PC25882_tblAmount"><label for="PC25882_rdoOther">Other</label></span></td>
+                                    <td id="PC25882_tdOther" class="BBFieldControlCell DonationFieldControlCell"><span itemindex="-1"><input id="PC25882_rdoOther" type="radio" name="PC25882$givingLevels" value="rdoOther" checked="checked" onclick="rdo_OnClick(this);" aria-labelledby="PC25882_tblAmount"><label for="PC25882_rdoOther">Other</label></span></td>
                                     <td class="wsNowrap BBFieldControlCell DonationFieldControlCell">
                                         <table style="margin-left: -3px">
-                                            <tbody class="donationInfo">
+                                            <tbody>
                                                 <tr>
                                                     <td>
                                                         <span id="PC25882_lblSymbol" class="DonationFormTable_DonationPanel_SymbolLabel">$</span>
                                                     </td>
                                                     <td id="PC25882_Td1">
-                                                        <input name="PC25882$txtAmount" type="text" maxlength="10" id="PC25882_txtAmount" class="aspNetDisabled BBFormTextbox DonationTextboxNarrow" onkeyup="UpdateSummary();">
+                                                        <input name="PC25882$txtAmount" type="text" maxlength="10" id="PC25882_txtAmount" class="BBFormTextbox DonationTextboxNarrow" onkeyup="UpdateSummary();">
                                                         <span id="PC25882_ReqFldValidatorAmount" style="display:none;"></span><span id="PC25882_CmpValidatorAmount" style="display:none;"></span>
                                                     </td>
                                                     <td>
                                                     </td>
                                                     <td>
-                                                        <span id="PC25882_lblAmtRequiredMarker" class="BBFormRequiredFieldMarker DonationRequiredFieldMarker" style="visibility: visible;">*</span>
+                                                        <span id="PC25882_lblAmtRequiredMarker" class="BBFormRequiredFieldMarker DonationRequiredFieldMarker" style="visibility:visible;">*</span>
                                                     </td>
                                                 </tr>
                                             </tbody>
@@ -306,30 +306,59 @@
                         <table id="PC25882_rdoGiftType" role="group" aria-label="divGiftType">
                             <tbody>
                                 <tr>
-                                    <td><input id="PC25882_rdoGiftType_0" type="radio" name="PC25882$rdoGiftType" value="OneTime" checked="checked"><label for="PC25882_rdoGiftType_0">One-time gift</label></td>
+                                    <td><input id="PC25882_rdoGiftType_0" type="radio" name="PC25882$rdoGiftType" value="OneTime" onclick="javascript:setTimeout('__doPostBack(\'PC25882$rdoGiftType$0\',\'\')', 0)"><label for="PC25882_rdoGiftType_0">One-time gift</label></td>
                                 </tr>
                                 <tr>
-                                    <td><input id="PC25882_rdoGiftType_1" type="radio" name="PC25882$rdoGiftType" value="Recurring" onclick="javascript:setTimeout('__doPostBack(\'PC25882$rdoGiftType$1\',\'\')', 0)"><label for="PC25882_rdoGiftType_1">Recurring gift</label></td>
+                                    <td><input id="PC25882_rdoGiftType_1" type="radio" name="PC25882$rdoGiftType" value="Recurring" checked="checked"><label for="PC25882_rdoGiftType_1">Recurring gift</label></td>
                                 </tr>
                             </tbody>
                         </table>
                     </td>
                 </tr>
-                <tr id="PC25882_trRecurrence" style="display;">
-                    <td id="PC25882_tdFrequencyCaption" class="BBFieldCaption DonationFieldCaption">
+                <tr id="PC25882_trRecurrence" style="display:;">
+                    <td id="PC25882_tdFrequencyCaption" class="BBFieldCaption DonationFieldCaption" valign="top">
                         <label for="PC25882_Recurrence_ddlFrequency" id="PC25882_lblFrequencyCaption">Frequency:</label>
                     </td>
-                    
+                    <td colspan="2" class="BBFieldControlCell DonationFieldControlCell">
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td id="PC25882_Recurrence_tdFrequency" valign="bottom">
+                                        <select name="PC25882$Recurrence$ddlFrequency" onchange="javascript:setTimeout('__doPostBack(\'PC25882$Recurrence$ddlFrequency\',\'\')', 0)" id="PC25882_Recurrence_ddlFrequency" class="BBFormSelectList DonationSelectList">
+                                            <option selected="selected" value="<?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?><RecurrenceInformation xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>  <Frequency xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>Monthly</Frequency>  <Position xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>First</Position>  <StartDate xmlns=&quot;urn:blackbaud.RE7.XDATA&quot; />  <EndDate xmlns=&quot;urn:blackbaud.RE7.XDATA&quot; />  <DayOfWeek xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>Sunday</DayOfWeek>  <Day xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>1</Day>  <Month xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>0</Month>  <ProcessNow xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>false</ProcessNow></RecurrenceInformation>">Day 1 of every month</option>
+                                            <option value="<?xml version=&quot;1.0&quot; encoding=&quot;utf-16&quot;?><RecurrenceInformation xmlns:xsd=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;>  <Frequency xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>Monthly</Frequency>  <Position xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>First</Position>  <StartDate xmlns=&quot;urn:blackbaud.RE7.XDATA&quot; />  <EndDate xmlns=&quot;urn:blackbaud.RE7.XDATA&quot; />  <DayOfWeek xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>Sunday</DayOfWeek>  <Day xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>15</Day>  <Month xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>0</Month>  <ProcessNow xmlns=&quot;urn:blackbaud.RE7.XDATA&quot;>false</ProcessNow></RecurrenceInformation>">Day 15 of every month</option>
+                                        </select>
+                                        <div id="PC25882_Recurrence_divFrequency">
+                                            <table>
+                                                <tbody>
+                                                    <tr id="PC25882_Recurrence_trRange">
+                                                        <td colspan="2" class="wsNowrap">
+                                                            <label for="PC25882_Recurrence_DatePickerStart" id="PC25882_Recurrence_lblTxtStarting" class="BBFieldCaption">Starting:</label>
+                                                            <input name="PC25882$Recurrence$DatePickerStart" type="text" value="2/28/2024" id="PC25882_Recurrence_DatePickerStart" class="BBFormTextbox DonationTextboxNarrow hasDatepicker" placeholder="mm/dd/yyyy"><img class="ui-datepicker-trigger" src="https://foundation.uc.edu/images/calendar.gif" alt="Start Date" title="Start Date">&nbsp;&nbsp;
+                                                            <span id="spanTruePledgeEndingDate" style="display:none"> 
+                                                            &nbsp;    
+                                                            <span id="PC25882_Recurrence_lblEndingOnCaption">Ending: </span>
+                                                            &nbsp;
+                                                            <span id="lblTruePledgeEndingDate"></span>
+                                                            </span>
+                                                            <span id="PC25882_Recurrence_ctl07" style="display:none;"></span>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
                 </tr>
                 <tr id="PC25882_trAnonymous">
                     <td class="BBFieldCaption DonationFieldCaption">
                         <span id="PC25882_lblAnonymousCaption">Anonymous:</span>
                     </td>
                     <td colspan="2" class="BBFieldControlCell DonationFieldControlCell">
-                        <span class="BBFieldCheckboxCaption DonationFieldCheckboxCaption">
-                            <input id="PC25882_chkAnonymous" type="checkbox" name="PC25882$chkAnonymous" aria-label="lblchkAnonymous">
-                            <label for="PC25882_chkAnonymous">I prefer to make this donation anonymously</label>
-                        </span>
+                        <span class="BBFieldCheckboxCaption DonationFieldCheckboxCaption"><input id="PC25882_chkAnonymous" type="checkbox" name="PC25882$chkAnonymous" aria-label="lblchkAnonymous"><label for="PC25882_chkAnonymous">I prefer to make this donation anonymously</label></span>
                     </td>
                 </tr>
                 <tr id="PC25882_trSource">
@@ -338,7 +367,7 @@
                     </td>
                     <td class="vaTop" colspan="2">
                         <select name="PC25882$ddlSources" id="PC25882_ddlSources" class="BBFormSelectList DonationSelectList">
-                            <option value=""></option>
+                            <option selected="selected" value=""></option>
                             <option value="7747">24AG-BBIS</option>
                         </select>
                         <span id="PC25882_ctl53" style="display:none;"></span>
@@ -391,7 +420,7 @@
             this.bbcheckout.intializeCheckout();
         </script>
     </div>
-    <div id="bbspLoadingOverlay" class="bbspLoadingOverlay" style="">
-        <img src="/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
+    <div id="bbspLoadingOverlay" class="bbspLoadingOverlay">
+        <img src="https://foundation.uc.edu/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
     </div>
 </div>
