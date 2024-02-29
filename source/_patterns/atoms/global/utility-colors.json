@@ -7,7 +7,7 @@
     },
     {
       "name": "color-ltGray",
-      "value": "#cccccc",
+      "value": "#f3f3f3",
       "comment": ""
     },
     {
@@ -27,7 +27,7 @@
     },
     {
       "name": "color-utility-warning",
-      "value": "#890519",
+      "value": "#b8011c",
       "comment": "Text color of warnings on forms"
     }
   ],
