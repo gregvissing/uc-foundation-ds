@@ -3459,7 +3459,7 @@ b, strong {
     font-weight: bold !important;
 }
 
-b em, strong em {
+b *, strong * {
     font-weight: bold;
 }
 
