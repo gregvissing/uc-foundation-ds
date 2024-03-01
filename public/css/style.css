@@ -3459,6 +3459,10 @@ b, strong {
     font-weight: bold !important;
 }
 
+b em, strong em {
+    font-weight: bold;
+}
+
 .flow > * + * {
   margin-top: var(--flow-space, 1em) !important;
 }
