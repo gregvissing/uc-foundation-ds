@@ -209,6 +209,10 @@ a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.m
     border-bottom: 2px solid var(--color-brand-red);
 }
 
+.c-logo {
+    margin-bottom: 0;
+}
+
 h1.c-logo a:hover,
 h1.c-logo a {
     border-bottom: none;
@@ -2604,8 +2608,8 @@ a.c-stacked-block {
  * Header inner
  */
 .c-header__inner {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 @media all and (min-width: 35em) {
   .c-header__inner {
