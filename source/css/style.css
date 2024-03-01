@@ -56,17 +56,31 @@
  */
 :root {
     --text-multiplier: 1.1;
+    
+    /* Brand Primary Colors */
     --color-brand-red: #e00122;
     --color-brand-black: #000;
-    --color-white: #fff;
+
+    /* Brand Secondary Colors */
+    --color-grey: #f3f3f3;
+    --color-uc-dark-red: #b8011c;
+
+    /* Expanded Color Palette */
     --color-calhoun-maroon: #890519;
+    --color-steger-silver: #a7a5aa;
+    --color-main-street-mist: #e0dfe3;
+    --color-bearcats-black: #333;
     --color-gettler-gold: #d1b179;
+    --color-tangeman-tan: #eadbc1;
+
     --color-text: #333;
+    --color-white: #fff;
     --color-ltGray: #ccc;
     --color-dkGray: #666;
     --color-callout-bg: #f3f3f3;
     --color: 0,100%;
     --color-tertiary: var(--color-gettler-gold);
+    --color-focus-color: var(--color-gettler-gold);
     --flow-space: 0.9rem;
     --container-width: 1024px;
     --button-border-radius: 4px;
@@ -828,9 +842,11 @@ input, textarea {
   border: 1px solid #444;
   background: var(--color-white);
 }
-input:focus, textarea:focus {
+
+/* input:focus, textarea:focus {
   border-color: #131313;
-}
+} */
+
 input:disabled, textarea:disabled {
   border-color: #eee;
   background: #eee;
@@ -960,9 +976,9 @@ select.BBFormSelectList.DonationSelectList {
   background: var(--color-white);
   color: #131313;
 }
-select:focus {
+/* select:focus {
   border-color: #131313;
-}
+} */
 
 /*------------------------------------*\
     #BUTTONS
@@ -1008,7 +1024,8 @@ img {
     color: #595959;
     font-size: .8em !important;
     border-left: 5px solid #f3f3f3;
-    padding: 10px;
+    padding: 10px 0 10px 10px;
+    width: 91%;
     margin-top: 1em;
 }
 
@@ -1156,7 +1173,7 @@ blockquote {
   line-height: 1.2;
   /* padding: 0 !important; */
   color: var(--color-brand-red);
-  padding: 40px 50px 40px 20px;
+  padding: 40px 50px 20px 20px;
 }
 
 blockquote p {
@@ -1189,7 +1206,8 @@ blockquote:after {
 .pull-quote-attribution {
     color: var(--color-brand-red);
     text-align: right;
-    margin-right: 20px;
+    padding: 0px 50px 0px 20px;
+    margin-left: 50px;
 }
 
 .pull-quote-attribution span {  
@@ -1274,6 +1292,44 @@ pre[class*=language-] {
 .text.floating-img .image.floating.right {
   float: right;
   margin: 10px 0px 10px 10px !important;
+}
+
+/* PAGE TITLE */
+
+.page-title {
+    position: relative;
+    background-color: var(--color-grey);
+    background-image: url(https://foundation.uc.edu/image/_2019-redesign/triangle-pattern-page-title-bg.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.page-title h1 {
+    display: inline-block;
+    background-color: var(--color-brand-red);
+    color: var(--color-white);
+    padding: 0 5px;
+    position: relative;
+    z-index: 1;
+    overflow: visible;
+    height: 75px;
+    line-height: 70px;
+    margin: 10px 0 0;
+}
+
+.page-title h1:before {
+    content: "";
+    height: 75px;
+    width: 100px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: -50px;
+    margin: auto;
+    z-index: -1;
+    transform: skew(-30deg);
+    background-color: var(--color-brand-red);
 }
 
 /*------------------------------------*\
@@ -1536,7 +1592,7 @@ tr {
 }
 
 .accordion__trigger:focus {
-	  box-shadow: inset 0 0 0 2px var(--color-tertiary);
+	  box-shadow: inset 0 0 0 2px var(--color-focus-color);
 }
 
 .accordion__trigger[aria-disabled="true"]:hover {
@@ -3279,7 +3335,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   display: none !important;
 }
 
-b {
+b, strong {
     font-weight: bold !important;
 }
 
@@ -4331,6 +4387,21 @@ span[id*="_lblAdditInformation"] {
     td[id*="_Recurrence_tdFrequency"] > div {
         width: 100% !important;
     }
+}
+
+/*------------------------------------*\
+    #FOCUS STYLES
+\*------------------------------------*/
+
+:is(a, button, input, select, textarea, summary) {
+    --outline-size: max(2px, 0.08em);
+    --outline-style: solid;
+    --outline-color: var(--color-focus-color); /* currentColor; */
+}
+
+:is(a, button, input, select, textarea, summary):focus {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color) !important;
+    outline-offset: var(--outline-offset, var(--outline-size)) !important;
 }
 
 /*# sourceMappingURL=style.css.map */

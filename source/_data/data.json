@@ -20,5 +20,5 @@
 	"cta": "Call to Action",
 	"sectionTitle": "Section Title",
 	"hero": true,
-	"promoBlock": true
+	"promoBlock": false
 }
