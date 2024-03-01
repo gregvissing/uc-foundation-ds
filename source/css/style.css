@@ -1033,11 +1033,19 @@ img {
     margin-top: 1em;
 }
 
+.featured-section {
+    height: 75vh;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-attachment: fixed !important;
+    position: relative;
+}
+
 .featured-section .featured-section-content {
     position: relative;
     max-width: 75vw;
     padding: 4% 2% 3%;
-    margin: -25em auto 0em;
+    margin: 0em auto 0em;
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.6);
@@ -1048,6 +1056,7 @@ img {
     background-position: center center;
     background-repeat: no-repeat;
     clear: both;
+    transform: translateY(200px);
 }
 
 .featured-section:after {
