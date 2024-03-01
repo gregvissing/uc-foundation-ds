@@ -7,14 +7,14 @@
 
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" href="../../css/style.css?1709306419274" media="all" />
-		<link rel="stylesheet" href="../../css/pattern-scaffolding.css?1709306419274" media="all" />
+		<link rel="stylesheet" href="../../css/style.css?1709314179942" media="all" />
+		<link rel="stylesheet" href="../../css/pattern-scaffolding.css?1709314179942" media="all" />
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1709306419274" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1709314179942" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -275,6 +275,137 @@
 			</script>
 		
 		</div><!--end pl-c-pattern-->
+		<div id="atoms-accessibility" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/atoms-global-accessibility&#x2F;atoms-global-accessibility.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="atoms-accessibility" title="Link to Pattern">
+						Accessibility
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-atoms-accessibility" data-patternpartial="atoms-accessibility" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-atoms-accessibility">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<p>Our brand's primary colors, red and black, have been meticulously selected to meet accessibility color guidelines. As such, it's crucial to adhere to their intended use. Never use red on black or black on red, as these combinations fail to meet the necessary color contrast requirements.</p>
+<p>Using red on black or black on red not only compromises the legibility of your content but also goes against the principles of accessibility, potentially excluding individuals with visual impairments. These colors have been purposefully chosen to strike the right balance, ensuring that our brand is not only visually appealing but also inclusive for all. Please refrain from making any adjustments to these color combinations, as they are fundamental to maintaining our commitment to accessibility and brand integrity.</p>
+
+<h3>Primary Color Combinations</h3>
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th scope="col">Primary Color Background</th>
+            <th scope="col">Accessible Text Color</th>
+            <th scope="col">Don't Use</th>
+        </tr>
+        <tr>
+            <td>White (#FFFFFF)</td>
+            <td>Black (#000000, #333333*)&nbsp;<br>
+                Red (#e00122)
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+        <tr>
+            <td>Black (#000000, #333333)</td>
+            <td>White (#ffffff)</td>
+            <td>Red (#e00122)</td>
+        </tr>
+        <tr>
+            <td>Red (#e00122)</td>
+            <td>White (#ffffff)</td>
+            <td>Black (#000000, #333333)&nbsp;</td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+
+<h3>Expanded Color Combinations</h3>
+<table class="table table-striped">
+    <tbody>
+        <tr>
+            <th scope="col">Expanded Color Background</th>
+            <th scope="col">Accessible Text Color</th>
+            <th scope="col">Don't Use</th>
+        </tr>
+        <tr>
+            <td>Calhoun Maroon (#890519)</td>
+            <td>White (#ffffff)</td>
+            <td>Black (#000000)&nbsp;<br>
+                Red (#e00122)
+            </td>
+        </tr>
+        <tr>
+            <td>Steger Silver (#a7a5aa)</td>
+            <td>Black (#000000)&nbsp;</td>
+            <td>White (#ffffff)&nbsp;<br>
+                Red (#e00122)
+            </td>
+        </tr>
+        <tr>
+            <td>Main Street Mist&nbsp;(#e0dfe3)</td>
+            <td>Black (#000000, #333333)</td>
+            <td>White (#ffffff)&nbsp;<br>
+                Red (#e00122)
+            </td>
+        </tr>
+        <tr>
+            <td>Bearcats Black (#333333)</td>
+            <td>White (#ffffff)</td>
+            <td>Black (#000000)&nbsp;<br>
+                Red (#e00122)
+            </td>
+        </tr>
+        <tr>
+            <td>Gettler Gold (#d1b179)</td>
+            <td>Black (#000000)</td>
+            <td>White (#ffffff)&nbsp;<br>
+                Red (#e00122)
+            </td>
+        </tr>
+        <tr>
+            <td>Tangeman Tan (#eadbc1)</td>
+            <td>Black (#000000, #333333)&nbsp;</td>
+            <td>White (#ffffff)&nbsp;<br>
+                Red (#e00122)
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<hr />
+
+<p><b>Note:</b> As a rule, we use Bearcats black as a primary color for text on a white field for digital and web. This is to reduce eye strain for our visitors, as it is a web best practice to avoid using pure black on pure white for copy.</p>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-atoms-accessibility" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"atoms","patternSubgroup":"global"},"patternExtension":"hbs","patternName":"Accessibility","patternPartial":"atoms-accessibility","patternState":"","patternEngineName":"handlebars","extraOutput":{"order":2}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
 		<div id="atoms-font-families" class="pl-c-pattern">
 		
 			<div class="pl-c-pattern__header">
@@ -371,10 +502,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1709306419274">
+<script id="pl-js-polyfill-insert-1709314179942">
   (function() {
     if (self != top) {
-      var cb = '1709306419274';
+      var cb = '1709314179942';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -387,7 +518,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1709306419274" nomodule>
+<script id="pl-js-insert-1709314179942" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
