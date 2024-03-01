@@ -32,6 +32,6 @@
     }  
   ],
   "meta": {
-    "description": "To add to these items, use Sass variables that start with <code>$color-brand-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
+    "description": "Our brand's color palette goes beyond the basics with a selection of extended colors, each with its unique character. These colors, including Calhoun Maroon, Steger Silver, Main Street Mist, Bearcats Black, Gettler Gold, and Tangeman Tan, are primarily designed for digital and print data visualization. However, it's important to note that they should not be integrated into master slides or themes in digital formats.<br><br>Colors from the Expanded color palette may not be used as a text color. These extended colors are like the spices in a well-balanced dish – they should be used sparingly to add tasteful accents, whether it's in data visualization or to provide a touch of flair. They are the supporting cast, never stealing the spotlight from our primary red and black hues. Remember, accessible color combinations are precise, so use these extended colors wisely to maintain the integrity of our brand's identity."
   }
 }

@@ -9,9 +9,14 @@
       "name": "color-brand-black",
       "value": "#000000",
       "comment": ""
+    },
+    {
+      "name": "color-brand-white",
+      "value": "#ffffff",
+      "comment": ""
     }  
   ],
   "meta": {
-    "description": "To add to these items, use Sass variables that start with <code>$color-brand-</code> in <code>./source/css/scss/abstracts/_variables.scss</code>"
+    "description": "The University of Cincinnati's primary color palette is built upon the dynamic duo of red and black. These colors are the lifeblood of our brand, making them the first choice for any digital or print design. We encourage you to embrace their boldness and vibrancy, allowing them to dominate your creative work. Remember, these primary colors should always take precedence over any secondary or expanded color choices, ensuring a consistent and powerful representation of the UC brand."
   }
 }

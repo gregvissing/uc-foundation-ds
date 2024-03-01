@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html class="" lang="en">
+	<head>
+		<title>University of Cincinnati</title>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
+		
+		<link rel="stylesheet" href="../../css/style.css?1709306419274" media="all" />
+		<link rel="stylesheet" href="../../css/pattern-scaffolding.css?1709306419274" media="all" />
+
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+		<!--<Deject>-->
+		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
+		
+		<!-- End Pattern Lab -->
+		<!--</Deject>-->
+
+	</head>
+	<body class="">
+<div class="flow">
+    <p class="large p-1">Three columns, each with one-third width, on a <code>'.row'</code> class. Columns stack on tablet view size and below.</p>
+    <div class="row flex thirds">
+        <div class="one-third p-1">One-third width column using <code>'.one-third'</code> class</div>
+        <div class="one-third p-1" style="background: var(--color-grey);">One-third width column using <code>'.one-third'</code> class</div>
+        <div class="one-third p-1">One-third width column using <code>'.one-third'</code> class</div>
+    </div>
+
+    <p class="large p-1">Two columns, each with one-half width, on a <code>'.row'</code> class. Columns stack on mobile view size.</p>
+    <div class="row flex half-half">
+        <div class="one-half p-1">One-half width column using <code>'.one-half'</code> class</div>
+        <div class="one-half p-1" style="background: var(--color-grey);">One-half width column using <code>'.one-half'</code> class</div>
+    </div>
+
+    <p class="large p-1">Four columns, each with one-fourth width, on a <code>'.row'</code> class. Columns stack on tablet view size and below.</p>
+    <div class="row flex">
+        <div class="one-fourth p-1">One-fourth width column using <code>'.one-fourth'</code> class</div>
+        <div class="one-fourth p-1" style="background: var(--color-grey);">One-fourth width column using <code>'.one-fourth'</code> class</div>
+        <div class="one-fourth p-1">One-fourth width column using <code>'.one-fourth'</code> class</div>
+        <div class="one-fourth p-1" style="background: var(--color-grey);">One-fourth width column using <code>'.one-fourth'</code> class</div>
+    </div>
+
+    <p class="large p-1">Two columns, one with with three-fourths width and the other with one-fourth width, on a <code>'.row'</code> class.</p>
+    <div class="row flex">
+        <div class="three-fourths p-1" style="background: var(--color-grey);">Three-fourths width column using <code>'.three-fourths'</code> class</div>
+        <div class="one-fourth p-1">One-fourth width column using <code>'.one-fourth'</code> class</div>
+    </div>
+
+    <p class="large p-1">Two columns, one with with one-third width and the other with two-thirds width, on a <code>'.row'</code> class.</p>
+    <div class="row flex">
+        <div class="one-third p-1">One-third width column using <code>'.one-third'</code> class</div>
+        <div class="two-thirds p-1" style="background: var(--color-grey);">Two-thirds width column using <code>'.two-thirds'</code> class</div>
+    </div>
+</div>        <!--<Deject>-->
+        <!--DO NOT REMOVE-->
+        <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"blocks"},"patternExtension":"hbs","patternName":"Columns","patternPartial":"molecules-columns","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+</script>
+
+<script>
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"blocks"},"patternExtension":"hbs","patternName":"Columns","patternPartial":"molecules-columns","patternState":"","patternEngineName":"handlebars","extraOutput":{}};
+</script>
+
+<script>
+  /*!
+   * scriptLoader - v0.1
+   *
+   * Copyright (c) 2014 Dave Olsen, http://dmolsen.com
+   * Licensed under the MIT license
+   *
+   */
+
+  var scriptLoader = {
+
+    run: function(js,cb,target) {
+      var s  = document.getElementById(target+'-'+cb);
+      for (var i = 0; i < js.length; i++) {
+        var src = (typeof js[i] != 'string') ? js[i].src : js[i];
+        var c   = document.createElement('script');
+        c.src   = '../../'+src+'?'+cb;
+        if (typeof js[i] != 'string') {
+          if (js[i].dep !== undefined) {
+            c.onload = function(dep,cb,target) {
+              return function() {
+                scriptLoader.run(dep,cb,target);
+              }
+            }(js[i].dep,cb,target);
+          }
+        }
+        s.parentNode.insertBefore(c,s);
+      }
+    }
+
+  }
+</script>
+
+<script id="pl-js-polyfill-insert-1709306419274">
+  (function() {
+    if (self != top) {
+      var cb = '1709306419274';
+      var js = [];
+      scriptLoader.run(js,cb,'pl-js-polyfill-insert');
+    }
+  })();
+</script>
+
+
+<script type="module">
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  import('../../styleguide/js/patternlab-pattern.modern.js');
+</script>
+
+<script id="pl-js-insert-1709306419274" nomodule>
+  /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
+  !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
+
+  // always load Pattern-specific JS so UI like accordions, etc can continue to work even when viewed as a standalone HTML page
+  loadJS('../../styleguide/js/patternlab-pattern.js');
+</script>
+
+        <!--</Deject>-->
+
+    </body>
+
+</html>

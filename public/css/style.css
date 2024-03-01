@@ -1091,6 +1091,11 @@ p {
   margin-bottom: 1rem;
 }
 
+p.large {
+    font-weight: bold;
+    font-size: 1.25;
+}
+
 p.intro-text {
     font-size: 24px;
     letter-spacing: 0.3px;
@@ -2220,6 +2225,7 @@ body.modal-open {
 }
 
 .c-stacked-block__title {
+  margin-top: 30px;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-brand-red);
@@ -3429,6 +3435,27 @@ b, strong {
 
 .one-fourth {
   width: 25%;
+}
+
+@media (max-width: 768px) {
+  .flex {
+      flex-direction: column;
+  }
+  .flex.half-half {
+      flex-direction: row;
+  }
+  .three-fourths, .two-thirds, .one-half, .one-third, .one-fourth {
+      width: 100% !important;
+  }
+}
+
+@media (max-width: 600px) {
+    .flex {
+        flex-direction: column;
+    }
+    .three-fourths, .two-thirds, .one-half, .one-third, .one-fourth {
+        width: 100% !important;
+    }
 }
 
 .width-700 {
