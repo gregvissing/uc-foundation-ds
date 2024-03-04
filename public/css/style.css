@@ -3680,6 +3680,14 @@ b *, strong * {
   gap: 2em;
 }
 
+.flex.gap-3 {
+  gap: 3em;
+}
+
+.flex.gap-4 {
+  gap: 4em;
+}
+
 .imgLeft {
   margin: 0 1em 1em 0;
 }

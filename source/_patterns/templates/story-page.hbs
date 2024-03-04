@@ -61,6 +61,84 @@
                         <p style="line-height: 1.5 !important; margin: 0;">With its focus on innovation and impact, <a href="https://foundation.uc.edu/campaign/about" style="color: var(--color-text);"><strong><em>Next, <span style="color: #e00122; font-weight: inherit;">Now</span>: The Campaign for Cincinnati</em></strong></a> is where ambition meets action. At the University of Cincinnati and UC Health, we’re driven by next; thinking bolder and dreaming bigger to create the tomorrow we envision, today.<br><br>What’s <strong><em>NEXT</em></strong>, starts with you.</p>
                     </div>
                 </div>
+                <hr style="background: var(--color-brand-black);">
+                <div class="flow">
+                    <h2 class="text-center">Related stories</h2>
+                    <div class="flex flex-row flex-between gap-3 row">
+                        <div class="one-third">
+                            <a href="{{ url }}" class="c-stacked-block {{ additionalClasses }}">
+
+                                <div class="c-stacked-block__header">
+                                    {{#with stackedBlockMedia }}
+                                    <div class="c-stacked-block__media">
+                                        {{> atoms-stacked-block-image width="1200" height="800" }}
+                                    </div>
+                                    {{/ with }}
+                                    {{# with onSale }}
+                                    <span class="c-stacked-block__badge">{{ badge }}</span>
+                                    {{/ with }}
+                                </div>
+
+                                <div class="c-stacked-block__body">
+                                    <h3 class="c-stacked-block__title">{{ headline }}</h3>
+                                    {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                </div><!-- end c-stacked-block__body -->
+
+                                <div class="c-stacked-block__footer">
+                                    <a href="#" class="c-stacked-block__meta">{{ label }}</a>
+                                </div>
+                            </a><!-- end c-stacked-block -->
+                        </div>
+                        <div class="one-third">
+                            <a href="{{ url }}" class="c-stacked-block {{ additionalClasses }}">
+
+                                <div class="c-stacked-block__header">
+                                    {{#with stackedBlockMedia }}
+                                    <div class="c-stacked-block__media">
+                                        {{> atoms-stacked-block-image width="1200" height="800" }}
+                                    </div>
+                                    {{/ with }}
+                                    {{# with onSale }}
+                                    <span class="c-stacked-block__badge">{{ badge }}</span>
+                                    {{/ with }}
+                                </div>
+
+                                <div class="c-stacked-block__body">
+                                    <h3 class="c-stacked-block__title">{{ headline }}</h3>
+                                    {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                </div><!-- end c-stacked-block__body -->
+
+                                <div class="c-stacked-block__footer">
+                                    <a href="#" class="c-stacked-block__meta">{{ label }}</a>
+                                </div>
+                            </a><!-- end c-stacked-block -->
+                        </div>
+                        <div class="one-third">
+                            <a href="{{ url }}" class="c-stacked-block {{ additionalClasses }}">
+
+                                <div class="c-stacked-block__header">
+                                    {{#with stackedBlockMedia }}
+                                    <div class="c-stacked-block__media">
+                                        {{> atoms-stacked-block-image width="1200" height="800" }}
+                                    </div>
+                                    {{/ with }}
+                                    {{# with onSale }}
+                                    <span class="c-stacked-block__badge">{{ badge }}</span>
+                                    {{/ with }}
+                                </div>
+
+                                <div class="c-stacked-block__body">
+                                    <h3 class="c-stacked-block__title">{{ headline }}</h3>
+                                    {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                </div><!-- end c-stacked-block__body -->
+
+                                <div class="c-stacked-block__footer">
+                                    <a href="#" class="c-stacked-block__meta">{{ label }}</a>
+                                </div>
+                            </a><!-- end c-stacked-block -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
