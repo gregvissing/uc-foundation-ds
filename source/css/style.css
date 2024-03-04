@@ -4245,7 +4245,9 @@ b *, strong * {
     width: 75px;
 } 
 
-/* STANDARD DONATION FORM */
+/*------------------------------------*\
+    #STANDARD DONATION FORM
+\*------------------------------------*/
 
 div[id*="_UpdatePanel"] {
     padding: 10px;
@@ -4549,6 +4551,55 @@ span[id*="_lblAdditInformation"] {
     td[id*="_Recurrence_tdFrequency"] > div {
         width: 100% !important;
     }
+}
+
+/*------------------------------------*\
+    #REGISTRATION FORM
+\*------------------------------------*/
+
+div[id*="_UpdatePanel"] > .EventTable {
+    width: 100%;
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th {
+    padding: 5px !important;
+    height: auto !important;
+    background-color: #f0f0f0;
+    color: var(--color-brand-black);
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th.EventProgressCell {
+    background-color: var(--color-brand-black);
+    color: var(--color-white);    
+}
+
+.EventSectionHeader > * {
+    font-weight: bold;
+}
+
+.EventItemsSelectionGrid {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    border: 1px solid var(--color-grey);
+}
+
+.EventItemsSelectionGrid .BBFormTable.EventItemsTable > tbody > tr > td {
+    padding: 1rem;
+}
+
+table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
+    width: 100%;
+    display: block;
+}
+
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellQuantity {
+    width: 75px;
 }
 
 /*------------------------------------*\
