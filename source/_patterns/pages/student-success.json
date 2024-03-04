@@ -17,13 +17,13 @@
         "heading": "Together, we will create:",
         "items": [
             {
-                "text": "<p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Giving_Hands.png' style='float: left; margin: 0 0.5em 0.5em 0; width: 75px;'>An <span class='bold'>opportunity</span> for every student who wants to earn a UC degree, free from financial barriers.</p>"
+                "text": "<div class='flex'><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Giving_Hands.png' style='width: 75px; height: 75px;'><p>An <span class='bold'>opportunity</span> for every student who wants to earn a UC degree, free from financial barriers.</p></div>"
             },
             {
-                "text": "<p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Diversity_Inclusion_1.png' style='float: left; margin: 0 0.5em 0.5em 0; width: 75px;'>A <span class='bold'>community</span> where each Bearcat feels like they belong&mdash;and has the tools to thrive.</p>"
+                "text": "<div class='flex'><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Diversity_Inclusion_1.png' style='width: 75px; height: 75px;'><p>A <span class='bold'>community</span> where each Bearcat feels like they belong&mdash;and has the tools to thrive.</p></div>"
             },
             {
-                "text": "<p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Inclusion_Organizational_1.png' style='float: left; margin: 0 0.5em 0.5em 0; width: 75px;'>A <span class='bold'>path to success</span> that sets UC apart as the launching place for tomorrow's leaders and change-makers.</p>"
+                "text": "<div class='flex'><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Inclusion_Organizational_1.png' style='width: 75px; height: 75px;'><p>A <span class='bold'>path to success</span> that sets UC apart as the launching place for tomorrow's leaders and change-makers.</p></div>"
             }
         ]
     },

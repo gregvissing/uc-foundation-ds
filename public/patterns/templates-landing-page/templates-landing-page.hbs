@@ -17,7 +17,7 @@
 			
 			<div class="flex">
 				{{#each togetherCreate.items }}
-					<p>{{{ text }}}</p>
+					{{{ text }}}
 				{{/ each }}
 			</div>
 		</div>
@@ -27,7 +27,11 @@
 		<h2>{{{ priorities.heading }}}</h2>
 		{{> molecules-tabs }}
 
-		<p style="color: red !important; text-align: center;">VIDEO PLACEHOLDER HERE</p>
+		<div class="text-center">
+			<iframe class="youtube-video" width="560" height="315" src="https://www.youtube.com/embed/NpEaa2P7qZI?si=_WYX7Yo_L5pEb3HF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+		</div>
+		
+		{{!-- <p style="color: red !important; text-align: center;">VIDEO PLACEHOLDER HERE</p> --}}
 
 		{{!-- <h2>{{{ ucToday.heading }}}</h2> --}}
 		{{!-- <div class="largest-class flex">
