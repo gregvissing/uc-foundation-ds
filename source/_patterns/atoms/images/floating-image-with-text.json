@@ -2,5 +2,9 @@
 	"src": "https://placehold.co/200x133",
 	"caption": "Caption placeholder text here.",
 	"width": "200",
-	"height": "200"
+	"height": "200",
+	"portraitsrc": "https://placehold.co/133x200",
+	"portraitwidth": "133",
+	"portraitheight": "200",
+	"figurewidth": "133px"
 }
