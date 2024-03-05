@@ -7,14 +7,14 @@
 
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" href="../../css/style.css?1709653147980" media="all" />
-		<link rel="stylesheet" href="../../css/pattern-scaffolding.css?1709653147980" media="all" />
+		<link rel="stylesheet" href="../../css/style.css?1709669524550" media="all" />
+		<link rel="stylesheet" href="../../css/pattern-scaffolding.css?1709669524550" media="all" />
 
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.13.2/themes/base/jquery-ui.min.css" integrity="sha512-ELV+xyi8IhEApPS/pSj66+Jiw+sOT1Mqkzlh8ExXihe4zfqbWkxPRi8wptXIO9g73FSlhmquFlUOuMSoXz5IRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1709653147980" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1709669524550" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -369,13 +369,37 @@
 			<div class="pl-js-pattern-example">
 			<p class="text-center">
     <button type="button" class="btn-link" data-modal-open="modal_1">
-        Launch Modal
+        Launch Medium Modal
+    </button>
+</p>
+
+<p class="text-center">
+    <button type="button" class="btn-link" data-modal-open="modal_2">
+        Launch Large Modal
     </button>
 </p>
 
 
 <!-- dialog markup -->
 <div id="modal_1" data-modal>
+    <div data-modal-document>
+        <h2>Modal Heading</h2>
+        <div class="flex gap-1">
+			<figure class="image floating right" style="width: 200px">
+				<img src="https://placehold.co/200x133" alt="Alt text goes here" width="200" height="133" class="c-stacked-block__img" />
+			<figcaption class="caption">Caption text</figcaption></figure>
+			<div class="content flow">
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis felis in augue ultrices convallis. Etiam a lorem vitae mauris sollicitudin pretium quis ac lorem.</p>
+				<p>Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam semper sem a tellus aliquam, sit amet ullamcorper elit consequat. Morbi a nisl dolor.</p>
+				<p>Nulla in nunc id lorem porttitor posuere eu in mauris. Morbi aliquam ligula et consectetur pretium. Proin sollicitudin dolor maximus felis mollis dictum.</p>
+			</div>
+        </div>
+    </div>
+</div>
+<!-- end dialog markup -->
+
+<!-- dialog markup -->
+<div id="modal_2" class="large" data-modal>
     <div data-modal-document>
         <h2>Modal Heading</h2>
         <div class="flex gap-1">
@@ -2759,10 +2783,10 @@ window.addEventListener("hashchange", function( e ) {
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1709653147980">
+<script id="pl-js-polyfill-insert-1709669524550">
   (function() {
     if (self != top) {
-      var cb = '1709653147980';
+      var cb = '1709669524550';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -2775,7 +2799,7 @@ window.addEventListener("hashchange", function( e ) {
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1709653147980" nomodule>
+<script id="pl-js-insert-1709669524550" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
