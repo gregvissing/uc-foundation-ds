@@ -4967,6 +4967,39 @@ table[id*="Wizard1_dgAttendeesSummary2_dgEventTickets2_0"] td {
 }
 
 @media (max-width: 600px) {
+    /* table[id*="_Wizard1"] .w100p > tbody > tr:nth-child(2) > td:first-child  {
+        display: none;
+    } */
+
+    table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody {
+        display: flex;
+        flex-direction: row;
+    }
+
+    table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr:last-child > td {
+        text-align: right;
+    }
+
+    table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr > td {
+        display: block;
+        width: 100% !important;
+    }
+
+    .EventAttendeesCurrent .w100p > tbody > tr:nth-child(2) > td:first-child {
+        display: none !important;
+    }
+
+    .EventTicketsHeaderCell.taRight {
+        text-align: left;
+    }
+
+
     .BBFormTable.DonationCaptureFormTable.pnlDonor tr {
         position: relative;
     }
