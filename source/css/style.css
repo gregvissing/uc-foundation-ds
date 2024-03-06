@@ -1512,9 +1512,9 @@ tr {
 /**
  * Table Cell
  */
-.c-table__cell {
+/* .c-table__cell { */
 	/* padding: 1.6rem 0.8rem; */
-}
+/* } */
 
 /**
  * Table Footer Cell
@@ -2027,7 +2027,7 @@ nav .button-primary a,
   background-color: var(--color-brand-red);
   text-decoration: none;
   margin: 5px;
-  padding: 7px 28px 7px 32px;
+  padding: 7px 32px;
   box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   border-width: 2px !important;
@@ -2042,8 +2042,8 @@ nav .button-primary a,
 }
 
 .btn-link:hover {
-  background-color: #B8011C !important;
-  border-color: #B8011C !important;
+  background-color: var(--color-uc-dark-red) !important;
+  border-color: var(--color-uc-dark-red) !important;
   color: var(--color-white);
   outline: 0;
   text-decoration: underline;
@@ -2055,8 +2055,8 @@ button.btn-link:hover {
 }
 
 ul.nav.main > li[class*="menuItem"].button-primary > a:hover {
-  background-color: #B8011C !important;
-  border-color: #B8011C !important;
+  background-color: var(--color-uc-dark-red) !important;
+  border-color: var(--color-uc-dark-red) !important;
 }
 
 /*------------------------------------*\
@@ -4730,6 +4730,8 @@ div[id*="_UpdatePanel"] > .EventTable {
 
 .EventSectionHeader > * {
     font-weight: bold;
+    padding: 5px 0 !important;
+    display: block;
 }
 
 .EventItemsSelectionGrid {
@@ -4739,13 +4741,13 @@ div[id*="_UpdatePanel"] > .EventTable {
 }
 
 .EventItemsSelectionGrid .BBFormTable.EventItemsTable > tbody > tr > td {
-    padding: 1rem;
+    padding: 0.5rem 1rem;
 }
 
 table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 5px;
 }
 
 table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
@@ -4754,7 +4756,205 @@ table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
 }
 
 .w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellQuantity {
-    width: 75px;
+    width: 7%;
+}
+
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellQuantity select {
+  width: 100% !important;
+}
+
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellDescription *,
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellNumParticipants *,
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellPrice * {
+    line-height: 36px;
+    /* vertical-align: middle; */
+    height: 100%;
+    width: 100%;
+    display: block;
+    padding: 5px;
+}
+
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr {
+    display: flex;
+}
+
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellDescription,
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellNumParticipants,
+.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellPrice {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.BBFormTitle.EventItemTitleName {
+    font-weight: bold;
+}
+
+.BBListOddRowStyle {
+    background-color: var(--color-grey);
+}
+
+.BBFormTitle.EventItemTitleTime {
+    font-weight: bold;
+}
+
+.hdCheckoutCompleteBtn {
+    display: none;
+}
+
+/* Event Button styles */
+.BBFormSubmitButton {
+    color: var(--color-white) !important;
+    border-color: var(--color-brand-red);
+    background-color: var(--color-brand-red);
+    text-decoration: none;
+    margin: 1em 0 !important;
+    padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border-width: 2px !important;
+    border-style: solid;
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+    display: inline-block;
+    letter-spacing: 1px;
+    width: unset;
+    float: right;
+}
+
+input.BBFormSubmitButton[value="Previous"] {
+    float: left;
+}
+
+.BBFormSubmitButton:hover,
+.BBFormSubmitButton:focus {
+    background-color: var(--color-uc-dark-red) !important;
+    border-color: var(--color-uc-dark-red) !important;
+    color: var(--color-white);
+    outline: 0;
+}
+
+.taRight.EventAttendeesOverallTotal hr {
+    width: 100% !important;
+    display: block;
+    height: 2px !important;
+}
+
+.EventTicketsHeaderCell.taRight,
+.taRight.EventTicketsBodyCell {
+    text-align: right;
+}
+
+span[id*="_Wizard1_dgAttendeesSummary_lblEventTotal"] {
+    float: right;
+    padding: 5px;
+}
+
+.EventItemRegistrantsEventName {
+    background-color: var(--color-grey);
+    font-style: italic;
+    font-weight: bold;
+    text-align: left;
+    padding: 5px !important;
+    color: var(--color-brand-black);
+}
+
+.EventItemRegistrantsHeader {
+    background-color: transparent;
+    text-align: left;
+    font-weight: bold;
+    padding: 10px 10px 10px 0 !important;
+    border-bottom: 1px solid var(--color-grey);
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle {
+    margin-top: 0.5rem;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle select,
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle label {
+    margin-top: 1rem !important;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle .BBFieldCaption label {
+    margin: 0 !important;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] .wsNowrap.EventItemRegistrantControlCellName label,
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] .BBFieldCaption label {
+    display: block;
+    width: 100% !important;
+    margin-bottom: 1rem !important;
+    height: 46px !important;
+    line-height: 46px !important;
+    font-weight: bold;
+}
+
+img[id*="Wizard1_dgAttendeesSummary_imgCurrent_0"] {
+    display: inline-block;
+}
+
+/* Warning styles */
+.BBFormValidatorSummary {
+    background-color: #f8d7da;
+    color: var(--color-uc-dark-red);
+    text-align: left;
+    font-weight: bold;
+    margin: 10px 0 !important;
+    padding: 1rem !important;
+    border-radius: 10px;
+}
+
+.BBFormValidatorSummary ul {
+    padding-left: 1.25rem;
+}
+
+.EventAttendeesGrid {
+    vertical-align: top;
+    background-color: var(--color-grey);
+    border: 1px solid var(--color-bearcats-black);
+    margin-bottom: 10px !important;
+}
+
+.EventAttendeesGrid .EventTicketsHeaderCell {
+    font-weight: bold;
+}
+
+table[id*="Wizard1_dgAttendeesSummary_dgEventTickets_0"] td {
+    padding: 5px;
+}
+
+.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker {
+    color: var(--color-uc-dark-red);
+    line-height: 46px;
+    padding: 0 5px;
+}
+
+.BBListingHeading.DonationCaptureListingHeading {
+    background-color: var(--color-brand-black) !important;
+}
+
+.BBFieldCaption.DonationCaptureFieldCaption {
+    background-color: var(--color-grey);
+}
+
+.BBListingHeading.DonationCaptureListingHeading span {
+    color: var(--color-white) !important;
+    letter-spacing: 1px;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
+.BBFormTable.DonationCaptureFormTable.pnlDonor .BBFieldCaption.DonationCaptureFieldCaption > * {
+    display: block;
+    height: 100%;
+    line-height: 46px;
+    padding: 0 5px;
 }
 
 /*------------------------------------*\
