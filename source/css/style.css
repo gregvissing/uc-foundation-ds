@@ -4849,7 +4849,8 @@ input.BBFormSubmitButton[value="Previous"] {
     text-align: right;
 }
 
-span[id*="_Wizard1_dgAttendeesSummary_lblEventTotal"] {
+span[id*="_Wizard1_dgAttendeesSummary_lblEventTotal"],
+span[id*="_Wizard1_dgAttendeesSummary2_lblEventTotal"] {
     float: right;
     padding: 5px;
 }
@@ -4924,7 +4925,8 @@ img[id*="Wizard1_dgAttendeesSummary_imgCurrent_0"] {
     font-weight: bold;
 }
 
-table[id*="Wizard1_dgAttendeesSummary_dgEventTickets_0"] td {
+table[id*="Wizard1_dgAttendeesSummary_dgEventTickets_0"] td,
+table[id*="Wizard1_dgAttendeesSummary2_dgEventTickets2_0"] td {
     padding: 5px;
 }
 
@@ -4955,6 +4957,22 @@ table[id*="Wizard1_dgAttendeesSummary_dgEventTickets_0"] td {
     height: 100%;
     line-height: 46px;
     padding: 0 5px;
+    margin: 5px 0;
+}
+
+.BBFieldControlCell.DonationCaptureFieldControlCell select,
+.BBFieldControlCell.DonationCaptureFieldControlCell input,
+.BBFieldControlCell.DonationCaptureFieldControlCell textarea {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.BBFieldControlCell.DonationCaptureFieldControlCell textarea {
+    display: block;
+}
+
+.BBFormTable.DonationCaptureFormTable.pnlDonor {
+    border: 1px solid var(--color-grey);
 }
 
 /*------------------------------------*\
