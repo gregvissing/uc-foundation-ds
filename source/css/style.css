@@ -4897,6 +4897,12 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] .BBF
 
 img[id*="Wizard1_dgAttendeesSummary_imgCurrent_0"] {
     display: inline-block;
+    margin: 20px 5px 0;
+}
+
+.taLeft.vaTop.SummaryGridEventTitle span {
+    font-size: 1.75em !important;
+    font-weight: bold;
 }
 
 /* Warning styles */
@@ -4958,6 +4964,27 @@ table[id*="Wizard1_dgAttendeesSummary2_dgEventTickets2_0"] td {
     line-height: 46px;
     padding: 0 5px;
     margin: 5px 0;
+}
+
+@media (max-width: 600px) {
+    .BBFormTable.DonationCaptureFormTable.pnlDonor tr {
+        position: relative;
+    }
+
+    .BBFormTable.DonationCaptureFormTable.pnlDonor tr:not(:first-child) {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .BBFormTable.DonationCaptureFormTable.pnlDonor tr .BBFieldCaption.DonationCaptureFieldCaption {
+        padding-left: 1.25em;
+    }
+
+    .BBFormTable.DonationCaptureFormTable.pnlDonor tr .BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker {
+        position: absolute;
+        height: 56px;
+        line-height: 56px;
+    }
 }
 
 .BBFieldControlCell.DonationCaptureFieldControlCell select,
