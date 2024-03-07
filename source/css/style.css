@@ -4745,6 +4745,7 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
 
 .w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellQuantity {
     width: 7%;
+    min-width: 50px;
 }
 
 .w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellQuantity select {
@@ -4755,7 +4756,6 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
 .w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellNumParticipants *,
 .w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellPrice * {
     line-height: 36px;
-    /* vertical-align: middle; */
     height: 100%;
     width: 100%;
     display: block;
@@ -4783,7 +4783,7 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
 }
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr:first-child {
-    padding: 10px 0 !important;
+    padding: 5px 0 !important;
     background-color: var(--color-white);
     display: block;
     width: 100%;
@@ -4884,11 +4884,6 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.B
     margin-top: 0.5rem;
 }
 
-/* table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle select,
-table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle label {
-    margin-top: 1rem !important;
-} */
-
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle .BBFieldCaption label {
     margin: 0 !important;
 }
@@ -4908,7 +4903,7 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] {
 }
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] tr[class*="RowStyle"] table.w100p td {
-    padding: 0.5em !important;
+    padding: 5px 0.5em !important;
 }
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0"] > tbody > tr.BBListOddRowStyle {
@@ -4991,20 +4986,60 @@ table[id*="Wizard1_dgAttendeesSummary2_dgEventTickets2_0"] td {
     margin: 5px 0;
 }
 
+.w100p {
+    width: 100%;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListEvenRowStyle .BBListEvenRowStyle .w100p > tbody > tr, 
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListEvenRowStyle .BBListOddRowStyle .w100p > tbody > tr, 
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListOddRowStyle .BBListEvenRowStyle .w100p > tbody > tr, 
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListOddRowStyle .BBListOddRowStyle .w100p > tbody > tr {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (max-width: 600px) {
+    div[id*="_UpdatePanel"] {
+        width: 100%;
+    }
+
+    table[id$="_Wizard1"] > tbody > tr:first-child > td > table.w100p > tbody > tr:last-child > td:first-child {
+        display: none !important;
+        width: 0px !important;
+    }
+
+    tr[id*="_trProgress"] table[id*="_tblProgress"] tbody tr {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    tr[id*="_trProgress"] table[id*="_tblProgress"] tbody tr th {
+        width: 50%;  
+    }
+
     /* table[id*="_Wizard1"] .w100p > tbody > tr:nth-child(2) > td:first-child  {
         display: none;
     } */
 
     table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
     }
 
     table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr {
-        width: 50%;
+        width: 100%;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr:nth-child(odd) {
+        background-color: var(--color-white);
+    }
+
+    table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr > td {
+        width: 33% !important;
+        text-align: left !important;
     }
 
     table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr:last-child > td {
@@ -5013,17 +5048,33 @@ table[id*="Wizard1_dgAttendeesSummary2_dgEventTickets2_0"] td {
 
     table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_0"] > tbody > tr > td {
         display: block;
-        width: 100% !important;
+        /* width: 100% !important; */
     }
 
-    .EventAttendeesCurrent .w100p > tbody > tr:nth-child(2) > td:first-child {
+    .EventAttendeesCurrent .w100p > tbody > tr:nth-child(2) > td:not(.EventTicketsBodyCell):first-child,
+    .EventAttendeesCurrent .w100p > tbody > tr:nth-child(2) > td:not(.EventTicketsBodyCell):nth-child(2) {
         display: none !important;
+    }
+
+    .EventAttendeesCurrent table.w100p > tbody > tr {
+        display: flex;
     }
 
     .EventTicketsHeaderCell.taRight {
         text-align: left;
     }
 
+    table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListEvenRowStyle .BBListEvenRowStyle .w100p > tbody > tr, 
+    table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListEvenRowStyle .BBListOddRowStyle .w100p > tbody > tr, 
+    table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListOddRowStyle .BBListEvenRowStyle .w100p > tbody > tr,
+    table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListOddRowStyle .BBListOddRowStyle .w100p > tbody > tr {
+        display: flex;
+        flex-direction: column;
+    }
+
+    table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] tr[class*="RowStyle"] table.w100p td {
+        padding: 5px 0.25em !important;
+    }
 
     .BBFormTable.DonationCaptureFormTable.pnlDonor tr {
         position: relative;
