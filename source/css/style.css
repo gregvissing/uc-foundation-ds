@@ -4750,7 +4750,7 @@ table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody {
     gap: 5px;
 }
 
-table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
+table[id$="Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
     width: 100%;
     display: block;
 }
@@ -4792,6 +4792,22 @@ table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody > tr > td {
 
 .BBListOddRowStyle {
     background-color: var(--color-grey);
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr:first-child {
+    padding: 10px 0 !important;
+    background-color: var(--color-white);
+    display: block;
+    width: 100%;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr:first-child td {
+  display: block;
+  width: 100%;
+}
+
+.BBListOddRowStyle .BBListEvenRowStyle {
+    background-color: var(--color-white);
 }
 
 .BBFormTitle.EventItemTitleTime {
@@ -4856,20 +4872,24 @@ span[id*="_Wizard1_dgAttendeesSummary2_lblEventTotal"] {
 }
 
 .EventItemRegistrantsEventName {
-    background-color: var(--color-grey);
+    background-color: var(--color-brand-black);
     font-style: italic;
     font-weight: bold;
     text-align: left;
     padding: 5px !important;
-    color: var(--color-brand-black);
+    color: var(--color-white);
 }
 
 .EventItemRegistrantsHeader {
-    background-color: transparent;
+    background-color: var(--color-brand-black);
+    color: var(--color-white);
     text-align: left;
+    font-size: 1.25em;
     font-weight: bold;
     padding: 10px !important;
     border-bottom: 1px solid var(--color-grey);
+    font-family: "Jost", sans-serif;
+    letter-spacing: 1px;
 }
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle {
@@ -4901,6 +4921,15 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] {
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] tr[class*="RowStyle"] table.w100p td {
     padding: 0.5em !important;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0"] > tbody > tr.BBListOddRowStyle {
+    background-color: transparent;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListEvenRowStyle .BBListOddRowStyle,
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr.BBListOddRowStyle .BBListOddRowStyle {
+    background-color: var(--color-grey);
 }
 
 img[id*="Wizard1_dgAttendeesSummary_imgCurrent_0"] {
