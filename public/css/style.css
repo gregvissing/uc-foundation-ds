@@ -980,9 +980,9 @@ select.BBFormSelectList.DonationSelectList {
     background: var(--color-white);
     color: var(--color-text);
     position: relative;
-    -webkit-appearance: none;
+    /* -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none; */
 }
 
 select:after,
@@ -4868,7 +4868,7 @@ span[id*="_Wizard1_dgAttendeesSummary2_lblEventTotal"] {
     background-color: transparent;
     text-align: left;
     font-weight: bold;
-    padding: 10px 10px 10px 0 !important;
+    padding: 10px !important;
     border-bottom: 1px solid var(--color-grey);
 }
 
@@ -4876,23 +4876,31 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.B
     margin-top: 0.5rem;
 }
 
-table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle select,
+/* table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle select,
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle label {
     margin-top: 1rem !important;
-}
+} */
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] tr.BBListEvenRowStyle .BBFieldCaption label {
     margin: 0 !important;
 }
 
-table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] .wsNowrap.EventItemRegistrantControlCellName label,
-table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList_0"] .BBFieldCaption label {
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] .wsNowrap.EventItemRegistrantControlCellName label,
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] .BBFieldCaption label  {
     display: block;
     width: 100% !important;
-    margin-bottom: 1rem !important;
+    /* margin-bottom: 1rem !important; */
     height: 46px !important;
     line-height: 46px !important;
     font-weight: bold;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] {
+    margin-bottom: 1rem;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"] tr[class*="RowStyle"] table.w100p td {
+    padding: 0.5em !important;
 }
 
 img[id*="Wizard1_dgAttendeesSummary_imgCurrent_0"] {
