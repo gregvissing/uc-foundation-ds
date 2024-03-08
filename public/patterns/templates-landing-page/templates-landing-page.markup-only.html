@@ -854,7 +854,7 @@
 </main>
 <footer class="c-footer" role="contentinfo">
 
-	<div class="l-container flex flex-row p-2">
+	<div class="l-container flex flex-row p-1 relative">
 		<div class="one-third flow">
 			<p class="white bold uppercase list-title">Contact Us</p>
 			<ul class="navbar-list social-media flex gap-1 menu" role="list">
@@ -926,7 +926,7 @@
 			</ul>
 		</div>
 	</div>
-	<div class="c-footer__copyright text-center">Copyright Information © 2024 University of Cincinnati</div>
+	<div class="c-footer__copyright text-center relative">Copyright Information © 2024 University of Cincinnati</div>
 
 		 --}}
 
@@ -934,3 +934,87 @@
 
 </footer><!--end c-footer-->
 <script src="https://kit.fontawesome.com/6d9501c0d8.js" crossorigin="anonymous"></script>
+<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+<script src="https://player.vimeo.com/api/player.js"></script>
+
+<script>
+
+// HERO video scripts
+// Video Play/Pause functionality
+function initVimeoVideo() {
+	var iframe = $("#player1")[0];
+	var player = new Vimeo.Player(iframe);
+
+	// Close using the close icon
+	$(".pause").on("click", function (e) {
+		e.preventDefault();
+		var method = "pause";
+		player[method]();
+		$(".play, .pause").toggleClass("disabled");
+	});
+
+	// Close using the modal
+	$(".play").on("click", function (e) {
+		e.preventDefault();
+		var method = "play";
+		player[method]();
+		$(".play, .pause").toggleClass("disabled");
+	});
+}
+
+if ( $(".hero").length ) {
+	initVimeoVideo();
+}  
+
+// Gallery - Pinned image 
+if ( $(".gallery").length ) {
+	const details = gsap.utils.toArray(".desktopContentSection:not(:first-child)");
+	const photos = gsap.utils.toArray(".desktopPhoto:not(:first-child)");
+
+	gsap.set(photos, { yPercent: 101 });
+
+	const allPhotos = gsap.utils.toArray(".desktopPhoto");
+
+	// create
+	let mm = gsap.matchMedia();
+
+	// add a media query. When it matches, the associated function will run
+	mm.add("(min-width: 600px)", () => {
+		// this setup code only runs when viewport is at least 600px wide
+		// console.log("desktop");
+
+		ScrollTrigger.create({
+			trigger: ".gallery",
+			start: "top top",
+			end: "bottom bottom",
+			pin: ".right"
+		});
+
+		//create scrolltrigger for each details section
+		//trigger photo animation when headline of each details section
+		//reaches 80% of window height
+		details.forEach((detail, index) => {
+			let headline = detail.querySelector("h2");
+			let animation = gsap
+				.timeline()
+				.to(photos[index], { yPercent: 0 })
+				.set(allPhotos[index], { autoAlpha: 0 });
+			ScrollTrigger.create({
+				trigger: headline,
+				start: "top 80%",
+				end: "top 50%",
+				animation: animation,
+				scrub: true,
+				markers: false
+			});
+		});
+		return () => {
+			// optional
+			// custom cleanup code here (runs when it STOPS matching)
+			// console.log("mobile");
+		};
+	});
+}
+
+</script>

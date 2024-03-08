@@ -1111,9 +1111,10 @@ img {
 /**
  * Paragraph base styles
  */
-p {
+
+/* p {
   margin-bottom: 1rem;
-}
+} */
 
 p.large {
     font-weight: bold;
@@ -1431,6 +1432,197 @@ pre[class*=language-] {
     margin: auto;
     z-index: -1;
     background-color: var(--color-brand-red);
+}
+
+/*------------------------------------*\
+    #HERO SECTION
+\*------------------------------------*/
+
+/* .hero {
+    position: relative;
+} */
+
+/* .hero:before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 1;
+} */
+
+.hero .hero-content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 100%;
+    width: 1024px;
+    margin: auto;
+    z-index: 5;
+    transform: translateY(40%);
+}
+
+.hero {
+  position: relative;
+  overflow: hidden;
+  padding: 5em 0;
+}
+
+.hero * {
+  color: var(--color-white)!important;
+}
+
+.hero:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  background: rgba(0,0,0,.5);
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  z-index: 1;
+}
+
+.hero .vimeo-wrapper {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 1665px;
+  max-width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background-image: url("https://www.uc.edu/content/dam/refresh/president-62/campaigns/goetz/goetz-first-frame.jpg") !important;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hero .vimeo-wrapper iframe {
+  width: 100vw;
+  height: 56.25vw;
+  min-height: 99vh;
+  /* min-width: 177.77vh; */
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+@media only screen and(max-width: 767px) {
+  .hero .vimeo-wrapper {
+      height:calc(100vh - 40px);
+  }
+}
+
+.hero .video-control {
+    position: relative;
+    /* bottom: -4em;
+    right: 0; */
+    z-index: 1;
+}
+
+.hero .video-control button {
+    cursor: pointer;
+    border-radius: 10px !important;
+    background: rgba(255,255,255,.8)!important;
+    color: var(--color-brand-black)!important;
+    border: none;
+    padding: 7px 15px !important;
+    margin: 0 5px !important;
+    font-size: 1.25em !important;
+    font-weight: 400 !important;
+    width: 125px !important;
+    transition: all .4s ease-in-out;
+    text-transform: unset !important;
+    box-shadow: 0 1px 1px rgba(0,0,0,.075),
+        0 2px 2px rgba(0,0,0,.075),
+        0 4px 4px rgba(0,0,0,.075),
+        0 8px 8px rgba(0,0,0,.075),
+        0 16px 16px rgba(0,0,0,.075);
+}
+
+.hero .video-control button.disabled {
+  cursor: none;
+  display: none;
+}
+
+.hero .video-control button i:before {
+  font-size:1em;
+  color: var(--color-brand-black);
+}
+
+.hero .video-control button:hover {
+  background:white;
+  box-shadow: none;
+}
+
+.hero h1,.hero h2,.hero p {
+  color: var(--color-white);
+}
+
+.hero h1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0 !important;
+}
+
+.hero h1 span {
+  text-align: center;
+  display: block;
+  font-family: "Montserrat",sans-serif;
+  text-transform: uppercase;
+  line-height: 1;
+  padding: 10px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 span.large {
+  font-size: 1.75em;
+}
+
+.hero h1 span.large:before {
+  right:-10%;
+}
+
+@media(max-width: 700px) {
+  .hero h1 span.large {
+      font-size:1.25em !important;
+  }
+
+  .hero h2 {
+      text-align: center !important;
+      font-size: 1rem !important;
+  }
+}
+
+.lockup-bg:before {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/UC-logo-lockup-bg.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 23%;
+  height: 100%;
 }
 
 /*------------------------------------*\
@@ -2579,24 +2771,31 @@ a.c-stacked-block {
  * 1) Global block at the bottom of each page that contains a navigation and other information
  */
 .c-footer {
-  padding: 2rem 0;
-  margin-top: 2rem;
-  background: rgba(0, 0, 0, 0.85);
-  position: relative;
+    padding: 2rem 0;
+    background: rgba(0, 0, 0, 0.85);
+    position: relative;
+    border-top: 5px solid var(--color-brand-red);
+    background-image: url(https://foundation.uc.edu/image/_2019-redesign/sketch-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 3em 0 1em;
+    position: relative;
+    border-top: 5px solid var(--color-brand-red);
+    max-width: 100%;
+    margin: 0 auto;
 }
 
 .c-footer:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  left: 0;
-  margin: auto;
-  background-image: url(https://foundation.uc.edu/image/_2019-redesign/sketch-bg.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: -1;
+    content: "";
+    margin-top: 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, .85);
+    position: absolute;
+    width: 100%;
+    height: 100%;
 }
 
 .c-footer .fa {
@@ -2696,8 +2895,11 @@ a.c-stacked-block {
 /**
  * Global block at the top of each page containing the navigation, logo, and other potential contents
  */
-.c-header {
+.c-header,
+header {
   position: relative;
+  z-index: 99;
+  background-color: var(--color-white);
   /* margin-bottom: 2rem; */
   /* border-bottom: 1px solid #ddd; */
 }
@@ -2706,8 +2908,8 @@ a.c-stacked-block {
  * Header inner
  */
 .c-header__inner {
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
+  /* padding-top: 0.5rem; */
+  padding-bottom: 0.25rem;
 }
 @media all and (min-width: 35em) {
   .c-header__inner {
@@ -3664,6 +3866,14 @@ b *, strong * {
   text-decoration: underline;
 }
 
+.card.whitebox {
+    padding: 2%;
+    border-radius: 10px;
+    border-color: var(--color-white);
+    background-color: var(--color-white);
+    box-shadow: 3px 3px 16px 4px rgba(0,0,0,.15);
+}
+
 .callout-card {
   background-color: #f3f3f3;
   width: 100%;
@@ -4387,6 +4597,129 @@ b *, strong * {
     width: 75px;
 } 
 
+/* ORGANISM - Animated Gallery */
+.gallery {
+  display: flex;
+  background-color: var(--color-white);
+}
+
+.gallery h2 {
+  font-size: clamp(2em,4vw,6em);
+}
+
+.gallery p {
+  font-size: clamp(1em,2vw,3em);
+  line-height: 1.4;
+  letter-spacing: .3px;
+  color: var(--color-lighterText)!important;
+  line-height: 1.6 !important;
+  font-size: 1.125em !important;
+  font-weight: 300 !important;
+  hyphens: manual;
+  margin-bottom: 0 !important;
+}
+
+.gallery .left {
+  width: 50%;
+}
+
+.gallery .right {
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery .desktopContent {
+  margin: auto;
+  width: 80%;
+}
+
+.gallery .desktopContentSection {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gallery .desktopPhotos {
+  width: 40vw;
+  height: 40vw;
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 4px 4px 4px rgba(0,0,0,.4);
+}
+
+.gallery .desktopPhoto {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.gallery .red {
+  background: url(https://foundation.uc.edu/view.image?id=8168);
+}
+
+.gallery .green {
+  background: url(https://foundation.uc.edu/view.image?id=8102);
+}
+
+.gallery .blue {
+  background: url(https://foundation.uc.edu/view.image?id=8202);
+}
+
+.gallery .pink {
+  background: url(https://foundation.uc.edu/view.image?Id=8169);
+}
+
+.gallery .mobileContent {
+  display: none;
+  width: 90vw;
+}
+
+.gallery .mobilePhoto {
+  width: 90vw;
+  height: 90vw;
+  margin-top: 5em;
+  border-radius: 6vw;
+}
+
+.gallery .mobilePhoto,.gallery .desktopPhoto {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+@media(max-width: 599px) {
+  .gallery {
+      padding-bottom:2rem;
+  }
+
+  .gallery .left {
+      display: none;
+  }
+
+  .gallery .right {
+      height: auto;
+      width: 100%;
+      align-items: center;
+  }
+
+  .gallery .desktopPhotos {
+      display: none;
+  }
+
+  .gallery .mobileContent {
+      display: block;
+  }
+
+  .gallery .mobilePhoto {
+      margin-bottom: 1em;
+  }
+}
+
 /*------------------------------------*\
     #STANDARD DONATION FORM
 \*------------------------------------*/
@@ -4703,7 +5036,26 @@ span[id*="_lblAdditInformation"] {
     max-width: 100%;
     width: 1024px;
     margin: 0 auto;
+    position: relative;
+    z-index: 99;
+    background-color: var(--color-white);
 }
+
+.QuickSearchFormTable tbody {
+    position: relative;
+    z-index: 99;
+}
+/* 
+.QuickSearchFormTable:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: -50%;
+  left: -50%;
+  background-color: var(--color-white);
+  z-index: 98;
+} */
 
 .QuickSearchFormTable label {
     padding: 0 !important;
@@ -4711,18 +5063,19 @@ span[id*="_lblAdditInformation"] {
 }
 
 .QuickSearchFormTable td:first-child {
-    height: 51px;
-    width: 80px;
+    /* height: 51px;
+    width: 80px; */
+    display: none;
 }
 
 .QuickSearchFormTable td:last-child {
     width: 150px;
 }
 
-.BBFieldCaption.QuickSearchFieldCaption {
+/* .BBFieldCaption.QuickSearchFieldCaption {
     height: 51px;
     line-height: 51px;
-}
+} */
 
 .BBFormSubmitButton.QuickSearchButton {
     margin: 0 !important;
