@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* @import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"); */
 
 /*------------------------------------*\
     #TABLE OF CONTENTS
@@ -4694,6 +4693,39 @@ span[id*="_lblAdditInformation"] {
     td[id*="_Recurrence_tdFrequency"] > div {
         width: 100% !important;
     }
+}
+
+/*------------------------------------*\
+    #SEARCH
+\*------------------------------------*/
+
+.QuickSearchFormTable {
+    max-width: 100%;
+    width: 1024px;
+    margin: 0 auto;
+}
+
+.QuickSearchFormTable label {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+.QuickSearchFormTable td:first-child {
+    height: 51px;
+    width: 80px;
+}
+
+.QuickSearchFormTable td:last-child {
+    width: 150px;
+}
+
+.BBFieldCaption.QuickSearchFieldCaption {
+    height: 51px;
+    line-height: 51px;
+}
+
+.BBFormSubmitButton.QuickSearchButton {
+    margin: 0 !important;
 }
 
 /*------------------------------------*\
