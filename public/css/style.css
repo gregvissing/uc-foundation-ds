@@ -1263,6 +1263,22 @@ p.intro-text {
     }
 }
 
+/* 
+    Icon Text block
+    Icon over text 
+ */
+
+.icon-text .flex {
+    flex-direction: column;
+}
+
+.icon-text .flex img {
+    margin: auto;
+}
+
+.icon-text .flex p {
+  padding: 10px;
+}
 
 /**
  * Blockquote base styles
@@ -2454,7 +2470,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a:hover {
 \*------------------------------------*/
 
 .youtube-video {
-    margin: 0 auto !important;
+    margin: 1em auto !important;
     display: block;
     border-radius: 16px;
     box-shadow: 0 7px 15px 5px rgba(0, 0, 0, .2);
