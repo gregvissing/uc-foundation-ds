@@ -218,13 +218,13 @@ h1.c-logo a {
     text-decoration: none;
 }
 
-footer[class*="footer"] a:not(.navbar-link):not(.email-link):not(.map-link) {
+footer a:not(.navbar-link):not(.email-link):not(.map-link) {
     color: var(--color-white) !important;
     border-bottom: 1px solid var(--color-white) !important;
 }
 
-footer[class*="footer"] a:not(.navbar-link):hover {
-  border-bottom: 2px solid var(--color-white) !important;
+footer a:not(.navbar-link):not(.email-link):not(.map-link):hover {
+    border-bottom: 2px solid var(--color-white) !important;
 }
 
 /*------------------------------------*\
@@ -1167,6 +1167,24 @@ p.intro-text {
     padding-left: 0;
 }
 
+.byline .author .email .link {
+    text-decoration: none !important;
+    border-bottom: 1px solid var(--color-brand-red) !important;
+    height: unset;
+    line-height: 1 !important;
+    padding: 0 !important;
+}
+
+.byline .author .email .link:hover {
+    border-bottom: 2px solid var(--color-brand-red) !important;
+}
+
+.byline .author .email .link > span {
+    height: unset;
+    line-height: 1 !important;
+    padding: 0 !important;
+}
+
 .byline .story .sharing a {
     margin: 0 5px;
     padding: 0;
@@ -1219,6 +1237,10 @@ p.intro-text {
     height: 8em;
     background: rgba(0, 0, 0, .25);
     z-index: 1;
+}
+
+.story h2 {
+    color: var(--color-brand-black);
 }
 
 @media (min-width: 768px) {
@@ -1744,8 +1766,8 @@ tr {
     border: 1px solid var(--color-ltGray);
     background: #eee;
     color: var(--color-text);
-    font-size: 1.15em; 
-    font-weight: 600;
+    font-size: 1.3em !important; 
+    font-weight: 600 !important;
     /* text-transform: uppercase; */
     /* letter-spacing: 1px; */
     cursor: pointer;	
@@ -1867,7 +1889,8 @@ tr {
  */
 .accordion__heading {
     border: 1px solid var(--color-brand-black);
-    font-size: inherit;
+    font-size: 1.3em !important;
+    font-weight: 600 !important;
     margin: -1px 0 0;
 }
 
@@ -1891,9 +1914,9 @@ tr {
 }
 
 .accordion__trigger:after {
-    border-left: .4em solid transparent;
-    border-right: .4em solid transparent;
-    border-top: .5em solid var(--color-brand-black);
+    border-left: .3em solid transparent;
+    border-right: .3em solid transparent;
+    border-top: .4em solid var(--color-brand-black);
     bottom: 0;
     content: '';
     height: 0;
@@ -2200,7 +2223,8 @@ button.btn-link.btn-secondary:hover {
 a.btn-link,
 button.btn-link,
 nav .button-primary a,
-.c-btn {
+.c-btn,
+.BBFormSubmitButton.DonationSubmitButton {
   color: var(--color-white) !important;
   border-color: var(--color-brand-red);
   background-color: var(--color-brand-red);
@@ -2636,7 +2660,14 @@ body.modal-open {
   font-family: "Jost", sans-serif;
   margin-bottom: 0;
   transition: color 0.15s ease-out;
+  text-decoration: none;
+  border-bottom: 1px solid var(--color-brand-red);
 }
+
+.c-stacked-block__meta:hover {
+  border-bottom: 2px solid var(--color-brand-red);
+}
+
 /* .c-stacked-block:hover .c-stacked-block__meta, .c-stacked-block:focus .c-stacked-block__meta {
   color: #ba6333;
 } */
@@ -3318,7 +3349,7 @@ ul.nav.main > li[class*="menuItem"] > a {
   display: flex;
   align-items: center;
   border: none;
-  padding: 15px;
+  padding: 15px 10px;
   text-transform: uppercase !important;
   overflow: visible;
 }
@@ -3329,6 +3360,10 @@ ul.nav.main > li[class*="menuItem"] > a {
 
 nav#site-nav li.parent button[aria-expanded="true"]> svg {
   transform: rotate(180deg);
+}
+
+nav#site-nav li.parent button > svg {
+    margin: -2px;
 }
 
 /**
@@ -4839,6 +4874,7 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:first-child > span {
     height: unset;
+    color: var(--color-white);
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) {
@@ -4887,9 +4923,16 @@ div[id*="_UpdatePanel"] input.BBFormSubmitButton.DonationSubmitButton {
 }
 
 div[id*="_UpdatePanel"] .BBListingHeading.DonationListingHeading span {
-    font-size: 2em;
+    font-size: 1.25em;
     font-weight: bold;
     font-family: "Jost", sans-serif;
+}
+
+div[id*="_UpdatePanel"] label[id$="Caption"],
+div[id*="_UpdatePanel"] span[id$="Caption"] {
+    font-family: "Jost", sans-serif;
+    line-height: 1.1;
+    font-weight: 400;
 }
 
 /* GIFT TYPE */
@@ -5000,12 +5043,6 @@ span[id*="_lblAdditInformation"] {
 
 /* STANDARD DONATION FORM BUTTONS */
 
-.BBFormSubmitButton.DonationSubmitButton {
-    background: var(--color-brand-black);
-    color: var(--color-white);
-    font-weight: 500;
-}
-
 @media (max-width: 600px) {
     table[id*="_tblAmount"] > tbody {
         flex-direction: column;  
@@ -5084,6 +5121,10 @@ span[id*="_lblAdditInformation"] {
 /*------------------------------------*\
     #REGISTRATION FORM
 \*------------------------------------*/
+
+div[id*="_UpdatePanel"] * {
+    color: var(--color-brand-black);
+}
 
 div[id*="_UpdatePanel"] > .EventTable {
     width: 100%;
@@ -5313,12 +5354,16 @@ img[id*="Wizard1_dgAttendeesSummary_imgCurrent_0"] {
 /* Warning styles */
 .BBFormValidatorSummary {
     background-color: #f8d7da;
-    color: var(--color-uc-dark-red);
+    color: var(--color-uc-dark-red) !important;
     text-align: left;
     font-weight: bold;
     margin: 10px 0 !important;
     padding: 1rem !important;
     border-radius: 10px;
+}
+
+.BBFormValidatorSummary * {
+    color: var(--color-uc-dark-red) !important;
 }
 
 .BBFormValidatorSummary ul {
