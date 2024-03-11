@@ -3040,7 +3040,7 @@ header {
   gap: 0.5em;
   align-items: center;
   cursor: pointer;
-  padding: 0.75rem 1.5rem;
+  padding: 0.75rem 1.25rem;
   color: inherit;
   font-weight: bold;
   font-size: 1em !important;
@@ -3365,7 +3365,7 @@ ul.nav.main > li[class*="menuItem"] > a {
   display: flex;
   align-items: center;
   border: none;
-  padding: 15px 10px;
+  padding: 15px 5px;
   text-transform: uppercase !important;
   overflow: visible;
 }
@@ -5110,6 +5110,15 @@ span[id*="_lblAdditInformation"] {
   z-index: 98;
 } */
 
+.QuickSearchFormTable tr {
+    display: flex;
+    align-items: center;
+}
+
+.QuickSearchTextbox {
+    padding: 0.35rem 0.5rem !important;
+}
+
 .QuickSearchFormTable label {
     padding: 0 !important;
     margin: 0 !important;
@@ -5119,6 +5128,12 @@ span[id*="_lblAdditInformation"] {
     /* height: 51px;
     width: 80px; */
     display: none;
+}
+
+.QuickSearchFormTable td:nth-child(2) {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
 }
 
 .QuickSearchFormTable td:last-child {
