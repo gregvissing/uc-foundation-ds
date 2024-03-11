@@ -2956,7 +2956,7 @@ header {
  */
 .c-header__inner {
   /* padding-top: 0.5rem; */
-  padding-bottom: 0.25rem;
+  /* padding-bottom: 0.25rem; */
 }
 @media all and (min-width: 35em) {
   .c-header__inner {
