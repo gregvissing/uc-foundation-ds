@@ -2673,6 +2673,11 @@ body.modal-open {
   color: #444;
 }
 
+.c-stacked-block .c-stacked-block__media {
+    border-radius: 25px;
+    overflow: hidden;
+}
+
 .c-stacked-block__meta {
   color: var(--color-brand-red);
   font-size: 1.2rem;
@@ -3373,7 +3378,7 @@ ul.nav.main > li[class*="menuItem"] > a {
   display: flex;
   align-items: center;
   border: none;
-  padding: 9px 12px;
+  padding: 10px 12px;
   text-transform: uppercase !important;
   overflow: visible;
 
@@ -3412,6 +3417,7 @@ nav#site-nav li.parent button[aria-expanded="true"]> svg {
 
 ul.nav.main > li[class*="menuItem"].button-primary > a {
   background-color: var(--color-brand-red) !important;
+  border: none !important;
   color: var(--color-white) !important;
 }
 
