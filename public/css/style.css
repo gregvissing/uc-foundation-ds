@@ -1536,7 +1536,8 @@ pre[class*=language-] {
   right: 0;
   left: 0;
   margin: auto;
-  width: 1665px;
+  /* width: 1665px; */
+  width: 100%;
   max-width: 100%;
   height: 100%;
   z-index: 0;
@@ -1549,7 +1550,8 @@ pre[class*=language-] {
 }
 
 .hero .vimeo-wrapper iframe {
-  width: 100vw;
+  /* width: 100vw; */
+  width: 100%;
   height: 56.25vw;
   min-height: 99vh;
   /* min-width: 177.77vh; */
@@ -2954,10 +2956,10 @@ header {
 /**
  * Header inner
  */
-.c-header__inner {
-  /* padding-top: 0.5rem; */
-  /* padding-bottom: 0.25rem; */
-}
+/* .c-header__inner {
+  padding-top: 0.5rem;
+  padding-bottom: 0.25rem;
+} */
 @media all and (min-width: 35em) {
   .c-header__inner {
     display: flex;
