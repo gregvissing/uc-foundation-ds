@@ -4959,7 +4959,7 @@ div[id*="_UpdatePanel"] .BBListingHeading.DonationListingHeading span {
 
 div[id*="_UpdatePanel"] label[id$="Caption"],
 div[id*="_UpdatePanel"] span[id$="Caption"] {
-    font-family: "Jost", sans-serif;
+    font-family: "Open Sans", sans-serif;
     line-height: 1.1;
     font-weight: 400;
 }
@@ -4968,7 +4968,7 @@ div[id*="_UpdatePanel"] span[id$="Caption"] {
 tr[id*="_trGiftType"] {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 1.5em;
     gap: 10px;
 }
 
@@ -4986,11 +4986,15 @@ table[id*="_rdoGiftType"] > tbody > tr {
     width: 50%;
 }
 
+span[id*="lblAnonymousCaption"] {
+    display: none;
+}
+
 /* RECURRENCE */
 tr[id*="_trRecurrence"] {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 1.5em;
     gap: 10px;
 }
 
@@ -5048,7 +5052,7 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
 tr[id*="_trAnonymous"] {
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
+    margin-bottom: 1.5em;
     gap: 10px;
 }
 
