@@ -6814,7 +6814,7 @@ span[id*="_Wizard1_dgAttendeesSummary2_lblEventTotal"] {
 
 .EventItemRegistrantsHeader {
     background-color: var(--color-brand-black);
-    color: var(--color-white);
+    color: var(--color-white) !important;
     text-align: left;
     font-size: 1.1em;
     font-weight: bold;
