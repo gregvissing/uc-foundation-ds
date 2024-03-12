@@ -6809,7 +6809,7 @@ span[id*="_Wizard1_dgAttendeesSummary2_lblEventTotal"] {
     font-weight: bold;
     text-align: left;
     padding: 5px !important;
-    color: var(--color-white);
+    color: var(--color-white) !important;
 }
 
 .EventItemRegistrantsHeader {
