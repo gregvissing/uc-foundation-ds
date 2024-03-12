@@ -2255,7 +2255,7 @@ nav .button-primary a,
   border-width: 2px !important;
   border-style: solid;
   font-family: Jost, sans-serif;
-  font-weight: 500;
+  /* font-weight: 500; */
   font-size: 1em;
   text-transform: uppercase;
   text-align: center;
@@ -3366,16 +3366,18 @@ ul.nav.main > li[class*="menuItem"] > a {
   background-color: var(--color-white)!important;
   color: var(--color-brand-black)!important;
   line-height: 26px !important;
-  height: 56px;
+  /* height: 56px; */
   letter-spacing: .25px;
   font-size: 1em !important;
   font-weight: bold !important;
   display: flex;
   align-items: center;
   border: none;
-  padding: 15px 5px;
+  padding: 9px 12px;
   text-transform: uppercase !important;
   overflow: visible;
+
+  border: none;
 }
 
 .parent {
@@ -3384,10 +3386,6 @@ ul.nav.main > li[class*="menuItem"] > a {
 
 nav#site-nav li.parent button[aria-expanded="true"]> svg {
   transform: rotate(180deg);
-}
-
-nav#site-nav li.parent button > svg {
-    margin: -2px;
 }
 
 /**
@@ -6763,7 +6761,7 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList"] > tbody > tr:first-child 
     border-width: 2px !important;
     border-style: solid;
     font-family: Jost, sans-serif;
-    font-weight: bold;
+    /* font-weight: bold; */
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
