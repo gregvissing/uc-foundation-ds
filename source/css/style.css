@@ -4015,6 +4015,10 @@ b *, strong * {
   text-align: right;
 }
 
+.pull-right {
+  float: right;
+}
+
 .flex {
   display: flex !important;
 }
@@ -5217,6 +5221,7 @@ fieldset.billingInformation {
     text-transform: uppercase;
     display: inline-block;
     transition: all 0.4s ease-in-out;
+    border: none !important;
 }
 
 .designation-categories #school {
@@ -5259,6 +5264,7 @@ fieldset.billingInformation {
     width: 24%;
     transition: all 0.4s ease-in-out;
     text-decoration: none;
+    border-bottom: none !important;
 }
 
 .designation-categories a.selected,
@@ -5327,7 +5333,7 @@ fieldset.billingInformation {
 }
 
 .donationForm .steps .step-button {
-    display: inline-block;
+    /* display: inline-block;
     background-color: var(--color-lighterText);
     color: #ffffff;
     border: none;
@@ -5336,7 +5342,27 @@ fieldset.billingInformation {
     cursor: pointer;
     width: 33%;
     height: 50px !important;
-    line-height: 1 !important;
+    line-height: 1 !important; */
+
+    color: var(--color-white) !important;
+    border-color: var(--color-brand-red) !important;
+    background-color: var(--color-brand-red) !important;
+    text-decoration: none;
+    margin: 0px;
+    padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border-width: 2px !important;
+    border-style: solid !important;
+    font-family: Jost, sans-serif;
+    font-weight: 500;
+    font-size: 1em !important;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+    height: unset;
+    display: inline-block;
+
 }
 
 .steps {
@@ -6289,7 +6315,9 @@ li {
 }
 
 .donationForm .steps .step-button:hover {
-    background-color: #555555;
+    /* background-color: #555555; */
+    background-color: var(--color-uc-dark-red) !important;
+    border-color: var(--color-uc-dark-red) !important;
 }
 
 #BodyId {
