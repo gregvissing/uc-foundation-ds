@@ -3482,22 +3482,6 @@ ul.nav.main > li[class*="menuItem"] > button:focus:after {
     width: 100%;
 }
 
-/* FIRST NAV ITEM EXAMPLE */
-/* .nav.flex.main.c-primary-nav__list li:first-child .nccUlMenuSub1 > li > a:hover {
-    border-bottom: 1px solid var(--color-brand-red);
-} */
-
-/* SECOND NAV ITEM EXAMPLE */
-/* .nav.flex.main.c-primary-nav__list li:nth-child(2) .nccUlMenuSub1 > li > a {
-    color: var(--color-brand-black);
-    border-bottom: 1px solid var(--color-brand-black);
-}
-
-.nav.flex.main.c-primary-nav__list li:nth-child(2) .nccUlMenuSub1 > li > a:hover {
-    border-bottom: 1px solid var(--color-brand-black);
-} */
-
-/* THIRD NAV ITEM EXAMPLE */
 .nav.flex.main.c-primary-nav__list li.parent .nccUlMenuSub1 > li > a {
   color: var(--color-brand-black);
   border-bottom: 1px solid var(--color-brand-black);
