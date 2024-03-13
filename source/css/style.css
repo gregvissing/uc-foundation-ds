@@ -647,8 +647,16 @@ ol, ul {
 }
 
 main ol, main ul {
-  padding-left: 1.5em;
+    padding-left: 1.5em;
 } 
+
+main ol li, main ul li {
+    line-height: 1.6 !important;
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 0.3px;
+    font-weight: 300;
+    font-size: 18px !important;
+}
 
 /*------------------------------------*\
     #HEADINGS
