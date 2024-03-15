@@ -140,7 +140,7 @@
         },
         {
             "label" : "Give Now",
-            "url" : "link.pages-category-on-sale",
+            "url" : "link.pages-advanced-donation-form",
             "navClass" : "button-primary"
         }        
     ]
