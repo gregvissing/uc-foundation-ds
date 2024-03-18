@@ -82,7 +82,9 @@
     --color-focus-color: var(--color-gettler-gold);
     --flow-space: 0.9rem;
     --container-width: 1024px;
+
     --button-border-radius: 4px;
+    --image-border-radius: 16px;
 }
 /**
  * Neutral Colors
@@ -890,7 +892,7 @@ input[type=radio] {
 }
 
 input[type="checkbox"] {
-  border-radius: 4px;  
+  border-radius: var(--button-border-radius);  
 }
 
 input[type="checkbox"]:checked:before {
@@ -955,7 +957,7 @@ input[type="checkbox"]:checked:after {
   right: 0;
   background: var(--color-brand-black);
   z-index: 1;
-  border-radius: 4px;  
+  border-radius: var(--button-border-radius);  
   width: 100%;
   height: 100%;
 }
@@ -1036,7 +1038,7 @@ img {
 
 .imageCaption img,
 .image img {
-    border-radius: 16px;
+    border-radius: var(--image-border-radius);
     box-shadow: 0 7px 15px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -4962,6 +4964,7 @@ div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label,
 table[id*="_rdoGiftType"] > tbody > tr label {
     padding: 5px !important;
     border: 1px solid var(--color-brand-black);
+    border-radius: var(--button-border-radius);
     cursor: pointer;
     font-weight: bold;
     line-height: 35px;
@@ -5133,7 +5136,7 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td.wsNowrap {
     padding: 0 !important;
     position: relative;
-    display: flex;
+    display: inline-flex;
     /* flex-wrap: wrap; */
     width: 100% !important;
     height: 46px;
@@ -5141,22 +5144,22 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > label {
-    width: 50% !important;
-    line-height: 38px;
+    line-height: 46px;
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > input {
-    width: 50% !important;
-    margin-right: -10px;
+    width: 200px;
+    margin-left: 10px;
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > .ui-datepicker-trigger {
     position: absolute;
-    right: 0;
+    right: 110px;
     top: 0;
     bottom: 0;
-    margin: auto;
+    margin: auto 0;
     width: 35px;
+    height: 30px;
 }
 
 /* ANONYMOUS */
@@ -5313,7 +5316,7 @@ fieldset.billingInformation {
     background-color: var(--color-white);
     background-image: none;
     border: 1px solid var(--color-ltGray);
-    border-radius: 4px;
+    border-radius: var(--button-border-radius);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
     transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
 }
