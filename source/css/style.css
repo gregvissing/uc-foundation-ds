@@ -4958,11 +4958,11 @@ table[id*="_rdoGiftType"] td * {
     text-align: center;
 }
 
-div[id*="_pnlDonationForm"] table[id*="_tblAmount"] td.vaBottom.BBFieldControlCell.DonationFieldControlCell,
+/* div[id*="_pnlDonationForm"] table[id*="_tblAmount"] td.vaBottom.BBFieldControlCell.DonationFieldControlCell,
 div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody>tr input[type="radio"],
 table[id*="_rdoGiftType"] input {
     display: none;
-}
+} */
 
 div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label,
 table[id*="_rdoGiftType"] > tbody > tr label {
@@ -5157,7 +5157,7 @@ table[id*="_rdoGiftType"] > tbody > tr > td input:checked + label {
 
 table[id*="_tblAmount"] > tbody > tr > td:first-child span input:focus ~ label:after,
 table[id*="_rdoGiftType"] > tbody > tr > td input:focus ~ label:after {
-    border-color: var(--color-brand-black);
+    border-color: var(--color-gettler-gold);
     bottom: -.25em;
     left: -.25em;
     right: -.25em;
