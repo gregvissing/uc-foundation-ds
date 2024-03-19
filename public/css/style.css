@@ -5051,6 +5051,119 @@ div[id*="_pnlDonationForm"] td input[type="radio"]:checked + label {
     transition: all 250ms ease-in-out;
 }
 
+/* RADIO BUTTON PILLS */
+table[id*="_tblAmount"],
+table[id*="_rdoGiftType"] {
+    padding: 1rem;
+}
+
+table[id*="_tblAmount"] > tbody,
+table[id*="_rdoGiftType"] > tbody {
+    gap: 0 !important;
+}
+
+table[id*="_tblAmount"] > tbody tr:not(:last-child) {
+    width: 20%;
+    padding: 10px;
+}
+
+tr[id*="_trOther"] {
+    padding: 10px 0;
+}
+
+tr[id*="_trOther"] > td {
+    width: 20% !important;
+    padding: 10px !important;
+}
+
+tr[id*="_trOther"] > td:first-child span {
+    width: 100% !important;
+}
+
+tr[id*="_trOther"] > td:last-child {
+    width: 40% !important;
+}
+
+table[id*="_tblAmount"] .vaBottom.BBFieldControlCell.DonationFieldControlCell {
+    display: none;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td {
+    padding: 0;
+}
+
+table[id*="_rdoGiftType"] > tbody > tr {
+    padding: 10px;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td,
+table[id*="_rdoGiftType"] > tbody > tr > td {
+    width: 100%;
+    display: block;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td:first-child span,
+table[id*="_rdoGiftType"] > tbody > tr > td {
+    display: inline-block;
+    position: relative;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td:first-child span input,
+table[id*="_rdoGiftType"] > tbody > tr > td input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background: none;
+    border: 2px solid;
+    height: 100%;
+    left: 0;
+    opacity: .00001;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td:first-child span label,
+table[id*="_rdoGiftType"] > tbody > tr > td label {
+    border-radius: 2em;
+    border: 2px solid transparent;
+    color: var(--color-brand-black);
+    display: block;
+    padding: 0.55em 0.75em;
+    text-align: center;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td:first-child span label:after,
+table[id*="_rdoGiftType"] > tbody > tr > td label:after {
+    border: 2px solid;
+    border-color: var(--color-brand-black);
+    border-radius: 2em;
+    bottom: 0;
+    content: "";
+    left: 0;
+    pointer-events: none;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: bottom .2s ease-in-out, border-color .2s ease-in-out, left .2s ease-in-out, right .2s ease-in-out, top .2s ease-in-out;
+}
+
+table[id*="_tblAmount"] > tbody > tr > td:first-child span input:checked + label, 
+table[id*="_rdoGiftType"] > tbody > tr > td input:checked + label {
+    background: var(--color-brand-black);
+    color: var(--color-white);
+}
+
+table[id*="_tblAmount"] > tbody > tr > td:first-child span input:focus ~ label:after,
+table[id*="_rdoGiftType"] > tbody > tr > td input:focus ~ label:after {
+    border-color: var(--color-brand-black);
+    bottom: -.25em;
+    left: -.25em;
+    right: -.25em;
+    top: -.25em;
+}
+
 /* DESIGNATION */
 tr[id*="_trDesignation"] {
     display: flex;
