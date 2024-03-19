@@ -85,6 +85,10 @@
 
     --button-border-radius: 4px;
     --image-border-radius: 16px;
+
+    --outline-size: max(2px, 0.08em);
+    --outline-style: solid;
+    --outline-color: var(--color-focus-color); /* currentColor; */
 }
 /**
  * Neutral Colors
@@ -4969,6 +4973,12 @@ table[id*="_rdoGiftType"] > tbody > tr label {
     font-weight: bold;
     line-height: 35px;
     font-weight: 300;
+}
+
+div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label:focus,
+table[id*="_rdoGiftType"] > tbody > tr label:focus {
+    outline: var(--outline-size) var(--outline-style) var(--outline-color) !important;
+    outline-offset: var(--outline-offset, var(--outline-size)) !important;
 }
 
 tr[id*="_trOther"] {
