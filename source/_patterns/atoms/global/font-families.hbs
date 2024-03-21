@@ -1,8 +1,5 @@
-<main>
-    <ul>
-        {{# items }}
-        <li style="font-family: {{ value }}">{{ name }}: {{ value }} </li>
-        {{/ items }}
-    </ul>
-</main>
+{{# items }}
+<p style="font-family: {{ value }}">{{ name }}: {{ value }} </p>
+{{/ items }}
+
 <small>{{{ meta.description }}}</small>
