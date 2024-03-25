@@ -6933,14 +6933,63 @@ div[id*="_UpdatePanel"] > .EventTable {
     width: 100%;
 }
 
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr {
+    position: relative;
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr:before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+    top: 1em;
+    left: 2em;
+    right: 2em;
+    width: 80%;
+    height: 10px;
+    background-color: #ccc;
+    margin: auto;
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:before {
+    width: 45px;
+    height: 45px;
+    position: relative;
+    display: block;
+    margin: 0 auto 5px;
+    background: var(--color-white);
+    color: var(--color-brand-black);
+    text-align: center;
+    border: 1px solid var(--color-brand-black);
+    line-height: 40px;
+    border-radius: 50%;
+    font-style: italic;
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:first-child:before {
+    content: "1";
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:nth-child(2):before {
+  content: "2";
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:nth-child(3):before {
+  content: "3";
+}
+
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:last-child:before {
+  content: "4";
+}
+
 .BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th {
-    padding: 5px !important;
+    padding: 0px !important;
     height: auto !important;
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    text-align: center;
     color: var(--color-brand-black);
 }
 
-.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th.EventProgressCell {
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th.EventProgressCell:before {
     background-color: var(--color-brand-black);
     color: var(--color-white);    
 }
@@ -7089,12 +7138,11 @@ span[id*="_Wizard1_dgAttendeesSummary2_lblEventTotal"] {
 }
 
 .EventItemRegistrantsEventName {
-    background-color: var(--color-brand-black);
     font-style: italic;
     font-weight: bold;
     text-align: left;
+    font-size: 1.25em;
     padding: 5px !important;
-    color: var(--color-white) !important;
 }
 
 .EventItemRegistrantsHeader {
