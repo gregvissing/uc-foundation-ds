@@ -6902,9 +6902,9 @@ input#tributeCheckbox {
     align-items: center;
 }
 
-/* .QuickSearchFormTable td:last-child {
-    width: 150px;
-} */
+.QuickSearchFormTable td:last-child {
+    padding-left: 5px;
+}
 
 /* .BBFieldCaption.QuickSearchFieldCaption {
     height: 51px;
@@ -6948,6 +6948,10 @@ div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(2)
     flex-grow: 1;
     display: flex;
     align-items: center;
+}
+
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(3) {
+    padding-left: 5px;
 }
 
 div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(3) .BBFormSubmitButton {
