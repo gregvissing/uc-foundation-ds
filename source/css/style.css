@@ -1957,14 +1957,28 @@ table caption {
     border-top: none;
     padding: 1rem 30px;
 }
+
+/* .tab-content.flow > p:first-child {
+    margin-top: 0 !important;
+} */
+
 .tab-content h4 {
 	  margin: 0;
 }
 
-.tab-content img {
+/* .tab-content img {
     display: inline;
     float: left;
     margin: 0px 45px 20px 0 !important;
+} */
+
+.tab-content img {
+    float: left;
+    margin: 0px 45px 20px 0 !important;
+}
+
+.tab-content .flow > p:first-of-type {
+    margin-top: 0 !important;
 }
 
 /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
