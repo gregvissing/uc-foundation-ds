@@ -139,6 +139,11 @@
             ]
         },
         {
+            "label" : "Search",
+            "url" : "#",
+            "navClass" : "search"
+        },
+        {
             "label" : "Give Now",
             "url" : "link.pages-advanced-donation-form",
             "navClass" : "button-primary"

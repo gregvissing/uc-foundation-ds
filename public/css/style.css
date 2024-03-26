@@ -3342,6 +3342,10 @@ header {
   }
 }
 
+nav .search a {
+    border: none !important
+}
+
 /*------------------------------------*\
     #LOGO
 \*------------------------------------*/
@@ -3530,7 +3534,8 @@ header {
  }
 
 ul.nav.main > li[class*="menuItem"] > button,
-ul.nav.main > li[class*="menuItem"] > a {
+ul.nav.main > li[class*="menuItem"] > a, 
+ul.nav.main > li.search > a {
   text-transform: capitalize !important;
   font-weight: 600 !important;
   font-style: normal !important;
@@ -3616,11 +3621,13 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
     background-color: var(--color-grey);
 }
 
-ul.nav.main > li[class*="menuItem"] > button {
+ul.nav.main > li[class*="menuItem"] > button,
+ul.nav.main > li.search > a {
   position: relative;
 }
 
-ul.nav.main > li[class*="menuItem"] > button:after {
+ul.nav.main > li[class*="menuItem"] > button:after,
+ul.nav.main > li.search > a:after {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -3634,7 +3641,9 @@ ul.nav.main > li[class*="menuItem"] > button:after {
 }
 
 ul.nav.main > li[class*="menuItem"] > button:hover:after,
-ul.nav.main > li[class*="menuItem"] > button:focus:after {
+ul.nav.main > li[class*="menuItem"] > button:focus:after,
+ul.nav.main > li.search > a:hover:after,
+ul.nav.main > li.search > a:focus:after {
     width: 100%;
 }
 
@@ -5571,10 +5580,10 @@ fieldset.billingInformation {
     text-decoration: none !important;
 }
 
-.donationForm .formrow label {
+/* .donationForm .formrow label {
     font-size: 15px !important;
     font-weight: 500;
-}
+} */
 
 .input-group-addon {
     background-color: var(--color-white);
@@ -6251,14 +6260,16 @@ li {
     display: inline;
 }
 
-.designations p {
-    font-size: 15px;
+.designations p,
+.labelText {
+    font-size: 1em !important;
     color: var(--color-lighterText);
     line-height: 1.5;
     margin: 15px 0;
     text-transform: none;
     letter-spacing: .02px;
     font-weight: 500;
+    padding: 0
 }
 
 .designation-categories {
@@ -6704,10 +6715,10 @@ li {
     margin-top: 15px;
 }
 
-.labelText {
+/* .labelText {
     font-size: 1.3em;
     font-weight: 300;
-}
+} */
 
 /* new style for amount fields */
 .input-group-addon {
@@ -6996,7 +7007,7 @@ tr.BBListOddRowStyle.SearchOddRowStyle:not([id*="rpResultList_DescRow_"]) > td {
 }
 
 div[id*="_pnlResults"] span[id*="rpResultList_SearchText"] span {
-    background: #f5fe49;
+    background: var(--color-tangeman-tan);
     padding: 0 5px;
 }
 
