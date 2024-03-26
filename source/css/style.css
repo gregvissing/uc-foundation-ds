@@ -1962,10 +1962,11 @@ table caption {
 	  margin: 0;
 }
 
-/* .tab-content img {
+.tab-content img {
     float: left;
+    /* display: inline-block; */
     margin: 0px 45px 20px 0 !important;
-} */
+}
 
 /* .tab-content .flow > p:first-of-type {
     margin-top: 0 !important;
