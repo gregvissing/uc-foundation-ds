@@ -6951,7 +6951,8 @@ div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr {
     align-items: center;
 }
 
-div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:first-child {
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:first-child,
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable > tbody > tr:first-child {
     display: none;
 }
 
@@ -6983,6 +6984,15 @@ div[id*="_pnlResults"] tr.SearchHeaderRow td span {
 div[id*="_pnlResults"] .BBListOddRowStyle.SearchOddRowStyle td,
 div[id*="_pnlResults"] .BBListEvenRowStyle.SearchEvenRowStyle td {
     padding: 5px 10px;
+}
+
+tr[id*="rpResultList_DescRow_"] > td {
+    padding-bottom: 15px !important;
+}
+
+tr.BBListEvenRowStyle.SearchEvenRowStyle:not([id*="rpResultList_DescRow_"]) > td,
+tr.BBListOddRowStyle.SearchOddRowStyle:not([id*="rpResultList_DescRow_"]) > td {
+  padding-top: 15px !important;
 }
 
 div[id*="_pnlResults"] span[id*="rpResultList_SearchText"] span {
