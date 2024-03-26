@@ -6848,7 +6848,7 @@ input#tributeCheckbox {
 }
 
 /*------------------------------------*\
-    #SEARCH
+    #QUICK SEARCH
 \*------------------------------------*/
 
 .QuickSearchFormTable {
@@ -6919,6 +6919,59 @@ input#tributeCheckbox {
     .QuickSearchFormTable {
         max-width: 100%;
     }
+}
+
+/*------------------------------------*\
+    #SEARCH
+\*------------------------------------*/
+
+div[id*="_pnlSearch"] {
+    max-width: 100%;
+    width: 1024px;
+    margin: 1em auto;
+}
+
+div[id*="_pnlSearch"] .BBFormDescription.SearchFormDescription {
+    text-align: center;
+}
+
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:first-child {
+    display: none;
+}
+
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(2) {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+}
+
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(3) {
+    width: 150px;
+}
+
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(3) .BBFormSubmitButton {
+    margin: 0 !important;
+}
+
+div[id*="_pnlResults"] {
+    max-width: 100%;
+    width: 1024px;
+    margin: 1em auto;
+}
+
+div[id*="_pnlResults"] tr.SearchHeaderRow td,
+div[id*="_pnlResults"] tr.SearchHeaderRow td span {
+    font-size: 1.1em;
+}
+
+div[id*="_pnlResults"] .BBListOddRowStyle.SearchOddRowStyle td,
+div[id*="_pnlResults"] .BBListEvenRowStyle.SearchEvenRowStyle td {
+    padding: 5px 10px;
+}
+
+div[id*="_pnlResults"] span[id*="rpResultList_SearchText"] span {
+    background: #f5fe49;
+    padding: 0 5px;
 }
 
 /*------------------------------------*\
