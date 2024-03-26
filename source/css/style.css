@@ -3343,7 +3343,7 @@ header {
 }
 
 nav .search a {
-    border: none !important
+    border: none !important;
 }
 
 /*------------------------------------*\
@@ -3408,7 +3408,8 @@ nav .search a {
 }
 
 .searchIcon {
-    width: 30px;
+    width: 15px;
+    margin-right: 5px;
 }
 
 /*------------------------------------*\
@@ -3523,7 +3524,7 @@ nav .search a {
 }
 
 .nav.flex.main.c-primary-nav__list {
-    gap: 5px;
+    gap: 2px;
 }
 
 /**
