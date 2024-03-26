@@ -6935,6 +6935,11 @@ div[id*="_pnlSearch"] .BBFormDescription.SearchFormDescription {
     text-align: center;
 }
 
+div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr {
+    display: flex;
+    align-items: center;
+}
+
 div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:first-child {
     display: none;
 }
@@ -6943,10 +6948,6 @@ div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(2)
     flex-grow: 1;
     display: flex;
     align-items: center;
-}
-
-div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(3) {
-    width: 150px;
 }
 
 div[id*="_pnlSearch"] table.BBFormTable.SearchFormTable table tr td:nth-child(3) .BBFormSubmitButton {
