@@ -1962,15 +1962,15 @@ table caption {
 	  margin: 0;
 }
 
-.tab-content img {
-    float: left;
-    /* display: inline-block; */
-    margin: 0px 45px 20px 0 !important;
+.tab-content figure {
+    /* float: left; */
+    margin: 0 !important;
 }
 
-/* .tab-content .flow > p:first-of-type {
-    margin-top: 0 !important;
-} */
+.tab-content figure img {
+    border-radius: var(--image-border-radius);
+    box-shadow: 0 7px 15px 5px rgba(0, 0, 0, 0.2);
+}
 
 /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
 .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
