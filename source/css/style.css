@@ -7091,6 +7091,7 @@ input#tributeCheckbox {
     position: relative;
     visibility: hidden;
     z-index: 1;
+    transition: all 0.4s ease-in-out;
 }
 
 .search-toggle[aria-hidden="false"] {
