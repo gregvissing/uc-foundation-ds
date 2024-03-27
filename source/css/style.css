@@ -3080,6 +3080,16 @@ a.c-stacked-block {
     }
 }
 
+footer .social-media li * {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+footer .social-media li a {
+    padding: 5px;
+}
+
 /*------------------------------------*\
     #FOOTER NAV
 \*------------------------------------*/
@@ -3410,6 +3420,25 @@ nav .search a {
 .searchIcon {
     width: 15px;
     margin-right: 5px;
+}
+
+.social-media-icons {
+    list-style: none;
+    display: flex;
+    gap: 10px;
+    padding: 0;
+}
+
+.social-media-icons li {
+    display: block;
+    width: 40px;
+    height: 40px;
+}
+
+.social-media-icons li svg {
+    display: block;
+    width: 40px;
+    height: 40px;
 }
 
 /*------------------------------------*\
