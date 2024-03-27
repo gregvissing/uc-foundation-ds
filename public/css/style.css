@@ -901,8 +901,13 @@ input[type="checkbox"] {
 }
 
 input[type="checkbox"]:checked:before {
-  content: "\f00c";
-  font-family: "FontAwesome";
+  /* content: "\f00c";
+  font-family: "FontAwesome"; */
+  content: "";
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 80%;
+  background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/checkmark.svg);
 }
 
 input[type="checkbox"]:checked:before {
@@ -1206,7 +1211,6 @@ p.intro-text {
 }
 
 .byline .story .sharing a {
-    margin: 0 5px;
     padding: 0;
 }
 
@@ -1248,6 +1252,13 @@ p.intro-text {
 .story .container .content .byline .dateline {
     font-style: italic;
     padding-left: 10px;
+}
+
+.sharing {
+    display: flex !important;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
 }
 
 .sharing a {
@@ -3000,6 +3011,7 @@ a.c-stacked-block {
     border-top: 5px solid var(--color-brand-red);
     background-image: url(https://foundation.uc.edu/image/Footer-bg.jpg);
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     padding: 3em 0 1em;
     position: relative;
@@ -3080,6 +3092,10 @@ a.c-stacked-block {
     }
 }
 
+footer .social-media {
+    margin: 0 !important;
+}
+
 footer .social-media li * {
     display: block;
     width: 100%;
@@ -3087,7 +3103,71 @@ footer .social-media li * {
 }
 
 footer .social-media li a {
+    height: 40px;
+    width: 40px;
     padding: 5px;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+.sharing a {
+    content: "";
+    display: inline-block;
+    height: 25px !important;
+    width: 25px !important;
+    padding: 0;
+    background-position: center;
+    background-size: cover;
+    transition: background-image 0.3s ease-in-out;
+}
+
+footer .social-media li a.facebook{
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Facebook-white.svg);
+}
+
+footer .social-media li a.facebook:hover,
+footer .social-media li a.facebook:focus,
+.sharing a.facebook {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Facebook-red.svg);
+}
+
+footer .social-media li a.instagram {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Instagram-white.svg);
+}
+
+footer .social-media li a.instagram:hover,
+footer .social-media li a.instagram:focus {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Instagram-red.svg);
+}
+
+footer .social-media li a.linkedin {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/LinkedIn-white.svg);
+}
+
+footer .social-media li a.linkedin:hover,
+footer .social-media li a.linkedin:focus,
+.sharing a.linkedin {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/LinkedIn-red.svg);
+}
+
+footer .social-media li a.youtube {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-white.svg);
+}
+
+footer .social-media li a.youtube:hover,
+footer .social-media li a.youtube:focus {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-red.svg);
+}
+
+footer .social-media li a.twitterx {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/TwitterX-white.svg);
+}
+
+footer .social-media li a.twitterx:hover,
+footer .social-media li a.twitterx:focus,
+.sharing a.twitterx {
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/TwitterX-red.svg);
 }
 
 /*------------------------------------*\
