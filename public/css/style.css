@@ -1981,8 +1981,9 @@ table caption {
 }
 
 .tab-content figure {
-    /* float: left; */
-    margin: 0 !important;
+    /* float: left;
+    width: 250px; */
+    margin: 0 0 20px 0 !important;
 }
 
 .tab-content figure img {
