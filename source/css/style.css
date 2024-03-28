@@ -5148,8 +5148,9 @@ table[id*="_rdoGiftType"] input {
 div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label,
 table[id*="_rdoGiftType"] > tbody > tr label {
     padding: 5px !important;
-    border: 1px solid var(--color-brand-black);
-    border-radius: var(--button-border-radius);
+    background-color: #e5e5e5 !important;
+    /* border: 1px solid var(--color-brand-black); */
+    /* border-radius: var(--button-border-radius); */
     cursor: pointer;
     font-weight: bold;
     line-height: 35px;
@@ -5193,8 +5194,6 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr {
     position: relative;
-    border-radius: 2em;
-    border: 1px solid var(--color-brand-black);
     overflow: hidden;
 }
 
@@ -5224,8 +5223,6 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) input {
     padding-left: 2.25em !important;
-    border-top-right-radius: 2em;
-    border-bottom-right-radius: 2em;
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(3),
@@ -5235,7 +5232,6 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table
 
 div[id*="_pnlDonationForm"] td input[type="radio"]:checked + label {
     background: var(--color-brand-black);
-    color: var(--color-white);
     transition: all 250ms ease-in-out;
 }
 
@@ -5314,19 +5310,20 @@ table[id*="_rdoGiftType"] > tbody > tr > td input {
 
 table[id*="_tblAmount"] > tbody > tr > td:first-child span label,
 table[id*="_rdoGiftType"] > tbody > tr > td label {
-    border-radius: 2em;
-    border: 2px solid transparent;
+    /* border-radius: 2em; */
+    /* border: 2px solid transparent; */
     color: var(--color-brand-black);
     display: block;
     padding: 0.55em 0.75em;
     text-align: center;
+    font-weight: bold;
 }
 
 table[id*="_tblAmount"] > tbody > tr > td:first-child span label:after,
 table[id*="_rdoGiftType"] > tbody > tr > td label:after {
-    border: 2px solid;
+    /* border: 2px solid; */
     border-color: var(--color-brand-black);
-    border-radius: 2em;
+    /* border-radius: 2em; */
     bottom: 0;
     content: "";
     left: 0;
@@ -5339,7 +5336,7 @@ table[id*="_rdoGiftType"] > tbody > tr > td label:after {
 
 table[id*="_tblAmount"] > tbody > tr > td:first-child span input:checked + label, 
 table[id*="_rdoGiftType"] > tbody > tr > td input:checked + label {
-    background: var(--color-brand-black);
+    background-color: var(--color-brand-red) !important;
     color: var(--color-white);
 }
 
