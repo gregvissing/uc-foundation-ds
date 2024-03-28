@@ -1818,6 +1818,7 @@ pre[class*=language-] {
   background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/UC-logo-lockup-bg.png);
   background-repeat: no-repeat;
   background-size: contain;
+  opacity: 0.8;
   width: 23%;
   height: 100%;
 }
@@ -4910,6 +4911,10 @@ b *, strong * {
 /*------------------------------------*\
     #EXCEPTIONS
 \*------------------------------------*/
+.related-stories.red-bg .p-1 {
+    padding: 1em !important;
+}
+
 .flex.largest-class {
     flex-wrap: wrap;
     justify-content: center;
