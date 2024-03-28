@@ -1411,12 +1411,20 @@ blockquote:after {
  * Horizontal rule base styles
  */
 hr {
-  border: 0;
-  height: 3px;
-  width: 95%;
-  /* background: #ddd; */
-  background: var(--color-brand-red);
-  margin: 2rem auto;
+    border: 0;
+    height: 3px;
+    width: 95%;
+    /* background: #ddd; */
+    background: var(--color-brand-red);
+    margin: 2rem auto;
+}
+
+hr.short {
+    width: 25%;
+}
+
+hr.thick {
+    height: 6px;
 }
 
 /**
@@ -4248,6 +4256,10 @@ b *, strong * {
 
 .bold {
   font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
 }
 
 .underline {
