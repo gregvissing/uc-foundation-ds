@@ -3272,10 +3272,10 @@ header {
 /**
  * Header inner
  */
-/* .c-header__inner {
-  padding-top: 0.5rem;
-  padding-bottom: 0.25rem;
-} */
+.c-header__inner {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
 @media all and (min-width: 35em) {
   .c-header__inner {
     display: flex;
@@ -3680,7 +3680,7 @@ nav .search a {
 }
 
 .nav.flex.main.c-primary-nav__list {
-    gap: 2px;
+    gap: 4px;
 }
 
 /**
@@ -3750,6 +3750,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
   background-color: var(--color-brand-red) !important;
   border: none !important;
   color: var(--color-white) !important;
+  
 }
 
 /**
@@ -5213,6 +5214,7 @@ table[id*="_rdoGiftType"] > tbody > tr label:focus {
 tr[id*="_trOther"] {
     display: flex;
     flex-direction: row !important;
+    gap: 0 !important;
 }
 
 tr[id*="_trOther"] td[id*="_tdOther"] {
@@ -5223,12 +5225,6 @@ tr[id*="_trOther"] td[id*="_tdOther"] label {
     display: block;
     width: 100%;
     text-align: center;
-}
-
-tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell {
-    width: 37% !important;
-    padding-left: 0 !important;
-    padding-right: 0 !important;
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell * {
@@ -7082,6 +7078,7 @@ input#tributeCheckbox {
 .QuickSearchFormTable tr {
     display: flex;
     align-items: center;
+    padding: 3px 0;
 }
 
 .QuickSearchTextbox {
@@ -7136,7 +7133,7 @@ input#tributeCheckbox {
     position: relative;
     visibility: hidden;
     z-index: 1;
-    transition: all 0.4s ease-in-out;
+    /* transition: all 0.4s ease-in-out; */
 }
 
 .search-toggle[aria-hidden="false"] {
@@ -7704,6 +7701,32 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_0"] {
 :is(a, button, input, select, textarea, summary):focus {
     outline: var(--outline-size) var(--outline-style) var(--outline-color) !important;
     outline-offset: var(--outline-offset, var(--outline-size)) !important;
+}
+
+/*------------------------------------*\
+  	#ADMIN VIEW FIXES
+\*------------------------------------*/
+
+table.DesignMenuTable a { 
+    color: #666666 !important; 
+}
+
+*.bb_mainMenu a { 
+    font-weight: normal; 
+}
+
+div[id*="_designPaneCloak"] { 
+    top: 0px !important; 
+    left: 0px !important; 
+}
+
+div[id*="_DesignPanePanel"] { 
+    top: 0px !important; 
+    left: 0px !important; 
+}
+
+*.DesignPanePage { 
+    position: relative; 
 }
 
 /*# sourceMappingURL=style.css.map */

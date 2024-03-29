@@ -7,8 +7,8 @@
 
 		<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1711716713511" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1711716713511" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1711717427072" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1711717427072" media="all" />
 
 		<link rel="stylesheet" type="text/css" href="https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/css/chosen.css" />
 		<link rel="stylesheet" type="text/css" href="https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/ucf-ds/css/jquery-ui.css" />
@@ -17,7 +17,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1711716713511" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1711717427072" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -762,49 +762,51 @@
 		    </div><!--end pl-c-pattern__extra-->
 		
 			<div class="pl-js-pattern-example">
-			<div id="_pnlDonationForm">
-    <table id="PC22886_tblAmount" class="taLeft" cellpadding="3">
-			<tbody class="donationInfo">
-                <tr>
-                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="896" amount="50.00"><input id="PC22886_rdo_896_5" type="radio" name="PC22886$givingLevels" value="rdo_896_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_896_5">$50</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$50.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+			<div id="_UpdatePanel">
+    <div id="_pnlDonationForm">
+        <table id="PC22886_tblAmount" class="taLeft" cellpadding="3">
+                <tbody class="donationInfo">
+                    <tr>
+                        <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="896" amount="50.00"><input id="PC22886_rdo_896_5" type="radio" name="PC22886$givingLevels" value="rdo_896_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_896_5">$50</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$50.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="897" amount="100.00"><input id="PC22886_rdo_897_5" type="radio" name="PC22886$givingLevels" value="rdo_897_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_897_5">$100</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$100.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="898" amount="250.00"><input id="PC22886_rdo_898_5" type="radio" name="PC22886$givingLevels" value="rdo_898_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_898_5">$250 </label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$250.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="899" amount="500.00"><input id="PC22886_rdo_899_5" type="radio" name="PC22886$givingLevels" value="rdo_899_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_899_5">$500</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$500.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                    </tr>
+                    <tr>
+                        <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="900" amount="1000.00"><input id="PC22886_rdo_900_5" type="radio" name="PC22886$givingLevels" value="rdo_900_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_900_5">$1,000</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$1,000.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                    </tr>
+                    <tr id="PC22886_trOther" style="display:;">
+                        <td id="PC22886_tdOther" class="BBFieldControlCell DonationFieldControlCell"><span itemindex="-1"><input id="PC22886_rdoOther" type="radio" name="PC22886$givingLevels" value="rdoOther" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdoOther">Other</label></span></td><td class="wsNowrap BBFieldControlCell DonationFieldControlCell">
+                            <table style="margin-left: -3px">
+                                <tbody class="donationInfo"><tr>
+                                    <td>
+                                        <span id="PC22886_lblSymbol" class="DonationFormTable_DonationPanel_SymbolLabel">$</span>
+                                    </td>
+                                    <td id="PC22886_Td1">
+                                        <input name="PC22886$txtAmount" type="text" maxlength="10" id="PC22886_txtAmount" class="aspNetDisabled BBFormTextbox DonationTextboxNarrow" onkeyup="UpdateSummary();">
+                                        &nbsp;
+                                    <span id="PC22886_ReqFldValidatorAmount" style="display:none;"></span><span id="PC22886_CmpValidatorAmount" style="display:none;"></span></td>
+            
+                                    <td>
+                                        &nbsp;
+                                    </td>
+                                    <td>
+                                        <span id="PC22886_lblAmtRequiredMarker" class="BBFormRequiredFieldMarker DonationRequiredFieldMarker" style="visibility: visible;">*</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
                 </tr>
-                <tr>
-                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="897" amount="100.00"><input id="PC22886_rdo_897_5" type="radio" name="PC22886$givingLevels" value="rdo_897_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_897_5">$100</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$100.00</span><span class="BBConvertedCurrencyLabel"></span></td>
-                </tr>
-                <tr>
-                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="898" amount="250.00"><input id="PC22886_rdo_898_5" type="radio" name="PC22886$givingLevels" value="rdo_898_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_898_5">$250 </label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$250.00</span><span class="BBConvertedCurrencyLabel"></span></td>
-                </tr>
-                <tr>
-                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="899" amount="500.00"><input id="PC22886_rdo_899_5" type="radio" name="PC22886$givingLevels" value="rdo_899_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_899_5">$500</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$500.00</span><span class="BBConvertedCurrencyLabel"></span></td>
-                </tr>
-                <tr>
-                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="900" amount="1000.00"><input id="PC22886_rdo_900_5" type="radio" name="PC22886$givingLevels" value="rdo_900_5" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdo_900_5">$1,000</label></span></td><td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$1,000.00</span><span class="BBConvertedCurrencyLabel"></span></td>
-                </tr>
-                <tr id="PC22886_trOther" style="display:;">
-                    <td id="PC22886_tdOther" class="BBFieldControlCell DonationFieldControlCell"><span itemindex="-1"><input id="PC22886_rdoOther" type="radio" name="PC22886$givingLevels" value="rdoOther" onclick="rdo_OnClick(this);" aria-labelledby="PC22886_tblAmount"><label for="PC22886_rdoOther">Other</label></span></td><td class="wsNowrap BBFieldControlCell DonationFieldControlCell">
-                        <table style="margin-left: -3px">
-                            <tbody class="donationInfo"><tr>
-                                <td>
-                                    <span id="PC22886_lblSymbol" class="DonationFormTable_DonationPanel_SymbolLabel">$</span>
-                                </td>
-                                <td id="PC22886_Td1">
-                                    <input name="PC22886$txtAmount" type="text" maxlength="10" id="PC22886_txtAmount" class="aspNetDisabled BBFormTextbox DonationTextboxNarrow" onkeyup="UpdateSummary();">
-                                    &nbsp;
-                                <span id="PC22886_ReqFldValidatorAmount" style="display:none;"></span><span id="PC22886_CmpValidatorAmount" style="display:none;"></span></td>
-        
-                                <td>
-                                    &nbsp;
-                                </td>
-                                <td>
-                                    <span id="PC22886_lblAmtRequiredMarker" class="BBFormRequiredFieldMarker DonationRequiredFieldMarker" style="visibility: visible;">*</span>
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </td>
-			</tr>
-		</tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
 </div>
 			</div><!--end pl-js-pattern-example-->
 		
@@ -3051,10 +3053,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1711716713511">
+<script id="pl-js-polyfill-insert-1711717427072">
   (function() {
     if (self != top) {
-      var cb = '1711716713511';
+      var cb = '1711717427072';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -3067,7 +3069,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1711716713511" nomodule>
+<script id="pl-js-insert-1711717427072" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
