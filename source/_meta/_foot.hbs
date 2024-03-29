@@ -1183,6 +1183,26 @@
 
             })( window, document );
 
+            function getRndInteger(min, max) {
+                var value = Math.floor(Math.random() * (3 - 0)) + 0;
+                switch(value) {
+                    case 0:
+                        document.getElementById("footer").style.backgroundPosition = "center top";
+                        break;
+                    case 1:
+                        document.getElementById("footer").style.backgroundPosition = "center center";
+                        break;
+                    case 2:
+                        document.getElementById("footer").style.backgroundPosition = "center bottom";
+                        break;
+                    default:
+                        document.getElementById("footer").style.backgroundPosition = "center center";
+                }
+                return value;
+            }
+
+            getRndInteger(0, 3);
+
         </script>
         <script src="https://foundation.uc.edu/file/redesign/js/aria.accordion.min.js"></script>
 
