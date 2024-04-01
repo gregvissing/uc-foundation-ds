@@ -30,7 +30,8 @@
                 var expandables = document.querySelector("#search-toggle");
                 var searchToggle = document.querySelector(".search-toggle");
 
-                expandables.addEventListener("click", function () {
+                expandables.addEventListener("click", function (e) {
+                    e.preventDefault;
                     var expanded = this.getAttribute("aria-expanded")
                     if (expanded === "false") {
                         this.setAttribute("aria-expanded", "true");
