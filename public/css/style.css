@@ -2036,6 +2036,7 @@ table caption {
     /* transition: all 0.3s; */
     padding: 0;
     border-bottom: none;
+    display: none;
 }
 .tabbed [type="radio"]:nth-of-type(1):not(:checked) ~ .tab-content:nth-of-type(1) h4,
 .tabbed [type="radio"]:nth-of-type(2):not(:checked) ~ .tab-content:nth-of-type(2) h4,
@@ -2666,6 +2667,15 @@ ul.nav.main > li[class*="menuItem"].button-primary > a:hover {
     display: block;
     border-radius: 16px;
     box-shadow: 0 7px 15px 5px rgba(0, 0, 0, .2);
+    max-width: 100%;
+    
+}
+ 
+@media (max-width: 700px) {
+    .youtube-video {
+        max-width: 95%;
+        height: 500px;
+    }
 }
 
 /*------------------------------------*\
