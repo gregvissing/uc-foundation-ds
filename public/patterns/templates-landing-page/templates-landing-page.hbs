@@ -2,7 +2,7 @@
 {{> organisms-header }}
 {{> atoms-page-title }}
 <main id="main" role="main">
-	<img src="https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/220430mkCommencement0030.jpg" alt="Placeholder image" s">
+	<img src="https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/220430mkCommencement0030.jpg" alt="Placeholder image">
 	<div class="l-container">
 		{{!-- {{# hero }}
 		{{> molecules-hero width="1200" height="800" }}
@@ -30,18 +30,36 @@
 		<h2>{{{ priorities.heading }}}</h2>
 		{{> molecules-tabs }}
 
-		<div class="text-center">
+		<!--<div class="text-center">
 			<iframe class="youtube-video" width="1000" height="755" src="https://www.youtube.com/embed/NpEaa2P7qZI?si=_WYX7Yo_L5pEb3HF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-		</div>
+		</div>-->
 		
-		{{!-- <p style="color: red !important; text-align: center;">VIDEO PLACEHOLDER HERE</p> --}}
-
 		{{!-- <h2>{{{ ucToday.heading }}}</h2> --}}
 		{{!-- <div class="largest-class flex">
 			{{#each ucToday.items }}
 				<div>{{{ text }}}</div>
 			{{/ each }}
 		</div> --}}
+
+		<div class="contact-card">
+			<div class="col-image">
+				<div class="image ">
+					<img alt="Headshot of Chris Eden" data-emptytext="Image" src="{{{ contactCard.image }}}">
+				</div>
+			</div>
+			<div class="body">
+				<h3 class="name">
+					{{{ contactCard.title }}}
+				</h3>
+				<p>
+					<strong>
+						<span class="title">{{{ contactCard.position }}}</span>, 
+						<span class="department">{{{ contactCard.location }}}</span>
+					</strong>
+				</p>
+				<p class="address">{{{ contactCard.email }}}</p>
+			</div>
+		</div>
 
 	</div>
 
