@@ -278,6 +278,33 @@ a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.m
     box-shadow: none;
 }
 
+.visible-hidden {
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+.pl-js-pattern-example .visible-hidden,
+.visible-hidden:focus {
+    clip: auto;
+    height: auto;
+    overflow: auto;
+    position: absolute;
+    width: 100%;
+    text-decoration: underline !important;
+    padding: 24px;
+    z-index: 800;
+    background: #e6e6e6;
+}
+
+.pl-js-pattern-example .visible-hidden {
+    margin-bottom: 3em;
+    border-bottom: 0 !important;
+}
+
 .c-logo {
     margin-bottom: 0;
 }
