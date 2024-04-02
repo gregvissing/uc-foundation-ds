@@ -1317,6 +1317,7 @@ p.intro-text {
     .contact-card {
         display: flex;
         flex-direction: column;
+        padding: 10px;
     }
 
     .contact-card .col-image {
@@ -2185,6 +2186,11 @@ table caption {
 
     .tabs .tab {
         width: 100%;
+    }
+
+    .tab-content,
+    .tab > label {
+        padding: 1rem;
     }
 }
 
