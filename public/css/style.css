@@ -3324,6 +3324,20 @@ footer .social-media li a.twitterx:focus,
     background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/print-icon-black.svg);
 }
 
+@media (max-width: 700px) {
+    footer .social-media.flex {
+        flex-direction: row !important;
+    }
+
+    footer .social-media.flex li {
+        width: 20% !important;
+    }
+
+    footer .social-media.flex li a {
+        margin: 0 auto;
+    }
+}
+
 /*------------------------------------*\
     #FOOTER NAV
 \*------------------------------------*/
