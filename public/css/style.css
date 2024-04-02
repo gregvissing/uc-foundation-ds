@@ -214,6 +214,70 @@ a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.m
     border-bottom: 2px solid var(--color-brand-red);
 }
 
+.scrollToTop {
+    width: 55px;
+    height: auto;
+    padding: 3px;
+    text-align: center;
+    text-decoration: none;
+    position: fixed;
+    bottom: 0;
+    right: 25px;
+    z-index: 15;
+    -webkit-transition: all .4s ease-in-out;
+    -moz-transition: all .4s ease-in-out;
+    -ms-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    /* display: none; */
+    border-radius: 3px;
+    line-height: 1.25;
+    border: 1px solid #dbdbe0;
+    overflow: hidden;
+    visibility: hidden;
+    background-color: #f6f8fa;
+    border-bottom: none !important;
+    box-shadow: 0 1px 1px hsl(0deg 0% 0%/.075), 
+        0 2px 2px hsl(0deg 0% 0%/.075), 
+        0 4px 4px hsl(0deg 0% 0%/.075), 
+        0 8px 8px hsl(0deg 0% 0%/.075), 
+        0 16px 16px hsl(0deg 0% 0%/.075);
+}
+
+.scrollToTop svg.scrollArrow {
+    display: inline-block;
+    width: 25px;
+    position: relative;
+    z-index: 100000;
+    margin: auto;
+    fill: var(--color-brand-red);
+    overflow: visible;
+}
+
+.scrollToTop span {
+    font-size: 0.8em;
+    line-height: 1.2;
+}
+
+@media (max-width: 768px) {
+    .scrollToTop span {
+        display: none;
+    }
+}
+
+.pl-js-pattern-example .scrollToTop {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    position: relative;
+    right: unset;
+    bottom: unset;
+}
+
+.scrollToTop:hover {
+    box-shadow: none;
+}
+
 .c-logo {
     margin-bottom: 0;
 }
@@ -1723,7 +1787,7 @@ pre[class*=language-] {
 .hero .video-control button {
     cursor: pointer;
     border-radius: 10px !important;
-    background: rgba(255,255,255,.8)!important;
+    background: rgba(255, 255, 255, .8)!important;
     color: var(--color-brand-black)!important;
     border: none;
     padding: 7px 15px !important;
@@ -1732,13 +1796,16 @@ pre[class*=language-] {
     font-weight: 400 !important;
     width: 125px !important;
     transition: all .4s ease-in-out;
-    text-transform: unset !important;
     height: 46.8px;
     box-shadow: 0 1px 1px rgba(0,0,0,.075),
         0 2px 2px rgba(0,0,0,.075),
         0 4px 4px rgba(0,0,0,.075),
         0 8px 8px rgba(0,0,0,.075),
         0 16px 16px rgba(0,0,0,.075);
+}
+
+.hero .video-control button:hover {
+    background: rgba(255, 255, 255, 1)!important;
 }
 
 .hero .video-control button svg {
