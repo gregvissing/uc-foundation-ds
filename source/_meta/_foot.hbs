@@ -48,31 +48,34 @@
                 var expandables = document.querySelector("#search-toggle");
                 var searchToggle = document.querySelector(".search-toggle");
 
-                expandables.addEventListener("click", function (e) {
-                    e.preventDefault;
-                    var expanded = this.getAttribute("aria-expanded")
-                    if (expanded === "false") {
-                        this.setAttribute("aria-expanded", "true");
-                        searchToggle.setAttribute("aria-hidden", "false");
-                    } else {
-                        this.setAttribute("aria-expanded", "false");
-                        searchToggle.setAttribute("aria-hidden", "true");
-                    }
+                if ( $("header.c-header").length ) {
 
-                    /*
-                    var content = this.parentNode.parentNode.querySelector("dd");
-
-                    if (content) {
-                        content.getAttribute("hidden")
-                        if (typeof content.getAttribute("hidden") === "string") {
-                            content.removeAttribute("hidden")
+                    expandables.addEventListener("click", function (e) {
+                        e.preventDefault;
+                        var expanded = this.getAttribute("aria-expanded")
+                        if (expanded === "false") {
+                            this.setAttribute("aria-expanded", "true");
+                            searchToggle.setAttribute("aria-hidden", "false");
                         } else {
-                            content.setAttribute("hidden", "hidden")
+                            this.setAttribute("aria-expanded", "false");
+                            searchToggle.setAttribute("aria-hidden", "true");
                         }
-                    } 
-                    */
-                })
 
+                        /*
+                        var content = this.parentNode.parentNode.querySelector("dd");
+
+                        if (content) {
+                            content.getAttribute("hidden")
+                            if (typeof content.getAttribute("hidden") === "string") {
+                                content.removeAttribute("hidden")
+                            } else {
+                                content.setAttribute("hidden", "hidden")
+                            }
+                        } 
+                        */
+                    })
+
+                }
 
                 // Add Menu button to nav
                 const svgNavigation = '<button type="button" class="nav-toggle" id="nav-toggle" aria-expanded="false" hidden><svg height="21" viewBox="0 0 24 24" width="24" aria-hidden="true" style="color: inherit;"><path d="M3 13h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 7h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1zM3 19h18c0.552 0 1-0.448 1-1s-0.448-1-1-1h-18c-0.552 0-1 0.448-1 1s0.448 1 1 1z" fill="currentColor"></path></svg> Navigation</button>';
