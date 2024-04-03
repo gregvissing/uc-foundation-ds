@@ -1513,10 +1513,27 @@ blockquote:after {
     /* text-align: left; */
 }
 
+.pull-quote-attribution span.headshot img {
+    border-radius: 50%;
+    width: 150px;
+    height: auto;
+}
+
 .pull-quote-attribution:before {
     content: "–";
     position: absolute;
     left: 5px;
+}
+
+.pull-quote-attribution.flex:before {
+    content: "";
+    position: unset;
+    left: unset;
+    display: none;
+}
+
+.pull-quote-attribution.flex {
+    gap: 1em;
 }
 
 /**
