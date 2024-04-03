@@ -28,7 +28,7 @@
         ]
     },
     "blockquote": {
-        "html": "<div class='pull-quote'><blockquote><p>When students succeed at the University of Cincinnati, their achievements extend far beyond our classrooms and campus. Our students and alumni are of enormous value in today’s diverse, technology-infused, knowledge-driven economy.</p><br><br><p>UC’s commitment to student success is a call-to-action for all of us who want to make a pledge to lift up families, employers and communities across Greater Cincinnati for generations to come.</p></blockquote><p class='pull-quote-attribution'><span> Neville G. Pinto, UC President</span></p></div>"
+        "html": "<div class='pull-quote'><blockquote><p>When students succeed at the University of Cincinnati, their achievements extend far beyond our classrooms and campus. Our students and alumni are of enormous value in today’s diverse, technology-infused, knowledge-driven economy.</p><br><br><p>UC’s commitment to student success is a call-to-action for all of us who want to make a pledge to lift up families, employers and communities across Greater Cincinnati for generations to come.</p></blockquote><p class='pull-quote-attribution'><span> Neville G. Pinto, PhD<br>President<br>University of Cincinnati</span></p></div>"
     },
     "priorities": {
         "heading": "Our Priorities"
@@ -58,7 +58,7 @@
     },
     "whyNow": {
         "heading": "Why Now?",
-        "paragraphs": "<p><strong>Higher education is changing</strong></p><p>Across the nation, colleges and universities recognize that true student success requires an immersive support environment and a comprehensive focus on students inside and outside the classroom.</p><p><strong>Student needs are evolving</strong></p><p>Each generation of students faces a new set of challenges. Today’s students are navigating increasing costs, expectations and complexities to succeed not only in their academic careers, but to set themselves apart in a competitive professional environment.</p>"
+        "paragraphs": "<p><strong>Higher education is changing</strong></p><p>Across the nation, colleges and universities recognize that true student success requires an immersive support environment and a comprehensive focus on students inside and outside the classroom.</p><p><strong>Student needs are evolving</strong></p><p>Each generation of students faces a new set of challenges. Today’s students are navigating increasing costs, expectations and complexities to succeed not only in their academic careers, but to set themselves apart in a competitive professional environment.</p><p><strong>UC is growing</strong></p><p>As we celebrate our entrance into the Big 12, we are rising to the call of our new, national stage. And through the tremendous support garnered throughout the Next, Now campaign, we have aligned programs and resources across colleges to lay the groundwork for this breakthrough.<p>"
     },
     "contactCard": {
         "image": "https://placehold.co/200",
