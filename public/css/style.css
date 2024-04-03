@@ -1501,7 +1501,7 @@ blockquote:after {
 
 .pull-quote-attribution {
     color: var(--color-brand-red);
-    text-align: right;
+    /* text-align: right; */
     padding: 0px 50px 0px 20px;
     margin-left: 50px;
 }
@@ -1509,6 +1509,7 @@ blockquote:after {
 .pull-quote-attribution span {  
     font-weight: bold;
     font-family: "Gentium Book Basic", serif;
+    /* text-align: left; */
 }
 
 .pull-quote-attribution:before {
