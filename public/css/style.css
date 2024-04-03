@@ -1456,6 +1456,10 @@ p.intro-text {
     padding-right: 70px;
 }
 
+.pull-quote.with-headshot {
+    padding-bottom: 40px;
+}
+
 blockquote {
   font-style: italic;
   color: #808080;
