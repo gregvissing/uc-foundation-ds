@@ -34,12 +34,12 @@
 			<iframe class="youtube-video" width="1000" height="755" src="https://www.youtube.com/embed/NpEaa2P7qZI?si=_WYX7Yo_L5pEb3HF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 		</div>-->
 		
-		{{!-- <h2>{{{ ucToday.heading }}}</h2> --}}
-		{{!-- <div class="largest-class flex">
-			{{#each ucToday.items }}
-				<div>{{{ text }}}</div>
-			{{/ each }}
-		</div> --}}
+		{{{ blockquote.html }}}
+
+		<h2>{{{ whyNow.heading }}}</h2>
+		<div class="flow">
+			{{{ whyNow.paragraphs }}}
+		</div>
 
 		<div class="contact-card">
 			<h3 class="name">To learn more about student philanthropy, contact</h3>
@@ -50,9 +50,6 @@
 					</div>
 				</div>
 				<div class="body flow p-1">
-					<!--<h3 class="name">
-						To learn more about student student philanthropy, contact
-					</h3>-->
 					<p class="name">
 						<strong>
 							<span class="title">{{{ contactCard.title }}}</span>
@@ -63,7 +60,7 @@
 							<span class="title">{{{ contactCard.position }}}</span>
 						</strong>
 					</p>
-					<p class="address"><a href="mailto:Chris.Eden@foundation.uc.edu">{{{ contactCard.email }}}</a></p>
+					<p class="address"><a href="mailto:Chris.Eden@foundation.uc.edu">{{{ contactCard.email }}}</a> or<br>{{{ contactCard.phone }}}</p>
 				</div>
 			</div>
 		</div>
