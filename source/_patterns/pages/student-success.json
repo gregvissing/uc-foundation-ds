@@ -28,7 +28,7 @@
         ]
     },
     "blockquote": {
-        "html": "<div class='pull-quote'><blockquote><p>When students succeed at the University of Cincinnati, their achievements extend far beyond our classrooms and campus. Our students and alumni are of enormous value in today’s diverse, technology-infused, knowledge-driven economy.</p><br><br><p>UC’s commitment to student success is a call-to-action for all of us who want to make a pledge to lift up families, employers and communities across Greater Cincinnati for generations to come.</p></blockquote><p class='pull-quote-attribution'><span> Neville G. Pinto, PhD<br>President<br>University of Cincinnati</span></p></div>"
+        "html": "<div class='pull-quote' style='padding-bottom: 40px;'><blockquote><p>When students succeed at the University of Cincinnati, their achievements extend far beyond our classrooms and campus. Our students and alumni are of enormous value in today’s diverse, technology-infused, knowledge-driven economy.</p><br><br><p>UC’s commitment to student success is a call-to-action for all of us who want to make a pledge to lift up families, employers and communities across Greater Cincinnati for generations to come.</p></blockquote><p class='pull-quote-attribution'><span> Neville G. Pinto, PhD<br>President<br>University of Cincinnati</span></p></div>"
     },
     "priorities": {
         "heading": "Our Priorities"
