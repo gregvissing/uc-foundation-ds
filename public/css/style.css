@@ -1504,6 +1504,7 @@ blockquote:after {
     /* text-align: right; */
     padding: 0px 50px 0px 20px;
     margin-left: 50px;
+    position: relative;
 }
 
 .pull-quote-attribution span {  
@@ -1514,6 +1515,8 @@ blockquote:after {
 
 .pull-quote-attribution:before {
     content: "–";
+    position: absolute;
+    left: 5px;
 }
 
 /**
