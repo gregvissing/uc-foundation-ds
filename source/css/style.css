@@ -5794,7 +5794,6 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > input {
-    /* width: 200px; */
     margin-left: 10px;
     flex-grow: 1;
 }
