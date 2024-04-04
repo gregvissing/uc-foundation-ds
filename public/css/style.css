@@ -5840,6 +5840,7 @@ tr[id*="_trAdditInformation"] {
 @media (max-width: 600px) {
     table[id*="_tblAmount"] > tbody {
         flex-direction: column;  
+        gap: 10px !important;
     }
 
     table[id*="_tblAmount"] > tbody tr:not(:last-child),
@@ -5855,6 +5856,18 @@ tr[id*="_trAdditInformation"] {
 
     td[id*="_Recurrence_tdFrequency"] > select, 
     td[id*="_Recurrence_tdFrequency"] > div {
+        width: 100% !important;
+    }
+
+    tr[id*="_trOther"] {
+        padding: 0;
+        gap: 10px !important;
+        flex-direction: column !important;
+    }
+
+    tr[id*="_trOther"] > td,
+    tr[id*="_trOther"] > td:last-child {
+        display: block;
         width: 100% !important;
     }
 }
