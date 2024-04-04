@@ -1472,12 +1472,16 @@ blockquote {
 
   border-left: 0;
   font-weight: 300;
-  text-indent: -32px;
+  /* text-indent: -32px; */
   margin-left: 50px;
   line-height: 1.2;
   /* padding: 0 !important; */
   color: var(--color-brand-red);
   padding: 40px 50px 20px 20px;
+
+  display: inline-flex;
+  flex-direction: column;
+  position: relative;
 }
 
 blockquote p {
@@ -1489,7 +1493,9 @@ blockquote p {
 }
 
 /* blockquote p:not(:first-child) {
-
+    display: inline;
+    text-indent: 0;
+    margin-top: 1em;
 } */
 
 blockquote:before, 
@@ -1501,14 +1507,21 @@ blockquote:after {
   top: 22px;
   line-height: 0;
   -webkit-text-stroke: 1px var(--color-brand-red);
+
+  position: absolute;
 }
 
 blockquote:before {
-  content: "“";
+    content: "“";
+    top: 60px;
+    left: 0;
 }
 
 blockquote:after {
-  content: "”";
+    content: "”";
+    top: unset;
+    bottom: 50px;
+    right: 20px;
 }
 
 .pull-quote-attribution {
@@ -1556,6 +1569,52 @@ blockquote:after {
     .pull-quote blockquote {
         margin: 0;
         padding: 30px 40px !important;
+    }
+
+    .pull-quote-attribution.flex {
+        flex-direction: row;
+    }
+}
+
+@media (max-width: 500px) {
+    .pull-quote blockquote {
+        margin: 0;
+        padding: 10px 25px !important;
+    }
+
+    blockquote p {
+        font-size: calc(1.25em * var(--text-multiplier, 1)) !important;
+    }
+
+    .pull-quote-attribution.flex {
+        flex-direction: column;
+        margin: 0;
+        padding: 0 10px;
+    }
+
+    .pull-quote-attribution.flex span {
+        display: block;
+        width: 100%;
+    }
+
+    .pull-quote-attribution.flex span img {
+        display: block;
+        margin: 0 auto;
+    }
+
+    blockquote:before, 
+    blockquote:after {
+        font-size: 50px;
+    }
+
+    blockquote:before {
+        top: 30px;
+        left: 0;
+    }
+    
+    blockquote:after {
+        bottom: 20px;
+        right: 5px;
     }
 }
 
