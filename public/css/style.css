@@ -1488,6 +1488,10 @@ blockquote p {
   display: inline;
 }
 
+/* blockquote p:not(:first-child) {
+
+} */
+
 blockquote:before, 
 blockquote:after {
   color: transparent;
@@ -1542,6 +1546,17 @@ blockquote:after {
 
 .pull-quote-attribution.flex {
     gap: 1em;
+}
+
+@media (max-width: 750px) {
+    .pull-quote {
+        padding: 0;
+    }
+
+    .pull-quote blockquote {
+        margin: 0;
+        padding: 30px 40px !important;
+    }
 }
 
 /**
