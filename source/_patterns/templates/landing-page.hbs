@@ -3,31 +3,23 @@
 {{> atoms-page-title }}
 <main id="main" role="main">
 	<img src="https://foundation.uc.edu/image/220412crInnovationHub0025-crop.jpg" alt="Placeholder image">
-	<div class="l-container">
-		{{!-- {{# hero }}
-		{{> molecules-hero width="1200" height="800" }}
-		{{/ hero }} --}}
+	<div class="l-container flow">
+		
+		{{!-- <h2>{{{ page.title }}}</h2>
+		<p class="large bold">{{{ page.description }}}</p> --}}
 
-		<div class="flow">
-			{{!-- <h2>{{{ page.title }}}</h2>
-			<p class="large bold">{{{ page.description }}}</p> --}}
+		<p class="large bold">{{{ intro.paragraphs }}}</p>
 
-			<p class="large bold">{{{ intro.paragraphs }}}</p>
-
-			<br>
-			<h2 class="bold">{{{ togetherCreate.heading }}}</h2>			
-			
-			<div class="flex">
-				{{#each togetherCreate.items }}
-					<div class="icon-text">
-						{{{ text }}}
-					</div>
-				{{/ each }}
-			</div>
+		<h2 class="bold">{{{ togetherCreate.heading }}}</h2>			
+		
+		<div class="flex">
+			{{#each togetherCreate.items }}
+				<div class="icon-text">
+					{{{ text }}}
+				</div>
+			{{/ each }}
 		</div>
 
-		{{!-- <p>{{{ boldRedText }}}</p> --}}
-		<br>
 		<h2>{{{ priorities.heading }}}</h2>
 		{{> molecules-tabs }}
 
@@ -42,7 +34,7 @@
 		<div class="flow">
 			{{{ whyNow.paragraphs }}}
 		</div>-->
-		<br>
+		
 		<h2>{{{ studentFuture.heading }}}</h2>
 		<div class="flow">
 			{{{ studentFuture.paragraphs }}}
