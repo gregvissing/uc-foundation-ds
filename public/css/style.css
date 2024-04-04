@@ -1514,7 +1514,7 @@ blockquote:after {
 blockquote:before {
     content: "“";
     top: 60px;
-    left: 0;
+    left: -10px;
 }
 
 blockquote:after {
@@ -1573,6 +1573,10 @@ blockquote:after {
 
     .pull-quote-attribution.flex {
         flex-direction: row;
+    }
+
+    blockquote:before {
+        left: 0px;
     }
 }
 
