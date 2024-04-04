@@ -1091,6 +1091,10 @@ select.select2-input {
     background-repeat: no-repeat;
 }
 
+.BBFieldControlCell.DonationFieldControlCell > select {
+    min-width: 100%;
+}
+
 /* select:focus {
   border-color: #131313;
 } */
