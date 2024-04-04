@@ -5779,11 +5779,14 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td.wsNowrap {
     padding: 0 !important;
     position: relative;
-    display: inline-flex;
+    /* display: inline-flex; */
     /* flex-wrap: wrap; */
     width: 100% !important;
     height: 46px;
     overflow: hidden;
+
+    display: flex;
+    justify-content: space-between;
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > label {
@@ -5791,13 +5794,15 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > input {
-    width: 200px;
+    /* width: 200px; */
     margin-left: 10px;
+    flex-grow: 1;
 }
 
 div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFrequency"] tr[id*="_Recurrence_trRange"] > td > .ui-datepicker-trigger {
     position: absolute;
-    right: 110px;
+    /* right: 110px; */
+    right: 20px;
     top: 0;
     bottom: 0;
     margin: auto 0;
