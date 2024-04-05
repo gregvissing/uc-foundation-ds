@@ -1484,14 +1484,14 @@ blockquote p {
     font-size: calc(1.75em * var(--text-multiplier, 1)) !important;
     line-height: normal !important;
     color: var(--color-brand-red);
-    font-family: "Gentium Book Basic", serif;
+    /* font-family: "Gentium Book Basic", serif; */
     display: inline;
 }
 
 blockquote:before, 
 blockquote:after {
     color: transparent;
-    font-family: 'Gentium Book Basic',serif;
+    font-family: "Gentium Book Basic",serif;
     font-size: 70px;
     position: relative;
     top: 22px;
@@ -1523,7 +1523,7 @@ blockquote:after {
 
 .pull-quote-attribution span.headshot img {
     border-radius: 50%;
-    width: 150px;
+    width: 100px;
     height: auto;
 }
 
