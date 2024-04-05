@@ -1323,6 +1323,18 @@ p.intro-text {
     font-size: 1.15em;
 }
 
+.contact-card .col-image {
+   	width: 150px;
+}
+
+.contact-card .body {
+	padding: 0 1em;
+}
+
+.contact-card .body p:first-class {
+	line-height: 0.9;
+}
+
 @media (max-width: 600px) {
     .contact-card {
         display: flex;
@@ -1486,6 +1498,7 @@ blockquote p {
     color: var(--color-brand-red);
     /* font-family: "Gentium Book Basic", serif; */
     display: inline;
+    font-style: normal
 }
 
 blockquote:before, 
@@ -1516,15 +1529,24 @@ blockquote:after {
 }
 
 .pull-quote-attribution span {  
-    font-weight: bold;
-    font-family: "Gentium Book Basic", serif;
-    /* text-align: left; */
+    font-weight: 600;
+    font-size: 0.8em;
+    line-height: 1.25;
+}
+
+.pull-quote-attribution span.headshot {
+    border-radius: 50%;
+    background-image: url(https://media.licdn.com/dms/image/D5603AQGELOUM_Ft9GA/profile-displayphoto-shrink_800_800/0/1673291702886?e=1717632000&v=beta&t=xQo9utYPAm8JyT50bTzryK3AIF2qPynzf03Vy-xN4Yo);
+    background-repeat: no-repeat;
+    background-position: top -15px center;
+    background-size: 200%;
 }
 
 .pull-quote-attribution span.headshot img {
     border-radius: 50%;
     width: 100px;
     height: auto;
+    opacity: 0;
 }
 
 .pull-quote-attribution:before {
@@ -3347,10 +3369,6 @@ a.c-stacked-block {
         width: 100%;
         margin-bottom: 1rem;
     }
-}
-
-footer .social-media {
-    margin: 0 !important;
 }
 
 footer .social-media li * {
