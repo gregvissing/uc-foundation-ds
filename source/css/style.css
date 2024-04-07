@@ -3793,9 +3793,13 @@ header {
 }
    
 @media (max-width: 600px) {
-	.nav-toggle {
-   		padding: .75rem 5px;
+	  .nav-toggle {
+   		  padding: .75rem 5px;
    	}
+
+    header img, header h1 {
+        width: 165px !important;
+    }
 }
 
 nav .search a {
