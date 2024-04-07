@@ -1888,7 +1888,7 @@ pre[class*=language-] {
         font-size: 1.35em !important;
        	padding: 10px 5px;
     	display: block;
-    	line-height: 1;
+    	line-height: 1.2;
     	height: unset;
     }
 
@@ -2374,6 +2374,15 @@ table caption {
     width: 30%;
     float: left;
     margin: 10px 45px 20px 0 !important;
+}
+
+@media (max-width: 600px) {
+	.tab-content.floating-img figure {
+        width: 100%;
+        float: none;
+		display: block;
+        margin: 10px 0 !important;
+    }
 }
 
 /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
@@ -5819,6 +5828,7 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell>table>t
     top: 0;
     bottom: 0;
     left: 0;
+   	z-index: 2;
     background-color: var(--color-brand-black);
     color: var(--color-white);
     display: flex;
@@ -5850,6 +5860,17 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell>table>t
 div[id*="_pnlDonationForm"] td input[type="radio"]:checked+label {
     background: var(--color-brand-black);
     transition: all 250ms ease-in-out;
+}
+   
+@media (max-width: 600px) {
+   	tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) {
+        position: relative;
+        height: 45px;
+    }
+   
+   	tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) input {
+        position: absolute;
+    }
 }
 
 /* RADIO BUTTON PILLS */
