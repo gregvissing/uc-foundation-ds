@@ -3793,13 +3793,20 @@ header {
 }
    
 @media (max-width: 600px) {
-	  .nav-toggle {
-   		  padding: .75rem 5px;
+	.nav-toggle {
+   		padding: 10px 5px;
+   		margin: 3px 0;
    	}
-
-    header img, header h1 {
+   
+   	header img, header h1 {
         width: 165px !important;
     }
+   
+   	header .nav-content {
+   		padding-left: 10px;
+   		padding-right: 10px;
+   		transition: transform 0.4s ease-out,box-shadow .6s ease-out;
+   	}
 }
 
 nav .search a {
@@ -7947,7 +7954,17 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_0"] {
 @media (max-width: 600px) {
     div[id*="_UpdatePanel"] {
         width: 100%;
+   		padding-left: 30px;
+   		padding-right: 30px;
     }
+   
+   	div[id*="_UpdatePanel"] .BBFieldControlCell.DonationFieldControlCell > table > tbody > tr,
+   	tr[id*="trOther"] > td,
+   	div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"]>.BBFormTable.DonationFormTable>tbody:last-child:not([id*="_tbdCart"])>tr>td:last-child,
+   	BBFormButtonCell DonationButtonCell {
+   		padding-left: 0px !important;
+   		padding-right: 0px !important;
+   	}
 
     table[id$="_Wizard1"] > tbody > tr:first-child > td > table.w100p > tbody > tr:last-child > td:first-child {
         display: none !important;
