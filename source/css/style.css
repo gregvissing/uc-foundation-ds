@@ -4125,12 +4125,14 @@ ul.nav.main > li.search > a:after {
     transition: all 0.5s;
 }
 
-ul.nav.main > li[class*="menuItem"] > button:hover:after,
-ul.nav.main > li[class*="menuItem"] > button:focus:after,
-ul.nav.main > li.search > a:hover:after,
-ul.nav.main > li.search > a:focus:after,
-ul.nav.main > li.search > a[aria-expanded="true"]:after {
-    width: 100%;
+@media (min-width: 650px) {
+    ul.nav.main > li[class*="menuItem"] > button:hover:after,
+    ul.nav.main > li[class*="menuItem"] > button:focus:after,
+    ul.nav.main > li.search > a:hover:after,
+    ul.nav.main > li.search > a:focus:after,
+    ul.nav.main > li.search > a[aria-expanded="true"]:after {
+        width: 100%;
+    }
 }
 
 .nav.flex.main.c-primary-nav__list li.parent .nccUlMenuSub1 > li > a {
