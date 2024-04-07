@@ -1880,14 +1880,26 @@ pre[class*=language-] {
 }
 
 @media (max-width: 600px) {
+	.page-title {
+        height: unset
+    }
+	
     .page-title h1 {
         font-size: 1.35em !important;
-        padding: 0;
+       	padding: 10px 5px;
+    	display: block;
+    	line-height: 1;
+    	height: unset;
     }
 
-    .page-title h1:before {
-        right: -25px;
-        transform: skew(0deg);
+    .page-title h1:before,
+	.page-title h1:after {
+        display: none;
+    }
+
+	.page-title .l-container {
+        padding: 0;
+		background-color: var(--color-brand-red);
     }
 }
 
