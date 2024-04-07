@@ -1352,6 +1352,10 @@ p.intro-text {
         width: 100%;
         display: block;
     }
+
+	.contact-card .body {
+        padding: 0 !important;
+    }
 }
 
 .col-image .image {
@@ -1465,6 +1469,12 @@ p.intro-text {
   padding: 10px;
 }
 
+@media (max-width: 600px) {
+	.icon-text .flex p {
+    	padding: 10px 0;
+  	}
+}
+
 /**
  * Blockquote base styles
  */
@@ -1490,6 +1500,7 @@ blockquote {
     /* padding: 0 !important; */
     color: var(--color-brand-red);
     padding: 40px 50px 20px 20px;
+	position: relative;
 }
 
 blockquote p {
@@ -1590,20 +1601,21 @@ blockquote:after {
 @media (max-width: 500px) {
     .pull-quote blockquote {
         margin: 0;
-        padding: 10px 25px !important;
+        padding: 10px 0px !important;
     }
 
     blockquote p {
         font-size: calc(1.25em * var(--text-multiplier, 1)) !important;
+		text-indent: 0;
     }
 
     .pull-quote-attribution.flex {
         flex-direction: column;
         margin: 0;
-        padding: 0 10px;
+        padding: 0;
     }
 
-    .pull-quote-attribution.flex span {
+    .pull-quote-attribution.flex span:not(.headshot) {
         display: block;
         width: 100%;
     }
@@ -1611,6 +1623,18 @@ blockquote:after {
     .pull-quote-attribution.flex span img {
         display: block;
         margin: 0 auto;
+    }
+
+	blockquote:before {
+		left: 3px;
+	}
+
+    blockquote:after {
+        content: "”";
+		position: absolute;
+		top: unset;
+		right: -5px;
+		bottom: 0.5em;
     }
 }
 
@@ -1751,12 +1775,13 @@ pre[class*=language-] {
 
 @media (max-width: 600px) {
     .page-title h1 {
-        font-size: 1.45em !important;
+        font-size: 1.35em !important;
         padding: 0;
     }
 
     .page-title h1:before {
         right: -25px;
+		transform: skew(0deg);
     }
 }
 
@@ -2295,7 +2320,7 @@ table caption {
 
     .tab-content,
     .tab > label {
-        padding: 1rem;
+        padding: 0.5rem;
     }
 }
 
@@ -2459,6 +2484,14 @@ table caption {
     color: var(--color-white);
 }
 
+@media (max-width: 650px) {
+	.accordion__trigger {
+		padding-top: 0.5rem;
+		padding-bottom: 0.5rem;
+		padding-left: 0.5rem;
+	}
+}
+
 /*------------------------------------*\
     #LAYOUT
 \*------------------------------------*/
@@ -2490,6 +2523,14 @@ table caption {
         max-width: 100%;
         min-width: 100%;
         width: 100px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    main > .l-container,
+	footer > .l-container {
+        padding-left: 30px !important;
+		padding-right: 30px !important;
     }
 }
 
@@ -3750,6 +3791,12 @@ header {
     display: block;
   }
 }
+   
+@media (max-width: 600px) {
+	.nav-toggle {
+   		padding: .75rem 5px;
+   	}
+}
 
 nav .search a {
     border: none !important;
@@ -4040,6 +4087,10 @@ ul.nav.main > li[class*="menuItem"].button-primary > a {
     min-width: -moz-max-content;
     min-width: max-content;
 }
+   
+.nccUlMenuSub2 {
+	display: none !important;   
+}
 
 .nccUlMenuSub1 > li > a {
     padding: 5px 15px;
@@ -4079,13 +4130,13 @@ ul.nav.main > li.search > a[aria-expanded="true"]:after {
 }
 
 .nav.flex.main.c-primary-nav__list li.parent .nccUlMenuSub1 > li > a {
-  color: var(--color-brand-black);
-  border-bottom: 1px solid var(--color-brand-black);
+  color: var(--color-brand-black) !important;
+  border-bottom: 1px solid var(--color-brand-black) !important;
 }
 
 .nav.flex.main.c-primary-nav__list li.parent .nccUlMenuSub1 > li > a:hover {
   border-bottom: 1px solid var(--color-brand-black);
-  color: var(--color-white);
+  color: var(--color-white) !important;
   background-color: var(--color-brand-black);
 }
 
