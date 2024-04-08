@@ -3886,9 +3886,10 @@ header {
         color: var(--color-brand-black) !important;
         text-transform: capitalize !important;
         font-size: 1em !important;
-        padding: 0.85em !important;
+        padding: 10px 5px; !important;
         line-height: 1;
-        height: 56px;
+        /* height: 56px; */
+   		margin: 3px 0 3px auto !important;
     }
 
     header>div {
@@ -3901,7 +3902,7 @@ header {
         content: "";
         position: absolute;
         left: 1rem !important;
-        top: 1rem;
+        top: 10px;
         background-image: url(https://foundation.uc.edu/image/_2019-redesign/UCF_Logo_BlackRed.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -8220,8 +8221,8 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_0"] {
 @media (max-width: 600px) {
     div[id*="_UpdatePanel"] {
         width: 100%;
-        padding-left: 30px;
-        padding-right: 30px;
+        padding-left: 1em;
+        padding-right: 1em;
     }
 
     div[id*="_UpdatePanel"] .BBFieldControlCell.DonationFieldControlCell>table>tbody>tr,
