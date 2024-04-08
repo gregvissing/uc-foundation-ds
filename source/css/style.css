@@ -453,12 +453,13 @@ label {
 }
 
 /* Balance text wrapping on headings */
+/* 
 h1,
 h2,
 h3,
 h4 {
     text-wrap: balance;
-}
+} */
 
 /* A elements that don't have a class get default styles */
 a:not([class]) {
@@ -968,6 +969,10 @@ h4,
     }
 }
 
+main .l-container > h2 {
+	margin-top: 40px !important;
+}
+
 /*------------------------------------*\
     #FORMS
 \*------------------------------------*/
@@ -1331,7 +1336,7 @@ img {
 
 p.large {
     font-weight: bold;
-    font-size: 1.25;
+    font-size: 1.25em;
 }
 
 p.intro-text {
@@ -1406,7 +1411,6 @@ p.intro-text {
 }
 
 .contact-card {
-    margin: 30px 0;
     border-radius: 16px;
     padding: 30px;
     background: var(--color-grey);
@@ -1417,9 +1421,9 @@ p.intro-text {
     display: flex;
     /* grid-column-gap: 30px;
     grid-template-columns: 1fr 3fr; */
-    width: 800px;
+    width: 100%;
     max-width: 100%;
-    margin: 1em auto;
+    margin: 60px auto !important;
     flex-direction: column;
 }
 
@@ -1428,7 +1432,7 @@ p.intro-text {
 }
 
 .contact-card .col-image {
-    width: 150px;
+    width: 110px;
 }
 
 .contact-card .body {
@@ -1562,6 +1566,19 @@ p.intro-text {
     Icon over text 
  */
 
+.icon-text-container .icon-text:first-child {
+	border-right: 1px solid var(--color-brand-black);
+}
+
+.icon-text-container .icon-text:nth-child(2) {
+	border-left: 1px solid var(--color-brand-black);
+	border-right: 1px solid var(--color-brand-black);
+}
+
+.icon-text-container .icon-text:last-child {
+	border-left: 1px solid var(--color-brand-black);
+}
+
 .icon-text .flex {
     flex-direction: column;
 }
@@ -1572,9 +1589,17 @@ p.intro-text {
 
 .icon-text .flex p {
     padding: 10px;
+	text-align: center;
+}
+
+@media (max-width: 768px) {
+	.icon-text-container .icon-text {
+		border: none !important;
+	}
 }
 
 @media (max-width: 600px) {
+
     .icon-text .flex p {
         padding: 10px 0;
     }
@@ -3873,7 +3898,7 @@ header {
     display: none !important
 }
 
-@media (max-width: 1150px) {
+@media (max-width: 980px) {
     header .nav-closeBtn {
         margin-right: 0 !important;
         margin-left: auto !important;
@@ -5721,6 +5746,7 @@ div[id*="_UpdatePanel"] {
     padding: 10px;
     margin: 0 auto 1.5em;
     max-width: 800px;
+   	overflow: hidden;
 }
 
 div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"]>.BBFormTable.DonationFormTable {
@@ -5751,7 +5777,7 @@ tbody[id*="_TB_pnlDonation"] tr {
 table[id*="_tblAmount"]>tbody {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 10px;
 }
 
@@ -5762,6 +5788,8 @@ table[id*="_rdoGiftType"]>tbody>tr {
 
 table[id*="_tblAmount"]>tbody tr:last-child {
     width: 100%;
+   	display: flex;
+   	gap: 10px;
 }
 
 div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody>tr:not(:last-child) td *,
@@ -5798,7 +5826,7 @@ table[id*="_rdoGiftType"]>tbody>tr label:focus {
 tr[id*="_trOther"] {
     display: flex;
     flex-direction: row !important;
-    gap: 0 !important;
+    gap: 20px !important;
 }
 
 tr[id*="_trOther"] td[id*="_tdOther"] {
@@ -5847,6 +5875,7 @@ tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell>table>t
     display: flex;
     justify-content: center;
     align-items: center;
+   	width: 98%;
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell>table>tbody>tr>td:nth-child(2) input {
@@ -5867,6 +5896,7 @@ div[id*="_pnlDonationForm"] td input[type="radio"]:checked+label {
    	tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) {
         position: relative;
         height: 45px;
+   		width: 100% !important;
     }
    
    	tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell > table > tbody > tr > td:nth-child(2) input {
@@ -5882,12 +5912,12 @@ table[id*="_rdoGiftType"] {
 
 table[id*="_tblAmount"]>tbody,
 table[id*="_rdoGiftType"]>tbody {
-    gap: 0 !important;
+    gap: 10px !important;
 }
 
 table[id*="_tblAmount"]>tbody tr:not(:last-child) {
-    width: 20%;
-    padding: 0 10px;
+    width: 18%;
+    padding: 0;
 }
 
 tr[id*="_trOther"] {
@@ -5895,8 +5925,8 @@ tr[id*="_trOther"] {
 }
 
 tr[id*="_trOther"]>td {
-    width: 20% !important;
-    padding: 0 10px !important;
+    width: 18% !important;
+    padding: 0 !important;
 }
 
 tr[id*="_trOther"]>td:first-child span {
@@ -6189,7 +6219,7 @@ tr[id*="_trAdditInformation"] {
 }
 
 div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"]>.BBFormTable.DonationFormTable>tbody:last-child:not([id*="_tbdCart"])>tr>td:last-child {
-    padding: 10px;
+    padding: 10px 0;
 }
 
 /*------------------------------------*\
@@ -8217,11 +8247,11 @@ table[id$="_Wizard1"]>tbody>tr:first-child>td>table.w100p>tbody>tr:last-child>td
 span[id*="Wizard1_dgAttendeesSummary_lblEventName_0"] {
     padding-left: 5px !important;
 }
-
+   
 @media (max-width: 800px) {
-    div[id*="_UpdatePanel"] {
-        max-width: 100% !important;
-    }
+   	div[id*="_UpdatePanel"] {
+   		max-width: 100% !important;
+   	}
 }
 
 @media (max-width: 600px) {
