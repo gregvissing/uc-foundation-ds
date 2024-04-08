@@ -8218,6 +8218,12 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_0"] {
     padding-left: 5px !important;
 }
 
+@media (max-width: 800px) {
+    div[id*="_UpdatePanel"] {
+        max-width: 100% !important;
+    }
+}
+
 @media (max-width: 600px) {
     div[id*="_UpdatePanel"] {
         width: 100%;
