@@ -1566,17 +1566,9 @@ p.intro-text {
     Icon over text 
  */
 
-.icon-text-container .icon-text:first-child {
-	border-right: 1px solid var(--color-brand-black);
-}
-
 .icon-text-container .icon-text:nth-child(2) {
-	border-left: 1px solid var(--color-brand-black);
-	border-right: 1px solid var(--color-brand-black);
-}
-
-.icon-text-container .icon-text:last-child {
-	border-left: 1px solid var(--color-brand-black);
+	border-left: 1px solid var(--color-ltGray);
+	border-right: 1px solid var(--color-ltGray);
 }
 
 .icon-text .flex {
@@ -3950,7 +3942,7 @@ header {
         flex-direction: column;
         box-shadow: 0 0 0 150vmax rgba(0, 0, 0, 0);
         transform: translateX(100vw);
-        transition: transform 0s ease-out, box-shadow .6s ease-out;
+        transition: transform 0.4s ease-out, box-shadow .6s ease-out;
     }
 
     header h1 a {
