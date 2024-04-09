@@ -5741,6 +5741,11 @@ div[id*="_UpdatePanel"] {
    	overflow: hidden;
 }
 
+div[id*="_UpdatePanel"] .BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
+    color: var(--color-uc-dark-red);
+    display: inline;
+}
+
 div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"]>.BBFormTable.DonationFormTable {
     display: flex;
     flex-direction: column;
@@ -6143,6 +6148,20 @@ div[id*="_pnlDonationForm"] tr[id*="_trRecurrence"] td[id*="_Recurrence_tdFreque
     height: 30px;
 }
 
+/* CORPORATE */
+tr[id*="_trCorporate"] {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+    gap: 10px;
+}
+
+tr[id*="_trCorporate"] .BBFieldControlCell.DonationFieldControlCell > span {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 /* ANONYMOUS */
 tr[id*="_trAnonymous"] {
     display: flex;
@@ -6154,6 +6173,13 @@ tr[id*="_trAnonymous"] {
 tr[id*="_trAnonymous"] td.BBFieldControlCell.DonationFieldControlCell span {
     display: flex;
     flex-direction: row;
+    gap: 10px;
+}
+
+/* COMMENTS */
+tr[id*="_trComments"] {
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
@@ -6171,6 +6197,44 @@ tr[id*="_trSource"]>td:last-child {
 
 tr[id*="_trAdditInformation"] {
     display: none;
+}
+
+/* TRIBUTE */
+tr[id*="_trTribute"] > td:nth-child(2) {
+    padding: 2px 0;
+}
+
+tr[id*="_trTribute"] > td:first-child {
+    display: flex;
+    align-items: center;
+    height: 52px;
+}
+
+.w100p.BBFieldControlCell.DonationCaptureFieldControlCell .BBFieldCheckboxCaption.DonationFieldCheckboxCaption {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.w100p.BBFieldControlCell.DonationCaptureFieldControlCell .BBFieldCheckboxCaption.DonationFieldCheckboxCaption label {
+    padding: 5px 0;
+}
+
+/* ACKNOWLEDGEE */
+tbody[id*="pnlAcknowledgee"] {
+    width: 100%;
+    min-width: 100%;
+}
+
+tbody[id*="pnlAcknowledgee"] > tr {
+    width: 100%;
+    min-width: 100%;
+}
+
+tbody[id*="pnlAcknowledgee"] > tr > td:first-child {
+    display: flex;
+    align-items: center;
+    height: 52px;
 }
 
 /* STANDARD DONATION FORM BUTTONS */
@@ -6487,9 +6551,10 @@ fieldset.billingInformation {
     border-radius: 6px;
     border-width: 2px !important;
     border-style: solid !important;
-    font-family: Jost, sans-serif;
-    font-weight: 500;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
     font-size: 1em !important;
+    letter-spacing: 1px;
     text-transform: uppercase;
     text-align: center;
     transition: background .1s;
@@ -8045,7 +8110,7 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList"]>tbody>tr:first-child td {
     border-width: 2px !important;
     border-style: solid;
     font-family: Jost, sans-serif;
-    /* font-weight: bold; */
+    font-weight: bold;
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
