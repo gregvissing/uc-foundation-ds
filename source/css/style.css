@@ -3905,7 +3905,7 @@ header {
         color: var(--color-brand-black) !important;
         text-transform: capitalize !important;
         font-size: 1em !important;
-        padding: 10px 5px; !important;
+        padding: 10px 5px !important;
         line-height: 1;
         /* height: 56px; */
    		margin: 3px 0 3px auto !important;
