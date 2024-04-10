@@ -69,7 +69,8 @@
         "title": "Chris Eden",
         "position": "Assistant VP of Development",
         "email": "Chris.Eden@foundation.uc.edu",
-        "phone": "(513) 556-0912"
+        "phone": "(513) 556-0912",
+        "phonelink": "513-556-0912"
     },
     "fundInfo": {
         "items": [
