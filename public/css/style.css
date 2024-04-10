@@ -4310,6 +4310,10 @@ ul.nav.main>li[class*="menuItem"].button-primary>a {
     min-width: max-content;
 }
 
+a + ul.nccUlMenuSub1 {
+    display: none;
+}
+
 .nccUlMenuSub2 {
     display: none !important;
 }
