@@ -1013,11 +1013,11 @@ legend {
 /**
  * Label base styles
  */
-label {
+/* label {
     display: block;
     padding-bottom: 0.25rem;
     color: #131313;
-}
+} */
 
 label.c-input-group {
     display: flex;
@@ -1979,6 +1979,8 @@ pre[class*=language-] {
 }
 
 /* Amounts Popup */
+/* Removed from hero for now */
+/*
 .amounts-popup .btn-link:hover+.amounts-popup {
     display: block;
 }
@@ -2060,7 +2062,7 @@ pre[class*=language-] {
         display: none;
     }
 }
-
+*/
 
 .hero .vimeo-wrapper {
     position: fixed;
@@ -4929,14 +4931,6 @@ strong * {
     .flex {
         flex-direction: column;
     }
-
-    .three-fourths,
-    .two-thirds,
-    .one-half,
-    .one-third,
-    .one-fourth {
-        width: 100% !important;
-    }
 }
 
 .width-700 {
@@ -4964,6 +4958,10 @@ strong * {
 
 .flex {
     display: flex !important;
+}
+
+.flex-inline {
+    display: inline-flex !important;
 }
 
 .flex.flex-row {
@@ -6377,7 +6375,7 @@ fieldset.billingInformation {
     }
 }
 
-.form-control {
+.form-control:not(select) {
     display: block;
     width: 100%;
     height: 34px;
@@ -6394,7 +6392,6 @@ fieldset.billingInformation {
 }
 
 .designation-categories {
-    margin-bottom: 20px;
     text-align: center;
 }
 
@@ -6451,7 +6448,49 @@ fieldset.billingInformation {
 }
 
 .donationForm .formrow .amounts {
-    text-align: left !important;
+    /* text-align: left !important; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.donationForm .formrow .amounts #amt1 {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.donationForm .formrow .amounts #amt2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.donationForm .formrow .amounts #amt3 {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.donationForm .formrow .amounts #amt4 {
+    grid-area: 1 / 4 / 2 / 5;
+}
+
+.donationForm .formrow .amounts #amt5 {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.donationForm .formrow .amounts #amt6 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.donationForm .formrow .amounts #amt7 {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.donationForm .formrow .amounts #amt8 {
+    grid-area: 2 / 4 / 3 / 5;
+}
+
+.donationForm .formrow .amounts .otherAmt.amount {
+    grid-area: 3 / 1 / 4 / 5;
+    padding: 0;
 }
 
 .amounts a {
@@ -6462,8 +6501,8 @@ fieldset.billingInformation {
     line-height: 1.5;
     display: inline-block;
     text-align: center;
-    margin-bottom: 5px;
-    width: 24%;
+    /* margin-bottom: 5px; */
+    width: 100%;
     transition: all 0.4s ease-in-out;
     text-decoration: none;
     border-bottom: none !important;
@@ -6531,8 +6570,9 @@ fieldset.billingInformation {
 }
 
 .donationForm .steps .step-buttons {
-    text-align: center;
-    margin-top: 25px;
+    /* text-align: center; */
+    display: flex;
+    justify-content: space-between;
 }
 
 .donationForm .steps .step-button {
@@ -7052,10 +7092,6 @@ h1 a:visited {
     font-weight: bold;
 }
 
-.donationForm .formrow {
-    margin-top: 10px;
-}
-
 .donationForm .formrow label {
     display: inline-table;
     width: 100%;
@@ -7114,16 +7150,15 @@ li {
     margin: 0 0 7px 5px;
 }
 
-.donationForm input[type=text],
+/* .donationForm input[type=text],
 .donationForm input[type=select],
 .donationForm textarea {
     border-radius: 0;
-    /*width: 92%;*/
     line-height: 1.5;
     font-size: 1em;
     padding: 5px;
     height: 35px;
-}
+} */
 
 #BodyId .donationForm input[type=text]:not(#otherAmtInput),
 #BodyId .donationForm input[type=select],
@@ -7167,21 +7202,18 @@ li {
     display: inline;
 }
 
-.designations p,
-.labelText {
-    font-size: 1em !important;
-    color: var(--color-lighterText);
-    line-height: 1.5;
-    margin: 15px 0;
-    text-transform: none;
-    letter-spacing: .02px;
-    font-weight: 500;
-    padding: 0
+.designations > div:not(:first-child):not(:last-child) {
+    margin-bottom: 1.5em;
 }
 
-.designation-categories {
-    margin-bottom: 20px;
-    text-align: center;
+.designations p,
+.labelText {
+    color: var(--color-lighterText);
+    line-height: 1.1;
+    margin: 0 0 10px 0;
+    text-transform: none;
+    font-weight: 400;
+    padding: 0
 }
 
 .designation-categories a {
@@ -7224,9 +7256,9 @@ li {
     width: 250px;
 } */
 
-.amounts {
+/* .amounts {
     text-align: center;
-}
+} */
 
 .amounts a {
     background-color: #e5e5e5;
@@ -7235,8 +7267,8 @@ li {
     line-height: 1.5;
     display: inline-block;
     text-align: center;
-    margin-bottom: 5px;
-    width: 24%;
+    /* margin-bottom: 5px;
+    width: 24%; */
 }
 
 .amounts a {
@@ -7294,12 +7326,6 @@ li {
     color: var(--color-white);
 }
 
-.line-items {
-    padding: 10px;
-    border: 1px solid var(--color-ltGray);
-    border-radius: 7px;
-}
-
 .line-items h3 {
     font-size: 1.3em;
     color: #555;
@@ -7336,14 +7362,6 @@ li {
     color: #888;
     cursor: pointer;
     margin-left: 9px;
-}
-
-.steps {
-    display: none;
-}
-
-.steps.active {
-    display: block;
 }
 
 .top-heading {
@@ -7507,11 +7525,6 @@ li {
     width: 100%;
 }
 
-.donationForm .steps .step-buttons {
-    text-align: center;
-    margin-top: 25px;
-}
-
 .donationForm .steps .step-button {
     /*line-height: 3;*/
     display: inline-block;
@@ -7667,9 +7680,9 @@ li {
     width: 100%;
 }
 
-.tributeLabel {
+/* .tributeLabel {
     font-size: 1em;
-}
+} */
 
 input#tributeCheckbox {
     margin-right: 5px;
@@ -7783,7 +7796,7 @@ input#tributeCheckbox {
     top: 0;
     bottom: 0;
     left: 0;
-    margin: auto;
+    margin: 0;
     background: var(--color-brand-black);
     color: var(--color-white);
     padding: 5px 10px;

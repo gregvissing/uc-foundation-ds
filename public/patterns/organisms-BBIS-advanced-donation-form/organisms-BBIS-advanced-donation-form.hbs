@@ -1,3 +1,5 @@
+<p class="red">Advanced Donation Form - 1st Step - Initial State</p>
+
 <div id="donation-form" class="donationForm width-700">
   	<script src="https://doublethedonation.com/api/js/ddplugin.js"></script> 
 	<link href="https://doublethedonation.com/api/css/ddplugin.css" rel="stylesheet"/>
@@ -97,7 +99,7 @@
                                 <a href="#" id="amt6" class="amount" data-value="1500">$1500</a>
                                 <a href="#" id="amt7" class="amount" data-value="2500">$2500</a>
                                 <a href="#" id="amt8" class="amount" data-value="5000">$5000</a>                          
-                                <label for="otherAmtInput" class="otherAmt amount relative" style="width: 98%;">
+                                <label for="otherAmtInput" class="otherAmt amount relative">
                                     <span class="input-group-addon">$</span>
                                   	<input type="text" class="form-control" id="otherAmtInput" placeholder="Your gift amount" autocomplete="off" />
                                   	<!--<input type="number" class="form-control" id="otherAmtInput" style="font-family: Helvetica, Arial, sans-serif;font-weight:400;" placeholder="Your gift amount" autocomplete="off" min="0.00" max="9999.99" step="1.00" value="100.00" data-number="{'toFixed': 2, 'stepfactor': 1000}" />-->
@@ -300,9 +302,9 @@
                     <div class="tribute">
                         <div class="BBListingHeading DonationListingHeading" style="border:none;background-color:transparent;">
                             <span id="lblTributeHeading">Tribute Information</span>
-                            <span class="tributeSpan form-group">
-                            <input id="tributeCheckbox" type="checkbox" />
-                            <label for="tributeCheckbox" class="tributeLabel">I would like to make my gift as a tribute</label>
+                            <span class="tributeSpan form-group flex-inline">
+                                <input id="tributeCheckbox" type="checkbox" />
+                                <label for="tributeCheckbox" class="tributeLabel">I would like to make my gift as a tribute</label>
                             </span>
                         </div>
                         <div id="tributeInfoSub">
@@ -539,6 +541,1080 @@
             <div class="step-buttons form-group">
                 <input id="returnToReview" class="step-button form-control btn btn-default" type="button" value="BACK" />
                 <input id="donate" class="step-button submit form-control btn btn-default btn-donate" type="button" value="Continue" />
+            </div>
+        </div>
+    </div>
+    <div class="confirmation" id="confirmation"></div>
+</div>
+
+<hr>
+
+<p class="red">Advanced Donation Form - 2nd Step - Gift Added</p>
+
+<div id="donation-form" class="donationForm width-700" style="position: static; zoom: 1;">
+  	<script src="https://doublethedonation.com/api/js/ddplugin.js"></script> 
+	<link href="https://doublethedonation.com/api/css/ddplugin.css" rel="stylesheet">
+  
+  	<div class="breadcrumbs form-group flex flex-row flex-between progress-2">
+        <a href="#" class="breadcrumb bc-designation flex flex-column complete" data-step="1">
+          	<span class="form-step fa fa-check-circle" aria-hidden="true">1</span>
+          	<span>Gift Details</span>
+      	</a><!--<span class="divider">></span>-->
+        <a href="#" class="breadcrumb bc-review flex flex-column active" data-step="2">
+          	<span class="form-step">2</span>
+          	<span>Gift Review</span>
+      	</a><!--<span class="divider">></span>-->
+      	<a href="#" class="breadcrumb bc-billing flex flex-column" data-step="3">
+          	<span class="form-step">3</span>
+          	<span>Your Information</span>
+      	</a><!--<span class="divider">></span>-->
+        <span class="breadcrumb bc-payment flex flex-column">
+      		<span class="form-step">4</span>
+          	<span>Payment</span>	
+      	</span>
+    </div>
+  
+    <div class="validation"></div>
+    <div class="form">
+        <div class="gift">
+            <!------ STEP 1 ------>
+            <div class="steps step1">
+                <fieldset class="donationInformation">
+                    <div class="designations">
+                        <div>
+                            <div class="pull-right">
+                                <span class="gift-count-indicator text-right" style="line-height:3.3em;">Your Gifts <span class="gift-count badge">1</span></span>
+                            </div>
+                            <div>
+                              	<h3 class="top-heading">Make an Impact Today.</h3>
+                                <h3 class="top-heading hide">For Cincinnati. For Generations.</h3>
+                            </div>
+                        </div>
+                        
+                        <p>Where would you like to make your commitment?</p>
+                        <div class="designation-categories form-group flex flex-between">
+                            <a href="#" id="school" class="selected">School or College</a>
+                            <a href="#" id="campus" class="">Other Area</a>
+                            <a href="#" id="cause" class="">A Cause</a>
+                            <a href="#" id="search" class=""><span style="color:transparent;line-height:0;font-size:0;">Search</span><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                      
+                        <div class="formrow category-select form-group">
+                            <label for="categoryList" id="categoryLabel" class="labelText">Which school or college?</label>
+                            <div class="relative req-field">
+                                <select class="chosen-select categoryList form-control select2-input select2-hidden-accessible" id="categoryList" name=" " tabindex="-1" aria-hidden="true" data-select2-id="select2-data-categoryList"><option value="99 - others" data-default="bec20fdc-0e79-42ae-b353-b5b46c02f73e" data-select2-id="select2-data-41-y5k0">University-wide</option><option value="29 - athletics and ucats" data-default="undefined">Athletics and UCATS</option><option value="25 - college of allied health sciences" data-default="undefined">College of Allied Health Sciences</option><option value="01 - college of arts &amp; sciences" data-default="undefined">College of Arts &amp; Sciences</option><option value="04 - college of design, architecture, art &amp; planning" data-default="undefined">College of Design, Architecture, Art &amp; Planning</option><option value="09 - college of education, criminal justice, and human services" data-default="undefined">College of Education, Criminal Justice, and Human Services</option><option value="05 - college of engineering &amp; applied science" data-default="undefined">College of Engineering &amp; Applied Science</option><option value="06 - college of law" data-default="undefined">College of Law</option><option value="16 - college of medicine" data-default="undefined">College of Medicine</option><option value="17 - college of nursing" data-default="undefined">College of Nursing</option><option value="03 - college-conservatory of music" data-default="undefined">College-Conservatory of Music</option><option value="43 - heart, lung and vascular institute" data-default="undefined">Heart, Lung and Vascular Institute</option><option value="hoxworth" data-default="undefined">Hoxworth</option><option value="33 - institute for policy research" data-default="undefined">Institute for Policy Research</option><option value="02 - lindner college of business" data-default="undefined">Lindner College of Business</option><option value="14 - student affairs/provost" data-default="undefined">Student Affairs/Provost</option><option value="28 - uc alumni association" data-default="undefined">UC Alumni Association</option><option value="12 - uc blue ash college" data-default="undefined">UC Blue Ash College</option><option value="42 - uc cancer center" data-default="undefined">UC Cancer Center</option><option value="07 - uc clermont college" data-default="undefined">UC Clermont College</option><option value="30 - uc foundation" data-default="undefined">UC Foundation</option><option value="41 - uc gardner neuroscience institute" data-default="undefined">UC Gardner Neuroscience Institute</option><option value="20 - uc health" data-default="undefined">UC Health</option><option value="26 - uc libraries" data-default="undefined">UC Libraries</option><option value="18 - winkle college of pharmacy" data-default="undefined">Winkle College of Pharmacy</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-40-r5gs" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-categoryList-container" aria-controls="select2-categoryList-container"><span class="select2-selection__rendered" id="select2-categoryList-container" role="textbox" aria-readonly="true" title="University-wide">University-wide</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div class="formrow designation-search form-group">
+                            <p>
+                                <label for="designationSearch" style="width: 350px;">Find a designation by searching below:</label>
+                            </p>
+                            <div class="flex">
+                                <input type="text" class="form-control" id="designationSearch" style="width: 90%; margin-top: 0px; border-top-right-radius: 0; border-bottom-right-radius: 0;" placeholder="Search for a designation">
+                                <button id="designationSearchBtn" style="width: 10%; border-radius: 4px; border-top-left-radius: 0; border-bottom-left-radius: 0;"><i class="fa fa-search" style="display: block;" aria-hidden="true">
+                                <span style="line-height: 0;font-size: 0;color: transparent;">Search for a designation</span></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="formrow designation-select form-group">
+                            <!-- <label for="designationId">Gift designation:</label> -->
+                            <label for="designationId" class="labelText">Which designation? <span id="designationCount"> (5 results found)</span></label>
+                            <div class="relative req-field">
+                                <select class="chosen-select designationId form-control select2-input select2-hidden-accessible" id="designationId" name=" " tabindex="-1" aria-hidden="true" data-select2-id="select2-data-designationId"><option value="3512cdd7-d45b-4895-9511-0f1c2778ec53" data-description="">A&amp;F Debt Management Discretionary Fund - F102310</option><option value="3146dee6-0e7c-4490-a5ba-54c4e50beb67" data-description="">A&amp;F Treasury Discretionary Fund - F102395</option><option value="90b9c8f7-ad1b-4200-b82b-fc0ffcf9e16c" data-description="">Agnes &amp; Murray Seasongood Faculty/Center Perservation/Upkeep - R600374</option><option value="bec20fdc-0e79-42ae-b353-b5b46c02f73e" data-description="" data-select2-id="select2-data-50-bwbo">Anonymous - University Wide Hold Fund - 9001298</option><option value="62fe8d8e-5534-46da-a74c-3e2783dff1db" data-description="">Asian American and Pacific American Tree Fund - F102089</option><option value="bec20fdc-0e79-42ae-b353-b5b46c02f73e" data-description="Please enter a brief description of the area you would like to support below." data-other="true">Can't find your fund?</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-49-zzjl" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-designationId-container" aria-controls="select2-designationId-container"><span class="select2-selection__rendered" id="select2-designationId-container" role="textbox" aria-readonly="true" title="Anonymous - University Wide Hold Fund - 9001298">Anonymous - University Wide Hold Fund - 9001298</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div id="designationDescription" style="display: none;">
+                          	<p id="desDescrText"></p>
+                        </div>
+                        <div id="otherDesignation" class="otherDesignation" style="display: none;">
+                            <input type="text" maxlength="240" class="form-control" id="otherDesignationInput">
+                        </div>
+                        <!-- Begin redesigned amount buttons -->
+                        <div class="formrow form-group relative">
+                            <p>How much would you like to give?</p>
+                            <div class="amounts">
+                                <a href="#" id="amt1" class="amount" data-value="50">$50</a>
+                                <a href="#" id="amt2" class="amount" data-value="100">$100</a>
+                                <a href="#" id="amt3" class="amount" data-value="250">$250</a>
+                                <a href="#" id="amt4" class="amount" data-value="500">$500</a>
+                                <a href="#" id="amt5" class="amount" data-value="1000">$1000</a>
+                                <a href="#" id="amt6" class="amount" data-value="1500">$1500</a>
+                                <a href="#" id="amt7" class="amount" data-value="2500">$2500</a>
+                                <a href="#" id="amt8" class="amount" data-value="5000">$5000</a>                          
+                                <label for="otherAmtInput" class="otherAmt amount flex" style="width: 98%;"><span class="input-group-addon" style="font-weight:bold;">$</span>
+                                  	<input type="text" class="form-control" id="otherAmtInput" style="font-family: Helvetica, Arial, sans-serif;font-weight:400;" placeholder="Your gift amount" autocomplete="off">
+                                  	<!--<input type="number" class="form-control" id="otherAmtInput" style="font-family: Helvetica, Arial, sans-serif;font-weight:400;" placeholder="Your gift amount" autocomplete="off" min="0.00" max="9999.99" step="1.00" value="100.00" data-number="{'toFixed': 2, 'stepfactor': 1000}" />-->
+                                </label> 	
+                                <div id="otherAmtInstr" style="margin-top: 5px; display: none;">
+                                    <div class="input-helper" style="text-align:center;">Enter an amount in the input field above.</div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!--
+                      	<div class="formrow">
+                            <div class="gift-frequencies form-group">
+                                <input type="checkbox" id="recurringGift" class="gift-frequency" data-value="RECURRING GIFT" />
+                                <label for="recurringGift" id="gift-frequency-label">I want to keep my generosity going with automatic payments.</label>
+                            </div>
+                        </div>
+						-->
+                      	<!-- #recurrenceSection moved below Gift Type field -->
+                        <!--<div id="recurrenceSection" class="recurrence" style="display: none;">-->
+                            
+                        <!-- End redesigned amount buttons -->
+                        <div class="step-buttons form-group">
+                            <input id="cancelAddLineItem" class="step-button form-control btn btn-default" type="button" value="Return to review" style="display:none;">
+                            <input id="addLineItem" class="addLineItem step-button form-control btn btn-default" type="button" value="Add Gift">						
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!------ STEP 2 ------>
+            <div class="steps step2 active">
+                <div>
+                    <div class="pull-right"><span class="gift-count-indicator text-right">Your Gifts <span class="gift-count badge">1</span></span></div>
+                    <div>
+                        <h3 class="top-heading">Gift Review</h3>
+                    </div>
+                </div>
+                
+                <div id="lineItems" class="line-items form-group" style="display: block;"><h3>Gifts</h3><div id="lineItem1" class="line-item"><div class="line-item-amount">$50.00</div><div class="line-item-name">Anonymous - University Wide Hold Fund - 9001298</div><div class="line-item-buttons"><a class="line-item-remove" data-index="0">x Remove</a></div></div><div class="line-item" style="text-align:right;font-size:1.5em;color:#777;line-height:1.8;">Total: $50.00</div><div style="text-align:center;"><a style="color:#fff;background-color:#333;font-size:.8em;padding:5px;" href="#" class="add-gift">+ Add another gift</a></div></div>
+                <fieldset class="otherDonationInformation">
+                    <div>
+                        			
+                        <div class="attributes">
+                          	<div>
+                                <div class="formrow form-group one-half">
+                                    <label for="giftType" class="labelText">Gift type (Required):</label>
+                                    <select id="giftType" class="chosen-select giftTypeTxt form-control add-arrow">
+                                        <!--<option value="New Gift" selected="selected" />New Gift -->
+                                        <option value="One-Time" selected="selected">One-Time Gift
+                                        </option><option value="Monthly">Monthly Gift
+                                        </option><option value="Pledge">Pledge Payment
+                                    </option></select>
+                                </div>
+                          	</div>
+                          
+                          	<!-- #recurrenceSection moved from Step 1 -->
+                          	<div id="recurrenceSection" class="recurrence" style="display: none;">
+                              	<div>                                  
+                                    <div class="formrow form-group frequency-select one-half">
+                                        <!-- "Day 1 of every month"... this will be different now that they can start on any day. -->
+                                        <label for="frequency" class="labelText">Installment Frequency</label>
+                                        <div class="relative req-field">
+                                            <select id="frequency" class="chosen-select frequency form-control add-arrow">
+                                                <option value="2">Monthly
+                                                </option><option value="3">Quarterly
+                                            </option></select>
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                              	</div>
+                              	<div class="flex gap-1">
+                                    <div class="formrow form-group start-input one-half">
+                                        <!-- Start and end dates - use a date picker -->
+                                        <label for="startDate" class="labelText">Starting Date</label>
+                                        <div class="relative req-field">
+                                            <input type="text" maxlength="35" id="startDate" class="startDate form-control hasDatepicker" placeholder="mm/dd/yyyy" value="" readonly="readOnly">
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="formrow form-group end-input flex flex-wrap one-half">
+                                        <!-- Start and end dates - use a date picker -->
+                                      	<div class="flex flex-row flex-end align-center" style="height: max-content;">
+                                          	<input type="checkbox" class="endDateCheckbox" id="endDateCheckbox" style="margin-bottom: 0;">
+                                          	<label for="endDateCheckbox" class="labelText">Add an ending date (optional)</label>
+                                      	</div>
+                                        <input type="text" maxlength="35" id="endDate" class="endDate form-control hasDatepicker" placeholder="mm/dd/yyyy" value="" readonly="readOnly">
+                                    </div>
+                              	</div>
+                                <div class="formrow form-group month-select" style="display: none;">
+                                    <label for="month" class="labelText">Month:</label>
+                                    <div class="relative req-field">
+                                        <select id="month" class="chosen-select month form-control select2-input">
+                                            <option value="select a value" selected="selected">select a value
+                                            </option><option value="1">January
+                                            </option><option value="2">February
+                                            </option><option value="3">March
+                                            </option><option value="4">April
+                                            </option><option value="5">May
+                                            </option><option value="6">June
+                                            </option><option value="7">July
+                                            </option><option value="8">August
+                                            </option><option value="9">September
+                                            </option><option value="10">October
+                                            </option><option value="11">November
+                                            </option><option value="12">December
+                                        </option></select>
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                                <div class="formrow form-group" style="display: none;">
+                                    <label for="dayOfMonth" class="labelText">Day of Month:</label>
+                                    <div class="relative req-field">
+                                        <select id="dayOfMonth" class="dayOfMonth form-control select2-input select2-hidden-accessible" data-select2-id="select2-data-dayOfMonth" tabindex="-1" aria-hidden="true">
+                                            <option value="select a value" selected="selected">select a value
+                                            </option><option value="1">1
+                                            </option><option value="2">2
+                                            </option><option value="3">3
+                                            </option><option value="4">4
+                                            </option><option value="5">5
+                                            </option><option value="6">6
+                                            </option><option value="7">7
+                                            </option><option value="8">8
+                                            </option><option value="9">9
+                                            </option><option value="10">10
+                                            </option><option value="11" data-select2-id="select2-data-4-rnwg">11
+                                            </option><option value="12">12
+                                            </option><option value="13">13
+                                            </option><option value="14">14
+                                            </option><option value="15">15
+                                            </option><option value="16">16
+                                            </option><option value="17">17
+                                            </option><option value="18">18
+                                            </option><option value="19">19
+                                            </option><option value="20">20
+                                            </option><option value="21">21
+                                            </option><option value="22">22
+                                            </option><option value="23">23
+                                            </option><option value="24">24
+                                            </option><option value="25">25
+                                            </option><option value="26">26
+                                            </option><option value="27">27
+                                            </option><option value="28">28
+                                            </option><option value="29">29
+                                            </option><option value="30">30
+                                            </option><option value="31">31
+                                        </option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-3-5izl" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-dayOfMonth-container" aria-controls="select2-dayOfMonth-container"><span class="select2-selection__rendered" id="select2-dayOfMonth-container" role="textbox" aria-readonly="true" title="11
+                                            ">11
+                                            </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <!--<div class="formrow form-group">
+                                <label for="donorType" class="labelText">I am making this gift as a(n):</label>
+                                <select id="donorType" class="chosen-select donorTypeTxt form-control">
+                                    <option value="Individual" selected="selected" />Individual
+                                    <option value="Business" />Business
+                                </select>
+                            </div>-->
+                            <!-- Business fields - will only show, and be required, if 'Business' is chosen as donor type -->
+                            <!--<div id="businessSection" style="display:none;">
+                                <div class="formrow form-group business-name-input">
+                                    <label for="businessNameTxt" class="labelText">Business Name:</label>
+                                    <div class="relative req-field">
+                                        <input type="text" maxlength="60" id="businessNameTxt" class="orgNameTxt form-control" value="" />
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                                <div class="formrow form-group business-rep-input">
+                                    <label for="repNameTxt" class="labelText">Representative Name:</label>
+                                    <div class="relative req-field">
+                                        <input type="text" maxlength="35" id="repNameTxt" class="orgRepTxt form-control" value="" />
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                                <div class="formrow form-group business-title-input">
+                                    <label for="repTitleTxt" class="labelText">Representative Title:</label>
+                                    <div class="relative req-field">
+                                        <input type="text" maxlength="35" id="repTitleTxt" class="orgTitleTxt form-control" value="" />
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                        <!-- End business fields -->
+                        <div class="formrow form-group comments-input">
+                            <label for="comments" class="labelText">Special Instructions/Comments (Optional):</label>
+                          	<input type="text" class="comments form-control" id="comments" maxlength="255" placeholder="">
+                            <!--<textarea id="comments" rows="3" class="comments form-control" maxlength="255"></textarea>-->
+                        </div>
+                    </div>
+                    
+                </fieldset>
+                <fieldset class="tributeInformation">
+                    <div class="tribute">
+                        <div class="BBListingHeading DonationListingHeading" style="border:none;background-color:transparent;">
+                            <span id="lblTributeHeading">Tribute Information</span>
+                            <span class="tributeSpan form-group flex-inline">
+                                <input id="tributeCheckbox" type="checkbox">
+                                <label for="tributeCheckbox" class="tributeLabel">I would like to make my gift as a tribute</label>
+                            </span>
+                        </div>
+                        <div id="tributeInfoSub" style="display: none;">
+                            <div class="tributeDefinition">
+                                <div class="formrow form-group tribute-type-input">
+                                    <label for="ddlTribute" class="labelText">Type:</label>
+                                    <div class="relative req-field">
+                                        <select name="ddlTribute" id="ddlTribute" class="type form-control">
+                                            <option selected="selected" value="0">select a value
+                                            </option><option value="in honor of">in honor of person
+                                            </option><option value="in memory of">in memory of person
+                                            </option><option value="in memory of pet">in memory of pet
+                                        </option></select>
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                              	<div class="flex gap-1">
+                                    <div class="formrow form-group tribute-fname-input one-half">
+                                        <label for="txtTributeFirstName" class="labelText">First name:</label>
+                                        <input name="txtTributeFirstName" type="text" maxlength="30" id="txtTributeFirstName" autocomplete="nope" class="firstName form-control">		
+                                    </div>
+                                    <div class="formrow form-group tribute-lname-input one-half">
+                                        <label for="txtTributeLastName" class="tribute-lname-label labelText">Last name:</label>
+                                        <div class="relative req-field">
+                                            <input name="txtTributeLastName" type="text" maxlength="60" id="txtTributeLastName" autocomplete="nope" class="lastName form-control">
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                              	</div>
+                                <div class="formrow form-group tribute-instr-input">
+                                    <label for="txtTributeDescription" class="labelText">Special Instructions:</label>
+                                    <div class="relative req-field">
+                                        <input name="txtTributeDescription" type="text" maxlength="255" id="txtTributeDescription" autocomplete="nope" class="description form-control">
+                                        <span class="req">*</span>
+                                    </div>
+                                    <div class="input-helper" style="">If your gift honors/memorializes a pet, please indicate species and owner's names for appropriate acknowledgement.</div>
+                                </div>
+                            </div>
+                            <div class="formrow form-group flex gap-1">
+                                <input id="chkAcknowledge" type="checkbox" name="chkAcknowledge">
+                                <label for="chkAcknowledge" class="labelText">Provide contact information for honoree or next of kin. Please note address information is required if you would like to specify a contact.</label>
+                            </div>
+                            <div id="acknowledgeeInfoSub" style="display: none;">
+                                <div class="acknowledgee">
+                                  	<div class="flex gap-1">
+                                        <div class="formrow form-group ackn-fname-input one-half">
+                                            <label for="txtAcknowledgeeFirstName" class="labelText">First name</label>
+                                            <input id="txtAcknowledgeeFirstName" class="firstName form-control" type="text" maxlength="30" autocomplete="nope" name="txtAcknowledgeeFirstName">
+                                        </div>
+                                        <div class="formrow form-group ackn-lname-input one-half">
+                                            <label for="txtAcknowledgeeLastName" class="labelText">Last name</label>
+                                            <div class="relative req-field">
+                                                <input id="txtAcknowledgeeLastName" class="lastName form-control" type="text" maxlength="60" autocomplete="nope" name="txtAcknowledgeeLastName">
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                  	</div>
+                                    <div class="formrow form-group ackn-country-input">
+                                        <label for="acknowledgeeCountry" class="labelText">Country</label>
+                                        <div class="relative req-field">
+                                            <select class="country form-control select2-input select2-hidden-accessible" autocomplete="nope" id="acknowledgeeCountry" data-select2-id="select2-data-acknowledgeeCountry" tabindex="-1" aria-hidden="true">
+                                            <option value="AF" data-guid="cff2822a-f7cf-45da-ba77-98adb1f8651c">Afghanistan</option><option value="AL" data-guid="75820893-966c-4779-9aae-d94b0c3d31a3">Albania</option><option value="DZ" data-guid="ba1671c7-8317-451a-b1e7-0c1d593db7aa">Algeria</option><option value="AS" data-guid="b58c7d73-5b94-470e-9372-063f1bc65cde">American Samoa</option><option value="AD" data-guid="a3a3aa20-1d89-4c40-9bb0-7a943588eef9">Andorra</option><option value="AO" data-guid="54f797c2-0ceb-4cb2-b905-4ef1586573bc">Angola</option><option value="AG" data-guid="4dec75d7-d966-4c8e-9a8c-48e93da898ae">Antigua and Barbuda</option><option value="AR" data-guid="62fab607-2dbb-42a1-976a-e128183e8e2c">Argentina</option><option value="AM" data-guid="4ebb1ea1-31af-43ad-a7a5-b50b3bad3727">Armenia</option><option value="AW" data-guid="9a671dd9-6718-45f9-b807-08391a80f077">Aruba</option><option value="AU" data-guid="9dcf9c73-25c0-40a3-bd07-ac6c84ecce59">Australia</option><option value="AT" data-guid="500f9bff-73d3-42df-98fb-6801dd8a908e">Austria</option><option value="AZ" data-guid="e8830493-1883-40d5-acd3-873b281a068b">Azerbaijan</option><option value="BS" data-guid="7690b76d-3ea5-45cf-a911-73b32ccce890">Bahamas</option><option value="BH" data-guid="349dd00d-c6e3-45c9-8b0d-292bf12e9dfd">Bahrain</option><option value="BD" data-guid="438a1e55-e68a-4214-9b84-2c7f263ec361">Bangladesh</option><option value="BB" data-guid="dc84fd25-6923-40eb-8055-4cdbf89cdb81">Barbados</option><option value="BE" data-guid="e6c0a6a0-f0f5-4ad2-9f41-1335c2a12707">Belgium</option><option value="BZ" data-guid="01ef07e5-8def-443d-b7f2-f2d1dde8f337">Belize</option><option value="BJ" data-guid="d386d09e-efd8-48af-b467-a14494cf9122">Benin</option><option value="BM" data-guid="6f89deb3-2de1-4878-8363-cdd89d7e1f29">Bermuda</option><option value="BO" data-guid="43864de0-0551-4b27-8bf1-f2593cc0e5fc">Bolivia</option><option value="BA" data-guid="ff69efa7-bf52-440c-920e-892d37ed6d72">Bosnia and Herzegowina</option><option value="BW" data-guid="2fbc12e9-aa1c-431f-9c4c-d2940b5227e1">Botswana</option><option value="BR" data-guid="f1b80b04-09fe-4da3-9596-525a4157db24">Brazil</option><option value="IO" data-guid="73fb3f9f-132c-46bf-aafd-16f1b45ad696">British Indian Ocean Territory</option><option value="BN" data-guid="8bef29be-6932-4df2-8c0d-2349e2d47035">Brunei</option><option value="BG" data-guid="34491af7-0052-42e9-899f-50b42106c9dc">Bulgaria</option><option value="BF" data-guid="a9115118-630c-4c5a-9751-17a461f2bbdf">Burkina Faso</option><option value="BI" data-guid="9215afb6-75af-4cce-a7b7-36b7cd9fc748">Burundi</option><option value="KH" data-guid="2ee06df2-f1f7-4a9f-a811-d2efb584d877">Cambodia</option><option value="CM" data-guid="bb67c19d-3ca0-4232-9b4c-2cb48c4fe926">Cameroon</option><option value="CA" data-guid="b7439698-a713-433f-ba04-6eeb569b918e">Canada</option><option value="CJ" data-guid="d8e92b06-6f74-40da-9846-09c12a3c2257">Cayman Islands</option><option value="CF" data-guid="25b38653-249e-4aec-9e37-e7a16a11beb5">Central African Republic</option><option value="CL" data-guid="87dfd807-0523-46ec-b8b0-cd326cc051ec">Chile</option><option value="CN" data-guid="e1a2f875-bea0-43a0-8424-39589f6e32ca">China</option><option value="CO" data-guid="0a48a6b6-26ba-4736-9773-e32b71348a68">Colombia</option><option value="CR" data-guid="2a547de9-1924-4a0a-8eaf-f34315c65b18">Costa Rica</option><option value="CI" data-guid="d2a65fe9-f779-46aa-b27a-d90f95164942">Cote D'Ivoire</option><option value="HR" data-guid="6bb0296f-f409-46c8-97f9-057b6d8afcf6">Croatia</option><option value="CY" data-guid="fb034d5e-41a5-4c75-a80e-e71221936199">Cyprus</option><option value="CZ" data-guid="99f36fe4-c704-4351-9c7a-56247ef6fd8a">Czech Republic</option><option value="DK" data-guid="f1ae152a-b9cc-4a67-9172-3b82834184d1">Denmark</option><option value="DO" data-guid="5c7b1821-6cf7-43c0-9cff-d677bf16c1b9">Dominican Republic</option><option value="EC" data-guid="b12bddcc-2880-4755-bc5a-27517bfae9e8">Ecuador</option><option value="EG" data-guid="137b6c38-ab45-4a0e-bdd1-1eaf8ffbc223">Egypt</option><option value="SV" data-guid="cdf09e70-7fa9-4246-8685-276c8273b7bf">El Salvador</option><option value="ER" data-guid="be4f7666-a308-43b6-b51a-1ef7bf518926">Eritrea</option><option value="ET" data-guid="e04cd40d-5842-40a5-ad75-8eaa35b81c65">Ethiopia</option><option value="FJ" data-guid="d1a8f369-92ad-41bc-ac5a-989ad7e5477c">Fiji</option><option value="FI" data-guid="99159dc6-c4bc-4bcc-b0b9-be427ac670e7">Finland</option><option value="FR" data-guid="9ee72fe0-a337-4b59-9422-cc2ebd53a4c1">France</option><option value="GE" data-guid="242569f4-53ef-4bf2-bdb9-adaa416e0c5e">Georgia</option><option value="DE" data-guid="2e7f39e8-8a27-4994-b6fd-3820b0c39eef">Germany</option><option value="GH" data-guid="7828160e-dbb7-43a1-85a4-4089795f5566">Ghana</option><option value="GB" data-guid="af4c970c-ef51-461c-9661-8b193d184525">Great Britian</option><option value="GR" data-guid="4e214b9d-d7b6-462f-b6d5-1b8f77f05a4c">Greece</option><option value="GU" data-guid="e507ed20-3b6f-4a9e-ab5e-13e7b2176809">Guam</option><option value="GT" data-guid="6de0751d-101d-4e5c-85a9-b07143435b66">Guatemala</option><option value="GY" data-guid="66543648-544a-40d9-88c9-6a3f586b3fec">Guyana</option><option value="HT" data-guid="f379501a-05ad-42ae-9798-95975f3fc1c6">Haiti</option><option value="HN" data-guid="360e77ea-78e3-4039-a2ab-6c665865f64e">Honduras</option><option value="HK" data-guid="ffbfa840-bd2f-4073-8dc2-df5df4201c06">Hong Kong</option><option value="HU" data-guid="8471f8ba-29f5-4a5b-b298-f4de06f4f91d">Hungary</option><option value="IS" data-guid="0666f89c-fb2c-46bf-812e-dce46ab1036c">Iceland</option><option value="IN" data-guid="d38407ef-620a-4c3a-99b9-e0275a4906ff">India</option><option value="ID" data-guid="a100096a-cf7a-4a2f-adbf-a0fd17f08d40">Indonesia</option><option value="IR" data-guid="39a8f9f6-927e-4a78-94e2-4ea8802e94a7">Iran (Islamic Republic of)</option><option value="IQ" data-guid="c2296514-226e-41ba-baa8-cd22d77ca015">Iraq</option><option value="IE" data-guid="45197f52-728f-45ab-a63d-181aef138257">Ireland</option><option value="IL" data-guid="e31d6957-b510-46bf-824c-eaa248749ba0">Israel</option><option value="IT" data-guid="0e9a15e2-5eab-4018-9b96-c051f2943ccb">Italy</option><option value="JM" data-guid="1ccb4dda-bae0-4cdd-9a87-f53309e788d2">Jamaica</option><option value="JP" data-guid="e4ea9442-0a6d-4594-8fd6-39e56047f6ff">Japan</option><option value="JO" data-guid="5825f029-8869-4bc4-91d1-486024c8c4c9">Jordan</option><option value="KZ" data-guid="c0a8eebe-d831-4dfe-8cbe-324f961e2227">Kazakhstan</option><option value="KE" data-guid="32b2c072-5316-4f0f-965a-1eafbed103b1">Kenya</option><option value="KP" data-guid="3680569d-0136-4d0f-8783-d409938350db">Korea, D.P.R.O.</option><option value="KR" data-guid="236d40d1-f14f-46d0-b5fa-bdbf6a9609aa">Korea, Republic of</option><option value="KW" data-guid="a3dce12c-f824-4de8-8565-6f65749057d4">Kuwait</option><option value="KG" data-guid="b0e59266-db27-4bd4-8f67-926521c66bcb">Kyrgyzstan</option><option value="LV" data-guid="b8963779-4353-4323-923a-fa2b016ab660">Latvia</option><option value="LB" data-guid="9ce35505-cc8d-43cf-9a14-c28d8ec3202e">Lebanon</option><option value="LY" data-guid="dd7edb7c-672a-4c76-b6d3-ff52cf9ef1c5">Libyan Arab Jamahiriya</option><option value="LI" data-guid="02af1341-b0cf-47a6-beae-115872f85b6b">Liechtenstein</option><option value="LT" data-guid="e3cb7548-32e0-4fbd-9620-978f4f9451b8">Lithuania</option><option value="LU" data-guid="6ab5a801-5428-4076-968d-778aa4ba9cfa">Luxembourg</option><option value="MA" data-guid="0e1b356d-4e32-48ae-97b7-c3cb77ee8b8f">Macao</option><option value="MK" data-guid="03af22f9-42e8-4df7-92a4-b202d2cd8aa0">Macedonia</option><option value="MG" data-guid="cbaad64a-8210-4a48-a677-02b53d06242e">Madagascar</option><option value="MY" data-guid="3ea24c91-87f0-4d12-a9d8-68e8bc14a3fc">Malaysia</option><option value="MT" data-guid="b63096ed-e3f0-4e2f-9638-c8db72b671c1">Malta</option><option value="MH" data-guid="d084585f-c689-4012-87e3-d55f3ae48a91">Marshall Islands</option><option value="MR" data-guid="5abca937-52d2-4041-93da-6350fa1dc126">Mauritania</option><option value="MU" data-guid="721e394c-8d3f-4b6c-ab5d-b5c74e6fd43f">Mauritius</option><option value="RP" data-guid="fed15e15-e374-4bb3-8147-45b62858d65e">Metro Manila</option><option value="MX" data-guid="a3a2f411-d33a-46cc-9710-72070ae871c6">Mexico</option><option value="MD" data-guid="0dcef63d-7668-4c61-be22-d96ade28d889">Moldova, Republic of</option><option value="MC" data-guid="dcd0d37b-fc42-4281-a0f6-3d44878c2df2">Monaco</option><option value="MA" data-guid="75f22973-2ff5-41c3-a4de-f5127aa9a02d">Morocco</option><option value="MZ" data-guid="64febbe0-3c09-48d0-8ad7-ef8ff0e54676">Mozambique</option><option value="MM" data-guid="727c24e5-d2c8-44af-ad6e-a453451cab6a">Myanmar</option><option value="NP" data-guid="25fe4a6d-7fec-4d8f-8bf4-bcbd9277a21a">Nepal</option><option value="NL" data-guid="e34f392a-79b8-4933-b057-10ef94c8ebd6">Netherlands</option><option value="NZ" data-guid="ceec051e-f176-4f04-b76a-2c9497ce4c38">New Zealand</option><option value="NI" data-guid="3a96769c-4bda-4aab-a5fc-c6bf72ce4d81">Nicaragua</option><option value="NE" data-guid="a54f5f9d-098b-42e4-b0d5-281a4c761891">Niger</option><option value="NG" data-guid="41a40244-8d3b-485f-8c3e-d44859b36e04">Nigeria</option><option value="NO" data-guid="630a4615-71a4-4bf9-b8a4-a7abad2b386e">Norway</option><option value="OM" data-guid="7f8c121e-dc87-4a6e-bacf-2f9b60199f35">Oman</option><option value="PK" data-guid="a8eeb873-567a-4218-b701-2d8c36bf533e">Pakistan</option><option value="PW" data-guid="98a2051a-cbff-4ebb-b675-792604a48984">Palau</option><option value="PA" data-guid="1f4fd673-41c5-4a30-96b9-a36c8d2e6021">Panama</option><option value="PG" data-guid="cb58bcf1-a033-4db3-81b3-e2df98f0dbec">Papua New Guinea</option><option value="PY" data-guid="2fa68b79-b9bd-4f47-b1a9-0a6f0c4e6f50">Paraguay</option><option value="PE" data-guid="5af669e3-9f2a-4421-8cc0-af9229c55806">Peru</option><option value="PH" data-guid="d71e5e70-2f09-4bca-8b22-addae296e032">Philippines</option><option value="PL" data-guid="07682a92-76af-4d17-b0e7-2b8342982fc7">Poland</option><option value="PT" data-guid="cee28453-cee6-4fb4-88b4-7ba18a8061ed">Portugal</option><option value="PR" data-guid="b7b7b225-0113-4a90-bc1b-715a9728d1e8">Puerto Rico</option><option value="QA" data-guid="e871f30d-bd14-4763-93f1-5fd2c78406a3">Qatar</option><option value="RO" data-guid="00c98873-a8a8-496c-8076-ee982e5b09e3">Romania</option><option value="RU" data-guid="a2012389-3f0f-46f7-a563-97350d7372a4">Russian Federation</option><option value="SA" data-guid="b2919df4-22b1-40ec-bee6-ab08678da520">Saudi Arabia</option><option value="SN" data-guid="b46306c3-d772-418e-92f2-17079dca77fd">Senegal</option><option value="RS" data-guid="7628ca2e-a908-4a8b-9240-259e8e8da56d">Serbia</option><option value="SL" data-guid="6efc0ab9-5146-4b5e-bdbe-4eb7bab2638e">Sierra Leone</option><option value="SG" data-guid="973e6769-cba6-43e2-9119-e473eeda04cc">Singapore</option><option value="SI" data-guid="f4507cbb-d00e-46bb-9236-1a763c96abc3">Slovenia</option><option value="ZA" data-guid="72a5204e-2404-4f6d-8cf3-5aec665e9af1">South Africa</option><option value="KS" data-guid="4a1ac8c4-ea5c-412d-93af-d57774b2c97a">South Korea</option><option value="ES" data-guid="35e438a5-8da4-4fe6-86fd-7f401c77be7c">Spain</option><option value="LK" data-guid="e1006389-6d97-40f0-9343-3d679fcb68f7">Sri Lanka</option><option value="SD" data-guid="c4d7abcf-4873-431c-8f7b-1036e74b27b1">Sudan</option><option value="SZ" data-guid="41ed40a1-5f43-4a5e-ac81-32c2df12385a">Swaziland</option><option value="SE" data-guid="7d28813e-4488-401a-846b-33cff1667e2a">Sweden</option><option value="CH" data-guid="935daafe-90dc-4b5d-9d62-9f8bb0442d94">Switzerland</option><option value="SY" data-guid="4a7e2598-83d6-459d-bded-1bdd9860f507">Syrian Arab Republic</option><option value="TW" data-guid="38799e0c-8f9a-4d7c-8ad9-0d6b6e1340a1">Taiwan</option><option value="TZ" data-guid="57389453-53c4-4fe2-89af-f60c9218a437">Tanzania</option><option value="TH" data-guid="d47d669e-794b-4a2f-b431-a4fa84323a6d">Thailand</option><option value="TT" data-guid="8984ce70-7620-4406-81e9-a24481b53e30">Trinidad and Tobago</option><option value="TN" data-guid="8c4abbc1-fcd7-4a38-afba-f6f0f261164e">Tunisia</option><option value="TR" data-guid="2dc8bd1b-04ca-433e-a9bf-8e4cfcbf6052">Turkey</option><option value="UG" data-guid="69841c75-53a5-43ae-85e7-5613bf2e7d43">Uganda</option><option value="UA" data-guid="b2db7e09-5af5-49d9-994b-0dcadb57302a">Ukraine</option><option value="AE" data-guid="b7953db8-17f5-4936-84d7-1751e8d451d2">United Arab Emirates</option><option value="GB" data-guid="0609b403-c516-431d-affc-dfa9e206fa27">United Kingdom</option><option value="US" selected="selected" data-guid="4fc81243-c3ac-4ad8-be11-721be5795482" data-select2-id="select2-data-8-7o72">United States</option><option value="UY" data-guid="ca1fb1a8-c014-4a64-ad8e-51961c545233">Uruguay</option><option value="UZ" data-guid="b9eecc2a-9314-45a2-aa30-f6e127f279ef">Uzbekistan</option><option value="VE" data-guid="12d94616-1df8-4c89-9d06-2a406d512adb">Venezuela</option><option value="VN" data-guid="a368c320-9112-4d9f-b2c6-55ad00e3274a">Vietnam</option><option value="VI" data-guid="6fe3fd43-1f61-4126-9659-705403ac68ce">Virgin Islands (U.S.)</option><option value="YE" data-guid="82024569-bef2-4baa-8936-a1a04bf8b6bd">Yemen</option><option value="ZM" data-guid="ac8e6c58-4d37-4ed2-8393-6b363f0ac76d">Zambia</option><option value="ZW" data-guid="195528b1-6522-41ee-8297-efb6f010be26">Zimbabwe</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-7-vlbu" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-acknowledgeeCountry-container" aria-controls="select2-acknowledgeeCountry-container"><span class="select2-selection__rendered" id="select2-acknowledgeeCountry-container" role="textbox" aria-readonly="true" title="United States">United States</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="formrow form-group required ackn-address-input">
+                                        <label for="acknowledgeeStreetAddress" class="labelText">Address lines</label>
+                                        <div class="relative req-field">
+                                            <!--<textarea class="addressLines form-control" autocomplete="nope" id="acknowledgeeStreetAddress" cols="20" rows="2" maxlength="148"></textarea>-->
+                                          	<input type="text" class="addressLines form-control" id="acknowledgeeStreetAddress" maxlength="148" placeholder="">
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                                  	<div class="flex gap-1">
+                                        <div class="formrow form-group required ackn-city-input one-half">
+                                            <label for="acknowledgeeCity" class="labelText">City:</label>
+                                            <div class="relative req-field">
+                                                <input type="text" class="city form-control" autocomplete="nope" id="acknowledgeeCity" maxlength="50" placeholder="">
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="formrow form-group ackn-state-input one-third">
+                                            <label for="acknowledgeeState" class="labelText">State</label>
+                                            <div class="relative req-field">
+                                                <select class="state form-control select2-input select2-hidden-accessible" autocomplete="nope" id="acknowledgeeState" data-select2-id="select2-data-acknowledgeeState" tabindex="-1" aria-hidden="true"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CZ">Canal Zone</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FM">Federated States of Micronesia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MH">Marshall Islands</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH" selected="selected" data-select2-id="select2-data-14-jbn3">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VI">Virgin Islands</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-13-cva9" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-acknowledgeeState-container" aria-controls="select2-acknowledgeeState-container"><span class="select2-selection__rendered" id="select2-acknowledgeeState-container" role="textbox" aria-readonly="true" title="Ohio">Ohio</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="formrow form-group required ackn-zip-input one-fourth">
+                                            <label for="acknowledgeePostalCode" class="labelText">ZIP/Postal code</label>
+                                            <div class="relative req-field">
+                                                <input type="text" class="postalCode form-control" autocomplete="nope" id="acknowledgeePostalCode" maxlength="10" placeholder="">
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                  	</div>
+                                  	<div class="flex gap-1">
+                                        <div class="formrow form-group ackn-phone-input one-half">								
+                                            <label for="acknowledgeePhone" class="labelText">Phone</label>
+                                            <input type="text" class="phone form-control" autocomplete="nope" id="acknowledgeePhone" maxlength="50" placeholder="">
+                                        </div>
+                                        <div class="formrow form-group required ackn-email-input one-half">								
+                                            <label for="acknowledgeeEmailAddress" class="labelText">Email</label>
+                                            <input type="text" class="email form-control" autocomplete="nope" id="acknowledgeeEmailAddress" maxlength="100" placeholder="">
+                                        </div>
+                                  	</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="step-buttons form-group">
+                    <input id="returnToGiftDetail" class="step-button form-control btn btn-default" type="button" value="BACK">
+                    <input id="continueToYourInfo" class="step-button form-control btn btn-default" type="button" value="CONTINUE">
+                </div>
+            </div>
+        </div>
+        <!------ STEP 3 ------>
+        <div class="steps step3">
+            <fieldset class="billingInformation">
+                <div>
+                    <div class="pull-right"><span class="gift-count-indicator text-right">Your Gifts <span class="gift-count badge">1</span></span></div>
+                    <div>
+                        <h3 class="top-heading">Your Information</h3>
+                    </div>
+                </div>
+                
+                <div class="donor">
+                  	<div class="flex gap-1">
+                      	<div class="formrow form-group required fname-input one-half">
+                            <label for="firstName" class="labelText">First name (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="firstName form-control" id="firstName" maxlength="30" placeholder="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div class="formrow form-group required lname-input one-half">
+                            <label for="lastName" class="labelText">Last name (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="lastName form-control" id="lastName" maxlength="60" placeholder="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                  	</div>
+                                    	
+                    <div class="address full-width">
+                        <div class="flex gap-1">
+
+                            <div class="formrow form-group required country-input one-half">
+                              <label for="country" class="labelText">Country (Required)</label>
+                              <div class="relative req-field">
+                                <select class="chosen-select country form-control select2-input select2-hidden-accessible" id="country" data-select2-id="select2-data-country" tabindex="-1" aria-hidden="true">
+                                <option value="AF" data-guid="cff2822a-f7cf-45da-ba77-98adb1f8651c">Afghanistan</option><option value="AL" data-guid="75820893-966c-4779-9aae-d94b0c3d31a3">Albania</option><option value="DZ" data-guid="ba1671c7-8317-451a-b1e7-0c1d593db7aa">Algeria</option><option value="AS" data-guid="b58c7d73-5b94-470e-9372-063f1bc65cde">American Samoa</option><option value="AD" data-guid="a3a3aa20-1d89-4c40-9bb0-7a943588eef9">Andorra</option><option value="AO" data-guid="54f797c2-0ceb-4cb2-b905-4ef1586573bc">Angola</option><option value="AG" data-guid="4dec75d7-d966-4c8e-9a8c-48e93da898ae">Antigua and Barbuda</option><option value="AR" data-guid="62fab607-2dbb-42a1-976a-e128183e8e2c">Argentina</option><option value="AM" data-guid="4ebb1ea1-31af-43ad-a7a5-b50b3bad3727">Armenia</option><option value="AW" data-guid="9a671dd9-6718-45f9-b807-08391a80f077">Aruba</option><option value="AU" data-guid="9dcf9c73-25c0-40a3-bd07-ac6c84ecce59">Australia</option><option value="AT" data-guid="500f9bff-73d3-42df-98fb-6801dd8a908e">Austria</option><option value="AZ" data-guid="e8830493-1883-40d5-acd3-873b281a068b">Azerbaijan</option><option value="BS" data-guid="7690b76d-3ea5-45cf-a911-73b32ccce890">Bahamas</option><option value="BH" data-guid="349dd00d-c6e3-45c9-8b0d-292bf12e9dfd">Bahrain</option><option value="BD" data-guid="438a1e55-e68a-4214-9b84-2c7f263ec361">Bangladesh</option><option value="BB" data-guid="dc84fd25-6923-40eb-8055-4cdbf89cdb81">Barbados</option><option value="BE" data-guid="e6c0a6a0-f0f5-4ad2-9f41-1335c2a12707">Belgium</option><option value="BZ" data-guid="01ef07e5-8def-443d-b7f2-f2d1dde8f337">Belize</option><option value="BJ" data-guid="d386d09e-efd8-48af-b467-a14494cf9122">Benin</option><option value="BM" data-guid="6f89deb3-2de1-4878-8363-cdd89d7e1f29">Bermuda</option><option value="BO" data-guid="43864de0-0551-4b27-8bf1-f2593cc0e5fc">Bolivia</option><option value="BA" data-guid="ff69efa7-bf52-440c-920e-892d37ed6d72">Bosnia and Herzegowina</option><option value="BW" data-guid="2fbc12e9-aa1c-431f-9c4c-d2940b5227e1">Botswana</option><option value="BR" data-guid="f1b80b04-09fe-4da3-9596-525a4157db24">Brazil</option><option value="IO" data-guid="73fb3f9f-132c-46bf-aafd-16f1b45ad696">British Indian Ocean Territory</option><option value="BN" data-guid="8bef29be-6932-4df2-8c0d-2349e2d47035">Brunei</option><option value="BG" data-guid="34491af7-0052-42e9-899f-50b42106c9dc">Bulgaria</option><option value="BF" data-guid="a9115118-630c-4c5a-9751-17a461f2bbdf">Burkina Faso</option><option value="BI" data-guid="9215afb6-75af-4cce-a7b7-36b7cd9fc748">Burundi</option><option value="KH" data-guid="2ee06df2-f1f7-4a9f-a811-d2efb584d877">Cambodia</option><option value="CM" data-guid="bb67c19d-3ca0-4232-9b4c-2cb48c4fe926">Cameroon</option><option value="CA" data-guid="b7439698-a713-433f-ba04-6eeb569b918e">Canada</option><option value="CJ" data-guid="d8e92b06-6f74-40da-9846-09c12a3c2257">Cayman Islands</option><option value="CF" data-guid="25b38653-249e-4aec-9e37-e7a16a11beb5">Central African Republic</option><option value="CL" data-guid="87dfd807-0523-46ec-b8b0-cd326cc051ec">Chile</option><option value="CN" data-guid="e1a2f875-bea0-43a0-8424-39589f6e32ca">China</option><option value="CO" data-guid="0a48a6b6-26ba-4736-9773-e32b71348a68">Colombia</option><option value="CR" data-guid="2a547de9-1924-4a0a-8eaf-f34315c65b18">Costa Rica</option><option value="CI" data-guid="d2a65fe9-f779-46aa-b27a-d90f95164942">Cote D'Ivoire</option><option value="HR" data-guid="6bb0296f-f409-46c8-97f9-057b6d8afcf6">Croatia</option><option value="CY" data-guid="fb034d5e-41a5-4c75-a80e-e71221936199">Cyprus</option><option value="CZ" data-guid="99f36fe4-c704-4351-9c7a-56247ef6fd8a">Czech Republic</option><option value="DK" data-guid="f1ae152a-b9cc-4a67-9172-3b82834184d1">Denmark</option><option value="DO" data-guid="5c7b1821-6cf7-43c0-9cff-d677bf16c1b9">Dominican Republic</option><option value="EC" data-guid="b12bddcc-2880-4755-bc5a-27517bfae9e8">Ecuador</option><option value="EG" data-guid="137b6c38-ab45-4a0e-bdd1-1eaf8ffbc223">Egypt</option><option value="SV" data-guid="cdf09e70-7fa9-4246-8685-276c8273b7bf">El Salvador</option><option value="ER" data-guid="be4f7666-a308-43b6-b51a-1ef7bf518926">Eritrea</option><option value="ET" data-guid="e04cd40d-5842-40a5-ad75-8eaa35b81c65">Ethiopia</option><option value="FJ" data-guid="d1a8f369-92ad-41bc-ac5a-989ad7e5477c">Fiji</option><option value="FI" data-guid="99159dc6-c4bc-4bcc-b0b9-be427ac670e7">Finland</option><option value="FR" data-guid="9ee72fe0-a337-4b59-9422-cc2ebd53a4c1">France</option><option value="GE" data-guid="242569f4-53ef-4bf2-bdb9-adaa416e0c5e">Georgia</option><option value="DE" data-guid="2e7f39e8-8a27-4994-b6fd-3820b0c39eef">Germany</option><option value="GH" data-guid="7828160e-dbb7-43a1-85a4-4089795f5566">Ghana</option><option value="GB" data-guid="af4c970c-ef51-461c-9661-8b193d184525">Great Britian</option><option value="GR" data-guid="4e214b9d-d7b6-462f-b6d5-1b8f77f05a4c">Greece</option><option value="GU" data-guid="e507ed20-3b6f-4a9e-ab5e-13e7b2176809">Guam</option><option value="GT" data-guid="6de0751d-101d-4e5c-85a9-b07143435b66">Guatemala</option><option value="GY" data-guid="66543648-544a-40d9-88c9-6a3f586b3fec">Guyana</option><option value="HT" data-guid="f379501a-05ad-42ae-9798-95975f3fc1c6">Haiti</option><option value="HN" data-guid="360e77ea-78e3-4039-a2ab-6c665865f64e">Honduras</option><option value="HK" data-guid="ffbfa840-bd2f-4073-8dc2-df5df4201c06">Hong Kong</option><option value="HU" data-guid="8471f8ba-29f5-4a5b-b298-f4de06f4f91d">Hungary</option><option value="IS" data-guid="0666f89c-fb2c-46bf-812e-dce46ab1036c">Iceland</option><option value="IN" data-guid="d38407ef-620a-4c3a-99b9-e0275a4906ff">India</option><option value="ID" data-guid="a100096a-cf7a-4a2f-adbf-a0fd17f08d40">Indonesia</option><option value="IR" data-guid="39a8f9f6-927e-4a78-94e2-4ea8802e94a7">Iran (Islamic Republic of)</option><option value="IQ" data-guid="c2296514-226e-41ba-baa8-cd22d77ca015">Iraq</option><option value="IE" data-guid="45197f52-728f-45ab-a63d-181aef138257">Ireland</option><option value="IL" data-guid="e31d6957-b510-46bf-824c-eaa248749ba0">Israel</option><option value="IT" data-guid="0e9a15e2-5eab-4018-9b96-c051f2943ccb">Italy</option><option value="JM" data-guid="1ccb4dda-bae0-4cdd-9a87-f53309e788d2">Jamaica</option><option value="JP" data-guid="e4ea9442-0a6d-4594-8fd6-39e56047f6ff">Japan</option><option value="JO" data-guid="5825f029-8869-4bc4-91d1-486024c8c4c9">Jordan</option><option value="KZ" data-guid="c0a8eebe-d831-4dfe-8cbe-324f961e2227">Kazakhstan</option><option value="KE" data-guid="32b2c072-5316-4f0f-965a-1eafbed103b1">Kenya</option><option value="KP" data-guid="3680569d-0136-4d0f-8783-d409938350db">Korea, D.P.R.O.</option><option value="KR" data-guid="236d40d1-f14f-46d0-b5fa-bdbf6a9609aa">Korea, Republic of</option><option value="KW" data-guid="a3dce12c-f824-4de8-8565-6f65749057d4">Kuwait</option><option value="KG" data-guid="b0e59266-db27-4bd4-8f67-926521c66bcb">Kyrgyzstan</option><option value="LV" data-guid="b8963779-4353-4323-923a-fa2b016ab660">Latvia</option><option value="LB" data-guid="9ce35505-cc8d-43cf-9a14-c28d8ec3202e">Lebanon</option><option value="LY" data-guid="dd7edb7c-672a-4c76-b6d3-ff52cf9ef1c5">Libyan Arab Jamahiriya</option><option value="LI" data-guid="02af1341-b0cf-47a6-beae-115872f85b6b">Liechtenstein</option><option value="LT" data-guid="e3cb7548-32e0-4fbd-9620-978f4f9451b8">Lithuania</option><option value="LU" data-guid="6ab5a801-5428-4076-968d-778aa4ba9cfa">Luxembourg</option><option value="MA" data-guid="0e1b356d-4e32-48ae-97b7-c3cb77ee8b8f">Macao</option><option value="MK" data-guid="03af22f9-42e8-4df7-92a4-b202d2cd8aa0">Macedonia</option><option value="MG" data-guid="cbaad64a-8210-4a48-a677-02b53d06242e">Madagascar</option><option value="MY" data-guid="3ea24c91-87f0-4d12-a9d8-68e8bc14a3fc">Malaysia</option><option value="MT" data-guid="b63096ed-e3f0-4e2f-9638-c8db72b671c1">Malta</option><option value="MH" data-guid="d084585f-c689-4012-87e3-d55f3ae48a91">Marshall Islands</option><option value="MR" data-guid="5abca937-52d2-4041-93da-6350fa1dc126">Mauritania</option><option value="MU" data-guid="721e394c-8d3f-4b6c-ab5d-b5c74e6fd43f">Mauritius</option><option value="RP" data-guid="fed15e15-e374-4bb3-8147-45b62858d65e">Metro Manila</option><option value="MX" data-guid="a3a2f411-d33a-46cc-9710-72070ae871c6">Mexico</option><option value="MD" data-guid="0dcef63d-7668-4c61-be22-d96ade28d889">Moldova, Republic of</option><option value="MC" data-guid="dcd0d37b-fc42-4281-a0f6-3d44878c2df2">Monaco</option><option value="MA" data-guid="75f22973-2ff5-41c3-a4de-f5127aa9a02d">Morocco</option><option value="MZ" data-guid="64febbe0-3c09-48d0-8ad7-ef8ff0e54676">Mozambique</option><option value="MM" data-guid="727c24e5-d2c8-44af-ad6e-a453451cab6a">Myanmar</option><option value="NP" data-guid="25fe4a6d-7fec-4d8f-8bf4-bcbd9277a21a">Nepal</option><option value="NL" data-guid="e34f392a-79b8-4933-b057-10ef94c8ebd6">Netherlands</option><option value="NZ" data-guid="ceec051e-f176-4f04-b76a-2c9497ce4c38">New Zealand</option><option value="NI" data-guid="3a96769c-4bda-4aab-a5fc-c6bf72ce4d81">Nicaragua</option><option value="NE" data-guid="a54f5f9d-098b-42e4-b0d5-281a4c761891">Niger</option><option value="NG" data-guid="41a40244-8d3b-485f-8c3e-d44859b36e04">Nigeria</option><option value="NO" data-guid="630a4615-71a4-4bf9-b8a4-a7abad2b386e">Norway</option><option value="OM" data-guid="7f8c121e-dc87-4a6e-bacf-2f9b60199f35">Oman</option><option value="PK" data-guid="a8eeb873-567a-4218-b701-2d8c36bf533e">Pakistan</option><option value="PW" data-guid="98a2051a-cbff-4ebb-b675-792604a48984">Palau</option><option value="PA" data-guid="1f4fd673-41c5-4a30-96b9-a36c8d2e6021">Panama</option><option value="PG" data-guid="cb58bcf1-a033-4db3-81b3-e2df98f0dbec">Papua New Guinea</option><option value="PY" data-guid="2fa68b79-b9bd-4f47-b1a9-0a6f0c4e6f50">Paraguay</option><option value="PE" data-guid="5af669e3-9f2a-4421-8cc0-af9229c55806">Peru</option><option value="PH" data-guid="d71e5e70-2f09-4bca-8b22-addae296e032">Philippines</option><option value="PL" data-guid="07682a92-76af-4d17-b0e7-2b8342982fc7">Poland</option><option value="PT" data-guid="cee28453-cee6-4fb4-88b4-7ba18a8061ed">Portugal</option><option value="PR" data-guid="b7b7b225-0113-4a90-bc1b-715a9728d1e8">Puerto Rico</option><option value="QA" data-guid="e871f30d-bd14-4763-93f1-5fd2c78406a3">Qatar</option><option value="RO" data-guid="00c98873-a8a8-496c-8076-ee982e5b09e3">Romania</option><option value="RU" data-guid="a2012389-3f0f-46f7-a563-97350d7372a4">Russian Federation</option><option value="SA" data-guid="b2919df4-22b1-40ec-bee6-ab08678da520">Saudi Arabia</option><option value="SN" data-guid="b46306c3-d772-418e-92f2-17079dca77fd">Senegal</option><option value="RS" data-guid="7628ca2e-a908-4a8b-9240-259e8e8da56d">Serbia</option><option value="SL" data-guid="6efc0ab9-5146-4b5e-bdbe-4eb7bab2638e">Sierra Leone</option><option value="SG" data-guid="973e6769-cba6-43e2-9119-e473eeda04cc">Singapore</option><option value="SI" data-guid="f4507cbb-d00e-46bb-9236-1a763c96abc3">Slovenia</option><option value="ZA" data-guid="72a5204e-2404-4f6d-8cf3-5aec665e9af1">South Africa</option><option value="KS" data-guid="4a1ac8c4-ea5c-412d-93af-d57774b2c97a">South Korea</option><option value="ES" data-guid="35e438a5-8da4-4fe6-86fd-7f401c77be7c">Spain</option><option value="LK" data-guid="e1006389-6d97-40f0-9343-3d679fcb68f7">Sri Lanka</option><option value="SD" data-guid="c4d7abcf-4873-431c-8f7b-1036e74b27b1">Sudan</option><option value="SZ" data-guid="41ed40a1-5f43-4a5e-ac81-32c2df12385a">Swaziland</option><option value="SE" data-guid="7d28813e-4488-401a-846b-33cff1667e2a">Sweden</option><option value="CH" data-guid="935daafe-90dc-4b5d-9d62-9f8bb0442d94">Switzerland</option><option value="SY" data-guid="4a7e2598-83d6-459d-bded-1bdd9860f507">Syrian Arab Republic</option><option value="TW" data-guid="38799e0c-8f9a-4d7c-8ad9-0d6b6e1340a1">Taiwan</option><option value="TZ" data-guid="57389453-53c4-4fe2-89af-f60c9218a437">Tanzania</option><option value="TH" data-guid="d47d669e-794b-4a2f-b431-a4fa84323a6d">Thailand</option><option value="TT" data-guid="8984ce70-7620-4406-81e9-a24481b53e30">Trinidad and Tobago</option><option value="TN" data-guid="8c4abbc1-fcd7-4a38-afba-f6f0f261164e">Tunisia</option><option value="TR" data-guid="2dc8bd1b-04ca-433e-a9bf-8e4cfcbf6052">Turkey</option><option value="UG" data-guid="69841c75-53a5-43ae-85e7-5613bf2e7d43">Uganda</option><option value="UA" data-guid="b2db7e09-5af5-49d9-994b-0dcadb57302a">Ukraine</option><option value="AE" data-guid="b7953db8-17f5-4936-84d7-1751e8d451d2">United Arab Emirates</option><option value="GB" data-guid="0609b403-c516-431d-affc-dfa9e206fa27">United Kingdom</option><option value="US" selected="selected" data-guid="4fc81243-c3ac-4ad8-be11-721be5795482" data-select2-id="select2-data-6-tqli">United States</option><option value="UY" data-guid="ca1fb1a8-c014-4a64-ad8e-51961c545233">Uruguay</option><option value="UZ" data-guid="b9eecc2a-9314-45a2-aa30-f6e127f279ef">Uzbekistan</option><option value="VE" data-guid="12d94616-1df8-4c89-9d06-2a406d512adb">Venezuela</option><option value="VN" data-guid="a368c320-9112-4d9f-b2c6-55ad00e3274a">Vietnam</option><option value="VI" data-guid="6fe3fd43-1f61-4126-9659-705403ac68ce">Virgin Islands (U.S.)</option><option value="YE" data-guid="82024569-bef2-4baa-8936-a1a04bf8b6bd">Yemen</option><option value="ZM" data-guid="ac8e6c58-4d37-4ed2-8393-6b363f0ac76d">Zambia</option><option value="ZW" data-guid="195528b1-6522-41ee-8297-efb6f010be26">Zimbabwe</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-plqh" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-country-container" aria-controls="select2-country-container"><span class="select2-selection__rendered" id="select2-country-container" role="textbox" aria-readonly="true" title="United States">United States</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+
+                            <div class="formrow form-group required zip-input one-half">
+                              <label for="postalCode" class="labelText">ZIP/Postal code (Required)</label>
+                              <div class="relative req-field">
+                                <input type="text" class="postalCode form-control" id="postalCode" maxlength="10" placeholder="">
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="formrow form-group required address-input">
+                            <label for="streetAddress" class="labelText">Address (Required)</label>
+                            <div class="relative req-field">
+                              <!--<textarea class="streetAddress form-control" id="streetAddress" cols="20" rows="2" maxlength="148"></textarea>-->
+                              <input type="text" class="streetAddress form-control" id="streetAddress" maxlength="100" placeholder="">
+                              <span class="req">*</span>
+                            </div>
+                          </div>
+                          <div class="flex gap-1">
+
+                            <div class="formrow form-group required city-input one-half">
+                              <label for="city" class="labelText">City (Required)</label>
+                              <div class="relative req-field">
+                                <input type="text" class="city form-control" id="city" maxlength="50" placeholder="">
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+                            <div class="formrow form-group required state-input one-half">
+                              <label for="state" class="labelText">State (Required)</label>
+                              <div class="relative req-field">
+                                <select class="chosen-select state form-control select2-input select2-hidden-accessible" id="state" data-select2-id="select2-data-state" tabindex="-1" aria-hidden="true"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CZ">Canal Zone</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FM">Federated States of Micronesia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MH">Marshall Islands</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH" selected="selected" data-select2-id="select2-data-10-m9am">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VI">Virgin Islands</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-9-v0pg" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-state-container" aria-controls="select2-state-container"><span class="select2-selection__rendered" id="select2-state-container" role="textbox" aria-readonly="true" title="Ohio">Ohio</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+                            <div class="formrow form-group required province-input one-half hide">
+                              <label for="province" class="labelText">Province (Required)</label>
+                              <div class="relative req-field">
+                                <select class="chosen-select province form-control select2-input select2-hidden-accessible" id="province" data-select2-id="select2-data-province" tabindex="-1" aria-hidden="true"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CZ">Canal Zone</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FM">Federated States of Micronesia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MH">Marshall Islands</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH" selected="selected" data-select2-id="select2-data-12-stb5">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VI">Virgin Islands</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-so25" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-province-container" aria-controls="select2-province-container"><span class="select2-selection__rendered" id="select2-province-container" role="textbox" aria-readonly="true" title="Ohio">Ohio</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+
+                        </div>
+                    </div>
+                  
+                  	<div class="flex gap-1">
+                        <div class="formrow form-group required email-input one-half">
+                            <label for="emailAddress" class="labelText">Email (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="emailAddress form-control" id="emailAddress" maxlength="100" placeholder="" value="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div class="formrow form-group required phone-input one-half">
+                            <label for="phone" class="labelText">Phone (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="phone form-control" id="phone" maxlength="50" placeholder="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                  	</div>
+                </div>
+              
+              	<div class="formrow">
+                	<script>var DDCONF = {API_KEY: "N6tBG3KcsjhTlVVR"};</script>
+                	<label for="dd-company-name-input" class="labelText">See if your employer will match your gift! (optional)</label>
+                	<div id="dd-company-name-input" data-doublethedonation-widget-id="G__2"><div class="dtd-streamlined-plugin"><input type="hidden" name="doubledonation_status" value="no_interaction"><input type="hidden" name="doublethedonation_status" value="no_interaction"><input type="hidden" name="doublethedonation_entered_text"><input type="hidden" name="doubledonation_company_id"><input type="hidden" name="doublethedonation_company_id"><input type="hidden" name="doubledonation_company_name"><input type="hidden" name="doublethedonation_company_name"><div class="dtd-search-box" style="width: 100%; margin-bottom: 0px;"><div aria-live="assertive" style="display: block; font-size: 0px; color: rgb(255, 255, 255); opacity: 0; position: absolute; height: 0px; margin: 0px; z-index: -99999;"></div><div aria-live="polite" style="display: block; font-size: 0px; color: rgb(255, 255, 255); opacity: 0; position: absolute; height: 0px; margin: 0px; z-index: -99999;"></div><input role="combobox" aria-expanded="false" name="doublethedonation_company_name_input" autocomplete="new-password" type="text" id="dd-input" class="dtd-search-input form-control BBFormTextbox" placeholder="Search for company..." aria-label="Search for company..." style="width: 100%;"></div></div></div>
+            	</div>
+            </fieldset>
+            <!--<div class="formrow">
+                <script>var DDCONF = {API_KEY: "N6tBG3KcsjhTlVVR"};</script>
+                <label for="dd-company-name-input" class="labelText">See if your employer will match your gift! (optional)</label>
+                <div id="dd-company-name-input"></div>
+            </div>-->
+            <div class="step-buttons form-group">
+                <input id="returnToReview" class="step-button form-control btn btn-default" type="button" value="BACK">
+                <input id="donate" class="step-button submit form-control btn btn-default btn-donate" type="button" value="Continue">
+            </div>
+        </div>
+    </div>
+    <div class="confirmation" id="confirmation"></div>
+</div>
+
+<hr>
+
+<p class="red">Advanced Donation Form - 3rd Step - Your Information</p>
+
+<div id="donation-form" class="donationForm width-700" style="position: static; zoom: 1;">
+  	<script src="https://doublethedonation.com/api/js/ddplugin.js"></script> 
+	<link href="https://doublethedonation.com/api/css/ddplugin.css" rel="stylesheet">
+  
+  	<div class="breadcrumbs form-group flex flex-row flex-between progress-3">
+        <a href="#" class="breadcrumb bc-designation flex flex-column complete" data-step="1">
+          	<span class="form-step fa fa-check-circle" aria-hidden="true">1</span>
+          	<span>Gift Details</span>
+      	</a><!--<span class="divider">></span>-->
+        <a href="#" class="breadcrumb bc-review flex flex-column complete" data-step="2">
+          	<span class="form-step fa fa-check-circle" aria-hidden="true">2</span>
+          	<span>Gift Review</span>
+      	</a><!--<span class="divider">></span>-->
+      	<a href="#" class="breadcrumb bc-billing flex flex-column active" data-step="3">
+          	<span class="form-step">3</span>
+          	<span>Your Information</span>
+      	</a><!--<span class="divider">></span>-->
+        <span class="breadcrumb bc-payment flex flex-column">
+      		<span class="form-step">4</span>
+          	<span>Payment</span>	
+      	</span>
+    </div>
+  
+    <div class="validation"></div>
+    <div class="form">
+        <div class="gift">
+            <!------ STEP 1 ------>
+            <div class="steps step1">
+                <fieldset class="donationInformation">
+                    <div class="designations">
+                        <div>
+                            <div class="pull-right">
+                                <span class="gift-count-indicator text-right" style="line-height:3.3em;">Your Gifts <span class="gift-count badge">1</span></span>
+                            </div>
+                            <div>
+                              	<h3 class="top-heading">Make an Impact Today.</h3>
+                                <h3 class="top-heading hide">For Cincinnati. For Generations.</h3>
+                            </div>
+                        </div>
+                        
+                        <p>Where would you like to make your commitment?</p>
+                        <div class="designation-categories form-group flex flex-between">
+                            <a href="#" id="school" class="selected">School or College</a>
+                            <a href="#" id="campus" class="">Other Area</a>
+                            <a href="#" id="cause" class="">A Cause</a>
+                            <a href="#" id="search" class=""><span style="color:transparent;line-height:0;font-size:0;">Search</span><i class="fa fa-search" aria-hidden="true"></i></a>
+                        </div>
+                      
+                        <div class="formrow category-select form-group">
+                            <label for="categoryList" id="categoryLabel" class="labelText">Which school or college?</label>
+                            <div class="relative req-field">
+                                <select class="chosen-select categoryList form-control select2-input select2-hidden-accessible" id="categoryList" name=" " tabindex="-1" aria-hidden="true" data-select2-id="select2-data-categoryList"><option value="99 - others" data-default="bec20fdc-0e79-42ae-b353-b5b46c02f73e" data-select2-id="select2-data-114-kdd2">University-wide</option><option value="29 - athletics and ucats" data-default="undefined">Athletics and UCATS</option><option value="25 - college of allied health sciences" data-default="undefined">College of Allied Health Sciences</option><option value="01 - college of arts &amp; sciences" data-default="undefined">College of Arts &amp; Sciences</option><option value="04 - college of design, architecture, art &amp; planning" data-default="undefined">College of Design, Architecture, Art &amp; Planning</option><option value="09 - college of education, criminal justice, and human services" data-default="undefined">College of Education, Criminal Justice, and Human Services</option><option value="05 - college of engineering &amp; applied science" data-default="undefined">College of Engineering &amp; Applied Science</option><option value="06 - college of law" data-default="undefined">College of Law</option><option value="16 - college of medicine" data-default="undefined">College of Medicine</option><option value="17 - college of nursing" data-default="undefined">College of Nursing</option><option value="03 - college-conservatory of music" data-default="undefined">College-Conservatory of Music</option><option value="43 - heart, lung and vascular institute" data-default="undefined">Heart, Lung and Vascular Institute</option><option value="hoxworth" data-default="undefined">Hoxworth</option><option value="33 - institute for policy research" data-default="undefined">Institute for Policy Research</option><option value="02 - lindner college of business" data-default="undefined">Lindner College of Business</option><option value="14 - student affairs/provost" data-default="undefined">Student Affairs/Provost</option><option value="28 - uc alumni association" data-default="undefined">UC Alumni Association</option><option value="12 - uc blue ash college" data-default="undefined">UC Blue Ash College</option><option value="42 - uc cancer center" data-default="undefined">UC Cancer Center</option><option value="07 - uc clermont college" data-default="undefined">UC Clermont College</option><option value="30 - uc foundation" data-default="undefined">UC Foundation</option><option value="41 - uc gardner neuroscience institute" data-default="undefined">UC Gardner Neuroscience Institute</option><option value="20 - uc health" data-default="undefined">UC Health</option><option value="26 - uc libraries" data-default="undefined">UC Libraries</option><option value="18 - winkle college of pharmacy" data-default="undefined">Winkle College of Pharmacy</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-113-og5p" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-categoryList-container" aria-controls="select2-categoryList-container"><span class="select2-selection__rendered" id="select2-categoryList-container" role="textbox" aria-readonly="true" title="University-wide">University-wide</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div class="formrow designation-search form-group">
+                            <p>
+                                <label for="designationSearch" style="width: 350px;">Find a designation by searching below:</label>
+                            </p>
+                            <div class="flex">
+                                <input type="text" class="form-control" id="designationSearch" style="width: 90%; margin-top: 0px; border-top-right-radius: 0; border-bottom-right-radius: 0;" placeholder="Search for a designation">
+                                <button id="designationSearchBtn" style="width: 10%; border-radius: 4px; border-top-left-radius: 0; border-bottom-left-radius: 0;"><i class="fa fa-search" style="display: block;" aria-hidden="true">
+                                <span style="line-height: 0;font-size: 0;color: transparent;">Search for a designation</span></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="formrow designation-select form-group">
+                            <!-- <label for="designationId">Gift designation:</label> -->
+                            <label for="designationId" class="labelText">Which designation? <span id="designationCount"> (5 results found)</span></label>
+                            <div class="relative req-field">
+                                <select class="chosen-select designationId form-control select2-input select2-hidden-accessible" id="designationId" name=" " tabindex="-1" aria-hidden="true" data-select2-id="select2-data-designationId"><option value="3512cdd7-d45b-4895-9511-0f1c2778ec53" data-description="">A&amp;F Debt Management Discretionary Fund - F102310</option><option value="3146dee6-0e7c-4490-a5ba-54c4e50beb67" data-description="">A&amp;F Treasury Discretionary Fund - F102395</option><option value="90b9c8f7-ad1b-4200-b82b-fc0ffcf9e16c" data-description="">Agnes &amp; Murray Seasongood Faculty/Center Perservation/Upkeep - R600374</option><option value="bec20fdc-0e79-42ae-b353-b5b46c02f73e" data-description="" data-select2-id="select2-data-122-pjaj">Anonymous - University Wide Hold Fund - 9001298</option><option value="62fe8d8e-5534-46da-a74c-3e2783dff1db" data-description="">Asian American and Pacific American Tree Fund - F102089</option><option value="bec20fdc-0e79-42ae-b353-b5b46c02f73e" data-description="Please enter a brief description of the area you would like to support below." data-other="true">Can't find your fund?</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-121-ugom" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-designationId-container" aria-controls="select2-designationId-container"><span class="select2-selection__rendered" id="select2-designationId-container" role="textbox" aria-readonly="true" title="Anonymous - University Wide Hold Fund - 9001298">Anonymous - University Wide Hold Fund - 9001298</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div id="designationDescription" style="display: none;">
+                          	<p id="desDescrText"></p>
+                        </div>
+                        <div id="otherDesignation" class="otherDesignation" style="display: none;">
+                            <input type="text" maxlength="240" class="form-control" id="otherDesignationInput">
+                        </div>
+                        <!-- Begin redesigned amount buttons -->
+                        <div class="formrow form-group relative">
+                            <p>How much would you like to give?</p>
+                            <div class="amounts">
+                                <a href="#" id="amt1" class="amount" data-value="50">$50</a>
+                                <a href="#" id="amt2" class="amount" data-value="100">$100</a>
+                                <a href="#" id="amt3" class="amount" data-value="250">$250</a>
+                                <a href="#" id="amt4" class="amount" data-value="500">$500</a>
+                                <a href="#" id="amt5" class="amount" data-value="1000">$1000</a>
+                                <a href="#" id="amt6" class="amount" data-value="1500">$1500</a>
+                                <a href="#" id="amt7" class="amount" data-value="2500">$2500</a>
+                                <a href="#" id="amt8" class="amount" data-value="5000">$5000</a>                          
+                                <label for="otherAmtInput" class="otherAmt amount flex" style="width: 98%;"><span class="input-group-addon" style="font-weight:bold;">$</span>
+                                  	<input type="text" class="form-control" id="otherAmtInput" style="font-family: Helvetica, Arial, sans-serif;font-weight:400;" placeholder="Your gift amount" autocomplete="off">
+                                  	<!--<input type="number" class="form-control" id="otherAmtInput" style="font-family: Helvetica, Arial, sans-serif;font-weight:400;" placeholder="Your gift amount" autocomplete="off" min="0.00" max="9999.99" step="1.00" value="100.00" data-number="{'toFixed': 2, 'stepfactor': 1000}" />-->
+                                </label> 	
+                                <div id="otherAmtInstr" style="margin-top: 5px; display: none;">
+                                    <div class="input-helper" style="text-align:center;">Enter an amount in the input field above.</div>
+                                </div>
+                            </div>
+                        </div>
+                      
+                        <!--
+                      	<div class="formrow">
+                            <div class="gift-frequencies form-group">
+                                <input type="checkbox" id="recurringGift" class="gift-frequency" data-value="RECURRING GIFT" />
+                                <label for="recurringGift" id="gift-frequency-label">I want to keep my generosity going with automatic payments.</label>
+                            </div>
+                        </div>
+						-->
+                      	<!-- #recurrenceSection moved below Gift Type field -->
+                        <!--<div id="recurrenceSection" class="recurrence" style="display: none;">-->
+                            
+                        <!-- End redesigned amount buttons -->
+                        <div class="step-buttons form-group">
+                            <input id="cancelAddLineItem" class="step-button form-control btn btn-default" type="button" value="Return to review" style="display:none;">
+                            <input id="addLineItem" class="addLineItem step-button form-control btn btn-default" type="button" value="Add Gift">						
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <!------ STEP 2 ------>
+            <div class="steps step2">
+                <div>
+                    <div class="pull-right"><span class="gift-count-indicator text-right">Your Gifts <span class="gift-count badge">1</span></span></div>
+                    <div>
+                        <h3 class="top-heading">Gift Review</h3>
+                    </div>
+                </div>
+                
+                <div id="lineItems" class="line-items form-group" style="display: block;"><h3>Gifts</h3><div id="lineItem1" class="line-item"><div class="line-item-amount">$50.00</div><div class="line-item-name">Anonymous - University Wide Hold Fund - 9001298</div><div class="line-item-buttons"><a class="line-item-remove" data-index="0">x Remove</a></div></div><div class="line-item" style="text-align:right;font-size:1.5em;color:#777;line-height:1.8;">Total: $50.00</div><div style="text-align:center;"><a style="color:#fff;background-color:#333;font-size:.8em;padding:5px;" href="#" class="add-gift">+ Add another gift</a></div></div>
+                <fieldset class="otherDonationInformation">
+                    <div>
+                        			
+                        <div class="attributes">
+                          	<div>
+                                <div class="formrow form-group one-half">
+                                    <label for="giftType" class="labelText">Gift type (Required):</label>
+                                    <select id="giftType" class="chosen-select giftTypeTxt form-control add-arrow">
+                                        <!--<option value="New Gift" selected="selected" />New Gift -->
+                                        <option value="One-Time" selected="selected">One-Time Gift
+                                        </option><option value="Monthly">Monthly Gift
+                                        </option><option value="Pledge">Pledge Payment
+                                    </option></select>
+                                </div>
+                          	</div>
+                          
+                          	<!-- #recurrenceSection moved from Step 1 -->
+                          	<div id="recurrenceSection" class="recurrence" style="display: none;">
+                              	<div>                                  
+                                    <div class="formrow form-group frequency-select one-half">
+                                        <!-- "Day 1 of every month"... this will be different now that they can start on any day. -->
+                                        <label for="frequency" class="labelText">Installment Frequency</label>
+                                        <div class="relative req-field">
+                                            <select id="frequency" class="chosen-select frequency form-control add-arrow">
+                                                <option value="2">Monthly
+                                                </option><option value="3">Quarterly
+                                            </option></select>
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                              	</div>
+                              	<div class="flex gap-1">
+                                    <div class="formrow form-group start-input one-half">
+                                        <!-- Start and end dates - use a date picker -->
+                                        <label for="startDate" class="labelText">Starting Date</label>
+                                        <div class="relative req-field">
+                                            <input type="text" maxlength="35" id="startDate" class="startDate form-control hasDatepicker" placeholder="mm/dd/yyyy" value="" readonly="readOnly">
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="formrow form-group end-input flex flex-wrap one-half">
+                                        <!-- Start and end dates - use a date picker -->
+                                      	<div class="flex flex-row flex-end align-center" style="height: max-content;">
+                                          	<input type="checkbox" class="endDateCheckbox" id="endDateCheckbox" style="margin-bottom: 0;">
+                                          	<label for="endDateCheckbox" class="labelText">Add an ending date (optional)</label>
+                                      	</div>
+                                        <input type="text" maxlength="35" id="endDate" class="endDate form-control hasDatepicker" placeholder="mm/dd/yyyy" value="" readonly="readOnly">
+                                    </div>
+                              	</div>
+                                <div class="formrow form-group month-select" style="display: none;">
+                                    <label for="month" class="labelText">Month:</label>
+                                    <div class="relative req-field">
+                                        <select id="month" class="chosen-select month form-control select2-input">
+                                            <option value="select a value" selected="selected">select a value
+                                            </option><option value="1">January
+                                            </option><option value="2">February
+                                            </option><option value="3">March
+                                            </option><option value="4">April
+                                            </option><option value="5">May
+                                            </option><option value="6">June
+                                            </option><option value="7">July
+                                            </option><option value="8">August
+                                            </option><option value="9">September
+                                            </option><option value="10">October
+                                            </option><option value="11">November
+                                            </option><option value="12">December
+                                        </option></select>
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                                <div class="formrow form-group" style="display: none;">
+                                    <label for="dayOfMonth" class="labelText">Day of Month:</label>
+                                    <div class="relative req-field">
+                                        <select id="dayOfMonth" class="dayOfMonth form-control select2-input select2-hidden-accessible" data-select2-id="select2-data-dayOfMonth" tabindex="-1" aria-hidden="true">
+                                            <option value="select a value" selected="selected">select a value
+                                            </option><option value="1">1
+                                            </option><option value="2">2
+                                            </option><option value="3">3
+                                            </option><option value="4">4
+                                            </option><option value="5">5
+                                            </option><option value="6">6
+                                            </option><option value="7">7
+                                            </option><option value="8">8
+                                            </option><option value="9">9
+                                            </option><option value="10">10
+                                            </option><option value="11" data-select2-id="select2-data-4-2bl0">11
+                                            </option><option value="12">12
+                                            </option><option value="13">13
+                                            </option><option value="14">14
+                                            </option><option value="15">15
+                                            </option><option value="16">16
+                                            </option><option value="17">17
+                                            </option><option value="18">18
+                                            </option><option value="19">19
+                                            </option><option value="20">20
+                                            </option><option value="21">21
+                                            </option><option value="22">22
+                                            </option><option value="23">23
+                                            </option><option value="24">24
+                                            </option><option value="25">25
+                                            </option><option value="26">26
+                                            </option><option value="27">27
+                                            </option><option value="28">28
+                                            </option><option value="29">29
+                                            </option><option value="30">30
+                                            </option><option value="31">31
+                                        </option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-3-gc7a" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-dayOfMonth-container" aria-controls="select2-dayOfMonth-container"><span class="select2-selection__rendered" id="select2-dayOfMonth-container" role="textbox" aria-readonly="true" title="11
+                                            ">11
+                                            </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                            </div>
+                          
+                            <!--<div class="formrow form-group">
+                                <label for="donorType" class="labelText">I am making this gift as a(n):</label>
+                                <select id="donorType" class="chosen-select donorTypeTxt form-control">
+                                    <option value="Individual" selected="selected" />Individual
+                                    <option value="Business" />Business
+                                </select>
+                            </div>-->
+                            <!-- Business fields - will only show, and be required, if 'Business' is chosen as donor type -->
+                            <!--<div id="businessSection" style="display:none;">
+                                <div class="formrow form-group business-name-input">
+                                    <label for="businessNameTxt" class="labelText">Business Name:</label>
+                                    <div class="relative req-field">
+                                        <input type="text" maxlength="60" id="businessNameTxt" class="orgNameTxt form-control" value="" />
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                                <div class="formrow form-group business-rep-input">
+                                    <label for="repNameTxt" class="labelText">Representative Name:</label>
+                                    <div class="relative req-field">
+                                        <input type="text" maxlength="35" id="repNameTxt" class="orgRepTxt form-control" value="" />
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                                <div class="formrow form-group business-title-input">
+                                    <label for="repTitleTxt" class="labelText">Representative Title:</label>
+                                    <div class="relative req-field">
+                                        <input type="text" maxlength="35" id="repTitleTxt" class="orgTitleTxt form-control" value="" />
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                            </div>-->
+                        </div>
+                        <!-- End business fields -->
+                        <div class="formrow form-group comments-input">
+                            <label for="comments" class="labelText">Special Instructions/Comments (Optional):</label>
+                          	<input type="text" class="comments form-control" id="comments" maxlength="255" placeholder="">
+                            <!--<textarea id="comments" rows="3" class="comments form-control" maxlength="255"></textarea>-->
+                        </div>
+                    </div>
+                    
+                </fieldset>
+                <fieldset class="tributeInformation">
+                    <div class="tribute">
+                        <div class="BBListingHeading DonationListingHeading" style="border:none;background-color:transparent;">
+                            <span id="lblTributeHeading">Tribute Information</span>
+                            <span class="tributeSpan form-group flex-inline">
+                            <input id="tributeCheckbox" type="checkbox" data-gtm-form-interact-field-id="0">
+                            <label for="tributeCheckbox" class="tributeLabel">I would like to make my gift as a tribute</label>
+                            </span>
+                        </div>
+                        <div id="tributeInfoSub" style="display: none;">
+                            <div class="tributeDefinition">
+                                <div class="formrow form-group tribute-type-input">
+                                    <label for="ddlTribute" class="labelText">Type:</label>
+                                    <div class="relative req-field">
+                                        <select name="ddlTribute" id="ddlTribute" class="type form-control select2-hidden-accessible" tabindex="-1" aria-hidden="true" data-select2-id="select2-data-ddlTribute">
+                                            <option selected="selected" value="0" data-select2-id="select2-data-87-q3a6">select a value
+                                            </option><option value="in honor of">in honor of person
+                                            </option><option value="in memory of">in memory of person
+                                            </option><option value="in memory of pet">in memory of pet
+                                        </option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-86-g8kv" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-ddlTribute-container" aria-controls="select2-ddlTribute-container"><span class="select2-selection__rendered" id="select2-ddlTribute-container" role="textbox" aria-readonly="true" title="select a value
+                                            ">select a value
+                                            </span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                        <span class="req">*</span>
+                                    </div>
+                                </div>
+                              	<div class="flex gap-1">
+                                    <div class="formrow form-group tribute-fname-input one-half">
+                                        <label for="txtTributeFirstName" class="labelText">First name:</label>
+                                        <input name="txtTributeFirstName" type="text" maxlength="30" id="txtTributeFirstName" autocomplete="nope" class="firstName form-control">		
+                                    </div>
+                                    <div class="formrow form-group tribute-lname-input one-half">
+                                        <label for="txtTributeLastName" class="tribute-lname-label labelText">Last name:</label>
+                                        <div class="relative req-field">
+                                            <input name="txtTributeLastName" type="text" maxlength="60" id="txtTributeLastName" autocomplete="nope" class="lastName form-control">
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                              	</div>
+                                <div class="formrow form-group tribute-instr-input">
+                                    <label for="txtTributeDescription" class="labelText">Special Instructions:</label>
+                                    <div class="relative req-field">
+                                        <input name="txtTributeDescription" type="text" maxlength="255" id="txtTributeDescription" autocomplete="nope" class="description form-control">
+                                        <span class="req">*</span>
+                                    </div>
+                                    <div class="input-helper" style="">If your gift honors/memorializes a pet, please indicate species and owner's names for appropriate acknowledgement.</div>
+                                </div>
+                            </div>
+                            <div class="formrow form-group flex gap-1">
+                                <input id="chkAcknowledge" type="checkbox" name="chkAcknowledge">
+                                <label for="chkAcknowledge" class="labelText">Provide contact information for honoree or next of kin. Please note address information is required if you would like to specify a contact.</label>
+                            </div>
+                            <div id="acknowledgeeInfoSub" style="display: none;">
+                                <div class="acknowledgee">
+                                  	<div class="flex gap-1">
+                                        <div class="formrow form-group ackn-fname-input one-half">
+                                            <label for="txtAcknowledgeeFirstName" class="labelText">First name</label>
+                                            <input id="txtAcknowledgeeFirstName" class="firstName form-control" type="text" maxlength="30" autocomplete="nope" name="txtAcknowledgeeFirstName">
+                                        </div>
+                                        <div class="formrow form-group ackn-lname-input one-half">
+                                            <label for="txtAcknowledgeeLastName" class="labelText">Last name</label>
+                                            <div class="relative req-field">
+                                                <input id="txtAcknowledgeeLastName" class="lastName form-control" type="text" maxlength="60" autocomplete="nope" name="txtAcknowledgeeLastName">
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                  	</div>
+                                    <div class="formrow form-group ackn-country-input">
+                                        <label for="acknowledgeeCountry" class="labelText">Country</label>
+                                        <div class="relative req-field">
+                                            <select class="country form-control select2-input select2-hidden-accessible" autocomplete="nope" id="acknowledgeeCountry" data-select2-id="select2-data-acknowledgeeCountry" tabindex="-1" aria-hidden="true">
+                                            <option value="AF" data-guid="cff2822a-f7cf-45da-ba77-98adb1f8651c">Afghanistan</option><option value="AL" data-guid="75820893-966c-4779-9aae-d94b0c3d31a3">Albania</option><option value="DZ" data-guid="ba1671c7-8317-451a-b1e7-0c1d593db7aa">Algeria</option><option value="AS" data-guid="b58c7d73-5b94-470e-9372-063f1bc65cde">American Samoa</option><option value="AD" data-guid="a3a3aa20-1d89-4c40-9bb0-7a943588eef9">Andorra</option><option value="AO" data-guid="54f797c2-0ceb-4cb2-b905-4ef1586573bc">Angola</option><option value="AG" data-guid="4dec75d7-d966-4c8e-9a8c-48e93da898ae">Antigua and Barbuda</option><option value="AR" data-guid="62fab607-2dbb-42a1-976a-e128183e8e2c">Argentina</option><option value="AM" data-guid="4ebb1ea1-31af-43ad-a7a5-b50b3bad3727">Armenia</option><option value="AW" data-guid="9a671dd9-6718-45f9-b807-08391a80f077">Aruba</option><option value="AU" data-guid="9dcf9c73-25c0-40a3-bd07-ac6c84ecce59">Australia</option><option value="AT" data-guid="500f9bff-73d3-42df-98fb-6801dd8a908e">Austria</option><option value="AZ" data-guid="e8830493-1883-40d5-acd3-873b281a068b">Azerbaijan</option><option value="BS" data-guid="7690b76d-3ea5-45cf-a911-73b32ccce890">Bahamas</option><option value="BH" data-guid="349dd00d-c6e3-45c9-8b0d-292bf12e9dfd">Bahrain</option><option value="BD" data-guid="438a1e55-e68a-4214-9b84-2c7f263ec361">Bangladesh</option><option value="BB" data-guid="dc84fd25-6923-40eb-8055-4cdbf89cdb81">Barbados</option><option value="BE" data-guid="e6c0a6a0-f0f5-4ad2-9f41-1335c2a12707">Belgium</option><option value="BZ" data-guid="01ef07e5-8def-443d-b7f2-f2d1dde8f337">Belize</option><option value="BJ" data-guid="d386d09e-efd8-48af-b467-a14494cf9122">Benin</option><option value="BM" data-guid="6f89deb3-2de1-4878-8363-cdd89d7e1f29">Bermuda</option><option value="BO" data-guid="43864de0-0551-4b27-8bf1-f2593cc0e5fc">Bolivia</option><option value="BA" data-guid="ff69efa7-bf52-440c-920e-892d37ed6d72">Bosnia and Herzegowina</option><option value="BW" data-guid="2fbc12e9-aa1c-431f-9c4c-d2940b5227e1">Botswana</option><option value="BR" data-guid="f1b80b04-09fe-4da3-9596-525a4157db24">Brazil</option><option value="IO" data-guid="73fb3f9f-132c-46bf-aafd-16f1b45ad696">British Indian Ocean Territory</option><option value="BN" data-guid="8bef29be-6932-4df2-8c0d-2349e2d47035">Brunei</option><option value="BG" data-guid="34491af7-0052-42e9-899f-50b42106c9dc">Bulgaria</option><option value="BF" data-guid="a9115118-630c-4c5a-9751-17a461f2bbdf">Burkina Faso</option><option value="BI" data-guid="9215afb6-75af-4cce-a7b7-36b7cd9fc748">Burundi</option><option value="KH" data-guid="2ee06df2-f1f7-4a9f-a811-d2efb584d877">Cambodia</option><option value="CM" data-guid="bb67c19d-3ca0-4232-9b4c-2cb48c4fe926">Cameroon</option><option value="CA" data-guid="b7439698-a713-433f-ba04-6eeb569b918e">Canada</option><option value="CJ" data-guid="d8e92b06-6f74-40da-9846-09c12a3c2257">Cayman Islands</option><option value="CF" data-guid="25b38653-249e-4aec-9e37-e7a16a11beb5">Central African Republic</option><option value="CL" data-guid="87dfd807-0523-46ec-b8b0-cd326cc051ec">Chile</option><option value="CN" data-guid="e1a2f875-bea0-43a0-8424-39589f6e32ca">China</option><option value="CO" data-guid="0a48a6b6-26ba-4736-9773-e32b71348a68">Colombia</option><option value="CR" data-guid="2a547de9-1924-4a0a-8eaf-f34315c65b18">Costa Rica</option><option value="CI" data-guid="d2a65fe9-f779-46aa-b27a-d90f95164942">Cote D'Ivoire</option><option value="HR" data-guid="6bb0296f-f409-46c8-97f9-057b6d8afcf6">Croatia</option><option value="CY" data-guid="fb034d5e-41a5-4c75-a80e-e71221936199">Cyprus</option><option value="CZ" data-guid="99f36fe4-c704-4351-9c7a-56247ef6fd8a">Czech Republic</option><option value="DK" data-guid="f1ae152a-b9cc-4a67-9172-3b82834184d1">Denmark</option><option value="DO" data-guid="5c7b1821-6cf7-43c0-9cff-d677bf16c1b9">Dominican Republic</option><option value="EC" data-guid="b12bddcc-2880-4755-bc5a-27517bfae9e8">Ecuador</option><option value="EG" data-guid="137b6c38-ab45-4a0e-bdd1-1eaf8ffbc223">Egypt</option><option value="SV" data-guid="cdf09e70-7fa9-4246-8685-276c8273b7bf">El Salvador</option><option value="ER" data-guid="be4f7666-a308-43b6-b51a-1ef7bf518926">Eritrea</option><option value="ET" data-guid="e04cd40d-5842-40a5-ad75-8eaa35b81c65">Ethiopia</option><option value="FJ" data-guid="d1a8f369-92ad-41bc-ac5a-989ad7e5477c">Fiji</option><option value="FI" data-guid="99159dc6-c4bc-4bcc-b0b9-be427ac670e7">Finland</option><option value="FR" data-guid="9ee72fe0-a337-4b59-9422-cc2ebd53a4c1">France</option><option value="GE" data-guid="242569f4-53ef-4bf2-bdb9-adaa416e0c5e">Georgia</option><option value="DE" data-guid="2e7f39e8-8a27-4994-b6fd-3820b0c39eef">Germany</option><option value="GH" data-guid="7828160e-dbb7-43a1-85a4-4089795f5566">Ghana</option><option value="GB" data-guid="af4c970c-ef51-461c-9661-8b193d184525">Great Britian</option><option value="GR" data-guid="4e214b9d-d7b6-462f-b6d5-1b8f77f05a4c">Greece</option><option value="GU" data-guid="e507ed20-3b6f-4a9e-ab5e-13e7b2176809">Guam</option><option value="GT" data-guid="6de0751d-101d-4e5c-85a9-b07143435b66">Guatemala</option><option value="GY" data-guid="66543648-544a-40d9-88c9-6a3f586b3fec">Guyana</option><option value="HT" data-guid="f379501a-05ad-42ae-9798-95975f3fc1c6">Haiti</option><option value="HN" data-guid="360e77ea-78e3-4039-a2ab-6c665865f64e">Honduras</option><option value="HK" data-guid="ffbfa840-bd2f-4073-8dc2-df5df4201c06">Hong Kong</option><option value="HU" data-guid="8471f8ba-29f5-4a5b-b298-f4de06f4f91d">Hungary</option><option value="IS" data-guid="0666f89c-fb2c-46bf-812e-dce46ab1036c">Iceland</option><option value="IN" data-guid="d38407ef-620a-4c3a-99b9-e0275a4906ff">India</option><option value="ID" data-guid="a100096a-cf7a-4a2f-adbf-a0fd17f08d40">Indonesia</option><option value="IR" data-guid="39a8f9f6-927e-4a78-94e2-4ea8802e94a7">Iran (Islamic Republic of)</option><option value="IQ" data-guid="c2296514-226e-41ba-baa8-cd22d77ca015">Iraq</option><option value="IE" data-guid="45197f52-728f-45ab-a63d-181aef138257">Ireland</option><option value="IL" data-guid="e31d6957-b510-46bf-824c-eaa248749ba0">Israel</option><option value="IT" data-guid="0e9a15e2-5eab-4018-9b96-c051f2943ccb">Italy</option><option value="JM" data-guid="1ccb4dda-bae0-4cdd-9a87-f53309e788d2">Jamaica</option><option value="JP" data-guid="e4ea9442-0a6d-4594-8fd6-39e56047f6ff">Japan</option><option value="JO" data-guid="5825f029-8869-4bc4-91d1-486024c8c4c9">Jordan</option><option value="KZ" data-guid="c0a8eebe-d831-4dfe-8cbe-324f961e2227">Kazakhstan</option><option value="KE" data-guid="32b2c072-5316-4f0f-965a-1eafbed103b1">Kenya</option><option value="KP" data-guid="3680569d-0136-4d0f-8783-d409938350db">Korea, D.P.R.O.</option><option value="KR" data-guid="236d40d1-f14f-46d0-b5fa-bdbf6a9609aa">Korea, Republic of</option><option value="KW" data-guid="a3dce12c-f824-4de8-8565-6f65749057d4">Kuwait</option><option value="KG" data-guid="b0e59266-db27-4bd4-8f67-926521c66bcb">Kyrgyzstan</option><option value="LV" data-guid="b8963779-4353-4323-923a-fa2b016ab660">Latvia</option><option value="LB" data-guid="9ce35505-cc8d-43cf-9a14-c28d8ec3202e">Lebanon</option><option value="LY" data-guid="dd7edb7c-672a-4c76-b6d3-ff52cf9ef1c5">Libyan Arab Jamahiriya</option><option value="LI" data-guid="02af1341-b0cf-47a6-beae-115872f85b6b">Liechtenstein</option><option value="LT" data-guid="e3cb7548-32e0-4fbd-9620-978f4f9451b8">Lithuania</option><option value="LU" data-guid="6ab5a801-5428-4076-968d-778aa4ba9cfa">Luxembourg</option><option value="MA" data-guid="0e1b356d-4e32-48ae-97b7-c3cb77ee8b8f">Macao</option><option value="MK" data-guid="03af22f9-42e8-4df7-92a4-b202d2cd8aa0">Macedonia</option><option value="MG" data-guid="cbaad64a-8210-4a48-a677-02b53d06242e">Madagascar</option><option value="MY" data-guid="3ea24c91-87f0-4d12-a9d8-68e8bc14a3fc">Malaysia</option><option value="MT" data-guid="b63096ed-e3f0-4e2f-9638-c8db72b671c1">Malta</option><option value="MH" data-guid="d084585f-c689-4012-87e3-d55f3ae48a91">Marshall Islands</option><option value="MR" data-guid="5abca937-52d2-4041-93da-6350fa1dc126">Mauritania</option><option value="MU" data-guid="721e394c-8d3f-4b6c-ab5d-b5c74e6fd43f">Mauritius</option><option value="RP" data-guid="fed15e15-e374-4bb3-8147-45b62858d65e">Metro Manila</option><option value="MX" data-guid="a3a2f411-d33a-46cc-9710-72070ae871c6">Mexico</option><option value="MD" data-guid="0dcef63d-7668-4c61-be22-d96ade28d889">Moldova, Republic of</option><option value="MC" data-guid="dcd0d37b-fc42-4281-a0f6-3d44878c2df2">Monaco</option><option value="MA" data-guid="75f22973-2ff5-41c3-a4de-f5127aa9a02d">Morocco</option><option value="MZ" data-guid="64febbe0-3c09-48d0-8ad7-ef8ff0e54676">Mozambique</option><option value="MM" data-guid="727c24e5-d2c8-44af-ad6e-a453451cab6a">Myanmar</option><option value="NP" data-guid="25fe4a6d-7fec-4d8f-8bf4-bcbd9277a21a">Nepal</option><option value="NL" data-guid="e34f392a-79b8-4933-b057-10ef94c8ebd6">Netherlands</option><option value="NZ" data-guid="ceec051e-f176-4f04-b76a-2c9497ce4c38">New Zealand</option><option value="NI" data-guid="3a96769c-4bda-4aab-a5fc-c6bf72ce4d81">Nicaragua</option><option value="NE" data-guid="a54f5f9d-098b-42e4-b0d5-281a4c761891">Niger</option><option value="NG" data-guid="41a40244-8d3b-485f-8c3e-d44859b36e04">Nigeria</option><option value="NO" data-guid="630a4615-71a4-4bf9-b8a4-a7abad2b386e">Norway</option><option value="OM" data-guid="7f8c121e-dc87-4a6e-bacf-2f9b60199f35">Oman</option><option value="PK" data-guid="a8eeb873-567a-4218-b701-2d8c36bf533e">Pakistan</option><option value="PW" data-guid="98a2051a-cbff-4ebb-b675-792604a48984">Palau</option><option value="PA" data-guid="1f4fd673-41c5-4a30-96b9-a36c8d2e6021">Panama</option><option value="PG" data-guid="cb58bcf1-a033-4db3-81b3-e2df98f0dbec">Papua New Guinea</option><option value="PY" data-guid="2fa68b79-b9bd-4f47-b1a9-0a6f0c4e6f50">Paraguay</option><option value="PE" data-guid="5af669e3-9f2a-4421-8cc0-af9229c55806">Peru</option><option value="PH" data-guid="d71e5e70-2f09-4bca-8b22-addae296e032">Philippines</option><option value="PL" data-guid="07682a92-76af-4d17-b0e7-2b8342982fc7">Poland</option><option value="PT" data-guid="cee28453-cee6-4fb4-88b4-7ba18a8061ed">Portugal</option><option value="PR" data-guid="b7b7b225-0113-4a90-bc1b-715a9728d1e8">Puerto Rico</option><option value="QA" data-guid="e871f30d-bd14-4763-93f1-5fd2c78406a3">Qatar</option><option value="RO" data-guid="00c98873-a8a8-496c-8076-ee982e5b09e3">Romania</option><option value="RU" data-guid="a2012389-3f0f-46f7-a563-97350d7372a4">Russian Federation</option><option value="SA" data-guid="b2919df4-22b1-40ec-bee6-ab08678da520">Saudi Arabia</option><option value="SN" data-guid="b46306c3-d772-418e-92f2-17079dca77fd">Senegal</option><option value="RS" data-guid="7628ca2e-a908-4a8b-9240-259e8e8da56d">Serbia</option><option value="SL" data-guid="6efc0ab9-5146-4b5e-bdbe-4eb7bab2638e">Sierra Leone</option><option value="SG" data-guid="973e6769-cba6-43e2-9119-e473eeda04cc">Singapore</option><option value="SI" data-guid="f4507cbb-d00e-46bb-9236-1a763c96abc3">Slovenia</option><option value="ZA" data-guid="72a5204e-2404-4f6d-8cf3-5aec665e9af1">South Africa</option><option value="KS" data-guid="4a1ac8c4-ea5c-412d-93af-d57774b2c97a">South Korea</option><option value="ES" data-guid="35e438a5-8da4-4fe6-86fd-7f401c77be7c">Spain</option><option value="LK" data-guid="e1006389-6d97-40f0-9343-3d679fcb68f7">Sri Lanka</option><option value="SD" data-guid="c4d7abcf-4873-431c-8f7b-1036e74b27b1">Sudan</option><option value="SZ" data-guid="41ed40a1-5f43-4a5e-ac81-32c2df12385a">Swaziland</option><option value="SE" data-guid="7d28813e-4488-401a-846b-33cff1667e2a">Sweden</option><option value="CH" data-guid="935daafe-90dc-4b5d-9d62-9f8bb0442d94">Switzerland</option><option value="SY" data-guid="4a7e2598-83d6-459d-bded-1bdd9860f507">Syrian Arab Republic</option><option value="TW" data-guid="38799e0c-8f9a-4d7c-8ad9-0d6b6e1340a1">Taiwan</option><option value="TZ" data-guid="57389453-53c4-4fe2-89af-f60c9218a437">Tanzania</option><option value="TH" data-guid="d47d669e-794b-4a2f-b431-a4fa84323a6d">Thailand</option><option value="TT" data-guid="8984ce70-7620-4406-81e9-a24481b53e30">Trinidad and Tobago</option><option value="TN" data-guid="8c4abbc1-fcd7-4a38-afba-f6f0f261164e">Tunisia</option><option value="TR" data-guid="2dc8bd1b-04ca-433e-a9bf-8e4cfcbf6052">Turkey</option><option value="UG" data-guid="69841c75-53a5-43ae-85e7-5613bf2e7d43">Uganda</option><option value="UA" data-guid="b2db7e09-5af5-49d9-994b-0dcadb57302a">Ukraine</option><option value="AE" data-guid="b7953db8-17f5-4936-84d7-1751e8d451d2">United Arab Emirates</option><option value="GB" data-guid="0609b403-c516-431d-affc-dfa9e206fa27">United Kingdom</option><option value="US" selected="selected" data-guid="4fc81243-c3ac-4ad8-be11-721be5795482" data-select2-id="select2-data-8-g4dy">United States</option><option value="UY" data-guid="ca1fb1a8-c014-4a64-ad8e-51961c545233">Uruguay</option><option value="UZ" data-guid="b9eecc2a-9314-45a2-aa30-f6e127f279ef">Uzbekistan</option><option value="VE" data-guid="12d94616-1df8-4c89-9d06-2a406d512adb">Venezuela</option><option value="VN" data-guid="a368c320-9112-4d9f-b2c6-55ad00e3274a">Vietnam</option><option value="VI" data-guid="6fe3fd43-1f61-4126-9659-705403ac68ce">Virgin Islands (U.S.)</option><option value="YE" data-guid="82024569-bef2-4baa-8936-a1a04bf8b6bd">Yemen</option><option value="ZM" data-guid="ac8e6c58-4d37-4ed2-8393-6b363f0ac76d">Zambia</option><option value="ZW" data-guid="195528b1-6522-41ee-8297-efb6f010be26">Zimbabwe</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-7-w80l" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-acknowledgeeCountry-container" aria-controls="select2-acknowledgeeCountry-container"><span class="select2-selection__rendered" id="select2-acknowledgeeCountry-container" role="textbox" aria-readonly="true" title="United States">United States</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                                    <div class="formrow form-group required ackn-address-input">
+                                        <label for="acknowledgeeStreetAddress" class="labelText">Address lines</label>
+                                        <div class="relative req-field">
+                                            <!--<textarea class="addressLines form-control" autocomplete="nope" id="acknowledgeeStreetAddress" cols="20" rows="2" maxlength="148"></textarea>-->
+                                          	<input type="text" class="addressLines form-control" id="acknowledgeeStreetAddress" maxlength="148" placeholder="">
+                                            <span class="req">*</span>
+                                        </div>
+                                    </div>
+                                  	<div class="flex gap-1">
+                                        <div class="formrow form-group required ackn-city-input one-half">
+                                            <label for="acknowledgeeCity" class="labelText">City:</label>
+                                            <div class="relative req-field">
+                                                <input type="text" class="city form-control" autocomplete="nope" id="acknowledgeeCity" maxlength="50" placeholder="">
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="formrow form-group ackn-state-input one-third">
+                                            <label for="acknowledgeeState" class="labelText">State</label>
+                                            <div class="relative req-field">
+                                                <select class="state form-control select2-input select2-hidden-accessible" autocomplete="nope" id="acknowledgeeState" data-select2-id="select2-data-acknowledgeeState" tabindex="-1" aria-hidden="true"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CZ">Canal Zone</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FM">Federated States of Micronesia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MH">Marshall Islands</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH" selected="selected" data-select2-id="select2-data-14-8iku">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VI">Virgin Islands</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-13-oeo0" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-acknowledgeeState-container" aria-controls="select2-acknowledgeeState-container"><span class="select2-selection__rendered" id="select2-acknowledgeeState-container" role="textbox" aria-readonly="true" title="Ohio">Ohio</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                        <div class="formrow form-group required ackn-zip-input one-fourth">
+                                            <label for="acknowledgeePostalCode" class="labelText">ZIP/Postal code</label>
+                                            <div class="relative req-field">
+                                                <input type="text" class="postalCode form-control" autocomplete="nope" id="acknowledgeePostalCode" maxlength="10" placeholder="">
+                                                <span class="req">*</span>
+                                            </div>
+                                        </div>
+                                  	</div>
+                                  	<div class="flex gap-1">
+                                        <div class="formrow form-group ackn-phone-input one-half">								
+                                            <label for="acknowledgeePhone" class="labelText">Phone</label>
+                                            <input type="text" class="phone form-control" autocomplete="nope" id="acknowledgeePhone" maxlength="50" placeholder="">
+                                        </div>
+                                        <div class="formrow form-group required ackn-email-input one-half">								
+                                            <label for="acknowledgeeEmailAddress" class="labelText">Email</label>
+                                            <input type="text" class="email form-control" autocomplete="nope" id="acknowledgeeEmailAddress" maxlength="100" placeholder="">
+                                        </div>
+                                  	</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </fieldset>
+                <div class="step-buttons form-group">
+                    <input id="returnToGiftDetail" class="step-button form-control btn btn-default" type="button" value="BACK">
+                    <input id="continueToYourInfo" class="step-button form-control btn btn-default" type="button" value="CONTINUE">
+                </div>
+            </div>
+        </div>
+        <!------ STEP 3 ------>
+        <div class="steps step3 active">
+            <fieldset class="billingInformation">
+                <div>
+                    <div class="pull-right"><span class="gift-count-indicator text-right">Your Gifts <span class="gift-count badge">1</span></span></div>
+                    <div>
+                        <h3 class="top-heading">Your Information</h3>
+                    </div>
+                </div>
+                
+                <div class="donor">
+                  	<div class="flex gap-1">
+                      	<div class="formrow form-group required fname-input one-half">
+                            <label for="firstName" class="labelText">First name (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="firstName form-control" id="firstName" maxlength="30" placeholder="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div class="formrow form-group required lname-input one-half">
+                            <label for="lastName" class="labelText">Last name (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="lastName form-control" id="lastName" maxlength="60" placeholder="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                  	</div>
+                                    	
+                    <div class="address full-width">
+                        <div class="flex gap-1">
+
+                            <div class="formrow form-group required country-input one-half">
+                              <label for="country" class="labelText">Country (Required)</label>
+                              <div class="relative req-field">
+                                <select class="chosen-select country form-control select2-input select2-hidden-accessible" id="country" data-select2-id="select2-data-country" tabindex="-1" aria-hidden="true">
+                                <option value="AF" data-guid="cff2822a-f7cf-45da-ba77-98adb1f8651c">Afghanistan</option><option value="AL" data-guid="75820893-966c-4779-9aae-d94b0c3d31a3">Albania</option><option value="DZ" data-guid="ba1671c7-8317-451a-b1e7-0c1d593db7aa">Algeria</option><option value="AS" data-guid="b58c7d73-5b94-470e-9372-063f1bc65cde">American Samoa</option><option value="AD" data-guid="a3a3aa20-1d89-4c40-9bb0-7a943588eef9">Andorra</option><option value="AO" data-guid="54f797c2-0ceb-4cb2-b905-4ef1586573bc">Angola</option><option value="AG" data-guid="4dec75d7-d966-4c8e-9a8c-48e93da898ae">Antigua and Barbuda</option><option value="AR" data-guid="62fab607-2dbb-42a1-976a-e128183e8e2c">Argentina</option><option value="AM" data-guid="4ebb1ea1-31af-43ad-a7a5-b50b3bad3727">Armenia</option><option value="AW" data-guid="9a671dd9-6718-45f9-b807-08391a80f077">Aruba</option><option value="AU" data-guid="9dcf9c73-25c0-40a3-bd07-ac6c84ecce59">Australia</option><option value="AT" data-guid="500f9bff-73d3-42df-98fb-6801dd8a908e">Austria</option><option value="AZ" data-guid="e8830493-1883-40d5-acd3-873b281a068b">Azerbaijan</option><option value="BS" data-guid="7690b76d-3ea5-45cf-a911-73b32ccce890">Bahamas</option><option value="BH" data-guid="349dd00d-c6e3-45c9-8b0d-292bf12e9dfd">Bahrain</option><option value="BD" data-guid="438a1e55-e68a-4214-9b84-2c7f263ec361">Bangladesh</option><option value="BB" data-guid="dc84fd25-6923-40eb-8055-4cdbf89cdb81">Barbados</option><option value="BE" data-guid="e6c0a6a0-f0f5-4ad2-9f41-1335c2a12707">Belgium</option><option value="BZ" data-guid="01ef07e5-8def-443d-b7f2-f2d1dde8f337">Belize</option><option value="BJ" data-guid="d386d09e-efd8-48af-b467-a14494cf9122">Benin</option><option value="BM" data-guid="6f89deb3-2de1-4878-8363-cdd89d7e1f29">Bermuda</option><option value="BO" data-guid="43864de0-0551-4b27-8bf1-f2593cc0e5fc">Bolivia</option><option value="BA" data-guid="ff69efa7-bf52-440c-920e-892d37ed6d72">Bosnia and Herzegowina</option><option value="BW" data-guid="2fbc12e9-aa1c-431f-9c4c-d2940b5227e1">Botswana</option><option value="BR" data-guid="f1b80b04-09fe-4da3-9596-525a4157db24">Brazil</option><option value="IO" data-guid="73fb3f9f-132c-46bf-aafd-16f1b45ad696">British Indian Ocean Territory</option><option value="BN" data-guid="8bef29be-6932-4df2-8c0d-2349e2d47035">Brunei</option><option value="BG" data-guid="34491af7-0052-42e9-899f-50b42106c9dc">Bulgaria</option><option value="BF" data-guid="a9115118-630c-4c5a-9751-17a461f2bbdf">Burkina Faso</option><option value="BI" data-guid="9215afb6-75af-4cce-a7b7-36b7cd9fc748">Burundi</option><option value="KH" data-guid="2ee06df2-f1f7-4a9f-a811-d2efb584d877">Cambodia</option><option value="CM" data-guid="bb67c19d-3ca0-4232-9b4c-2cb48c4fe926">Cameroon</option><option value="CA" data-guid="b7439698-a713-433f-ba04-6eeb569b918e">Canada</option><option value="CJ" data-guid="d8e92b06-6f74-40da-9846-09c12a3c2257">Cayman Islands</option><option value="CF" data-guid="25b38653-249e-4aec-9e37-e7a16a11beb5">Central African Republic</option><option value="CL" data-guid="87dfd807-0523-46ec-b8b0-cd326cc051ec">Chile</option><option value="CN" data-guid="e1a2f875-bea0-43a0-8424-39589f6e32ca">China</option><option value="CO" data-guid="0a48a6b6-26ba-4736-9773-e32b71348a68">Colombia</option><option value="CR" data-guid="2a547de9-1924-4a0a-8eaf-f34315c65b18">Costa Rica</option><option value="CI" data-guid="d2a65fe9-f779-46aa-b27a-d90f95164942">Cote D'Ivoire</option><option value="HR" data-guid="6bb0296f-f409-46c8-97f9-057b6d8afcf6">Croatia</option><option value="CY" data-guid="fb034d5e-41a5-4c75-a80e-e71221936199">Cyprus</option><option value="CZ" data-guid="99f36fe4-c704-4351-9c7a-56247ef6fd8a">Czech Republic</option><option value="DK" data-guid="f1ae152a-b9cc-4a67-9172-3b82834184d1">Denmark</option><option value="DO" data-guid="5c7b1821-6cf7-43c0-9cff-d677bf16c1b9">Dominican Republic</option><option value="EC" data-guid="b12bddcc-2880-4755-bc5a-27517bfae9e8">Ecuador</option><option value="EG" data-guid="137b6c38-ab45-4a0e-bdd1-1eaf8ffbc223">Egypt</option><option value="SV" data-guid="cdf09e70-7fa9-4246-8685-276c8273b7bf">El Salvador</option><option value="ER" data-guid="be4f7666-a308-43b6-b51a-1ef7bf518926">Eritrea</option><option value="ET" data-guid="e04cd40d-5842-40a5-ad75-8eaa35b81c65">Ethiopia</option><option value="FJ" data-guid="d1a8f369-92ad-41bc-ac5a-989ad7e5477c">Fiji</option><option value="FI" data-guid="99159dc6-c4bc-4bcc-b0b9-be427ac670e7">Finland</option><option value="FR" data-guid="9ee72fe0-a337-4b59-9422-cc2ebd53a4c1">France</option><option value="GE" data-guid="242569f4-53ef-4bf2-bdb9-adaa416e0c5e">Georgia</option><option value="DE" data-guid="2e7f39e8-8a27-4994-b6fd-3820b0c39eef">Germany</option><option value="GH" data-guid="7828160e-dbb7-43a1-85a4-4089795f5566">Ghana</option><option value="GB" data-guid="af4c970c-ef51-461c-9661-8b193d184525">Great Britian</option><option value="GR" data-guid="4e214b9d-d7b6-462f-b6d5-1b8f77f05a4c">Greece</option><option value="GU" data-guid="e507ed20-3b6f-4a9e-ab5e-13e7b2176809">Guam</option><option value="GT" data-guid="6de0751d-101d-4e5c-85a9-b07143435b66">Guatemala</option><option value="GY" data-guid="66543648-544a-40d9-88c9-6a3f586b3fec">Guyana</option><option value="HT" data-guid="f379501a-05ad-42ae-9798-95975f3fc1c6">Haiti</option><option value="HN" data-guid="360e77ea-78e3-4039-a2ab-6c665865f64e">Honduras</option><option value="HK" data-guid="ffbfa840-bd2f-4073-8dc2-df5df4201c06">Hong Kong</option><option value="HU" data-guid="8471f8ba-29f5-4a5b-b298-f4de06f4f91d">Hungary</option><option value="IS" data-guid="0666f89c-fb2c-46bf-812e-dce46ab1036c">Iceland</option><option value="IN" data-guid="d38407ef-620a-4c3a-99b9-e0275a4906ff">India</option><option value="ID" data-guid="a100096a-cf7a-4a2f-adbf-a0fd17f08d40">Indonesia</option><option value="IR" data-guid="39a8f9f6-927e-4a78-94e2-4ea8802e94a7">Iran (Islamic Republic of)</option><option value="IQ" data-guid="c2296514-226e-41ba-baa8-cd22d77ca015">Iraq</option><option value="IE" data-guid="45197f52-728f-45ab-a63d-181aef138257">Ireland</option><option value="IL" data-guid="e31d6957-b510-46bf-824c-eaa248749ba0">Israel</option><option value="IT" data-guid="0e9a15e2-5eab-4018-9b96-c051f2943ccb">Italy</option><option value="JM" data-guid="1ccb4dda-bae0-4cdd-9a87-f53309e788d2">Jamaica</option><option value="JP" data-guid="e4ea9442-0a6d-4594-8fd6-39e56047f6ff">Japan</option><option value="JO" data-guid="5825f029-8869-4bc4-91d1-486024c8c4c9">Jordan</option><option value="KZ" data-guid="c0a8eebe-d831-4dfe-8cbe-324f961e2227">Kazakhstan</option><option value="KE" data-guid="32b2c072-5316-4f0f-965a-1eafbed103b1">Kenya</option><option value="KP" data-guid="3680569d-0136-4d0f-8783-d409938350db">Korea, D.P.R.O.</option><option value="KR" data-guid="236d40d1-f14f-46d0-b5fa-bdbf6a9609aa">Korea, Republic of</option><option value="KW" data-guid="a3dce12c-f824-4de8-8565-6f65749057d4">Kuwait</option><option value="KG" data-guid="b0e59266-db27-4bd4-8f67-926521c66bcb">Kyrgyzstan</option><option value="LV" data-guid="b8963779-4353-4323-923a-fa2b016ab660">Latvia</option><option value="LB" data-guid="9ce35505-cc8d-43cf-9a14-c28d8ec3202e">Lebanon</option><option value="LY" data-guid="dd7edb7c-672a-4c76-b6d3-ff52cf9ef1c5">Libyan Arab Jamahiriya</option><option value="LI" data-guid="02af1341-b0cf-47a6-beae-115872f85b6b">Liechtenstein</option><option value="LT" data-guid="e3cb7548-32e0-4fbd-9620-978f4f9451b8">Lithuania</option><option value="LU" data-guid="6ab5a801-5428-4076-968d-778aa4ba9cfa">Luxembourg</option><option value="MA" data-guid="0e1b356d-4e32-48ae-97b7-c3cb77ee8b8f">Macao</option><option value="MK" data-guid="03af22f9-42e8-4df7-92a4-b202d2cd8aa0">Macedonia</option><option value="MG" data-guid="cbaad64a-8210-4a48-a677-02b53d06242e">Madagascar</option><option value="MY" data-guid="3ea24c91-87f0-4d12-a9d8-68e8bc14a3fc">Malaysia</option><option value="MT" data-guid="b63096ed-e3f0-4e2f-9638-c8db72b671c1">Malta</option><option value="MH" data-guid="d084585f-c689-4012-87e3-d55f3ae48a91">Marshall Islands</option><option value="MR" data-guid="5abca937-52d2-4041-93da-6350fa1dc126">Mauritania</option><option value="MU" data-guid="721e394c-8d3f-4b6c-ab5d-b5c74e6fd43f">Mauritius</option><option value="RP" data-guid="fed15e15-e374-4bb3-8147-45b62858d65e">Metro Manila</option><option value="MX" data-guid="a3a2f411-d33a-46cc-9710-72070ae871c6">Mexico</option><option value="MD" data-guid="0dcef63d-7668-4c61-be22-d96ade28d889">Moldova, Republic of</option><option value="MC" data-guid="dcd0d37b-fc42-4281-a0f6-3d44878c2df2">Monaco</option><option value="MA" data-guid="75f22973-2ff5-41c3-a4de-f5127aa9a02d">Morocco</option><option value="MZ" data-guid="64febbe0-3c09-48d0-8ad7-ef8ff0e54676">Mozambique</option><option value="MM" data-guid="727c24e5-d2c8-44af-ad6e-a453451cab6a">Myanmar</option><option value="NP" data-guid="25fe4a6d-7fec-4d8f-8bf4-bcbd9277a21a">Nepal</option><option value="NL" data-guid="e34f392a-79b8-4933-b057-10ef94c8ebd6">Netherlands</option><option value="NZ" data-guid="ceec051e-f176-4f04-b76a-2c9497ce4c38">New Zealand</option><option value="NI" data-guid="3a96769c-4bda-4aab-a5fc-c6bf72ce4d81">Nicaragua</option><option value="NE" data-guid="a54f5f9d-098b-42e4-b0d5-281a4c761891">Niger</option><option value="NG" data-guid="41a40244-8d3b-485f-8c3e-d44859b36e04">Nigeria</option><option value="NO" data-guid="630a4615-71a4-4bf9-b8a4-a7abad2b386e">Norway</option><option value="OM" data-guid="7f8c121e-dc87-4a6e-bacf-2f9b60199f35">Oman</option><option value="PK" data-guid="a8eeb873-567a-4218-b701-2d8c36bf533e">Pakistan</option><option value="PW" data-guid="98a2051a-cbff-4ebb-b675-792604a48984">Palau</option><option value="PA" data-guid="1f4fd673-41c5-4a30-96b9-a36c8d2e6021">Panama</option><option value="PG" data-guid="cb58bcf1-a033-4db3-81b3-e2df98f0dbec">Papua New Guinea</option><option value="PY" data-guid="2fa68b79-b9bd-4f47-b1a9-0a6f0c4e6f50">Paraguay</option><option value="PE" data-guid="5af669e3-9f2a-4421-8cc0-af9229c55806">Peru</option><option value="PH" data-guid="d71e5e70-2f09-4bca-8b22-addae296e032">Philippines</option><option value="PL" data-guid="07682a92-76af-4d17-b0e7-2b8342982fc7">Poland</option><option value="PT" data-guid="cee28453-cee6-4fb4-88b4-7ba18a8061ed">Portugal</option><option value="PR" data-guid="b7b7b225-0113-4a90-bc1b-715a9728d1e8">Puerto Rico</option><option value="QA" data-guid="e871f30d-bd14-4763-93f1-5fd2c78406a3">Qatar</option><option value="RO" data-guid="00c98873-a8a8-496c-8076-ee982e5b09e3">Romania</option><option value="RU" data-guid="a2012389-3f0f-46f7-a563-97350d7372a4">Russian Federation</option><option value="SA" data-guid="b2919df4-22b1-40ec-bee6-ab08678da520">Saudi Arabia</option><option value="SN" data-guid="b46306c3-d772-418e-92f2-17079dca77fd">Senegal</option><option value="RS" data-guid="7628ca2e-a908-4a8b-9240-259e8e8da56d">Serbia</option><option value="SL" data-guid="6efc0ab9-5146-4b5e-bdbe-4eb7bab2638e">Sierra Leone</option><option value="SG" data-guid="973e6769-cba6-43e2-9119-e473eeda04cc">Singapore</option><option value="SI" data-guid="f4507cbb-d00e-46bb-9236-1a763c96abc3">Slovenia</option><option value="ZA" data-guid="72a5204e-2404-4f6d-8cf3-5aec665e9af1">South Africa</option><option value="KS" data-guid="4a1ac8c4-ea5c-412d-93af-d57774b2c97a">South Korea</option><option value="ES" data-guid="35e438a5-8da4-4fe6-86fd-7f401c77be7c">Spain</option><option value="LK" data-guid="e1006389-6d97-40f0-9343-3d679fcb68f7">Sri Lanka</option><option value="SD" data-guid="c4d7abcf-4873-431c-8f7b-1036e74b27b1">Sudan</option><option value="SZ" data-guid="41ed40a1-5f43-4a5e-ac81-32c2df12385a">Swaziland</option><option value="SE" data-guid="7d28813e-4488-401a-846b-33cff1667e2a">Sweden</option><option value="CH" data-guid="935daafe-90dc-4b5d-9d62-9f8bb0442d94">Switzerland</option><option value="SY" data-guid="4a7e2598-83d6-459d-bded-1bdd9860f507">Syrian Arab Republic</option><option value="TW" data-guid="38799e0c-8f9a-4d7c-8ad9-0d6b6e1340a1">Taiwan</option><option value="TZ" data-guid="57389453-53c4-4fe2-89af-f60c9218a437">Tanzania</option><option value="TH" data-guid="d47d669e-794b-4a2f-b431-a4fa84323a6d">Thailand</option><option value="TT" data-guid="8984ce70-7620-4406-81e9-a24481b53e30">Trinidad and Tobago</option><option value="TN" data-guid="8c4abbc1-fcd7-4a38-afba-f6f0f261164e">Tunisia</option><option value="TR" data-guid="2dc8bd1b-04ca-433e-a9bf-8e4cfcbf6052">Turkey</option><option value="UG" data-guid="69841c75-53a5-43ae-85e7-5613bf2e7d43">Uganda</option><option value="UA" data-guid="b2db7e09-5af5-49d9-994b-0dcadb57302a">Ukraine</option><option value="AE" data-guid="b7953db8-17f5-4936-84d7-1751e8d451d2">United Arab Emirates</option><option value="GB" data-guid="0609b403-c516-431d-affc-dfa9e206fa27">United Kingdom</option><option value="US" selected="selected" data-guid="4fc81243-c3ac-4ad8-be11-721be5795482" data-select2-id="select2-data-6-8eq3">United States</option><option value="UY" data-guid="ca1fb1a8-c014-4a64-ad8e-51961c545233">Uruguay</option><option value="UZ" data-guid="b9eecc2a-9314-45a2-aa30-f6e127f279ef">Uzbekistan</option><option value="VE" data-guid="12d94616-1df8-4c89-9d06-2a406d512adb">Venezuela</option><option value="VN" data-guid="a368c320-9112-4d9f-b2c6-55ad00e3274a">Vietnam</option><option value="VI" data-guid="6fe3fd43-1f61-4126-9659-705403ac68ce">Virgin Islands (U.S.)</option><option value="YE" data-guid="82024569-bef2-4baa-8936-a1a04bf8b6bd">Yemen</option><option value="ZM" data-guid="ac8e6c58-4d37-4ed2-8393-6b363f0ac76d">Zambia</option><option value="ZW" data-guid="195528b1-6522-41ee-8297-efb6f010be26">Zimbabwe</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-5-1cdb" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-country-container" aria-controls="select2-country-container"><span class="select2-selection__rendered" id="select2-country-container" role="textbox" aria-readonly="true" title="United States">United States</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+
+                            <div class="formrow form-group required zip-input one-half">
+                              <label for="postalCode" class="labelText">ZIP/Postal code (Required)</label>
+                              <div class="relative req-field">
+                                <input type="text" class="postalCode form-control" id="postalCode" maxlength="10" placeholder="">
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+
+                          </div>
+                          <div class="formrow form-group required address-input">
+                            <label for="streetAddress" class="labelText">Address (Required)</label>
+                            <div class="relative req-field">
+                              <!--<textarea class="streetAddress form-control" id="streetAddress" cols="20" rows="2" maxlength="148"></textarea>-->
+                              <input type="text" class="streetAddress form-control" id="streetAddress" maxlength="100" placeholder="">
+                              <span class="req">*</span>
+                            </div>
+                          </div>
+                          <div class="flex gap-1">
+
+                            <div class="formrow form-group required city-input one-half">
+                              <label for="city" class="labelText">City (Required)</label>
+                              <div class="relative req-field">
+                                <input type="text" class="city form-control" id="city" maxlength="50" placeholder="">
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+                            <div class="formrow form-group required state-input one-half">
+                              <label for="state" class="labelText">State (Required)</label>
+                              <div class="relative req-field">
+                                <select class="chosen-select state form-control select2-input select2-hidden-accessible" id="state" data-select2-id="select2-data-state" tabindex="-1" aria-hidden="true"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CZ">Canal Zone</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FM">Federated States of Micronesia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MH">Marshall Islands</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH" selected="selected" data-select2-id="select2-data-10-8ohl">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VI">Virgin Islands</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-9-anpl" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-state-container" aria-controls="select2-state-container"><span class="select2-selection__rendered" id="select2-state-container" role="textbox" aria-readonly="true" title="Ohio">Ohio</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+                            <div class="formrow form-group required province-input one-half hide">
+                              <label for="province" class="labelText">Province (Required)</label>
+                              <div class="relative req-field">
+                                <select class="chosen-select province form-control select2-input select2-hidden-accessible" id="province" data-select2-id="select2-data-province" tabindex="-1" aria-hidden="true"><option value="AL">Alabama</option><option value="AK">Alaska</option><option value="AS">American Samoa</option><option value="AZ">Arizona</option><option value="AR">Arkansas</option><option value="AA">Armed Forces Americas</option><option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option><option value="AP">Armed Forces Pacific</option><option value="CA">California</option><option value="CZ">Canal Zone</option><option value="CO">Colorado</option><option value="CT">Connecticut</option><option value="DE">Delaware</option><option value="DC">District of Columbia</option><option value="FM">Federated States of Micronesia</option><option value="FL">Florida</option><option value="GA">Georgia</option><option value="GU">Guam</option><option value="HI">Hawaii</option><option value="ID">Idaho</option><option value="IL">Illinois</option><option value="IN">Indiana</option><option value="IA">Iowa</option><option value="KS">Kansas</option><option value="KY">Kentucky</option><option value="LA">Louisiana</option><option value="ME">Maine</option><option value="MH">Marshall Islands</option><option value="MD">Maryland</option><option value="MA">Massachusetts</option><option value="MI">Michigan</option><option value="MN">Minnesota</option><option value="MS">Mississippi</option><option value="MO">Missouri</option><option value="MT">Montana</option><option value="NE">Nebraska</option><option value="NV">Nevada</option><option value="NH">New Hampshire</option><option value="NJ">New Jersey</option><option value="NM">New Mexico</option><option value="NY">New York</option><option value="NC">North Carolina</option><option value="ND">North Dakota</option><option value="MP">Northern Mariana Islands</option><option value="OH" selected="selected" data-select2-id="select2-data-12-ccrx">Ohio</option><option value="OK">Oklahoma</option><option value="OR">Oregon</option><option value="PW">Palau</option><option value="PA">Pennsylvania</option><option value="PR">Puerto Rico</option><option value="RI">Rhode Island</option><option value="SC">South Carolina</option><option value="SD">South Dakota</option><option value="TN">Tennessee</option><option value="TX">Texas</option><option value="UT">Utah</option><option value="VT">Vermont</option><option value="VI">Virgin Islands</option><option value="VA">Virginia</option><option value="WA">Washington</option><option value="WV">West Virginia</option><option value="WI">Wisconsin</option><option value="WY">Wyoming</option></select><span class="select2 select2-container select2-container--default" dir="ltr" data-select2-id="select2-data-11-pxpw" style="width: 100%;"><span class="selection"><span class="select2-selection select2-selection--single" role="combobox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-disabled="false" aria-labelledby="select2-province-container" aria-controls="select2-province-container"><span class="select2-selection__rendered" id="select2-province-container" role="textbox" aria-readonly="true" title="Ohio">Ohio</span><span class="select2-selection__arrow" role="presentation"><b role="presentation"></b></span></span></span><span class="dropdown-wrapper" aria-hidden="true"></span></span>
+                                <span class="req">*</span>
+                              </div>
+                            </div>
+
+                        </div>
+                    </div>
+                  
+                  	<div class="flex gap-1">
+                        <div class="formrow form-group required email-input one-half">
+                            <label for="emailAddress" class="labelText">Email (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="emailAddress form-control" id="emailAddress" maxlength="100" placeholder="" value="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                        <div class="formrow form-group required phone-input one-half">
+                            <label for="phone" class="labelText">Phone (Required)</label>
+                            <div class="relative req-field">
+                                <input type="text" class="phone form-control" id="phone" maxlength="50" placeholder="">
+                                <span class="req">*</span>
+                            </div>
+                        </div>
+                  	</div>
+                </div>
+              
+              	<div class="formrow">
+                	<script>var DDCONF = {API_KEY: "N6tBG3KcsjhTlVVR"};</script>
+                	<label for="dd-company-name-input" class="labelText">See if your employer will match your gift! (optional)</label>
+                	<div id="dd-company-name-input" data-doublethedonation-widget-id="G__2"><div class="dtd-streamlined-plugin"><input type="hidden" name="doubledonation_status" value="no_interaction"><input type="hidden" name="doublethedonation_status" value="no_interaction"><input type="hidden" name="doublethedonation_entered_text"><input type="hidden" name="doubledonation_company_id"><input type="hidden" name="doublethedonation_company_id"><input type="hidden" name="doubledonation_company_name"><input type="hidden" name="doublethedonation_company_name"><div class="dtd-search-box" style="width: 100%; margin-bottom: 0px;"><div aria-live="assertive" style="display: block; font-size: 0px; color: rgb(255, 255, 255); opacity: 0; position: absolute; height: 0px; margin: 0px; z-index: -99999;"></div><div aria-live="polite" style="display: block; font-size: 0px; color: rgb(255, 255, 255); opacity: 0; position: absolute; height: 0px; margin: 0px; z-index: -99999;"></div><input role="combobox" aria-expanded="false" name="doublethedonation_company_name_input" autocomplete="new-password" type="text" id="dd-input" class="dtd-search-input form-control BBFormTextbox" placeholder="Search for company..." aria-label="Search for company..." style="width: 100%;"></div></div></div>
+            	</div>
+            </fieldset>
+            <!--<div class="formrow">
+                <script>var DDCONF = {API_KEY: "N6tBG3KcsjhTlVVR"};</script>
+                <label for="dd-company-name-input" class="labelText">See if your employer will match your gift! (optional)</label>
+                <div id="dd-company-name-input"></div>
+            </div>-->
+            <div class="step-buttons form-group">
+                <input id="returnToReview" class="step-button form-control btn btn-default" type="button" value="BACK">
+                <input id="donate" class="step-button submit form-control btn btn-default btn-donate" type="button" value="Continue">
             </div>
         </div>
     </div>
