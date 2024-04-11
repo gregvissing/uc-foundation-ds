@@ -5028,6 +5028,10 @@ strong * {
     flex-wrap: wrap;
 }
 
+.flex-grow {
+    flex-grow: 1;
+}
+
 .flex.gap-1 {
     gap: 1em;
 }
@@ -6375,7 +6379,7 @@ fieldset.billingInformation {
     }
 }
 
-.form-control:not(select) {
+.form-control:not(select):not(input) {
     display: block;
     width: 100%;
     height: 34px;
