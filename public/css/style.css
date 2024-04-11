@@ -7778,6 +7778,21 @@ input#tributeCheckbox {
     width: 100% !important;
 }
 
+.otherAmt.amount span {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    background: var(--color-brand-black);
+    color: var(--color-white);
+    padding: 5px 10px;
+}
+
+.otherAmt.amount input {
+    padding-left: 2.25em !important;
+}
+
 /*------------------------------------*\
     #QUICK SEARCH
 \*------------------------------------*/
