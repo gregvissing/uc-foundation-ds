@@ -6028,10 +6028,11 @@ tr[id*="_trDesignation"] {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    margin-bottom: 1.5em;
 }
 
 tr[id*="_trDesignation"]>td:last-child {
-    padding: 10px;
+    padding: 0;
 }
 
 /* STANDARD DONATION BUTTONS */
@@ -6237,12 +6238,34 @@ tbody[id*="pnlAcknowledgee"] {
 tbody[id*="pnlAcknowledgee"] > tr {
     width: 100%;
     min-width: 100%;
+
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
 }
 
 tbody[id*="pnlAcknowledgee"] > tr > td:first-child {
     display: flex;
     align-items: center;
-    height: 52px;
+    padding-left: 20px;
+    /* height: 52px; */
+}
+
+tbody[id*="pnlAcknowledgee"] > tr > td.BBFormRequiredFieldMarker.DonationRequiredFieldMarker,
+tbody[id*="pnlAcknowledgee"] > tr > td[id*="_tdreq_"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 10px;
+    height: 18px;
+    line-height: 1;
+}
+
+tbody[id*="pnlAcknowledgee"] > tr > td[id*="_tdreq_"] span {
+    height: 100%;
+    display: block;
+    line-height: 1;
 }
 
 /* STANDARD DONATION FORM BUTTONS */
