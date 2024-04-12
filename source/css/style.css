@@ -1049,11 +1049,11 @@ select.select2-input {
     font-size: 1rem;
     width: 100%;
     max-width: 100% !important;
-    border: 1px solid #444;
+    border: 1px solid var(--color-brand-black);
     border-radius: 0;
     padding: 0.5rem !important;
     /* height: 2rem; */
-    height: 46px;
+    height: 46px !important;
     background: var(--color-white);
     color: var(--color-brand-black);
     position: relative;
@@ -6848,20 +6848,38 @@ a.add-gift:hover {
 }
 
 .donationForm .select2-selection--single {
-    height: 35px !important;
+    height: 46px !important;
     border-color: var(--color-ltGray) !important;
 }
 
 .donationForm .select2-selection__rendered {
-    line-height: 35px !important;
+    line-height: 46px !important;
+   	padding-right: 0.5rem !important;
+}
+   
+.select2-container--default .select2-selection--single .select2-selection__arrow b {
+   	top: 1px !important;
+   	left: 0 !important;
+   	display: block !important;
+   	position: relative !important;
+   	height: 46px !important;
+   	width: 40px !important;
+ 	border: none !important;
+   	background-position: 100%;
+    background-repeat: no-repeat;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAUCAMAAACtdX32AAAAdVBMVEUAAAD///8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhMdQaAAAAJ3RSTlMAAAECAwQGBwsOFBwkJTg5RUZ4eYCHkJefpaytrsXGy8zW3+Do8vNn0bsyAAAAYElEQVR42tXROwJDQAAA0Ymw1p9kiT+L5P5HVEi3qJn2lcPjtIuzUIJ/rhIGy762N3XaThqMN1ZPALsZPEzG1x8LrFL77DHBnEMxBewz0fJ6LyFHTPL7xhwzWYrJ9z22AqmQBV757MHfAAAAAElFTkSuQmCC);
 }
 
 .donationForm .select2-selection__arrow {
-    height: 35px !important;
+    height: 46px !important;
+   	top: 0 !important;
+   	right: 0 !important;
+ 	width: 38px !important;
 }
 
 .donationForm .select2-container--default .select2-selection--single {
     border-radius: 0;
+   	border-color: var(--color-brand-black) !important;
 }
 
 /* badge.css */
