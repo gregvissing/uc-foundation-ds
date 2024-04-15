@@ -7379,6 +7379,7 @@ li {
     /* background-color: var(--color-callout-bg); */
 }
 
+/* 
 @keyframes completed {
     from {
         transform: scale(0);
@@ -7407,6 +7408,89 @@ li {
     color: var(--color-white);
     border: 5px solid green;
     animation: completed 0.4s;
+} */
+
+.breadcrumbs .breadcrumb .form-step {
+    position: relative;
+}
+
+.breadcrumbs .breadcrumb .form-step svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.checkmark__circle {
+    stroke-dasharray: 166;
+    stroke-dashoffset: 166;
+    stroke-width: 2;
+    stroke-miterlimit: 10;
+    stroke: green;
+    fill: none;
+    /* animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards; */
+}
+  
+.checkmark {
+    width: 43x;
+    height: 43px;
+    border-radius: 50%;
+    display: block;
+    stroke-width: 2;
+    stroke: green;
+    stroke-miterlimit: 10;
+    margin: 10% auto;
+    box-shadow: inset 0px 0px 0px #7ac142;
+    /* animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both; */
+}
+  
+.checkmark__check {
+    transform-origin: 50% 50%;
+    stroke-dasharray: 48;
+    stroke-dashoffset: 48;
+    /* animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards; */
+}
+
+.breadcrumb.complete .checkmark__circle {
+    animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+}
+
+.breadcrumb.complete .checkmark {
+    animation: fill .4s ease-in-out .4s forwards, scale .3s ease-in-out .9s both;
+}
+
+.breadcrumb.complete .checkmark__check {
+    animation: stroke 0.3s cubic-bezier(0.65, 0, 0.45, 1) 0.8s forwards;
+}
+  
+@keyframes stroke {
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+@keyframes scale {
+    0%, 100% {
+        transform: none;
+    }
+    50% {
+        transform: scale3d(1.1, 1.1, 1);
+    }
+}
+@keyframes fill {
+    100% {
+        box-shadow: inset 0px 0px 0px 30px #fff;
+    }
+}
+
+.breadcrumbs .breadcrumb .form-step.complete svg {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
 }
 
 .breadcrumbs .breadcrumb.active .form-step {
@@ -7508,8 +7592,7 @@ li {
 .validation-message {
     color: var(--color-uc-dark-red);
     /* #f00; */
-    text-align: center;
-    font-size: 1.2em;
+    font-size: 1em;
 }
 
 .gift-count-indicator {
