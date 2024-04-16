@@ -6343,7 +6343,7 @@ fieldset.billingInformation {
     /* text-align: left !important; */
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-column-gap: 10px;
     grid-row-gap: 10px;
 }
@@ -6383,6 +6383,14 @@ fieldset.billingInformation {
 .donationForm .formrow .amounts .otherAmt.amount {
     grid-area: 3 / 1 / 4 / 5;
     padding: 0;
+}
+   
+.amounts #otherAmtInstr {
+   grid-area: 4 / 1 / 5 / 5; 
+}
+   
+.amounts #otherAmtInstr div {
+	margin: 0 !important;   
 }
 
 .amounts a {
@@ -7213,13 +7221,14 @@ li {
     text-decoration: none;
 }
 
+/*
 .amounts #otherAmtInstr {
     text-align: center;
     color: #555;
     display: none;
     position: absolute;
     width: 95%;
-}
+} */
 
 .gift-frequencies .gift-frequency {
     background-color: #e5e5e5;
