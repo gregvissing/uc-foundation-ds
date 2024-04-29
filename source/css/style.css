@@ -2550,10 +2550,18 @@ table caption {
 
 @media all and (max-width: 600px) {
 
-    main>.l-container,
+	main>.l-container {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
     footer>.l-container {
         padding-left: 30px !important;
         padding-right: 30px !important;
+    }
+
+	footer>.l-container {
+        flex-direction: column !important;
     }
 }
 
@@ -4800,6 +4808,12 @@ strong * {
     .flex {
         flex-direction: column;
     }
+   
+   	#frequency.flex,
+   	.c-input-groupp.form-group.flex,
+   	.formrow.form-group.flex.gap-1 {
+   		flex-direction: row;
+   	}
 }
 
 .width-700 {
@@ -6160,6 +6174,64 @@ tbody[id*="pnlAcknowledgee"] > tr > td[id*="_tdreq_"] span {
     display: block;
     line-height: 1;
 }
+   
+#ui-datepicker-div .ui-datepicker-calendar {
+	display: none;
+}
+   
+#ui-datepicker-div.show-calendar .ui-datepicker-calendar {
+	display: table;
+}
+   
+.ui-state-default, .ui-widget-content .ui-state-default {
+ 	border: 1px solid var(--color-steger-silver) !important;
+    background: var(--color-main-street-mist);
+   	color: var(--color-brand-black) !important;
+}
+
+.ui-state-active, .ui-widget-content .ui-state-active {
+   	border: 1px solid var(--color-steger-silver) !important;
+    background: var(--color-steger-silver) !important;
+   	color: var(--color-white) !important;
+}
+   
+/*
+.ui-datepicker-prev.ui-corner-all,
+.ui-datepicker-next.ui-corner-all {
+   	border: 1px solid #e9e9e9 !important;
+} */
+   
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
+   	border: 1px solid #e9e9e9 !important;
+}
+   
+.ui-datepicker .ui-datepicker-buttonpane button {
+   	margin: .5em 0em .4em !important;
+    color: var(--color-white) !important;
+    border-color: var(--color-brand-red) !important;
+    background-color: var(--color-brand-red) !important;
+   	padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0,0,0,.25);
+    border-radius: 6px;
+    border-width: 2px !important;
+   	font-family: "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 1em !important;
+    letter-spacing: 1px;
+   	text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+}
+   
+div.ui-datepicker.ui-widget {
+   	box-shadow: 8px 8px 10px rgba(0,0,0,.25);
+}
+   
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus, .ui-button:hover, .ui-button:focus {
+   	border: 1px solid #ccc !important;
+}
+   
 
 /* STANDARD DONATION FORM BUTTONS */
 
@@ -6283,7 +6355,7 @@ fieldset.billingInformation {
     padding-top: 0 !important;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .donationForm {
         padding: 0 10px !important;
     }
@@ -6356,14 +6428,16 @@ fieldset.billingInformation {
     width: 15%;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     .designation-categories.flex {
         flex-wrap: wrap;
-        gap: 10px;
+        gap: 1%;
+   		flex-direction: row !important;
     }
 
     .designation-categories>a {
-        width: 48% !important;
+        width: 49% !important;
+   		margin-bottom: 2%;
     }
 }
 
@@ -7351,7 +7425,7 @@ li {
 
 .line-item-amount {
     float: right;
-    font-size: 1.5em;
+    font-size: 1.25em;
     color: var(--color-dkGray);
     line-height: 1.8;
 }
@@ -7506,6 +7580,24 @@ li {
     left: 0;
     right: 0;
     margin: auto;
+}
+   
+@media (max-width: 600px) {
+   	.breadcrumbs:before {
+   		width: 80% !important;
+   	}
+   
+   	.breadcrumbs .breadcrumb {
+   		width: 25% !important;
+   	}
+   
+   	.breadcrumbs.progress-2:after {
+        width: 27%;
+    }
+
+    .breadcrumbs.progress-3:after {
+        width: 53%;
+    }
 }
 
 .checkmark__circle {
@@ -7829,6 +7921,12 @@ input#tributeCheckbox {
 #donation-form .SpellSuggestionList {
     width: 100%;
 }
+   
+#donation-form .tributeSpan.form-group {
+  	display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
 
 #donation-form #lblTributeHeading {
     /* padding-bottom: 20px;
@@ -7847,10 +7945,8 @@ input#tributeCheckbox {
     font-size: 14px;
 }
    
-#donation-form .tributeSpan.form-group {
-  	display: flex;
-    flex-direction: row;
-    gap: 10px;
+#donation-form .c-radio.form-group.flex {
+  	padding: 10px 0 !important;
 }
 
 .donationForm.givingTuesday18 .designations .feature-masthead {
