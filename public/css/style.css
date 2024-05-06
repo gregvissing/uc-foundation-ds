@@ -534,6 +534,8 @@ textarea:not([rows]) {
   src: url("../fonts/OpenSans-BoldItalic.ttf") format("truetype");
 } */
 
+/* JOST font */
+/*
 @font-face {
     font-family: "Jost";
     font-style: normal;
@@ -565,7 +567,10 @@ textarea:not([rows]) {
     font-weight: 700;
     src: url("../fonts/Jost-BoldItalic.ttf") format("truetype");
 }
+*/
 
+/* Gentium Book Basic font */
+/*
 @font-face {
     font-family: "Gentium Book Basic";
     font-style: normal;
@@ -597,15 +602,16 @@ textarea:not([rows]) {
     font-weight: 700;
     src: url("../fonts/GenBkBasBI.ttf") format("truetype");
 }
+*/
 
-@font-face {
+/* @font-face {
     font-family: "Abel";
     font-style: normal;
     font-display: swap;
     font-weight: 400;
     src: url("../fonts/abel-latin-400-normal.woff2") format("woff2"), url("../fonts/abel-all-400-normal.woff") format("woff");
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
+} */
 
 /*------------------------------------*\
     #BODY
@@ -4787,11 +4793,12 @@ strong * {
 }
 
 @media (max-width: 768px) {
-    .flex {
+    .flex:not(.form-group) {
         flex-direction: column;
     }
 
-    .flex.half-half {
+    .flex.half-half,
+   	.flex.align-stretch {
         flex-direction: row;
     }
 
@@ -5535,7 +5542,7 @@ main h2 {
     font-size: clamp(1em, 2vw, 3em);
     line-height: 1.4;
     letter-spacing: .3px;
-    color: var(--color-lighterText) !important;
+    color: var(--color-brand-black) !important;
     line-height: 1.6 !important;
     font-size: 1.125em !important;
     font-weight: 300 !important;
@@ -6355,7 +6362,7 @@ fieldset.billingInformation {
     padding-top: 0 !important;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     .donationForm {
         padding: 0 10px !important;
     }
@@ -6575,11 +6582,12 @@ fieldset.billingInformation {
     /* text-align: center; */
     display: flex;
     justify-content: space-between;
+   	gap: 10px;
 }
 
 .donationForm .steps .step-button {
     /* display: inline-block;
-    background-color: var(--color-lighterText);
+    background-color: var(--color-brand-black);
     color: #ffffff;
     border: none;
     border-radius: none;
@@ -6608,7 +6616,12 @@ fieldset.billingInformation {
     transition: background .1s;
     height: unset;
     display: inline-block;
-
+}
+   
+@media (max-width: 500px) {
+   .donationForm .steps .step-button {
+   		padding: 7px 20px !important;
+   }
 }
 
 .steps {
@@ -6976,17 +6989,20 @@ a.add-gift:hover {
 }
 
 .donationForm #designationSearchBtn {
-    height: 100%;
+    height: 50.8px;
     width: 10%;
     border-radius: 4px; 
     border-top-left-radius: 0; 
     border-bottom-left-radius: 0;
-    padding: 9px;
+    padding: 0px;
     border-color: var(--color-brand-red) !important;
     background-color: var(--color-brand-red) !important;
     box-shadow: 8px 8px 10px rgba(0,0,0,.25);
     border-width: 2px !important;
     border-style: solid !important;
+   	display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .donationForm #designationSearchBtn svg {
@@ -6994,9 +7010,10 @@ a.add-gift:hover {
 }
 
 /* Select2 styles */
+/*
 .donationForm .select2 {
     width: 100% !important;
-}
+} */
 
 .donationForm .select2-selection--single {
     height: 46px !important;
@@ -7291,7 +7308,7 @@ li {
 
 .designations p,
 .labelText {
-    color: var(--color-lighterText);
+    color: var(--color-brand-black);
     line-height: 1.1;
     margin: 0 0 10px 0;
     text-transform: none;
@@ -7428,6 +7445,7 @@ li {
     font-size: 1.25em;
     color: var(--color-dkGray);
     line-height: 1.8;
+   	position: relative;
 }
 
 /* .line-item-name {
@@ -7450,6 +7468,21 @@ li {
    
 .line-item-remove:hover {
    	border-bottom: 2px solid var(--color-brand-red) !important;
+}
+   
+@media (max-width: 600px) {
+   	.line-item {
+   		display: flex;
+   		flex-direction: column;
+   	}
+   
+   	.line-item .line-item-name {
+   		order: -1;
+   	}
+   
+   	.line-item .line-item-amount {
+   		text-align: right;
+   	}
 }
 
 .top-heading {
@@ -7718,7 +7751,7 @@ li {
 .donationForm .steps .step-button {
     /*line-height: 3;*/
     display: inline-block;
-    background-color: var(--color-lighterText);
+    background-color: var(--color-brand-black);
     color: #ffffff;
     border: none;
     border-radius: none;
@@ -7910,8 +7943,8 @@ input#tributeCheckbox {
 }
 
 #donation-form h3 {
-    color: var(--color-lighterText);
-    margin-bottom: 30px;
+    color: var(--color-brand-black);
+    margin-bottom: 10px;
 }
 
 #donation-form input[type="text"],
@@ -7970,7 +8003,7 @@ input#tributeCheckbox {
 }
 
 .donationForm.givingTuesday18 .designations .feature-masthead h3 {
-    color: var(--color-lighterText) !important;
+    color: var(--color-brand-black) !important;
     font-size: 28px;
     font-weight: 600;
 }
