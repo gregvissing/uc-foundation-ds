@@ -1299,7 +1299,7 @@ p.intro-text {
     width: 100%;
     max-width: 100%;
     margin: 60px auto !important;
-    flex-direction: column;
+    flex-direction: row;
 }
 
 .contact-card p.name * {
