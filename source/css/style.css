@@ -1355,7 +1355,7 @@ p.intro-text {
     width: 100%;
 }
 
-.story .container .content .byline .social-media a {
+.story .l-container .content .byline .social-media a {
     font-size: 1.75em;
     margin: 0 5px;
 }
@@ -1385,13 +1385,13 @@ p.intro-text {
     position: relative
 }
 
-.story .container {
+.story .l-container {
     position: relative;
     width: 800px;
     margin: auto;
 }
 
-.story .container>.content {
+.story .l-container>.content {
     margin-top: -6rem;
     background-color: var(--color-white);
     padding: 2rem;
@@ -3659,6 +3659,10 @@ header {
     position: sticky;
     top: 0;
     bottom: initial;
+   
+   	-webkit-box-shadow: 0 1px 1px hsl(0deg 0% 0% / .075), 0 2px 2px hsl(0deg 0% 0% / .075), 0 4px 4px hsl(0deg 0% 0% / .075), 0 8px 8px hsl(0deg 0% 0% / .075), 0 16px 16px hsl(0deg 0% 0% / .075);
+    -moz-box-shadow: 0 1px 1px hsl(0deg 0% 0% / .075), 0 2px 2px hsl(0deg 0% 0% / .075), 0 4px 4px hsl(0deg 0% 0% / .075), 0 8px 8px hsl(0deg 0% 0% / .075), 0 16px 16px hsl(0deg 0% 0% / .075);
+    box-shadow: 0 1px 1px hsl(0deg 0% 0% / .075), 0 2px 2px hsl(0deg 0% 0% / .075), 0 4px 4px hsl(0deg 0% 0% / .075), 0 8px 8px hsl(0deg 0% 0% / .075), 0 16px 16px hsl(0deg 0% 0% / .075);
 }
 
 /**
@@ -4711,6 +4715,10 @@ strong * {
 
 .red {
     color: var(--color-brand-red);
+}
+   
+.white {
+   	color: var(--color-white);
 }
 
 .black-bg {
