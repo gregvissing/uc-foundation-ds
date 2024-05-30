@@ -1403,6 +1403,7 @@ p.intro-text {
     margin-top: -6rem;
     background-color: var(--color-white);
     padding: 2rem;
+    padding-bottom: 0;
     position: relative;
     z-index: 2;
 }
@@ -2090,7 +2091,7 @@ pre[class*=language-] {
     /* background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/UC-logo-lockup-bg.png); */
     background-image: url(https://foundation.uc.edu/image/transparent-monogram-forty-percent.png);
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
     /* opacity: 0.8; */
     width: 40%;
     height: 100%;
@@ -3211,15 +3212,28 @@ body.modal-open {
 
 .c-stacked-block__body {
     flex: 1;
-    margin-top: 0.6rem;
+    padding: 20px 10px;
+    /* margin-top: 0.6rem; */
+}
+
+.date.pub-date {
+    color: var(--color-brand-black);
+    font-size: 0.85em;
+    font-style: italic;
+    margin-bottom: 5px;
 }
 
 .c-stacked-block__title {
-    margin-top: 35px;
+    /* margin-top: 35px; */
+    margin: 0;
     text-transform: capitalize;
     letter-spacing: 1px;
     color: var(--color-brand-red);
     transition: color 0.15s ease-out;
+}
+
+.c-stacked-block__title:hover {
+    text-decoration: underline;
 }
 
 /* .c-stacked-block:hover .c-stacked-block__title, .c-stacked-block:focus .c-stacked-block__title {
@@ -4755,11 +4769,29 @@ strong * {
 }
 
 .card.whitebox {
-    padding: 2%;
-    border-radius: 10px;
+    /* padding: 2%; */
+    border-radius: 16px;
+    overflow: hidden;
     border-color: var(--color-white);
     background-color: var(--color-white);
     box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
+}
+
+.card.related .c-stacked-block__media { 
+    height: 150px;
+    overflow: hidden;
+}
+
+.card.related .image {
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+    overflow: hidden;
+}
+
+.card.related:hover .image {
+    transform: scale(1.1);
+    transition: transform 1s ease-in-out;
 }
 
 .callout-card {

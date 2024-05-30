@@ -51,7 +51,7 @@
                 <hr style="background: var(--color-brand-black);">
                 <div class="flow">
                     <h2 class="text-center">Related stories</h2>
-                    <div class="flex flex-row flex-between gap-3 row">
+                    <div class="flex flex-row flex-between gap-2 row" style="display: none !important;">
                         <div class="one-third">
                             <a href="{{ url }}" class="c-stacked-block {{ additionalClasses }}">
 
@@ -65,12 +65,12 @@
 
                                 <div class="c-stacked-block__body">
                                     <h3 class="c-stacked-block__title">{{ headline }}</h3>
-                                    {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                    {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
                                 </div><!-- end c-stacked-block__body -->
 
-                                <div class="c-stacked-block__footer">
+                                <!--<div class="c-stacked-block__footer">
                                     <span class="c-stacked-block__meta">{{ label }}</span>
-                                </div>
+                                </div>-->
                             </a><!-- end c-stacked-block -->
                         </div>
                         <div class="one-third">
@@ -86,12 +86,12 @@
 
                                 <div class="c-stacked-block__body">
                                     <h3 class="c-stacked-block__title">{{ headline }}</h3>
-                                    {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                    {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
                                 </div><!-- end c-stacked-block__body -->
 
-                                <div class="c-stacked-block__footer">
+                                <!--<div class="c-stacked-block__footer">
                                     <span class="c-stacked-block__meta">{{ label }}</span>
-                                </div>
+                                </div>-->
                             </a><!-- end c-stacked-block -->
                         </div>
                         <div class="one-third">
@@ -107,82 +107,189 @@
 
                                 <div class="c-stacked-block__body">
                                     <h3 class="c-stacked-block__title">{{ headline }}</h3>
-                                    {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                    {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
                                 </div><!-- end c-stacked-block__body -->
 
-                                <div class="c-stacked-block__footer">
+                                <!--<div class="c-stacked-block__footer">
                                     <span class="c-stacked-block__meta">{{ label }}</span>
-                                </div>
+                                </div>-->
                             </a><!-- end c-stacked-block -->
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="related-stories p-1 relative">
+            <div class="l-container">
+                <div class="flex flex-row flex-between gap-2 row">
+                    <div class="one-third">
+                        <a href="{{ url }}" class="c-stacked-block card whitebox related flex flex-column white-bg {{ additionalClasses }}">
+
+                            <div class="c-stacked-block__header">
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://placehold.co/600x400);">
+                                        <!--<img src="https://placehold.co/600x400" alt="" width="1200" height="800" class="c-stacked-block__img">-->
+                                    </div>                                
+                                </div>
+                                {{!-- {{#with stackedBlockMedia }}
+                                <div class="c-stacked-block__media">
+                                    {{> atoms-stacked-block-image width="1200" height="800" }}
+                                </div>
+                                {{/ with }} --}}
+                            </div>
+
+                            <div class="c-stacked-block__body">
+                                <p class="date pub-date">May 29, 2024</p>
+                                <h3 class="c-stacked-block__title">{{ headline }}</h3>
+                                {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
+                            </div><!-- end c-stacked-block__body -->
+
+                            <!--<div class="c-stacked-block__footer">
+                                    <span class="c-stacked-block__meta">{{ label }}</span>
+                                </div>-->
+                        </a><!-- end c-stacked-block -->
+                    </div>
+                    <div class="one-third">
+                        <a href="{{ url }}" class="c-stacked-block card whitebox related flex flex-column white-bg {{ additionalClasses }}">
+
+                            <div class="c-stacked-block__header">
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://placehold.co/600x400);">
+                                        <!--<img src="https://placehold.co/600x400" alt="" width="1200" height="800" class="c-stacked-block__img">-->
+                                    </div>                                
+                                </div>
+                                {{!-- {{#with stackedBlockMedia }}
+                                <div class="c-stacked-block__media">
+                                    {{> atoms-stacked-block-image width="1200" height="800" }}
+                                </div>
+                                {{/ with }} --}}
+                            </div>
+
+                            <div class="c-stacked-block__body">
+                                <p class="date pub-date">May 29, 2024</p>
+                                <h3 class="c-stacked-block__title">{{ headline }}</h3>
+                                {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
+                            </div><!-- end c-stacked-block__body -->
+
+                            <!--<div class="c-stacked-block__footer">
+                                    <span class="c-stacked-block__meta">{{ label }}</span>
+                                </div>-->
+                        </a><!-- end c-stacked-block -->
+                    </div>
+                    <div class="one-third">
+                        <a href="{{ url }}" class="c-stacked-block card whitebox related flex flex-column white-bg {{ additionalClasses }}">
+
+                            <div class="c-stacked-block__header">
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://placehold.co/600x400);">
+                                        <!--<img src="https://placehold.co/600x400" alt="" width="1200" height="800" class="c-stacked-block__img">-->
+                                    </div>                                
+                                </div>
+                                {{!-- {{#with stackedBlockMedia }}
+                                <div class="c-stacked-block__media">
+                                    {{> atoms-stacked-block-image width="1200" height="800" }}
+                                </div>
+                                {{/ with }} --}}
+                            </div>
+
+                            <div class="c-stacked-block__body">
+                                <p class="date pub-date">May 29, 2024</p>
+                                <h3 class="c-stacked-block__title">{{ headline }}</h3>
+                                {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
+                            </div><!-- end c-stacked-block__body -->
+
+                            <!--<div class="c-stacked-block__footer">
+                                    <span class="c-stacked-block__meta">{{ label }}</span>
+                                </div>-->
+                        </a><!-- end c-stacked-block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="related-stories red-bg p-1 lockup-bg relative">
             <div class="l-container">
-                <div class="flex flex-row flex-between gap-3 row">
+                <div class="flex flex-row flex-between gap-2 row">
                     <div class="one-third">
-                        <a href="{{ url }}" class="c-stacked-block card whitebox flow flex flex-column white-bg p-1 {{ additionalClasses }}">
+                        <a href="{{ url }}" class="c-stacked-block card whitebox related flex flex-column white-bg {{ additionalClasses }}">
 
                             <div class="c-stacked-block__header">
-                                {{#with stackedBlockMedia }}
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://placehold.co/600x400);">
+                                        <!--<img src="https://placehold.co/600x400" alt="" width="1200" height="800" class="c-stacked-block__img">-->
+                                    </div>                                
+                                </div>
+                                {{!-- {{#with stackedBlockMedia }}
                                 <div class="c-stacked-block__media">
                                     {{> atoms-stacked-block-image width="1200" height="800" }}
                                 </div>
-                                {{/ with }}
+                                {{/ with }} --}}
                             </div>
 
                             <div class="c-stacked-block__body">
+                                <p class="date pub-date">May 29, 2024</p>
                                 <h3 class="c-stacked-block__title">{{ headline }}</h3>
-                                {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
                             </div><!-- end c-stacked-block__body -->
 
-                            <div class="c-stacked-block__footer">
-                                <span class="c-stacked-block__meta">{{ label }}</span>
-                            </div>
+                            <!--<div class="c-stacked-block__footer">
+                                    <span class="c-stacked-block__meta">{{ label }}</span>
+                                </div>-->
                         </a><!-- end c-stacked-block -->
                     </div>
                     <div class="one-third">
-                        <a href="{{ url }}" class="c-stacked-block card whitebox flow flex flex-column white-bg p-1 {{ additionalClasses }}">
+                        <a href="{{ url }}" class="c-stacked-block card whitebox related flex flex-column white-bg {{ additionalClasses }}">
 
                             <div class="c-stacked-block__header">
-                                {{#with stackedBlockMedia }}
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://placehold.co/600x400);">
+                                        <!--<img src="https://placehold.co/600x400" alt="" width="1200" height="800" class="c-stacked-block__img">-->
+                                    </div>                                
+                                </div>
+                                {{!-- {{#with stackedBlockMedia }}
                                 <div class="c-stacked-block__media">
                                     {{> atoms-stacked-block-image width="1200" height="800" }}
                                 </div>
-                                {{/ with }}
+                                {{/ with }} --}}
                             </div>
 
                             <div class="c-stacked-block__body">
+                                <p class="date pub-date">May 29, 2024</p>
                                 <h3 class="c-stacked-block__title">{{ headline }}</h3>
-                                {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
                             </div><!-- end c-stacked-block__body -->
 
-                            <div class="c-stacked-block__footer">
-                                <span class="c-stacked-block__meta">{{ label }}</span>
-                            </div>
+                            <!--<div class="c-stacked-block__footer">
+                                    <span class="c-stacked-block__meta">{{ label }}</span>
+                                </div>-->
                         </a><!-- end c-stacked-block -->
                     </div>
                     <div class="one-third">
-                        <a href="{{ url }}" class="c-stacked-block card whitebox flow flex flex-column white-bg p-1 {{ additionalClasses }}">
+                        <a href="{{ url }}" class="c-stacked-block card whitebox related flex flex-column white-bg {{ additionalClasses }}">
 
                             <div class="c-stacked-block__header">
-                                {{#with stackedBlockMedia }}
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://placehold.co/600x400);">
+                                        <!--<img src="https://placehold.co/600x400" alt="" width="1200" height="800" class="c-stacked-block__img">-->
+                                    </div>                                
+                                </div>
+                                {{!-- {{#with stackedBlockMedia }}
                                 <div class="c-stacked-block__media">
                                     {{> atoms-stacked-block-image width="1200" height="800" }}
                                 </div>
-                                {{/ with }}
+                                {{/ with }} --}}
                             </div>
 
                             <div class="c-stacked-block__body">
+                                <p class="date pub-date">May 29, 2024</p>
                                 <h3 class="c-stacked-block__title">{{ headline }}</h3>
-                                {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }}
+                                {{!-- {{#if excerpt}}<p class="c-stacked-block__excerpt">{{ excerpt }}</p>{{/ if }} --}}
                             </div><!-- end c-stacked-block__body -->
 
-                            <div class="c-stacked-block__footer">
-                                <span class="c-stacked-block__meta">{{ label }}</span>
-                            </div>
+                            <!--<div class="c-stacked-block__footer">
+                                    <span class="c-stacked-block__meta">{{ label }}</span>
+                                </div>-->
                         </a><!-- end c-stacked-block -->
                     </div>
                 </div>
