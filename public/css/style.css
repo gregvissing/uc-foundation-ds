@@ -5494,6 +5494,12 @@ main h2 {
     padding: 1em !important;
 }
 
+@media (max-width: 600px) {
+    .related-stories .flex {
+        flex-direction: column !important;
+    }
+}
+
 .flex.largest-class {
     flex-wrap: wrap;
     justify-content: center;
