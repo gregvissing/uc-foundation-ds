@@ -1113,6 +1113,11 @@ button {
     flex: 1 0 auto;
 }
 
+main {
+	padding: 0;
+	background-color: var(--color-white);
+}
+
 /*------------------------------------*\
     #MEDIA
 \*------------------------------------*/
@@ -5702,6 +5707,16 @@ main h2 {
     }
 }
 
+/*------------------------------------*\
+   OTHER OUT OF BOX PARTS
+\*------------------------------------*/
+   
+.bbformbuilder-form-part {
+  	max-width: 700px;
+   	margin: 1em auto;
+   	display: block;
+}
+
 .icon-stats .card img {
     margin: 0 auto;
     width: 125px;
@@ -5758,7 +5773,7 @@ tbody[id*="_TB_pnlDonation"] tr {
 table[id*="_tblAmount"]>tbody {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: flex-start;
     gap: 10px;
 }
 
