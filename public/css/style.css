@@ -5822,7 +5822,7 @@ table[id*="_rdoGiftType"]>tbody>tr label:focus {
 tr[id*="_trOther"] {
     display: flex;
     flex-direction: row !important;
-    gap: 20px !important;
+    gap: 10px !important;
 }
 
 tr[id*="_trOther"] td[id*="_tdOther"] {
@@ -5930,7 +5930,7 @@ tr[id*="_trOther"]>td:first-child span {
 }
 
 tr[id*="_trOther"]>td:last-child {
-    width: 40% !important;
+    width: 39% !important;
 }
 
 table[id*="_tblAmount"] .vaBottom.BBFieldControlCell.DonationFieldControlCell {
