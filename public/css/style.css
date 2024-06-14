@@ -4819,7 +4819,7 @@ strong * {
     height: -webkit-fit-content;
     height: -moz-fit-content;
     height: fit-content;
-    margin-bottom: 89px;
+    margin-bottom: 40px;
     padding: 35px 50px;
     -webkit-box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
     box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
@@ -4847,8 +4847,7 @@ strong * {
     position: relative;
     left: 25px;
     top: 30px;
-    height: 35px;
-    width: 32.33px;
+    width: 35px;
 }
 
 .highlights .highlight-card h2 {
