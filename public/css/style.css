@@ -4845,10 +4845,10 @@ strong * {
 
 .highlights .highlight-card .shield-container .shield {
     position: relative;
-    left: 35px;
+    left: 25px;
     top: 30px;
-    height: 25px;
-    width: 22.33px;
+    height: 35px;
+    width: 32.33px;
 }
 
 .highlights .highlight-card h2 {
