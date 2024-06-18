@@ -4876,6 +4876,14 @@ strong * {
 .highlights .highlight-card p {
     position: relative;
 }
+   
+.highlights .highlight-card a {
+    cursor: pointer;
+}
+   
+.highlights .highlight-card a:hover {
+   	border-bottom: 2px solid var(--color-brand-red) !important;
+}
 
 .highlights .highlight-card .shield-container {
     -webkit-box-shadow: -10px 0px 10px -7px rgba(0, 0, 0, 0.07);
@@ -5263,6 +5271,14 @@ strong * {
 
 main h2 {
     margin-top: 24px !important;
+}
+   
+main p > a {
+   	transition: all 0.4s ease-in-out;
+}
+   
+main p > a:hover {
+   	border-bottom: 2px solid var(--color-brand-red) !important;
 }
 
 /*------------------------------------*\
@@ -5679,6 +5695,14 @@ main h2 {
 .gallery {
     display: flex;
     background-color: var(--color-white);
+}
+   
+.gallery a {
+	transition: all 0.4s ease-in-out;   
+}
+   
+.gallery a:hover {
+   	border-bottom: 2px solid var(--color-brand-red) !important;
 }
 
 .gallery h2 {
