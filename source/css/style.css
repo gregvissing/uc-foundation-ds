@@ -2090,16 +2090,15 @@ pre[class*=language-] {
     content: "";
     position: absolute;
     right: 0;
-    top: 0;
-    bottom: 0;
+    top: 20%;
     margin: auto;
     /* background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/UC-logo-lockup-bg.png); */
-    background-image: url(https://foundation.uc.edu/image/transparent-monogram-forty-percent.png);
+    background-image: url(https://foundation.uc.edu/image/transparent-monogram-forty-percent_cropped.png);
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity: 0.8; */
-    width: 35%;
-    height: 100%;
+    width: 300px;
+    height: 300px;
 }
 
 /*------------------------------------*\
@@ -3217,12 +3216,29 @@ body.modal-open {
 
 .c-stacked-block__body {
     flex: 1;
-    padding: 20px 10px;
+    padding: 20px 10px 40px;
+   	position: relative;
     /* margin-top: 0.6rem; */
+}
+   
+.c-stacked-block__body:after {
+	content: "";
+   	position: absolute;
+   	bottom: 0;
+	left: 0;
+   	rigth: 0;
+   	margin: auto;
+   	height: 25px;
+   	width: 100%;
+   	background-color: var(--color-brand-black);
+}
+   
+.c-stacked-block__body p {
+   	color: var(--color-brand-black) !important;
 }
 
 .date.pub-date {
-    color: var(--color-brand-black);
+    color: var(--color-brand-red) !important;
     font-size: 0.85em;
     font-style: italic;
     margin-bottom: 5px;
@@ -3233,8 +3249,9 @@ body.modal-open {
     margin: 0;
     text-transform: capitalize;
     letter-spacing: 1px;
-    color: var(--color-brand-red);
+    color: var(--color-brand-black);
     transition: color 0.15s ease-out;
+   	font-size: 22px !important;
 }
 
 .c-stacked-block__title:hover {
@@ -3275,6 +3292,18 @@ body.modal-open {
 
 a.c-stacked-block {
     border-bottom: none !important;
+}
+   
+a.c-stacked-block * {
+    transition: all 0.4s ease-in-out;
+}
+   
+a.c-stacked-block:hover {
+   	background-color: var(--color-brand-black);
+}
+   
+a.c-stacked-block:hover * {
+   	color: var(--color-white) !important;
 }
 
 .c-stacked-block__badge {
@@ -4780,17 +4809,18 @@ strong * {
     border-color: var(--color-white);
     background-color: var(--color-white);
     box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
+   	height: 100%;
 }
 
 .card.related .c-stacked-block__media { 
-    height: 150px;
+    height: 210px;
     overflow: hidden;
 }
 
 .card.related .image {
     background-size: cover;
     background-position: center;
-    height: 150px;
+    height: 210px;
     overflow: hidden;
 }
 
@@ -4798,7 +4828,26 @@ strong * {
     transform: scale(1.1);
     transition: transform 1s ease-in-out;
 }
+   
+.video.card > div:first-child {
+   	position: relative;
+}
 
+.video.card > div:first-child:before {
+   	content: "";
+    position: absolute;
+    top: 15%;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 50%;
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-white.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    opacity: 0.9;
+}
+   
 .callout-card {
     background-color: var(--color-grey);
     width: 100%;
@@ -6360,6 +6409,11 @@ div.ui-datepicker.ui-widget {
    	border: 1px solid #ccc !important;
 }
    
+.ui-state-default.ui-state-active {
+   	background-color: var(--color-bearcats-black) !important;
+   	color: var(--color-white) !important;
+}
+   
 
 /* STANDARD DONATION FORM BUTTONS */
 
@@ -6697,6 +6751,10 @@ fieldset.billingInformation {
     padding: 10px;
     border: 1px solid var(--color-ltGray);
     border-radius: 7px;
+}
+   
+.line-items > div:last-of-type {
+  	margin-bottom: 10px;
 }
 
 .donationForm .steps .step-buttons {
@@ -7581,6 +7639,13 @@ li {
     border-top: 1px solid var(--color-ltGray);
     padding: 5px 0 5px 5px;
     line-height: 1.5;
+}
+
+.line-item.total {
+   	text-align: right;
+   	line-height: 1.8;
+   	font-size: 1.35em;
+   	color: var(--color-dkGray);
 }
 
 .line-item-amount {
