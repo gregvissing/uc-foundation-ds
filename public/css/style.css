@@ -2567,10 +2567,6 @@ table caption {
 		padding: 0 !important;
 	}
 
-    .l-container.highlights-container {
-		padding-left: 44px !important;
-	}
-
 	main > section > .l-container {
 		width: 90vw;
 		max-width: 90vw;
@@ -3546,7 +3542,7 @@ a.c-stacked-block:hover * {
     footer,
     footer.c-footer {
         padding: 1rem 0;
-        margin-top: 1rem;
+        margin-top: 0;
     }
 
     footer .flex-row,
@@ -4898,7 +4894,7 @@ strong * {
     box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
 }
 
-.highlights-container {
+.highlights-container .highlights {
     padding-left: 44px;
 }
    
@@ -4945,6 +4941,35 @@ strong * {
     letter-spacing: 0;
     line-height: 40px;
 }
+   
+@media (max-width: 600px) {
+   	.highlights-container .highlights {
+        padding-left: 0;
+    }
+   
+   	.highlights .highlight-card {
+   		padding: 15px 25px;
+   	}
+   
+   	.highlights .highlight-card .shield-container {
+   		height: 48px;
+    	width: 48px;
+   		top: 0;
+   		left: 50%;
+   		box-shadow: none;
+   	}
+   
+   	.highlights .highlight-card .shield-container .shield {
+        position: relative;
+        left: 15px;
+        top: 15px;
+        width: 20px;
+    }
+   
+   	.highlights-container .highlights:first-child {
+        margin-top: 2em;
+    }
+}
 
 .relative {
     position: relative;
@@ -4975,7 +5000,7 @@ strong * {
 }
 
 @media (max-width: 768px) {
-    .flex:not(.form-group) {
+    .flex:not(.form-group):not(.social-media) {
         flex-direction: column !important;
     }
 
@@ -5709,6 +5734,10 @@ main p > a:hover {
 @media (max-width: 768px) {
     .related-stories .flex {
         flex-direction: column !important;
+    }
+   
+   	.related-stories a.card {
+        min-width: 100% !important;
     }
 }
 
