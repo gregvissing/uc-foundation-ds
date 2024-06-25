@@ -4881,95 +4881,6 @@ strong * {
 .callout-card h2 {
     color: var(--color-brand-black);
 }
-   
-.highlights .highlight-card {
-    position: relative;
-    background-color: var(--color-white);
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    margin-bottom: 40px;
-    padding: 35px 50px;
-    -webkit-box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
-    box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
-}
-
-.highlights-container .highlights {
-    padding-left: 44px;
-}
-   
-.highlights-container .highlights:last-child .highlight-card {
-   	margin-bottom: 0px;
-}
-
-.highlights .highlight-card p {
-    position: relative;
-}
-   
-.highlights .highlight-card a {
-    cursor: pointer;
-}
-   
-.highlights .highlight-card a:hover {
-   	border-bottom: 2px solid var(--color-brand-red) !important;
-}
-
-.highlights .highlight-card .shield-container {
-    -webkit-box-shadow: -10px 0px 10px -7px rgba(0, 0, 0, 0.07);
-    box-shadow: -10px 0px 10px -7px rgba(0, 0, 0, 0.07);
-    height: 88px;
-    width: 88px;
-    border-radius: 50%;
-    background-color: var(--color-white);
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    left: -2px;
-}
-
-.highlights .highlight-card .shield-container .shield {
-    position: relative;
-    left: 25px;
-    top: 30px;
-    width: 35px;
-}
-
-.highlights .highlight-card h2 {
-    color: var(--color-brand-black);
-    font-size: 1.75rem;
-    letter-spacing: 0;
-    line-height: 40px;
-}
-   
-@media (max-width: 600px) {
-   	.highlights-container .highlights {
-        padding-left: 0;
-    }
-   
-   	.highlights .highlight-card {
-   		padding: 15px 25px;
-   	}
-   
-   	.highlights .highlight-card .shield-container {
-   		height: 48px;
-    	width: 48px;
-   		top: 0;
-   		left: 50%;
-   		box-shadow: none;
-   	}
-   
-   	.highlights .highlight-card .shield-container .shield {
-        position: relative;
-        left: 15px;
-        top: 15px;
-        width: 20px;
-    }
-   
-   	.highlights-container .highlights:first-child {
-        margin-top: 2em;
-    }
-}
 
 .relative {
     position: relative;
@@ -5311,23 +5222,28 @@ strong * {
 }
 
 .py-1 {
-    padding: 1em 0;
+    padding-top: 1em;
+   	padding-bottom: 1em;
 }
 
 .py-2 {
-    padding: 2em 0;
+    padding-top: 2em;
+   	padding-bottom: 2em;
 }
 
 .py-3 {
-    padding: 3em 0;
+    padding-top: 3em;
+   	padding-bottom: 3em;
 }
 
 .py-4 {
-    padding: 4em 0;
+    padding-top: 4em;
+   	padding-bottom: 4em;
 }
 
 .py-5 {
-    padding: 5em 0;
+    padding-top: 5em;
+   	padding-bottom: 5em;
 }
    
 .px-0 {
@@ -5336,23 +5252,28 @@ strong * {
 }
 
 .px-1 {
-    padding: 0 1em;
+    padding-left: 1em;
+   	padding-right: 1em;
 }
 
 .px-2 {
-    padding: 0 2em;
+    padding-left: 2em;
+   	padding-right: 2em;
 }
 
 .px-3 {
-    padding: 0 3em;
+    padding-left: 3em;
+   	padding-right: 3em;
 }
 
 .px-4 {
-    padding: 0 4em;
+    padding-left: 4em;
+   	padding-right: 4em;
 }
 
 .px-5 {
-    padding: 0 5em;
+    padding-left: 5em;
+   	padding-right: 5em;
 }
    
 .m-0 {
@@ -5818,7 +5739,162 @@ main p > a:hover {
 .largest-class img {
     width: 75px;
 }
+   
+.highlights-container {
+    padding-top: 1em !important;
+}
+   
+.highlights .highlight-card {
+    position: relative;
+    background-color: var(--color-white);
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin-bottom: 40px;
+    padding: 35px 50px;
+    -webkit-box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
+    box-shadow: 0 4.5px 3.6px 0 rgba(0, 0, 0, 0.02), 0 12.5px 10px 0 rgba(0, 0, 0, 0.03), 0 30.1px 24.1px 0 rgba(0, 0, 0, 0.05), 0 100px 80px 0 rgba(0, 0, 0, 0.07);
+}
 
+.highlights-container .highlights {
+    padding-left: 44px;
+}
+   
+.highlights-container .highlights:last-child .highlight-card {
+   	margin-bottom: 0px;
+}
+
+.highlights .highlight-card p {
+    position: relative;
+}
+   
+.highlights .highlight-card a {
+    cursor: pointer;
+}
+   
+.highlights .highlight-card a:hover {
+   	border-bottom: 2px solid var(--color-brand-red) !important;
+}
+
+.highlights .highlight-card .shield-container {
+    -webkit-box-shadow: -10px 0px 10px -7px rgba(0, 0, 0, 0.07);
+    box-shadow: -10px 0px 10px -7px rgba(0, 0, 0, 0.07);
+    height: 88px;
+    width: 88px;
+    border-radius: 50%;
+    background-color: var(--color-white);
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: -2px;
+}
+
+.highlights .highlight-card .shield-container .shield {
+    position: relative;
+    left: 25px;
+    top: 30px;
+    width: 35px;
+}
+
+.highlights .highlight-card h2 {
+    color: var(--color-brand-black);
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    line-height: 40px;
+}
+   
+@media (max-width: 600px) {
+   	.highlights-container .highlights {
+        padding-left: 0;
+    }
+   
+   	.highlights .highlight-card {
+   		padding: 15px 25px;
+   	}
+   
+   	.highlights .highlight-card .shield-container {
+   		height: 48px;
+    	width: 48px;
+   		top: 0;
+   		left: 50%;
+   		box-shadow: none;
+   	}
+   
+   	.highlights .highlight-card .shield-container .shield {
+        position: relative;
+        left: 15px;
+        top: 15px;
+        width: 20px;
+    }
+   
+   	.highlights-container .highlights:first-child {
+        margin-top: 2em;
+    }
+}
+   
+.pillar-cards > a:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--color-brand-red);   
+}
+
+.pillar-cards > a .bg-image:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.pillar-cards * {
+    color: var(--color-brand-black) !important;   
+}
+
+.pillar-cards {
+    gap: 1em !important;   
+}
+
+.pillar-cards > a {
+    overflow: hidden;
+    text-shadow: 1px 1px var(--color-white);
+}
+
+.pillar-cards > a div {
+    transition: transform 1s ease-in-out;
+}
+
+.pillar-cards > a:hover div {
+    transform: scale(1.1);
+}
+
+.pillar-cards .bg-image {
+    padding: 2.25em 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    width: 100%
+}
+
+.pillar-cards .bg-image p {
+    z-index: 5;
+    font-size: 2em;
+    text-align: center;
+}
+   
 /* ORGANISM - Animated Gallery */
 .gallery {
     display: flex;
