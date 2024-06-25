@@ -5833,49 +5833,53 @@ main p > a:hover {
     }
 }
    
-.pillar-cards > a:after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    border: 2px solid var(--color-brand-red);   
-}
-
-.pillar-cards > a .bg-image:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.35);
-}
-
-.pillar-cards * {
-    color: var(--color-brand-black) !important;   
-}
-
 .pillar-cards {
-    gap: 1em !important;   
+	padding: 0.5em 0 !important;   
 }
-
+   
+.pillar-cards > a:after {
+   	content: "";
+   	position: absolute;
+   	top: 0;
+   	bottom: 0;
+   	left: 0;
+   	right: 0;
+   	margin: auto;
+   	width: 100%;
+   	height: 100%;
+	border: 2px solid var(--color-brand-red);   
+}
+   
+.pillar-cards > a .bg-image:before {
+   	content: "";
+   	position: absolute;
+   	top: 0;
+   	bottom: 0;
+   	left: 0;
+   	right: 0;
+   	margin: auto;
+   	width: 100%;
+   	height: 100%;
+   	background: rgba(255, 255, 255, 0.35);
+}
+   
+.pillar-cards * {
+	color: var(--color-brand-black) !important;   
+}
+   
+.pillar-cards {
+	gap: 1em !important;   
+}
+   
 .pillar-cards > a {
-    overflow: hidden;
-    text-shadow: 1px 1px var(--color-white);
+   	overflow: hidden;
+	text-shadow: 1px 1px var(--color-white);
 }
-
+  
 .pillar-cards > a div {
     transition: transform 1s ease-in-out;
 }
-
+   
 .pillar-cards > a:hover div {
     transform: scale(1.1);
 }
@@ -5886,13 +5890,13 @@ main p > a:hover {
     background-position: center;
     background-size: cover;
     height: 100%;
-    width: 100%
+   	width: 100%
 }
 
 .pillar-cards .bg-image p {
     z-index: 5;
     font-size: 2em;
-    text-align: center;
+   	text-align: center;
 }
    
 /* ORGANISM - Animated Gallery */
