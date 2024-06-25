@@ -5899,6 +5899,16 @@ main p > a:hover {
    	text-align: center;
 }
    
+@media (max-width: 768px) {
+   	.pillar-cards .bg-image {
+   		padding: 1.75em 1em;
+   	}
+   
+   	.pillar-cards > a:hover div {
+        transform: none;
+    }
+}
+   
 /* ORGANISM - Animated Gallery */
 .gallery {
     display: flex;
