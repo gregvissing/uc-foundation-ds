@@ -13,11 +13,17 @@
         <script src="https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/js/select2.min.js"></script>
         <!-- End: ADF Scripts -->
 
-        <!-- Font Awesome 6 -->
-        <!--<script src="https://kit.fontawesome.com/6d9501c0d8.js" crossorigin="anonymous"></script>-->
-
         <script>
             (function () {
+
+                var url = location.pathname;
+                if ("url:contains('pages-event-registration')") {
+                    document.getElementById("eventStylesSkyless").removeAttribute("disabled");
+                    document.getElementById("eventStylesEventUI").removeAttribute("disabled");
+                    document.getElementById("eventStylesEventUIMediaQuery").removeAttribute("disabled");
+                    document.getElementById("eventStylesEventUIStep1").removeAttribute("disabled");
+                    document.getElementById("eventStylesBBCheckout").removeAttribute("disabled");
+                }
 
                 /* 
                     SCROLL TO TOP Element scripts
