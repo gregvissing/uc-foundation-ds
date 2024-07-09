@@ -1490,6 +1490,7 @@ p.intro-text {
  */
 .pull-quote {
     padding-right: 70px;
+	margin-bottom: var(--flow-space, 1em) !important;
 }
 
 .pull-quote.with-headshot {
