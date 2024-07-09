@@ -681,6 +681,11 @@ footer ul,
     padding: 0
 }
 
+header li,
+footer li {
+    list-style: none;
+}
+
 ol {
     list-style: auto;
 }
@@ -8720,12 +8725,11 @@ input#tributeCheckbox {
 \*------------------------------------*/
 
 .QuickSearchFormTable {
-    max-width: 50%;
+    max-width: 90%;
     width: 1024px;
     margin: 0 0 0 auto;
     position: relative;
     z-index: 99;
-    background-color: var(--color-white);
 }
 
 .QuickSearchFormTable tbody {
@@ -8753,6 +8757,8 @@ input#tributeCheckbox {
 
 .QuickSearchTextbox {
     padding: 0.35rem 0.5rem !important;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
 }
 
 .QuickSearchFormTable label {
@@ -8773,7 +8779,7 @@ input#tributeCheckbox {
 }
 
 .QuickSearchFormTable td:last-child {
-    padding-left: 5px;
+    padding-left: 3px;
 }
 
 /* .BBFieldCaption.QuickSearchFieldCaption {
@@ -8783,6 +8789,11 @@ input#tributeCheckbox {
 
 .BBFormSubmitButton.QuickSearchButton {
     margin: 0 !important;
+    border-radius: 0;
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+    padding: 5.5px 10px !important;
+    height: 43.39px;
 }
 
 @media (max-width: 700px) {
@@ -8796,11 +8807,14 @@ input#tributeCheckbox {
 \*------------------------------------*/
 
 .search-toggle {
-    background-color: inherit;
+    background: rgba(0, 0, 0, 0.9);
     max-height: 0vh;
     overflow: hidden;
     padding: 0 1.25em;
-    position: relative;
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
     visibility: hidden;
     z-index: 1;
     /* transition: all 0.4s ease-in-out; */
