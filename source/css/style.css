@@ -1996,6 +1996,7 @@ pre[class*=language-] {
     /* bottom: -4em;
     right: 0; */
     z-index: 1;
+	text-align: right;
 }
 
 .hero .video-control button {
@@ -2564,12 +2565,12 @@ table caption {
     .l-container {
         max-width: 100%;
         min-width: 100%;
-        width: 100px;
+        width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-	.l-container {
+	.l-container:not(.c-header__inner) {
 		padding: 0 !important;
 	}
 
@@ -2837,7 +2838,7 @@ ul.nav.main>li[class*="menuItem"].button-primary>a:hover {
 }
 
 @media (max-width: 700px) {
-    ul.nav.main>li[class*="menuItem"].button-primary>a {
+    ul.nav.main > li[class*="menuItem"].button-primary > a {
         text-align: center;
         display: block;
     }
@@ -3898,14 +3899,14 @@ header {
     header .nav-content {
         position: fixed;
         z-index: 10;
-        width: 100vw;
+        width: 100%;
         height: 100vh;
         top: 0;
         right: 0;
         bottom: 0;
         overflow-y: auto;
         background: var(--color-white);
-        padding: 2px 1.5rem 1rem;
+        padding: 2px 1em 1rem;
         display: flex;
         flex-direction: column;
         box-shadow: 0 0 0 150vmax rgba(0, 0, 0, 0);
@@ -3948,7 +3949,7 @@ header {
         padding: 10px !important;
     }
 
-    header nav ul.main li:not(:last-child) {
+    header nav ul.main > li:not(:last-child) {
         border-bottom: 1px solid var(--color-brand-black);
     }
 
@@ -4271,6 +4272,7 @@ ul.nav.main>li[class*="menuItem"].button-primary>a {
     box-shadow: 0 0 5px 2px rgba(0, 0, 0, .1);
     margin: 0;
     background: rgba(255, 255, 255, .97);
+   	width: 150px;
     min-width: -webkit-max-content;
     min-width: -moz-max-content;
     min-width: max-content;
@@ -4335,7 +4337,7 @@ ul.nav.main>li.search>a:after {
     background-color: var(--color-brand-black);
 }
 
-@media (max-width: 700px) {
+@media (max-width: 980px) {
     .parent {
         position: relative;
     }
@@ -4346,6 +4348,7 @@ ul.nav.main>li.search>a:after {
         top: 5px;
         box-shadow: none;
         background: var(--color-grey);
+   		box-shadow: inset 0 0 5px var(--color-steger-silver);
     }
 }
 
@@ -8727,7 +8730,7 @@ input#tributeCheckbox {
 .QuickSearchFormTable {
     max-width: 90%;
     width: 1024px;
-    margin: 0 0 0 auto;
+    margin: 0 auto 0 0;
     position: relative;
     z-index: 99;
 }
@@ -8796,9 +8799,10 @@ input#tributeCheckbox {
     height: 43.39px;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 980px) {
     .QuickSearchFormTable {
         max-width: 100%;
+   		width: 100%;
     }
 }
 
@@ -8819,12 +8823,23 @@ input#tributeCheckbox {
     z-index: 1;
     /* transition: all 0.4s ease-in-out; */
 }
+   
+.search-toggle .relative {
+   	width: 100%;
+}
 
 .search-toggle[aria-hidden="false"] {
     max-height: 100vh;
     overflow: auto;
     padding: 0;
     visibility: visible;
+}
+   
+@media (max-width: 980px) {
+   	.search-toggle[aria-hidden="false"] {   
+   		z-index: 10;
+    	top: 55vh;
+  	}
 }
 
 div[id*="_pnlSearch"] {
@@ -8892,7 +8907,7 @@ div[id*="_pnlResults"] span[id*="rpResultList_SearchText"] span {
 }
 
 /*------------------------------------*\
-    #REGISTRATION FORM
+    #REGISTRATION FORM (CLASSIC)
 \*------------------------------------*/
 
 div[id*="_UpdatePanel"] * {
@@ -9389,6 +9404,415 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_0"] {
 
 .BBFormTable.DonationCaptureFormTable.pnlDonor {
     border: 1px solid var(--color-grey);
+}
+   
+   
+/*------------------------------------*\
+    #REGISTRATION FORM
+\*------------------------------------*/
+   
+.BBEventRegSequenceMapCurrentStepItem {
+	background-color: var(--color-brand-black);
+    color: #ffffff;
+}
+
+.BBSequenceMap.BBEventRegSequenceMap.list-inline {
+	display: flex;
+	justify-content: space-between;
+	padding: 0 !important;
+	margin: 1em 0 !important;
+	gap: 10px;
+	flex-direction: row;
+}
+
+.BBSequenceMap.BBEventRegSequenceMap.list-inline > li {
+    width: 20%;
+	margin: 0 !important;
+	display: inline-block;
+}
+
+.BBSequenceMap.BBEventRegSequenceMap.list-inline > li > span,
+.BBSequenceMap.BBEventRegSequenceMap.list-inline > li > a {
+    width: 100%;
+	display: block;
+	height: 100% !important;
+	margin: 0 !important;
+}
+
+.BBSequenceMapStepItem.BBEventRegSequenceMapStepItem.BBSequenceMapStepLink.BBEventRegSequenceMapStepLink {
+	background-color: #EEEEEE;
+}
+
+.BBEventRegSequenceMapStepItem {
+	font-weight: 400 !important;
+    font-size: 1.125em !important;
+}
+
+.BBFormRequiredFieldMarker {
+	left: -10px;
+    top: 4px;
+   	position: absolute;
+    margin: auto;
+    height: 30px;
+   	color: #DF0000;
+}
+
+.EventContainer #divAddAttendee > button,
+.EventDivAddAttendee a.EventLinkButton {
+	border: 2px solid var(--color-brand-black) !important;
+	border-radius: 10px !important;
+   	padding: 10px 12px;
+   	color: var(--color-brand-black) !important;
+}
+
+.EventLinkButton:before {
+	color: var(--color-brand-black) !important;   
+}
+
+.EventContainer #divAddAttendee > button * {
+	color: var(--color-brand-black) !important;
+}
+
+div[class*="Ev3_DivLaterChk"] {
+	display: flex;
+}
+
+div[class*="Ev3_DivLaterChk"] label[class*="_RegisterLaterLbl"] {
+	display: none;
+}
+
+div[class*="Ev3_DivLaterChk"] label {
+	margin: 0;
+}
+
+div[class*="Ev3_DivLaterChk"] input {
+	height: 30px;
+	width: 30px !important;
+	margin: 0 !important;
+}
+
+div[class*="Ev3_DivLaterChk"] label[class*="_RegisterLaterText"] {
+	padding: 0 5px;
+}
+
+.divRegistrantFieldForm.fullWidth > .container.fullWidth {
+	width: 100% !important;
+	max-width: 100% !important;
+	display: flex;
+	flex-direction: column;
+}
+
+.divRegistrantFieldForm.fullWidth > .container.fullWidth > div {
+	width: 100% !important;
+}
+
+.Ev3_ContentPopup > button {
+	padding: 0 10px !important;
+}
+
+.Ev3_ConfirmButton {
+	background-color: var(--color-brand-black) !important;
+}
+
+.Ev3_ConfirmButton:hover {
+	color: var(--color-white) !important;
+}
+
+.Ev3_CancelButton {
+	color: var(--color-brand-black) !important;
+}
+   
+.EventName.EventCursor.AlignLeft.EventDetail.EventCursorPointer.EventNameTextColor {
+   	color: var(--color-brand-red);
+}
+   
+.EventLabelAttending.lblNoOfPeopleAttending,
+.EventDivAttending.divAttending {
+   	text-align: left;
+}
+
+.BBSequenceMapContent.BBEventRegSequenceMapContent >.container.fullWidth {
+	max-width: 100% !important;
+	width: 100% !important;
+}
+
+.BBSequenceMapNavigationContainer.BBEventRegSequenceMapNavigationContainer.container.fullWidth {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	max-width: 100% !important;
+	width: 100% !important;
+	gap: 10px;
+}
+
+.BBSequenceMapNavigationContainer.BBEventRegSequenceMapNavigationContainer.container.fullWidth input { 
+	margin: 0 !important;
+	border-color: #666666 !important;
+   	height: unset;
+   	cursor: pointer;
+}
+
+.BBSequenceMapNavigationContainer.BBEventRegSequenceMapNavigationContainer.container.fullWidth:after {
+	display: none !important;
+}
+   
+.AddAttendeeButton {
+   	padding: 10px 12px !important;
+}
+   
+#divEventPopUpPage {
+	overflow: hidden;
+   	padding: 0 0 20px !important;
+}
+   
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons {
+	padding: 1em;  
+}
+ 
+/* Event Popup Headings */
+   
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons label {
+	font-family: "Open Sans", sans-serif !important;   
+}
+   
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons h2.EventPopUpHeading,
+.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-buttons h3.EventTicketTypeHeading {
+	font-family: "Jost", sans-serif !important;   
+}
+   
+.EventPopUpHeaderCell.EventPopUpDivThirdColumnHeader .EventTicketTypeHeading {
+   	width: max-content;
+}
+   
+/* Event Ticket type column */
+.EventPopUpTicketTypeColumn.EventPopUpDivFirstColumn label {
+   	display: block;
+    text-align: left;
+    float: none;
+   	padding: 3px 0;
+}
+   
+/* Event Buttons */
+   
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix {
+   	padding: 10px !important;
+}
+   
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix .ui-dialog-buttonset {
+   	padding: 0px !important;
+	width: 100%;
+   	display: flex;
+   	justify-content: space-between;
+}  
+   
+.ui-dialog-buttonpane.ui-widget-content.ui-helper-clearfix .ui-dialog-buttonset button {
+   	color: var(--color-white) !important;
+    border-color: var(--color-brand-red);
+    background-color: var(--color-brand-red) !important;
+    text-decoration: none;
+    margin: 1em 0 0 !important;
+    padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px !important;
+    border-width: 2px !important;
+    border-style: solid;
+    font-family: Jost, sans-serif !important;
+    font-weight: bold !important;
+    font-size: 1em !important;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+    display: inline-block;
+    letter-spacing: 1px;
+    width: unset !important;
+   	height: unset !important;
+}  
+   
+.BBSequenceMapNavigationContainer.BBEventRegSequenceMapNavigationContainer.container.fullWidth input {
+	color: var(--color-white) !important;
+    border-color: var(--color-brand-red) !important;
+    background-color: var(--color-brand-red);
+    text-decoration: none;
+    margin: 1em 0 !important;
+    padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border-width: 2px !important;
+    border-style: solid;
+    font-family: Jost, sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+    display: inline-block;
+    letter-spacing: 1px;
+    width: unset;
+    float: right;   
+}
+   
+/* Fields */
+.Ev3_RegistrantContent input[type="text"], .BBFormSelectList, .Ev3_RegistrantAddressControlDropDown, .Ev3_RegistrantContent textarea {
+	width: 100% !important;   
+}
+
+/* Billing Information */
+
+.Ev3_RegistrationGroups > .fullWidth > * {
+	float: none;
+	width: 100%;
+}
+
+.Ev3_RegistrantContent > .container.fullWidth {
+	width: 100% !important;
+}
+
+.Ev3_RegistrantContent > .container.fullWidth {
+	display: flex !important;
+	flex-direction: column;
+}
+
+.Ev3_RegistrantContent > .container.fullWidth > div {
+	width: 100% !important;
+}
+
+.EventTotalDue {
+	float: none;
+	display: block;
+	width: 100%;
+}
+
+.EventTotalDue div {
+	width: 100%;
+	text-align: right;
+}
+
+.Ev3_DivRegLaterChk {
+	display: flex;
+	justify-content: flex-start;
+	gap: 1em;
+}
+
+.Ev3_DivRegLaterChk input[type=checkbox]:checked + .Ev3_RegLaterLbl {
+	background-color: var(--color-brand-black) !important;
+}
+
+/* Billing */
+
+.Ev3_TotalGift,
+.Ev3_AdButtons {
+	max-width: 100%; 
+	width: 100%; 
+	float: none;
+	display: block;
+}
+
+.Ev3_TotalGift {
+	margin: 0 !important;
+	display: flex;
+	gap: 1em;
+}
+
+.Ev3_TotalGift span:last-child {
+	border: none !important;
+}
+
+.Ev3_AdAmtbox.Ev3_AdSelectedAmt {
+	background-color: var(--color-brand-black) !important;
+	border-color: var(--color-brand-black);
+	color: var(--color-white) !important;
+}
+
+.Ev3_AdAmtbox,
+.Ev3_AdAmtbox.Ev3_AdOtherAmtbox {
+	color: var(--color-brand-black) !important;
+	border-color: var(--color-brand-black) !important;
+	transition: all 0.4s ease-in-out;
+}
+
+.Ev3_AdAmtbox.Ev3_AdOtherAmtbox::placeholder {
+	color: #666666 !important;
+}
+
+.Ev3_AdAmtbox.Ev3_AdOtherAmtbox:hover::placeholder {
+	color: var(--color-white) !important;
+}
+
+.Ev3_AdAmtbox:hover {
+	color: var(--color-white) !important;
+	background-color: var(--color-brand-black) !important;
+}
+
+@media (max-width: 600px) {
+   	.skyContainer { 
+   		padding-left: 0 !important;
+   		padding-right: 0 !important;
+   	}
+   
+	.EventContainer > .EventTable {
+		width: 100%;
+        display: flex;
+    }
+
+	.EventContainer > .EventTable > div {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+    }
+   
+   	.Ev3_AttendeeHeader {
+   		margin-top: 20px;
+   	}
+
+	.EventContainer > .EventTable > div * {
+		width: 100%;
+	}
+   
+   	.BBSequenceMapStepItem.BBEventRegSequenceMapStepItem.BBSequenceMapCurrentStepItem.BBEventRegSequenceMapCurrentStepItem,
+   	.BBSequenceMapStepItem.BBEventRegSequenceMapStepItem.BBSequenceMapStepLink.BBEventRegSequenceMapStepLink,
+   	.BBSequenceMapStepItem.BBEventRegSequenceMapStepItem.BBSequenceMapFutureStepItem.BBEventRegSequenceMapFutureStepItem {
+   		display: flex;
+   		align-items: center;
+   		justify-content: center;
+   	}
+   
+   	.EventLabelAttending.lblNoOfPeopleAttending, 
+   	.EventDivAttending.divAttending {
+        text-align: center;
+    }
+   
+   	.EventDivAttending.divAttending > div > div {
+   		display: flex !important;
+   		justify-content: center;
+   	}
+   
+   	.EventDivAttending.divAttending > div > div > .EventMobileEdit {
+   		width: unset !important;
+   	}
+
+	.EventContainer > .EventTable > div div {
+		margin: 0;
+		padding: 0;
+	}
+
+	.EventContainer > .EventTable > div > div {
+		height: 70px;
+	}
+
+	.EventContainer > .EventTable > div input {
+		margin: 0;
+	}
+
+	.EventContainer > .EventTable > div > div.EventHeaderCell,
+	.EventContainer > .EventTable > div.EventRow.EventGridColor > div {
+		display: flex;
+		align-items: center;
+	}
+
+	.EventContainer > .EventTable > div.EventRow.EventGridColor > div span {
+		text-align: center;
+	}
+	
 }
 
 /*------------------------------------*\
