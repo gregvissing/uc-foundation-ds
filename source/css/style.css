@@ -1340,7 +1340,7 @@ p.intro-text {
     .contact-card {
         display: flex;
         flex-direction: column;
-        padding: 10px;
+        padding: 20px;
     }
 
     .contact-card .col-image {
@@ -1466,8 +1466,40 @@ p.intro-text {
 		padding: 1rem;
 	}
 
+	.story h2 {
+		margin: 0 !important;
+	}
+
+	.byline .story {
+		display: grid !important;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-column-gap: 0px;
+        grid-row-gap: 0px;
+	}
+
+	.byline .story .dateline,
+	.byline .story .read-time,
+	.byline .story .sharing {
+		padding-right: 0;
+		padding-left: 0;
+	}
+
 	.byline .story .sharing {
 		margin-top: 10px;
+	}
+
+	.read-time { grid-area: 1 / 1 / 2 / 2; }
+    
+	.dateline { 
+		grid-area: 1 / 2 / 2 / 3; 
+		text-align: right;
+	}
+
+    .sharing { 
+		grid-area: 2 / 1 / 3 / 3; 
+		display: flex;
+		justify-content: space-around;
 	}
 }
 
@@ -1597,7 +1629,7 @@ blockquote:after {
 .pull-quote-attribution span.headshot img {
     border-radius: 50%;
     width: 100px;
-    height: auto;
+    height: 100px;
     opacity: 0;
 }
 
@@ -1642,6 +1674,7 @@ blockquote:after {
     .pull-quote blockquote {
         margin: 0;
         padding: 10px 20px !important;
+		text-indent: -22px;
     }
 
     blockquote p {
@@ -1672,6 +1705,7 @@ blockquote:after {
 
     blockquote:before {
         left: 3px;
+		top: 0;
     }
 
     blockquote:after {
@@ -1680,6 +1714,11 @@ blockquote:after {
         top: unset;
         right: -5px;
         bottom: 0.5em;
+    }
+
+	blockquote:before,
+    blockquote:after {
+        font-size: 30px;
     }
 }
 
@@ -1835,7 +1874,6 @@ pre[class*=language-] {
 
 	.page-title .l-container {
         padding: 0;
-		background-color: var(--color-brand-red);
     }
 }
 
@@ -2633,7 +2671,6 @@ table caption {
     footer>.l-container {
         padding-left: 30px !important;
         padding-right: 30px !important;
-		margin-bottom: 15px;
 		gap: 20px;
     }
 
@@ -3566,6 +3603,7 @@ a.c-stacked-block:hover * {
     /* text-transform: uppercase; */
     font-family: "Jost", sans-serif;
     font-size: 0.85rem;
+   	text-wrap: pretty;
 }
 
 .c-footer__credit a,
@@ -3597,8 +3635,11 @@ a.c-stacked-block:hover * {
     footer .flex-row .one-third,
     footer.c-footer .flex-row .one-third {
         width: 100%;
-        margin-bottom: 1rem;
     }
+   
+   	.c-footer__copyright {
+   		padding: 0.5em 1em !important;
+   	}
 }
 
 footer .social-media li * {
@@ -4923,6 +4964,12 @@ strong * {
 
 .callout-card h2 {
     color: var(--color-brand-black);
+}
+   
+@media (max-width: 500px) {
+   	.callout-card {
+   		padding: 20px;
+   	}
 }
 
 .relative {
