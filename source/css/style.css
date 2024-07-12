@@ -2164,15 +2164,15 @@ pre[class*=language-] {
     content: "";
     position: absolute;
     right: 0;
-    top: 20%;
+    top: 10%;
     margin: auto;
     /* background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/UC-logo-lockup-bg.png); */
     background-image: url(https://foundation.uc.edu/image/transparent-monogram-forty-percent_cropped.png);
     background-repeat: no-repeat;
     background-size: cover;
     /* opacity: 0.8; */
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 500px;
 }
 
 /*------------------------------------*\
@@ -5952,6 +5952,136 @@ main p > a:hover {
         margin-top: 2em;
     }
 }
+   
+.pillar-cards {
+	padding: 0.5em 0 !important;   
+}
+   
+.pillar-cards > a:after {
+   	content: "";
+   	position: absolute;
+   	top: 0;
+   	bottom: 0;
+   	left: 0;
+   	right: 0;
+   	margin: auto;
+   	width: 100%;
+   	height: 100%;
+	border: 2px solid var(--color-brand-red);   
+}
+   
+.pillar-cards > a .bg-image:before {
+   	content: "";
+   	position: absolute;
+   	top: 0;
+   	bottom: 0;
+   	left: 0;
+   	right: 0;
+   	margin: auto;
+   	width: 100%;
+   	height: 100%;
+   	background: rgba(255, 255, 255, 0.35);
+}
+   
+.pillar-cards * {
+	color: var(--color-brand-black) !important;   
+}
+   
+.pillar-cards {
+	gap: 1em !important;   
+}
+   
+.pillar-cards > a {
+   	overflow: hidden;
+	text-shadow: 1px 1px var(--color-white);
+}
+  
+.pillar-cards > a div {
+    transition: transform 1s ease-in-out;
+}
+   
+.pillar-cards > a:hover div {
+    transform: scale(1.1);
+}
+
+.pillar-cards .bg-image {
+    padding: 2.25em 2em;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+   	width: 100%
+}
+
+.pillar-cards .bg-image p {
+    z-index: 5;
+    font-size: 2em;
+   	text-align: center;
+}
+   
+@media (max-width: 768px) {
+   	.pillar-cards .bg-image {
+   		padding: 1.75em 1em;
+   	}
+   
+   	.pillar-cards > a:hover div {
+        transform: none;
+    }
+}
+   
+.pillars {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+   	overflow: visible;
+}
+   
+.pillars > * {
+	width: 100% !important;   
+}
+
+.pillar1 { grid-area: 1 / 1 / 2 / 2; }
+.pillar2 { grid-area: 1 / 2 / 2 / 3; }
+.pillar3 { grid-area: 1 / 3 / 2 / 4; }
+.pillar4 { grid-area: 2 / 1 / 3 / 2; }
+.pillar5 { grid-area: 2 / 2 / 3 / 3; }
+.pillar6 { grid-area: 2 / 3 / 3 / 4; }
+   
+@media (max-width: 800px) {
+   	.pillars {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+  	}
+
+   	.pillar1 { grid-area: 1 / 1 / 2 / 2; }
+   	.pillar2 { grid-area: 1 / 2 / 2 / 3; }
+   	.pillar3 { grid-area: 2 / 1 / 3 / 2; }
+   	.pillar4 { grid-area: 2 / 2 / 3 / 3; }
+   	.pillar5 { grid-area: 3 / 1 / 4 / 2; }
+   	.pillar6 { grid-area: 3 / 2 / 4 / 3; }
+}
+   
+@media (max-width: 750px) {
+   	.pillars {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6, 1fr);
+        grid-column-gap: 20px;
+        grid-row-gap: 20px;
+  	}
+
+   	.pillar1 { grid-area: 1 / 1 / 2 / 2; }
+   	.pillar2 { grid-area: 2 / 1 / 3 / 2; }
+   	.pillar3 { grid-area: 3 / 1 / 4 / 2; }
+   	.pillar4 { grid-area: 4 / 1 / 5 / 2; }
+   	.pillar5 { grid-area: 5 / 1 / 6 / 2; }
+   	.pillar6 { grid-area: 6 / 1 / 7 / 2; }
+}  
    
 /* Horizontal slider */   
 .categoriesBar {
