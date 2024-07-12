@@ -5023,7 +5023,7 @@ strong * {
     main .one-half,
     main .one-third,
     main .one-fourth {
-        width: 90vw !important;
+        /* width: 90vw !important; */
    		margin-left: auto;
 		margin-right: auto;
     }
