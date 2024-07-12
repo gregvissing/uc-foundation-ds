@@ -1240,7 +1240,8 @@ p.intro-text {
 /* Byline styles */
 .byline {
     margin-bottom: 1em;
-    width: 800px;
+    /* width: 800px; */
+	width: 100%;
     max-width: 100%;
     margin: 1em auto;
 }
@@ -1258,7 +1259,7 @@ p.intro-text {
     margin: 0 auto;
     clear: both;
     width: 100%;
-    padding: 0 30px;
+    padding: 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -1402,6 +1403,11 @@ p.intro-text {
     position: relative
 }
 
+.story .story-image img {
+    margin: 0 auto;
+	display: block;
+}
+
 .story .l-container {
     position: relative;
     width: 800px;
@@ -1452,6 +1458,17 @@ p.intro-text {
         padding: 0;
         line-height: 1;
     }
+
+}
+
+@media (max-width: 500px) {
+	.story .l-container > .content {
+		padding: 1rem;
+	}
+
+	.byline .story .sharing {
+		margin-top: 10px;
+	}
 }
 
 /* 
@@ -1480,6 +1497,14 @@ p.intro-text {
 @media (max-width: 768px) {
 	.icon-text-container .icon-text {
 		border: none !important;
+	}
+
+	.story .story-image:after {
+		display: none;
+	}
+
+	.story .l-container > .content {
+		margin-top: 0;
 	}
 }
 
@@ -1616,13 +1641,18 @@ blockquote:after {
 @media (max-width: 500px) {
     .pull-quote blockquote {
         margin: 0;
-        padding: 10px 0px !important;
+        padding: 10px 20px !important;
     }
 
     blockquote p {
         font-size: calc(1.25em * var(--text-multiplier, 1)) !important;
         text-indent: 0;
     }
+
+	.pull-quote-attribution {
+		margin-left: 0;
+		padding: 0 10px;
+	}
 
     .pull-quote-attribution.flex {
         flex-direction: column;
@@ -2570,6 +2600,7 @@ table caption {
 }
 
 @media (max-width: 768px) {
+
 	.l-container:not(.c-header__inner) {
 		padding: 0 !important;
 	}
@@ -2579,6 +2610,11 @@ table caption {
 		max-width: 90vw;
         min-width: 90vw;
 	}
+
+	footer.c-footer > .l-container {
+		padding: 1em !important;
+	}
+
 }
 
 @media all and (max-width: 768px) {
@@ -3659,7 +3695,6 @@ footer .social-media li a.twitterx:focus,
 
 #share-print {
     border-radius: 50%;
-    border: 1px solid var(--color-brand-red) !important;
     padding: 10px !important;
     background-size: 75%;
     background-image: url(https://foundation.uc.edu/file/icons/print-icon-red.svg);
@@ -3667,8 +3702,7 @@ footer .social-media li a.twitterx:focus,
 
 #share-print:hover,
 #share-print:focus {
-    border-color: var(--color-brand-black) !important;
-    background-image: url(https://foundation.uc.edu/file/icons/print-icon-black.svg);
+    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/print-icon-black.svg);
 }
 
 @media (max-width: 700px) {
