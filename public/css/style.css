@@ -4964,6 +4964,7 @@ strong * {
 
 .callout-card h2 {
     color: var(--color-brand-black);
+    margin-top: unset !important;
 }
    
 @media (max-width: 500px) {
