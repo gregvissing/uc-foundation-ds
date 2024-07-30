@@ -4508,6 +4508,15 @@ ul.nav.main>li.search>a:after {
     #ANCHOR NAVIGATION
 \*------------------------------------*/
 
+.anchor-scroll-nav {
+   	background: var(--color-white);
+   	position: -webkit-sticky;
+    position: sticky;
+    top: 62px;
+    z-index: 98;
+   	border-bottom: 1px solid var(--color-bearcats-black);
+}
+   
 .anchor-scroll-nav ul {
     width: 1024px;
     max-width: 100%;
