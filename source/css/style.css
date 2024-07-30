@@ -1830,14 +1830,14 @@ pre[class*=language-] {
     position: relative;
     z-index: 1;
     overflow: visible;
-    height: 75px;
+    min-height: 75px;
     line-height: 70px;
     margin: 10px 0 0;
 }
 
 .page-title h1:before {
     content: "";
-    height: 75px;
+    min-height: 75px;
     width: 100px;
     position: absolute;
     top: 0;
@@ -1851,7 +1851,7 @@ pre[class*=language-] {
 
 .page-title h1:after {
     content: "";
-    height: 75px;
+    min-height: 75px;
     width: 500px;
     position: absolute;
     top: 0;
@@ -1860,6 +1860,23 @@ pre[class*=language-] {
     margin: auto;
     z-index: -1;
     background-color: var(--color-brand-red);
+}
+
+.page-title.multi-line h1 {
+	line-height: 55px;
+}
+
+@media (max-width: 1000px) {
+	.page-title.multi-line h1 {
+        text-wrap: pretty;
+		line-height: 50px;
+    }
+}
+
+@media (max-width: 767px) {
+	.page-title.multi-line h1 {
+        line-height: 40px;
+    }
 }
 
 @media (max-width: 600px) {
@@ -1882,6 +1899,10 @@ pre[class*=language-] {
 
 	.page-title .l-container {
         padding: 0;
+    }
+
+	.page-title.multi-line h1 {
+        line-height: 30px;
     }
 }
 
@@ -2344,6 +2365,45 @@ table caption {
     margin: 0;
 }
 
+.tab-content.bg-img-content {
+	padding-top: 6em !important;
+	padding-bottom: 6em !important;
+	background-size: 75% !important;
+	background-repeat: no-repeat;
+	background-position: right;
+}
+
+.tab-content.bg-img-content:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -10%;
+	right: 0;
+	width: 120%;
+	height: 101%;
+	transform: skew(-30deg);
+	/* background: rgba(255, 255, 255, 0.75); */
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+60,ffffff+100&0.9+0,0.9+60,0+100 */
+	background: linear-gradient(to right, rgba(255,255,255,0.95) 0%,rgba(255,255,255,0.95) 50%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+	background: linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+
+.tab-content.bg-img-content:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: -1px;
+	right: 0;
+	width: 101%;
+	height: 100%;
+	z-index: 2;
+	border: 1px solid var(--color-ltGray);
+	border-top: none;
+}
+
 .tab-content figure {
     /* float: left;
     width: 250px; */
@@ -2623,7 +2683,7 @@ table caption {
  */
 .l-container {
     /* max-width: 80rem; */
-    max-width: 1024px;
+    max-width: 100%;
     width: 1024px;
     padding: 0 0.5rem;
     /* padding: 0 1rem; */
@@ -2750,6 +2810,10 @@ main .l-container.flow:first-child > p:not(.large):first-child {
         order: 1;
         margin-bottom: 0;
     }
+}
+
+iframe {
+	max-width: 100% !important;
 }
 
 /*------------------------------------*\
@@ -4439,7 +4503,7 @@ ul.nav.main>li.search>a:after {
    		box-shadow: inset 0 0 5px var(--color-steger-silver);
     }
 }
-
+   
 /*------------------------------------*\
     #ANCHOR NAVIGATION
 \*------------------------------------*/
@@ -9121,6 +9185,12 @@ div[id*="_UpdatePanel"] * {
 div[id*="_UpdatePanel"]>.EventTable {
     width: 100%;
 }
+   
+.BBFormTable.EventTable tr[id*="_trProgress"] {
+   	display: inline-table;
+	margin: 1em 0 !important;
+   	width: 100%;
+}
 
 .BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr {
     position: relative;
@@ -9193,6 +9263,7 @@ div[id*="_UpdatePanel"]>.EventTable {
     margin-top: 6px;
     margin-bottom: 6px;
     border: 1px solid var(--color-grey);
+   	padding: 10px !important;
 }
 
 .EventItemsSelectionGrid .BBFormTable.EventItemsTable>tbody>tr>td {
@@ -9241,6 +9312,10 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_0"]>tbody>tr>td {
     align-items: center;
 }
 
+.w100p.BBFormTable.EventItemRegistrationsTable>tbody>tr>td.BBFieldControlCell.EventItemRegistrationControlCellDescription {
+	width: 33%;   
+}
+   
 .BBFormTitle.EventItemTitleName {
     font-weight: bold;
 }
