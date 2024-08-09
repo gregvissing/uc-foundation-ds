@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1722950170678" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1722950170678" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1723232736936" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1723232736936" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -27,7 +27,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1722950170678" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1723232736936" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -2186,6 +2186,115 @@
 		
 			<script type="text/json" id="pl-pattern-data-molecules-modal" class="pl-js-pattern-data">
 			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"blocks"},"patternExtension":"hbs","patternName":"Modal","patternPartial":"molecules-modal","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="molecules-slider" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/molecules-blocks-slider&#x2F;molecules-blocks-slider.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="molecules-slider" title="Link to Pattern">
+						Slider
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-molecules-slider" data-patternpartial="molecules-slider" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-molecules-slider">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div id="slider">
+    <a href="#" class="control_next">>></a>
+    <a href="#" class="control_prev"><</a>
+    <ul>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/Stroke-Research-Meeting-26-X3.jpg)"></li>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/CG-Photos-0704-X3.jpg)"></li>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/DDC-ALS-Clinic-92-X3.jpg)"></li>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/CG-Photos-0704-X3.jpg)"></li>
+    </ul>  
+</div>
+
+<div class="slider_option">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">Autoplay Slider</label>
+</div> 
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	 $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});
+
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-molecules-slider" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"blocks"},"patternExtension":"hbs","patternName":"Slider","patternPartial":"molecules-slider","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
 			</script>
 		
 		</div><!--end pl-c-pattern-->
@@ -15378,10 +15487,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1722950170678">
+<script id="pl-js-polyfill-insert-1723232736936">
   (function() {
     if (self != top) {
-      var cb = '1722950170678';
+      var cb = '1723232736936';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -15394,7 +15503,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1722950170678" nomodule>
+<script id="pl-js-insert-1723232736936" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 

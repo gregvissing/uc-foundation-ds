@@ -38,13 +38,73 @@
 		</style>
 	</head>
 	<body class="">
-<label class="c-input-group " for="">
+<div id="slider">
+    <a href="#" class="control_next">>></a>
+    <a href="#" class="control_prev"><</a>
+    <ul>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/Stroke-Research-Meeting-26-X3.jpg)"></li>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/CG-Photos-0704-X3.jpg)"></li>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/DDC-ALS-Clinic-92-X3.jpg)"></li>
+        <li style="background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/CG-Photos-0704-X3.jpg)"></li>
+    </ul>  
+</div>
 
-	<input id="" type="checkbox" name="" value="" class="c-input-group__control" >
-	<span class="c-input-group__text">Label</span>
+<div class="slider_option">
+    <input type="checkbox" id="checkbox">
+    <label for="checkbox">Autoplay Slider</label>
+</div> 
 
-</label><!-- end c-input-group -->
-        <!--<Deject>-->
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script>
+
+jQuery(document).ready(function ($) {
+
+  $('#checkbox').change(function(){
+    setInterval(function () {
+        moveRight();
+    }, 3000);
+  });
+  
+	var slideCount = $('#slider ul li').length;
+	var slideWidth = $('#slider ul li').width();
+	var slideHeight = $('#slider ul li').height();
+	var sliderUlWidth = slideCount * slideWidth;
+	
+	$('#slider').css({ width: slideWidth, height: slideHeight });
+	
+	 $('#slider ul').css({ width: sliderUlWidth, marginLeft: - slideWidth });
+	
+    $('#slider ul li:last-child').prependTo('#slider ul');
+
+    function moveLeft() {
+        $('#slider ul').animate({
+            left: + slideWidth
+        }, 200, function () {
+            $('#slider ul li:last-child').prependTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    function moveRight() {
+        $('#slider ul').animate({
+            left: - slideWidth
+        }, 200, function () {
+            $('#slider ul li:first-child').appendTo('#slider ul');
+            $('#slider ul').css('left', '');
+        });
+    };
+
+    $('a.control_prev').click(function () {
+        moveLeft();
+    });
+
+    $('a.control_next').click(function () {
+        moveRight();
+    });
+
+});
+
+</script>        <!--<Deject>-->
         <!--DO NOT REMOVE-->
         <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
         <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
@@ -1289,11 +1349,11 @@
         <script src="https://foundation.uc.edu/file/redesign/js/aria.accordion.min.js"></script>
 
         <script type="text/json" id="pl-pattern-data-footer" class="pl-js-pattern-data">
-  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-form","lineagePath":"../../patterns/organisms-forms-form/organisms-forms-form.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-form","lineagePath":"../../patterns/organisms-forms-form/organisms-forms-form.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"forms"},"patternExtension":"hbs","patternName":"Inline Checkbox","patternPartial":"molecules-inline-checkbox","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+  {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"blocks"},"patternExtension":"hbs","patternName":"Slider","patternPartial":"molecules-slider","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
 </script>
 
 <script>
-  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-form","lineagePath":"../../patterns/organisms-forms-form/organisms-forms-form.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-form","lineagePath":"../../patterns/organisms-forms-form/organisms-forms-form.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"forms"},"patternExtension":"hbs","patternName":"Inline Checkbox","patternPartial":"molecules-inline-checkbox","patternState":"","patternEngineName":"handlebars","extraOutput":{}};
+  window.patternData = {"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"blocks"},"patternExtension":"hbs","patternName":"Slider","patternPartial":"molecules-slider","patternState":"","patternEngineName":"handlebars","extraOutput":{}};
 </script>
 
 <script>
