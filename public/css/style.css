@@ -1630,7 +1630,7 @@ blockquote:after {
 
 .pull-quote-attribution span.headshot {
     border-radius: 50%;
-    background-image: url(https://media.licdn.com/dms/image/D5603AQGELOUM_Ft9GA/profile-displayphoto-shrink_800_800/0/1673291702886?e=1717632000&v=beta&t=xQo9utYPAm8JyT50bTzryK3AIF2qPynzf03Vy-xN4Yo);
+    background-image: url(https://foundation.uc.edu/image/Neville-Pinto.jpg);
     background-repeat: no-repeat;
     background-position: top -15px center;
     background-size: 200%;
@@ -5894,77 +5894,7 @@ main p > a:hover {
 
 /*------------------------------------*\
     #EXCEPTIONS
-\*------------------------------------*/
-#slider {
-    position: relative;
-    overflow: hidden;
-    margin: auto 0;
-    min-width: 100%;
-}
-  
-#slider ul {
-    position: relative;
-    margin: 0;
-    padding: 0;
-    height: 500px;
-    list-style: none;
-}
-  
-  #slider ul li {
-    position: relative;
-    display: block;
-    float: left;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 500px;
-    background: #ccc;
-    text-align: center;
-    line-height: 500px;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
-  }
-  
-  a.control_prev, a.control_next {
-    position: absolute;
-    top: 40%;
-    z-index: 999;
-    display: block;
-    padding: 4% 3%;
-    width: auto;
-    height: auto;
-    background: #2a2a2a;
-    color: #fff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 18px;
-    opacity: 0.8;
-    cursor: pointer;
-  }
-  
-  a.control_prev:hover, a.control_next:hover {
-    opacity: 1;
-    -webkit-transition: all 0.2s ease;
-  }
-  
-  a.control_prev {
-    border-radius: 0 2px 2px 0;
-  }
-  
-  a.control_next {
-    right: 0;
-    border-radius: 2px 0 0 2px;
-  }
-  
-  .slider_option {
-    position: relative;
-    margin: 10px auto;
-    width: 160px;
-    font-size: 18px;
-  }
-  
-  
+\*------------------------------------*/  
 
 .related-stories.red-bg .p-1 {
     padding: 1em !important;
