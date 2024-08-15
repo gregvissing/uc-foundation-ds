@@ -278,7 +278,8 @@
 <main id="main" role="main">
 	<div class="hero">
 		<div class="vimeo-wrapper">
-            <iframe id="player1" src="https://player.vimeo.com/video/857854851?background=1&amp;autoplay=1&amp;loop=1&amp;byline=0&amp;title=0" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-gtm-yt-inspected-8="true" data-gtm-yt-inspected-214685_1664="true" data-gtm-yt-inspected-214685_1665="true" data-gtm-yt-inspected-214685_1672="true" data-ready="true"></iframe>
+			<iframe width="560" height="315" src="https://www.youtube.com/embed/4tPAY5n40c0?autoplay=1&rel=0&enablejsapi=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+
         </div>
 		<div class="l-container flex flex-between flex-row relative" style="z-index: 3;">
           	<div class="relative flow">
@@ -299,12 +300,12 @@
 			</div>
         </div>
 		<div class="video-control l-container flex flex-end">
-            <button class="play disabled">
+            <button class="play disabled" onClick="controlVideo('playVideo');">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 					<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zM188.3 147.1c7.6-4.2 16.8-4.1 24.3 .5l144 88c7.1 4.4 11.5 12.1 11.5 20.5s-4.4 16.1-11.5 20.5l-144 88c-7.4 4.5-16.7 4.7-24.3 .5s-12.3-12.2-12.3-20.9V168c0-8.7 4.7-16.7 12.3-20.9z"/>
 				</svg>
 			</button>
-            <button class="pause">
+            <button class="pause" onClick="controlVideo('pauseVideo')"">
 				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
 					<path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm224-72V328c0 13.3-10.7 24-24 24s-24-10.7-24-24V184c0-13.3 10.7-24 24-24s24 10.7 24 24zm112 0V328c0 13.3-10.7 24-24 24s-24-10.7-24-24V184c0-13.3 10.7-24 24-24s24 10.7 24 24z"/>
 				</svg>
