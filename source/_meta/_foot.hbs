@@ -374,23 +374,25 @@
 
             /* STORY READ TIME SCRIPT */
             // Get the article text
-            var el = document.getElementById("article"); 
-            if (el != null) {
-                const articleText = document.getElementById("article").innerText;
-                const time = document.getElementById("time");
+            if ( $("#article .content").length ) {
+                var el = document.getElementById("article"); 
+                if (el != null) {
+                    const articleText = document.getElementById("article").innerText;
+                    const time = document.getElementById("time");
 
-                // Split the text into an array of words
-                const wordsArray = articleText.split(" ");
+                    // Split the text into an array of words
+                    const wordsArray = articleText.split(" ");
 
-                // Count the number of words in the array
-                const wordCount = wordsArray.length;
+                    // Count the number of words in the array
+                    const wordCount = wordsArray.length;
 
-                // Calculate the estimated reading time
-                const wordsPerMinute = 200;
-                const readingTime = Math.ceil(wordCount / wordsPerMinute);
+                    // Calculate the estimated reading time
+                    const wordsPerMinute = 200;
+                    const readingTime = Math.ceil(wordCount / wordsPerMinute);
 
-                // Display the estimated reading time
-                time.innerHTML = readingTime + " min read";
+                    // Display the estimated reading time
+                    time.innerHTML = readingTime + " min read";
+                }
             }
 
             // Gallery - Pinned image 

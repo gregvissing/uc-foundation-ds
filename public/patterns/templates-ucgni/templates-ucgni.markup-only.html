@@ -359,8 +359,8 @@
             </nav>
             <div class="story-image">
                 <div id="carousel" class="carousel" aria-roledescription="carousel" aria-label="Accessible Carousel">
-                    <div class="carousel__slides">
-                        <div class="carousel__slide" aria-roledescription="slide" aria-label="1 of 4">
+                    <div id="carousel__slides" class="carousel__slides">
+                        <!--<div class="carousel__slide" aria-roledescription="slide" aria-label="1 of 4">
                             <img src="https://foundation.uc.edu/image/CG-Photos-0704-X3.jpg" alt="Slide 1">
                         </div>
                         <div class="carousel__slide" aria-roledescription="slide" aria-label="2 of 4">
@@ -371,7 +371,7 @@
                         </div>
                         <div class="carousel__slide" aria-roledescription="slide" aria-label="4 of 4">
                             <img src="https://foundation.uc.edu/image/Stroke-Research-Meeting-26-X3.jpg" alt="Slide 4">
-                        </div>
+                        </div>-->
                     </div>
                     <a href="#" class="carousel__button carousel__button--prev" aria-label="Previous slide"></a>
                     <a href="#" class="carousel__button carousel__button--next" aria-label="Next slide"></a>
@@ -381,6 +381,39 @@
             <script>
             
                 document.addEventListener("DOMContentLoaded", function () {
+                    const images = [
+                        'https://foundation.uc.edu/image/CG-Photos-0704-X3.jpg', 
+                        'https://foundation.uc.edu/image/DDC-ALS-Clinic-92-X3.jpg', 
+                        'https://foundation.uc.edu/image/7A8A0002-X3.jpg', 
+                        'https://foundation.uc.edu/image/Stroke-Research-Meeting-26-X3.jpg'
+                    ];
+
+                    const shuffle = array => {
+                        for (let i = array.length - 1; i > 0; i--) {
+                            const j = Math.floor(Math.random() * (i + 1));
+                            const temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+                        }
+                    }
+
+                    const shuffledArray = shuffle(images); 
+
+                    const container = document.getElementById("carousel__slides");
+    
+                    for (let i = 0; i < images.length; i++) {
+                        const newDiv = document.createElement("div");
+                        newDiv.classList.add("carousel__slide");
+                        newDiv.setAttribute("aria-roledescription", "slide");
+                        let slideNumber = i + 1;
+                        newDiv.setAttribute("aria-label", slideNumber + " of 4");
+
+                        const img = document.createElement('img');
+                        img.src = images[i];
+                        newDiv.appendChild(img);
+                        container.appendChild(newDiv);
+                    }
+
                     const carousel = document.querySelector(".carousel__slides");
                     const slides = document.querySelectorAll(".carousel__slide");
                     const prevButton = document.querySelector(".carousel__button--prev");
@@ -416,6 +449,10 @@
                             showPrevSlide();
                         }
                     });
+
+                    
+
+                    
 
                     slides.forEach((slide, index) => {
                         slide.setAttribute("tabindex", index === 0 ? 0 : -1);
