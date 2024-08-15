@@ -1,0 +1,451 @@
+{{> molecules-skip-link }}
+{{> organisms-header }}
+{{!-- {{> atoms-page-title }} --}}
+
+<div class="page-title relative">
+    <div class="l-container">
+        <h1>UC Gardner Neuroscience Institute</h1>
+    </div>
+</div>
+<main id="main" role="main">
+
+	<style>
+  
+        .carousel {
+            position: relative;
+            width: 100%;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .carousel__slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .carousel__slide {
+            min-width: 100%;
+        }
+
+        .carousel__slide img {
+            display: block;
+            width: 100%;
+        }
+
+        .carousel__button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            border: none !important;
+            cursor: pointer;
+            background-image: url(https://foundation.uc.edu/image/sliderarrows.png);
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 50px;
+            height: 75px;
+        }
+
+        .carousel__button--prev {
+            background-position: 15px 25px;
+            left: 0;
+        }
+
+        .carousel__button--next {
+            background-position: -165px 25px;
+            right: 0;
+        }
+        
+        @media (max-width: 768px) {
+            .carousel__button {  
+                width: 30px;
+                height: 55px;
+            }
+        
+            .carousel__button--prev {
+                background-position: 5px 15px;
+            }
+
+            .carousel__button--next {
+                background-position: -170px 15px
+            }
+        }
+
+    </style>
+
+    <section class="p-0">
+        <div id="article" class="story">
+
+            <nav class="anchor-scroll-nav">
+                <ul class="nav-list">
+                    <li><a href="#message">Message from Leaders</a></li>
+                    <li><a href="#make-impact">Make Your Impact</a></li>
+                    <li><a href="#stories">Stories</a></li>
+                    <li><a href="#ways-to-give">Ways to Give</a></li>
+                </ul>
+            </nav>
+            <div class="story-image">
+                <div id="carousel" class="carousel" aria-roledescription="carousel" aria-label="Accessible Carousel">
+                    <div class="carousel__slides">
+                        <div class="carousel__slide" aria-roledescription="slide" aria-label="1 of 4">
+                            <img src="https://foundation.uc.edu/image/CG-Photos-0704-X3.jpg" alt="Slide 1">
+                        </div>
+                        <div class="carousel__slide" aria-roledescription="slide" aria-label="2 of 4">
+                            <img src="https://foundation.uc.edu/image/DDC-ALS-Clinic-92-X3.jpg" alt="Slide 2">
+                        </div>
+                        <div class="carousel__slide" aria-roledescription="slide" aria-label="3 of 4">
+                            <img src="https://foundation.uc.edu/image/7A8A0002-X3.jpg" alt="Slide 3">
+                        </div>
+                        <div class="carousel__slide" aria-roledescription="slide" aria-label="4 of 4">
+                            <img src="https://foundation.uc.edu/image/Stroke-Research-Meeting-26-X3.jpg" alt="Slide 4">
+                        </div>
+                    </div>
+                    <a href="#" class="carousel__button carousel__button--prev" aria-label="Previous slide"></a>
+                    <a href="#" class="carousel__button carousel__button--next" aria-label="Next slide"></a>
+                </div>            
+            </div>
+        
+            <script>
+            
+                document.addEventListener("DOMContentLoaded", function () {
+                    const carousel = document.querySelector(".carousel__slides");
+                    const slides = document.querySelectorAll(".carousel__slide");
+                    const prevButton = document.querySelector(".carousel__button--prev");
+                    const nextButton = document.querySelector(".carousel__button--next");
+                    let currentSlide = 0;            
+
+                    function updateSlide(position) {
+                        carousel.style.transform = `translateX(-${position * 100}%)`;
+                        carousel.setAttribute(
+                            "aria-label",
+                            `Slide ${position + 1} of ${slides.length}`
+                        );
+                    }
+
+                    function showNextSlide() {
+                        currentSlide = (currentSlide + 1) % slides.length;
+                        updateSlide(currentSlide);
+                    }
+
+                    function showPrevSlide() {
+                        currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                        updateSlide(currentSlide);
+                    }
+
+                    nextButton.addEventListener("click", showNextSlide);
+                    prevButton.addEventListener("click", showPrevSlide);
+
+                    document.addEventListener("keydown", function (event) {
+                        event.preventDefault();
+                        if (event.key === "ArrowRight") {
+                            showNextSlide();
+                        } else if (event.key === "ArrowLeft") {
+                            showPrevSlide();
+                        }
+                    });
+
+                    slides.forEach((slide, index) => {
+                        slide.setAttribute("tabindex", index === 0 ? 0 : -1);
+                    });
+
+                    carousel.addEventListener("focusin", function (event) {
+                        event.preventDefault();
+                        const focusIndex = Array.from(slides).indexOf(document.activeElement);
+                        if (focusIndex !== -1) {
+                            currentSlide = focusIndex;
+                            updateSlide(currentSlide);
+                        }
+                    });
+                });
+            
+            </script>
+        
+            <div id="message" class="l-container">
+                <div class="content flow">
+                    <h2>A top destination for care</h2>
+                    <p class="bold large">Our institute leaders and care teams are committed to being the best at what they do.</p>
+                
+                    <div class="flex">                
+                        <div class="two-thirds flow">                        
+                            <p>UC Gardner Neuroscience Institute provides the most complex care for many neurological conditions.</p>
+                            <p>Focused on the pursuit of lifelong brain health, we are recruiting and retaining top talent for research and care and leveraging the power of big data to provide personalized medicine that improves the lives of our patients and their families.</p>
+                        </div>
+
+                        <div class="one-third px-2 my-1-sm">
+                            <p class="text-center"><img width="200" class="my-auto" src="https://foundation.uc.edu/image/UCH_UCGNI-General-Case-270x335.jpg" alt="University of Cincinnati Foundation Fiscal Year 2022 Annual Report"></p>
+                            <p style="margin: 0; text-align: center;">
+                                <a href="https://issuu.com/roetj/docs/ucgni_general_case?fr=xKAE9_zU1NQ" data-modal-open="modal_1"><strong>View our Vision</strong></a>
+                            </p>
+
+                            {{!-- <div id="modal_1" data-modal>
+                                <div data-modal-document>
+                                    <h2 class="text-center">Our Vision</h2>
+                                    <iframe name="annualReport" class="my-auto" width="1024" height="776" src="https://issuu.com/roetj/docs/ucgni_general_case?fr=xKAE9_zU1NQ" frameborder="0" allowfullscreen></iframe>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="top-destination">
+        <div class="l-container flow">
+            <h2 class="text-center">A Message From Our Leaders</h2>
+            <div class="text-center">
+                <div class="two-thirds m-auto" style="display: block; margin: 0 auto;">
+                    <iframe class="youtube-video my-2" width="710" height="465" src="https://www.youtube.com/embed/otDcH2nZoz4?si=eXuGkT1_LE6nmjvo" title="UC Day of Giving 2024: Thank You, Bearcats!" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" data-gtm-yt-inspected-6="true" id="438610489" data-gtm-yt-inspected-214685_1837="true" data-gtm-yt-inspected-214685_1838="true" data-gtm-yt-inspected-214685_1664="true" data-gtm-yt-inspected-214685_1665="true" data-gtm-yt-inspected-214685_1672="true"></iframe>
+                </div>   
+            </div>      	     
+        </div>
+    </section>
+
+    <section id="top-destination">
+        <div class="l-container flow py-1">
+            <h2 class="text-center">What Matters Most to You?</h2>
+            <p>Breakthrough discoveries, world-renowned specialists, compassionate care for complex conditions. Explore our centers of excellence to learn how the institute is advancing precision medicine in all areas of neurological care.</p>
+            <p class="text-center">
+                <a href="/ucgni/specialties" class="btn-link">View all specialties</a>
+            </p>      	
+        </div>
+    </section>
+
+    <section id="make-impact" class="white-bg relative">  	
+        <div class="l-container flow">
+            <h2 class="text-center">Make Your Impact</h2>
+            <p>Your gifts can support research initiatives, enhance care, educate the next generation of providers or go to our most urgent needs. Make a gift today!</p>
+        </div>
+        <div class="l-container">
+            <div class="tabbed">
+                <input type="radio" id="tab1" name="css-tabs" checked="">
+                <input type="radio" id="tab2" name="css-tabs">
+                <input type="radio" id="tab3" name="css-tabs">
+                <input type="radio" id="tab4" name="css-tabs">
+
+                <ul class="tabs">
+                    <li class="tab"><label class="h3" for="tab1">Research</label></li>
+                    <li class="tab"><label class="h3" for="tab2">Care</label></li>
+                    <li class="tab"><label class="h3" for="tab3">Education</label></li>
+                    <li class="tab"><label class="h3" for="tab4">Greatest Needs</label></li>
+                </ul>
+
+                <div class="tab-content bg-img-content text flow p-4" style="background-image: url(https://foundation.uc.edu/image/Dr.-Jeff-Strawn--in-Department-of-Psych.jpg); background-size: cover;">
+                    <div class="flex relative">
+                        <div class="px-1 one-half">
+                            <p class="large">Research</p>
+                            <p>Fund our most critical research initiatives focused on precision medicine and brain health with a gift to the <a href="https://foundation.uc.edu/donate?id=7bba7329-6753-45a7-80c6-4580ffa8965a">Neuroscience Research Fund</a></p>
+                        </div>
+                    </div>                
+                </div>
+                <div class="tab-content bg-img-content text flow p-4" style="background-image: url(https://foundation.uc.edu/image/Care-Photo-2_1000.jpg); background-size: cover;">
+                    <div class="flex relative">
+                        <div class="px-1 one-half">
+                            <p class="large">Care</p>
+                            <p>When you support the <a href="https://foundation.uc.edu/donate?id=05efd8f0-0417-4d14-b664-557ed44bafba">Neuroscience Institute Fund</a>, you help our clinical care teams find the right treatment for the right patient at the right time, improving lives.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="tab-content bg-img-content text flow p-4" style="background-image: url(https://foundation.uc.edu/image/Education-Photo.jpg); background-size: cover; background-position: center right -50px !important;">
+                    <div class="flex relative">
+                        <div class="px-1 one-half">
+                            <p class="large">Education</p>
+                            <p>Support the next generation of neuroscience leaders. The <a href="https://foundation.uc.edu/donate?id=7bba7329-6753-45a7-80c6-4580ffa8965a">Neuroscience Research Fund</a> helps recruitment, retention and training.</p>              			
+                        </div>
+                    </div>
+                </div>          
+                <div class="tab-content bg-img-content text flow p-4" style="background-image: url(https://foundation.uc.edu/image/UCGNI_cropped-hero_1000.jpg); background-size: contain !important; background-position: center right -140px;">
+                    <div class="flex relative">
+                        <div class="px-1 one-half">
+                            <p class="large">Greatest Needs</p>
+                            <p>From revolutionary technology to the recruitment of world-class faculty, supporting the <a href="https://foundation.uc.edu/donate?id=f62bf739-3349-4c1c-9634-ce6dde603fed">Neuroscience Institute Discretionary Fund</a> allows our leaders to prioritize ongoing needs.</p>
+                        </div>
+                    </div>
+                </div>
+            
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="l-container">
+            <h2 id="stories" class="text-center">Stories: You Make it Happen</h2>
+        </div>
+        <div class="related-stories red-bg py-2 lockup-bg relative">
+            <div class="l-container">
+                <div class="flex flex-row flex-between gap-1 row">
+                    <div class="one-third">
+                        <a href="#" class="c-stacked-block card whitebox related flex flex-column white-bg ">
+                            <div class="c-stacked-block__header">
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://foundation.uc.edu/image/UCH-artful-science.jpg);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-stacked-block__body flow">
+                                <h3 class="c-stacked-block__title">Hoffman scholars Creates interdisciplinary cohort program</h3>
+                                <p>Starting in fall 2024, XX of UC students will receive full tuition as part of a new scholarship focused on professional development and interdisciplinary learning.</p>
+                            </div>
+                            <!-- end c-stacked-block__body -->
+                        </a>
+                        <!-- end c-stacked-block -->
+                    </div>
+                    <div class="one-third">
+                        <a href="#" class="c-stacked-block card whitebox related flex flex-column white-bg ">
+                            <div class="c-stacked-block__header">
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://foundation.uc.edu/image/UCH-artful-science.jpg);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-stacked-block__body flow">
+                                <h3 class="c-stacked-block__title">Marian Spencer Scholars honors civil rights leader</h3>
+                                <p>This flagship program honors Marian Spencer and awards Cincinnati Public Schools graduates with full-tuition scholarship and a unique living-learning community.</p>
+                            </div>
+                            <!-- end c-stacked-block__body -->
+                        </a>
+                        <!-- end c-stacked-block -->
+                    </div>
+                    <div class="one-third">
+                        <a href="#" class="c-stacked-block card whitebox related flex flex-column white-bg ">
+                            <div class="c-stacked-block__header">
+                                <div class="c-stacked-block__media">
+                                    <div class="image" style="background-image: url(https://foundation.uc.edu/image/UCH-artful-science.jpg);">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="c-stacked-block__body flow">
+                                <h3 class="c-stacked-block__title">Developing the next Innovative leaders</h3>
+                                <p>Next Innovation Scholars makes UC a destination for future-minded students across colleges to foster collaboration and innovative thinking.</p>
+                            </div>
+                            <!-- end c-stacked-block__body -->
+                        </a>
+                        <!-- end c-stacked-block -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ways-to-give">
+        <div class="l-container flow">
+            <h2 class="text-center">Ways to Give</h2>
+        </div>
+        <div class="l-container">
+            <div class="row flex">
+                <div class="one-fourth column p-1" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="vision-image" style="background-image: url('https://foundation.uc.edu/image/icons/UCFoundation_Red_Icon_CellPhone_1_Donate.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 125px;"></div>
+                    <div class="vision-content">
+                        <div class="vision-content-container flow">
+                            <h3 class="text-center">Give Online</h3>
+                            <p>Make a one-time gift or set up a recurring <a href="https://giveto.uc.edu/give?appeal=07690458-068e-409d-90ea-ff2e605b6a11">donation</a> online.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-fourth column p-1" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="vision-image" style="background-image: url('https://foundation.uc.edu/image/icons/UCFoundation_Red_Icon_Inclusion_Community.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 125px;"></div>
+                    <div class="vision-content">
+                        <div class="vision-content-container flow">
+                            <h3 class="text-center">Host an Event</h3>
+                            <p><a href="mailto:ucgnistaff@foundation.uc.edu">Contact us</a> to host a community fundraiser.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-fourth column p-1" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="vision-image" style="background-image: url('https://foundation.uc.edu/image/icons/UCFoundation_Red_Icon_Diversity_Inclusion_2.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 125px;"></div>
+                    <div class="vision-content">
+                        <div class="vision-content-container flow">
+                            <h3 class="text-center">Matching Gifts</h3>
+                            <p>Does your company have a <a href="https://foundation.uc.edu/matching ">matching gift program</a>? You could double the impact of your donation.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-fourth column p-1" style="opacity: 1; transform: translate(0px, 0px);">
+                    <div class="vision-image" style="background-image: url('https://foundation.uc.edu/image/icons/UCFoundation_Red_Icon_Giving_Box.png'); background-size: contain; background-position: center; background-repeat: no-repeat; height: 125px;"></div>
+                    <div class="vision-content">
+                        <div class="vision-content-containe flowr">
+                            <h3 class="text-center">Gift Planning</h3>
+                            <p>Learn more about <a href="https://uc.giftlegacy.com/">gift planning</a>, and how you can make a lasting impact on UC and UC Health.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="l-container flow">
+            <h2 class="text-center">Contact Us</h2>
+        </div>
+        <div class="l-container flow">
+            <div class="row flex gap-1 ">
+                <div class="one-half">
+                    <div class="contact-card" style="margin: 1em 0 !important;">
+                        <div class="col-image">
+                            <div class="image ">
+                                <img alt="Headshot of First Last" data-emptytext="Image" src="https://placehold.co/90x90">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <h3 class="name">
+                                First Last
+                            </h3>
+                            <p>
+                                <strong>
+                                    <span class="title">Job Title</span>, 
+                                    <span class="department">Department</span>
+                                </strong>
+                            </p>
+                            <p class="address">513-556-0000 | email@ucmail.uc.edu</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="one-half">
+                    <div class="contact-card" style="margin: 1em 0 !important;">
+                        <div class="col-image">
+                            <div class="image ">
+                                <img alt="Headshot of First Last" data-emptytext="Image" src="https://placehold.co/90x90">
+                            </div>
+                        </div>
+                        <div class="body">
+                            <h3 class="name">
+                                First Last
+                            </h3>
+                            <p>
+                                <strong>
+                                    <span class="title">Job Title</span>, 
+                                    <span class="department">Department</span>
+                                </strong>
+                            </p>
+                            <p class="address">513-556-0000 | email@ucmail.uc.edu</p>
+                        </div>
+                    </div>
+                </div>  
+            </div>  
+        
+        </div>
+    </section>
+        
+    <script>
+    
+    $(document).ready(function() {
+    
+        // Scroll to section
+        $(".nav-list > li > a").click(function (e) {
+            // Prevent a page reload when a link is pressed
+            e.preventDefault();
+
+            $("html, body").animate({
+                scrollTop: $($(this).attr("href")).offset().top - 80
+            }, 800);
+            return false;
+        });
+    
+    });
+
+    </script>
+
+</main>
+{{> molecules-back-to-top }}
+{{> organisms-footer }}
