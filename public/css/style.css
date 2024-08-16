@@ -998,7 +998,7 @@ input[type="checkbox"]:checked:before {
     background-repeat: no-repeat;
     background-position: center;
     background-size: 80%;
-    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/checkmark.svg);
+    background-image: url(https://foundation.uc.edu/file/icons/checkmark.svg);
 }
 
 input[type="checkbox"]:checked:before {
@@ -3843,7 +3843,7 @@ footer .social-media li a.twitterx:focus,
 
 #share-print:hover,
 #share-print:focus {
-    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/print-icon-black.svg);
+    background-image: url(https://foundation.uc.edu/file/icons/print-icon-black.svg);
 }
 
 @media (max-width: 700px) {
@@ -5091,7 +5091,7 @@ strong * {
     margin: auto;
     width: 50%;
    	z-index: 1;
-    background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-white.svg);
+    background-image: url(https://foundation.uc.edu/file/social-media/YouTube-white.svg);
     background-repeat: no-repeat;
     background-size: contain;
     opacity: 0.9;
