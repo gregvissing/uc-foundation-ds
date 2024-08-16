@@ -4227,7 +4227,7 @@ nav .search a {
 
 .social-media-icons {
     list-style: none;
-    display: flex;
+    display: inline-flex;
     gap: 10px;
     padding: 0;
 }
@@ -4238,7 +4238,8 @@ nav .search a {
     height: 40px;
 }
 
-.social-media-icons li svg {
+.social-media-icons li svg,
+.social-media-icons li img {
     display: block;
     width: 40px;
     height: 40px;
