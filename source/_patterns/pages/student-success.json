@@ -8,7 +8,7 @@
         "description": "3 Ways to Invest in a student's education to shape Cincinnati's future."
     },
     "intro": {
-        "paragraphs": "<p><strong>There's a story unfolding at UC</strong>, and every one of us who calls Greater Cincinnati home has a stake in what happens next.</p><p>Bucking trends in higher education, UC is growing—and alongside it, so does our commitment to students. With 50,000 students and a rapidly changing world, UC is accelerating our work to ensure each student succeeds.</p><p><span class='bold'>Why?</span> Because we know that a college degree is the best tool for generational change. And a UC degree is the best path to launch a career of meaning and impact.</p><p>Under a broad, university-wide vision, we are creating new scholarships and recruitment programs, adding student-centered resources, and elevating career readiness tools to empower the next generation of leaders.</p>"
+        "paragraphs": "<h2>There's a story unfolding at UC, and every one of us who calls Greater Cincinnati home has a stake in what happens next.</h2><p>Bucking trends in higher education, UC is growing—and alongside it, so does our commitment to students. With 50,000 students and a rapidly changing world, UC is accelerating our work to ensure each student succeeds.</p><p><span class='bold'>Why?</span> Because we know that a college degree is the best tool for generational change. And a UC degree is the best path to launch a career of meaning and impact.</p><p>Under a broad, university-wide vision, we are creating new scholarships and recruitment programs, adding student-centered resources, and elevating career readiness tools to empower the next generation of leaders.</p>"
     },
     "togetherCreate" : {
         "heading": "Together, we will create:",
@@ -52,10 +52,6 @@
                 "text": "<p>Over <span>12,000</span> graduate, <br>law and medical students</p><img src='https://foundation.uc.edu/image/UCFoundation_Black_Icon_Networking.png'>"
             }
         ]
-    },
-    "whyNow": {
-        "heading": "Why Now?",
-        "paragraphs": "<p><strong>Higher education is changing</strong></p><p>Across the nation, colleges and universities recognize that true student success requires an immersive support environment and a comprehensive focus on students inside and outside the classroom.</p><p><strong>Student needs are evolving</strong></p><p>Each generation of students faces a new set of challenges. Today’s students are navigating increasing costs, expectations and complexities to succeed not only in their academic careers, but to set themselves apart in a competitive professional environment.</p><p><strong>UC is growing</strong></p><p>As we celebrate our entrance into the Big 12, we are rising to the call of our new, national stage. And through the tremendous support garnered throughout the Next, Now campaign, we have aligned programs and resources across colleges to lay the groundwork for this breakthrough.<p>"
     },
     "studentFuture": {
         "heading": "For our Students, For our Future",
