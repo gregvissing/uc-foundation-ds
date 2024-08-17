@@ -4549,12 +4549,12 @@ ul.nav.main>li.search>a:after {
     list-style: none;
     display: flex;
     justify-content: flex-start;
-    padding: 5px 0;
+    padding: 0;
 }
 
 .anchor-scroll-nav ul li {
- list-style: none;
- display: list-item;
+    list-style: none;
+    display: contents;
 }
 
 .anchor-scroll-nav ul li a {
