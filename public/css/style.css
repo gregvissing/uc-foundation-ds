@@ -1904,10 +1904,11 @@ pre[class*=language-] {
 	
     .page-title h1 {
         font-size: 1.35em !important;
-       	padding: 10px 5px;
+       	padding: 10px;
     	display: block;
     	line-height: 1.2;
     	height: unset;
+		min-height: unset;
     }
 
     .page-title h1:before,
@@ -2450,7 +2451,8 @@ table caption {
 	.tab-content.bg-img-content,
 	.tab-content {
 		background-image: none !important;
-		padding: 1em !important;
+		padding: 1em 0 !important;
+		border-top: 1px solid var(--color-ltGray);
 	} 
 }
 
@@ -6146,7 +6148,7 @@ main p > a:hover {
     }
    
    	.highlights .highlight-card {
-   		padding: 15px 25px;
+   		padding: 10px 15px;
    	}
    
    	.highlights .highlight-card .shield-container {
@@ -6167,6 +6169,15 @@ main p > a:hover {
    	.highlights-container .highlights:first-child {
         margin-top: 2em;
     }
+   
+   	.highlights .highlight-card h2 {
+   		margin: 10px 0;
+   	}
+   
+   	
+   	#ways-to-give .one-fourth.column.px-1 {
+   		padding: 0 !important;
+	}
 }
    
 .pillar-cards {
