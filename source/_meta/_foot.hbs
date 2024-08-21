@@ -367,17 +367,32 @@
                 });
             }
 
-            if ( $(".hero").length ) {
-                function controlVideo(vidFunc) {
-                    $(".play, .pause").toggleClass("disabled");
-                    var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
+            function initControlVideo() {
+                var iframe = document.getElementsByTagName("iframe")[0].contentWindow;
+
+                $(".pause").on("click", function(e) {
+                    e.preventDefault();
                     iframe.postMessage(
-                        '{"event":"command","func":"' + vidFunc + '","args":""}',
+                        '{"event":"command","func":"pauseVideo","args":""}',
                         "*"
                     );
-                }
+                    $(".play, .pause").toggleClass("disabled");
+                });
 
+                $(".play").on("click", function(e) {
+                    e.preventDefault();
+                    iframe.postMessage(
+                        '{"event":"command","func":"playVideo","args":""}',
+                        "*"
+                    );
+                    $(".play, .pause").toggleClass("disabled");
+                });
+            }
+
+            if ( $(".hero").length ) {
                 // initVimeoVideo();
+
+                initControlVideo();
             }  
 
 
