@@ -2343,6 +2343,40 @@ table caption {
 	padding: 0.8rem;
 }
 
+.l-container.flow > table.rwd-table {
+	display: block;
+}
+
+.l-container.flow > table.rwd-table colgroup {
+	display: block;
+	width: 100%;
+	min-width: 100%;
+}
+
+.l-container.flow > table.rwd-table > tbody.flow {
+	width: 100%;
+	min-width: 100%;
+	display: block;
+}
+
+.l-container.flow > table.rwd-table > tbody.flow > tr {
+	display: flex;
+	width: 100%;
+	min-width: 100%;
+	justify-content: space-between;
+	gap: 10px;
+}
+
+.l-container.flow > table.rwd-table > tbody.flow > tr > td {
+	width: 50%;
+}
+
+@media (max-width: 600px) {
+	.l-container.flow > table.rwd-table > tbody.flow > tr {
+		flex-direction: column;
+	}
+}
+
 /*------------------------------------*\
     #SHOW HIDE TEXT
     Ex: Tabs, Accordions
@@ -3321,7 +3355,7 @@ ul.nav.main > li[class*="menuItem"].button-primary > a:hover {
 \*------------------------------------*/
 
 .youtube-video {
-	margin: 1em auto !important;
+	margin: 0 auto !important;
 	display: block;
 	border-radius: 16px;
 	box-shadow: 0 7px 15px 5px rgba(0, 0, 0, 0.2);
