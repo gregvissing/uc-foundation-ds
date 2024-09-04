@@ -11019,9 +11019,9 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 	margin-top: var(--flow-space, 1em) !important;
 }
    
-.bbformbuilder-form-part .bbcommunicationpreference-divOptOutContainer .bbcommunicationpreference-cbPreference > label {
+/* .bbformbuilder-form-part .bbcommunicationpreference-divOptOutContainer .bbcommunicationpreference-cbPreference > label {
    
-}
+} */
    
 .bbcommunicationpreference-cbPreference {
 	display: flex;
