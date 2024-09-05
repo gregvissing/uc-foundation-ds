@@ -1568,6 +1568,10 @@ p.intro-text {
 	.icon-text .flex p {
 		padding: 10px 0;
 	}
+
+	.icon-text-card img{
+		margin: 0 auto;
+	}
 }
 
 /**
