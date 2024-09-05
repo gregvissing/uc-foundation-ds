@@ -3664,6 +3664,46 @@ a.c-stacked-block:hover * {
 	border-radius: 25px;
 }
 
+.c-stacked-block.quote .c-stacked-block__header .c-stacked-block__media,
+.c-stacked-block.quote .c-stacked-block__header .c-stacked-block__media .image {
+	height: 250px;
+}
+
+.c-stacked-block.quote .pull-quote {
+	padding: 0;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.c-stacked-block.quote .pull-quote blockquote {
+	text-indent: -30px;
+}
+
+.c-stacked-block.quote .pull-quote blockquote:before,
+.c-stacked-block.quote .pull-quote blockquote:after {
+	font-size: 40px;
+	top: 10px;
+}
+
+.c-stacked-block.quote .pull-quote p {
+	font-size: 18px !important;
+	line-height: 1.6;
+}
+
+.c-stacked-block.quote .pull-quote-attribution {
+	margin: 0;
+	padding: 0px 20px;
+}
+
+.c-stacked-block.quote:hover .image {
+    transform: none !important;
+    transition: none;
+}
+
+.c-stacked-block.quote:hover, .c-stacked-block:focus {
+    transform: none !important;
+}
+
 /*------------------------------------*\
     #STRIPE
 \*------------------------------------*/
