@@ -9909,8 +9909,22 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
-	th:last-child:before {
+	th:nth-child(4):before {
 	content: "4";
+}
+
+.BBFormTable.EventTable
+	tr[id*="_trProgress"]
+	table[id*="_tblProgress"]
+	th:nth-child(5):before {
+	content: "5";
+}
+
+.BBFormTable.EventTable
+	tr[id*="_trProgress"]
+	table[id*="_tblProgress"]
+	th:nth-child(6):before {
+	content: "6";
 }
 
 .BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th {
@@ -9944,6 +9958,28 @@ div[id*="_UpdatePanel"] > .EventTable {
 
 .EventItemsSelectionGrid .BBFormTable.EventItemsTable > tbody > tr > td {
 	padding: 0.5rem 1rem;
+}
+
+table[id*="_Wizard1_dgEventItems"] tr[class$="RowStyle"] span.BBFieldCheckboxCaption {
+	padding: 0 5px !important;
+}
+
+table[id*="_Wizard1_dgEventItems"] tr[class$="RowStyle"] span.BBFieldCheckboxCaption > input {
+	margin-top: 15px;
+	padding: 0 5px !important;
+}
+
+table[id*="_Wizard1_dgEventItems"] tr[class$="RowStyle"] .w100p.BBFormTable.EventItemsTable tbody > tr label,
+table[id*="_Wizard1_dgEventItems"] tr[class$="RowStyle"] .w100p.BBFormTable.EventItemsTable tbody > tr span {
+	display: block;
+}
+
+table[id*="_Wizard1_dgEventItems"] tr[class$="RowStyle"] .w100p.BBFormTable.EventItemsTable tbody > tr:first-child label.BBFormTitle.EventItemTitleName {
+	margin-top: 10px;
+}
+
+table[id*="_Wizard1_dgEventItems"] tr[class$="RowStyle"] .w100p.BBFormTable.EventItemsTable tbody > tr span.BBFormTitle.EventItemTitleTime {
+	margin-bottom: 10px;
 }
 
 table[id$="_Wizard1_dgEventItems2_dgPriceList_0"] > tbody {
