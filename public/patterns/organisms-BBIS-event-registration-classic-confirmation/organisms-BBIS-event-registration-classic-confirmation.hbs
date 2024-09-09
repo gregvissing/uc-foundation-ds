@@ -1,0 +1,127 @@
+<div id="PC29349_UpdatePanel">
+    <style type="text/css">
+        .bbspLoadingImage {
+        left: 50%;
+        top: 50%;
+        position: absolute;
+        z-index: 101;
+        width: 32px;
+        height: 32px;
+        margin-left: -16px;
+        margin-top: -16px;
+        }
+    </style>
+    <table id="PC29349_tblMain" class="BBFormTable EventTable">
+        <tbody>
+            <tr>
+                <td id="PC29349_TestModeWarning">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <div id="PC29349_ValidationSummary1" class="BBFormValidatorSummary EventValidationSummary" style="display:none;">
+                    </div>
+                </td>
+            </tr>
+            <tr id="PC29349_trProgress">
+                <td align="center">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <table cellspacing="0" cellpadding="0" id="PC29349_Wizard1" style="width:100%;border-collapse:collapse;">
+                        <tbody>
+                            <tr style="height:100%;">
+                                <td>
+                                    <table width="100%">
+                                        <tbody>
+                                            <tr>
+                                                <td colspan="2" class="EventSectionHeader">
+                                                    <span id="PC29349_Wizard1_lblConfirmation">Confirmation</span>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2">
+                                                    <table id="PC29349_Wizard1_tblProgress" class="w100p">
+                                                        <tbody>
+                                                            <tr>
+                                                                <th title="Step 1 of 5 (Start)" class="EventProgressCellPast">Step 1:<br>Start</th>
+                                                                <th title="Step 2 of 5 (Prices)" class="EventProgressCellPast">Step 2:<br>Prices</th>
+                                                                <th title="Step 3 of 5 (Registrant)" class="EventProgressCellPast">Step 3:<br>Registrant</th>
+                                                                <th title="Step 4 of 5 (Register)" class="EventProgressCellPast">Step 4:<br>Register</th>
+                                                                <th title="Step 5 of 5 (Finish)" class="EventProgressCell">Step 5:<br>Finish</th>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                    <!--Danny Li 08/09/07 CR279735-072607 Adding Borderwidth and Height attribute to get rid of the extra space on the top of the donation form. -->
+                                                    <h2>Thank you for Registering</h2>
+                                                    <p></p>
+                                                    <p>A confirmation email has been sent to <span>greg.vissing@gmail.com</span>. <strong>If you have a Gmail email address, be sure to check your junk folder for our message, and add emails from the UC Foundation to your safe sender list.</strong> Instructions on how to do so <a href="https://alumni.uc.edu/get-involved/update-info/safe-sender.html">can be found here</a>.</p>
+                                                    <p>Please keep a copy of this as a record of your registration. The following information was recorded for your registration: <br>&nbsp;</p>
+                                                    <p><strong>Event</strong>: &nbsp;<strong><span></span><span>A CME Opportunity: The Future of Family Medicine</span><span></span></strong><br><strong>Registration Type:</strong>&nbsp; &nbsp;<span>Medical Students &amp; Residents</span><span></span><br><strong>Attendee</strong>: &nbsp;&nbsp;<span>Greg Vissing</span><span></span><span></span><span></span><br>Date: <span>9/9/2024</span></p>
+                                                    <p>Receipt Amount: <span>$0.00</span><br>The receipt amount reflected represents your gift amount less the sum of any goods and services received. Please retain for tax purposes.</p>
+                                                    <p>On&nbsp;behalf of&nbsp;our entire organization, thank you again&nbsp;for registering, and we look forward to seeing you at the event!</p>
+                                                    <p>&nbsp;</p>
+                                                    <p style="text-align: center;"><span style="color: #e00122;"><a href="https://foundation.uc.edu/alumni/home"><span style="color: #e00122;">Return Home</span></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://foundation.uc.edu/alumni/give"><span style="color: #e00122;"> Make a Gift</span></a></span></p>
+                                                    <p><span style="text-align: center;">&nbsp;</span></p>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td style="width: 25px">
+                                                    &nbsp;
+                                                </td>
+                                                <td>
+                                                    <table>
+                                                    </table>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="right">
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" name="PC29349$btnPopupCheckoutComplete" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;PC29349$btnPopupCheckoutComplete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="btnPopupCheckoutComplete" class="hdCheckoutCompleteBtn">
+    <input type="hidden" name="PC29349$hdnTId" id="hdnTId">
+    <input type="hidden" name="PC29349$hdnEventTran" id="hdnEventTran">
+    <div>
+        {{!-- <script>
+            this.CheckoutConfiguration = new BBCheckoutModel();
+            this.CheckoutConfiguration.Data.Key = '55d0259b-8201-4043-bcdc-94ee78d4f708';
+            this.CheckoutConfiguration.TransactionType = 1;
+            this.CheckoutConfiguration.Data.ClientAppName = 'BBIS';
+            this.CheckoutConfiguration.Data.MerchantAccountId = '2be92ac2-f8ee-44a6-9986-cedd6e21710e';
+            this.CheckoutConfiguration.Data.IsEmailRequired = 'True';
+            this.CheckoutConfiguration.Data.IsNameVisible = 'True';
+            this.CheckoutConfiguration.Data.PrimaryColor = '';
+            this.CheckoutConfiguration.Data.SecondaryColor = '';
+            this.CheckoutConfiguration.Data.FontFamily = 'opensans';
+            this.CheckoutConfiguration.Data.UseCaptcha = 'False';
+            this.CheckoutConfiguration.WorkflowType = '1';
+            this.CheckoutConfiguration.HandleBrowserClosing = 'True';
+            this.CheckoutConfiguration.APITokenID = 'fa8424c3-5a7e-45c6-9309-b662f6fe78c3';
+            this.CheckoutConfiguration.TempConfirmationHtml = 'Thank you for your contribution, please wait while we process your transaction.';
+            this.CheckoutConfiguration.AllowSiteTracking = 'False';
+            
+            this.CheckoutConfiguration.Data.UseVisaCheckout = true;
+            this.CheckoutConfiguration.Data.UseMasterpass = true;
+            this.CheckoutConfiguration.Data.UseApplePay = true;
+            
+            this.bbcheckout = null;
+            this.APIControllerName = 'Payment';
+            this.TokenID = 'fa8424c3-5a7e-45c6-9309-b662f6fe78c3';
+            
+        </script> --}}
+    </div>
+    <div id="bbspLoadingOverlay" class="bbspLoadingOverlay">
+        <img src="/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
+    </div>
+</div>

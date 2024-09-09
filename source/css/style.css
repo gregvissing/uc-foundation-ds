@@ -9847,13 +9847,18 @@ div[id*="_UpdatePanel"] > .EventTable {
 	width: 100%;
 }
 
-.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr {
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr,
+.BBFormTable.EventTable table[id$="_Wizard1"] table[id$="_Wizard1_tblProgress"] tr {
 	position: relative;
 }
 
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	tr:before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"]
 	tr:before {
 	content: "";
 	position: absolute;
@@ -9870,6 +9875,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	th:before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"] 
 	th:before {
 	width: 45px;
 	height: 45px;
@@ -9888,6 +9897,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	th:first-child:before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"] 
 	th:first-child:before {
 	content: "1";
 }
@@ -9895,6 +9908,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	th:nth-child(2):before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"] 
 	th:nth-child(2):before {
 	content: "2";
 }
@@ -9902,6 +9919,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	th:nth-child(3):before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"] 
 	th:nth-child(3):before {
 	content: "3";
 }
@@ -9909,6 +9930,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	th:nth-child(4):before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"] 
 	th:nth-child(4):before {
 	content: "4";
 }
@@ -9916,6 +9941,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
+	th:nth-child(5):before,
+.BBFormTable.EventTable
+	table[id$="_Wizard1"]
+	table[id$="_Wizard1_tblProgress"] 
 	th:nth-child(5):before {
 	content: "5";
 }
@@ -9927,7 +9956,8 @@ div[id*="_UpdatePanel"] > .EventTable {
 	content: "6";
 }
 
-.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th {
+.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th,
+.BBFormTable.EventTable table[id$="_Wizard1"] table[id$="_Wizard1_tblProgress"] tr th {
 	padding: 0px !important;
 	height: auto !important;
 	/* background-color: #f0f0f0; */
@@ -9938,7 +9968,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
 	table[id*="_tblProgress"]
-	th.EventProgressCell:before {
+	th.EventProgressCell:before,
+.BBFormTable.EventTable 
+	table[id$="_Wizard1"] 
+	table[id$="_Wizard1_tblProgress"] tr th:before {
 	background-color: var(--color-brand-black);
 	color: var(--color-white);
 }
@@ -11212,6 +11245,13 @@ div[id*="_DesignPanePanel"] {
 	left: 0px !important;
 }
 
+.mce-content-body .search-toggle {
+   	visibility: unset;
+   	overflow: unset;
+   	position: relative;
+   	max-height: unset;
+}   
+   
 *.DesignPanePage {
 	position: relative;
 }
