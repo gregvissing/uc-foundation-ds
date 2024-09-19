@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1726760949228" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1726760949228" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1726762949046" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1726762949046" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -27,7 +27,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1726760949228" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1726762949046" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -335,20 +335,27 @@
 			<div class="pl-js-pattern-example">
 			<section id="videos" class="white-bg relative py-1">
     <div class="l-container flow">  
-        <div id="videoPlayer" class="flex flex-row gap-1">
+        <div id="videoPlayer" class="flex flex-column gap-1">
             <div class="video-container">
                 <iframe name="video-player" class="youtube-video" width="640" height="360" src="https://www.youtube.com/embed/KYOGW2wym48" frameborder="0" allow="autoplay 'self'; fullscreen 'self'" allowfullscreen="allowfullscreen"></iframe>
                 <!--<h3>Lauren's Story</h3>-->
             </div>
-            <div class="video-list youtube-video" style="overflow: hidden; height: 100%; max-width: 100%;">
-                <div class="thumbnail active" data-url="https://www.youtube.com/embed/KYOGW2wym48">
+            <div class="video-list youtube-video flex flex-row flex-nowrap" style="overflow: hidden; height: 100%; max-width: 100%;">
+                <div class="thumbnail one-half active" data-url="https://www.youtube.com/embed/KYOGW2wym48">
                     <a href="https://www.youtube.com/embed/KYOGW2wym48" target="video-player"></a>
                     <div class="thumbnail-img"><img src="https://i.ytimg.com/vi/KYOGW2wym48/mqdefault.jpg"></div>
                     <div class="thumbnail-info">
                         <p>Lauren's Story</p>
                     </div>
                 </div>
-                <div class="thumbnail" data-url="https://www.youtube.com/embed/PHzY9RWaG4k">
+                <div class="thumbnail one-half" data-url="https://www.youtube.com/embed/PHzY9RWaG4k"></div>
+                    <a href="https://www.youtube.com/embed/PHzY9RWaG4k" target="video-player"></a>
+                    <div class="thumbnail-img"><img src="https://i.ytimg.com/vi/PHzY9RWaG4k/mqdefault.jpg"></div>
+                    <div class="thumbnail-info">
+                        <p>Dr. George Rieveschl Jr. - UC's Founder of Philanthropy</p>
+                    </div>
+                </div>
+                <div class="thumbnail one-half" data-url="https://www.youtube.com/embed/PHzY9RWaG4k">
                     <a href="https://www.youtube.com/embed/PHzY9RWaG4k" target="video-player"></a>
                     <div class="thumbnail-img"><img src="https://i.ytimg.com/vi/PHzY9RWaG4k/mqdefault.jpg"></div>
                     <div class="thumbnail-info">
@@ -1689,10 +1696,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1726760949228">
+<script id="pl-js-polyfill-insert-1726762949046">
   (function() {
     if (self != top) {
-      var cb = '1726760949228';
+      var cb = '1726762949046';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -1705,7 +1712,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1726760949228" nomodule>
+<script id="pl-js-insert-1726762949046" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 

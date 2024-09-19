@@ -6185,7 +6185,6 @@ main p > a:hover {
 }
 
 #videoPlayer .video-container {
-	margin-right: 10px;
 	-webkit-flex-basis: 60%;
 	-ms-flex-preferred-size: 60%;
 	flex-basis: 60%;
