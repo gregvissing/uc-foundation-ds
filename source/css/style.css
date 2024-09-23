@@ -9117,6 +9117,78 @@ li {
 	margin-top: 15px;
 }
 
+/*------------------------------------*\
+    #CHECKOUT - PAYMENT 2.0
+\*------------------------------------*/
+div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions {
+	display: flex;
+	justify-content: flex-end;
+	gap: 10px;
+}
+
+div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_UpdateCartLink,
+div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_RemoveAllLink {
+	color: var(--color-white) !important;
+    border-color: var(--color-brand-red);
+    background-color: var(--color-brand-red);
+    text-decoration: none;
+    margin: 5px;
+    padding: 7px 32px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border-width: 2px !important;
+    border-style: solid;
+    font-family: Jost, sans-serif;
+    /* font-weight: 500; */
+    font-size: 1em;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background 0.1s;
+    display: inline-block;
+}
+
+div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_RemoveAllLink {
+	background: none !important;
+    color: var(--color-brand-red) !important;
+    border: 1px solid var(--color-brand-red);
+}
+
+div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_UpdateCartLink:hover,
+div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_RemoveAllLink:hover {
+	color: var(--color-white) !important;
+	background-color: var(--color-uc-dark-red) !important;
+    border-color: var(--color-uc-dark-red) !important;
+}
+
+.PaymentPart_Cart .PaymentPart_CartList .PaymentPart_CartHeader .PaymentPart_CartRows.PaymentPart_CartHeaderRow th,
+.PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {
+	padding: 10px;
+	font-weight: bold;
+}
+
+input.PaymentPart_CartItemRemoveImage {
+	display: none !important;
+}
+
+.PaymentPart_CartSummary .PaymentPart_CartSummaryDetails dl[id*="_dlCartSummary"] {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.PaymentPart_CartSummaryCaptionContainer, 
+.PaymentPart_CartSummaryFieldContainer {
+	display: flex;
+	align-items: center;
+}
+
+.PaymentPart_CartSummaryCaptionContainer label, 
+.PaymentPart_CartSummaryFieldContainer span {
+    font-weight: 400;
+    font-size: 2em !important;
+    font-weight: bold;
+	display: inline-block;
+}
+
 .breadcrumbs .form-step {
 	height: 45px;
 	width: 45px;
