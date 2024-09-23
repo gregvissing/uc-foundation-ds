@@ -6925,6 +6925,18 @@ main p > a:hover {
 /*------------------------------------*\
     #STANDARD DONATION FORM
 \*------------------------------------*/
+   
+div[id*="_UpdatePanel"] tr:has(> td[id*="ParentControl"]) {   
+ 	display: flex;
+   	flex-direction: column;
+}
+   
+div[id*="_UpdatePanel"] td[id*="_tdTribDescControls"] span,
+div[id*="_UpdatePanel"] td[id*="_tdTribNameControls"] span {   
+ 	padding-left: 10px;
+   	display: inline-block;
+    vertical-align: -webkit-baseline-middle;
+}
 
 div[id*="_UpdatePanel"] {
 	padding: 10px;
