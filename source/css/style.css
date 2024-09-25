@@ -1583,6 +1583,10 @@ p.intro-text {
 	/* margin-bottom: var(--flow-space, 1em) !important; */
 }
 
+div.pull-quote {
+	margin-bottom: 40px !important;
+}
+
 .pull-quote.with-headshot {
 	padding-bottom: 40px;
 }
