@@ -1579,7 +1579,8 @@ p.intro-text {
  */
 .pull-quote {
 	padding-right: 70px;
-	margin-bottom: var(--flow-space, 1em) !important;
+	margin-bottom: 0;
+	/* margin-bottom: var(--flow-space, 1em) !important; */
 }
 
 .pull-quote.with-headshot {
@@ -9132,20 +9133,61 @@ li {
 /*------------------------------------*\
     #CHECKOUT - PAYMENT 2.0
 \*------------------------------------*/
+.PaymentPart_FormContainer {
+	overflow: visible !important;   
+}
+   
+table.PaymentPart_CartList,
+td.PaymentPart_CartItemType {
+	border-bottom: none !important;   
+}
+   
+tr[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_PaymentPartGridRow_0"].PaymentPart_CartRows {
+ 	position: relative;  
+}
+   
+th[id*="_ctl00_CartGrid_thDesecription"] {
+   	display: inline;
+}
+   
+th[id*="_ctl00_CartGrid_thUnitPrice"],
+th[id*="_ctl00_CartGrid_thTotal"] {
+   	text-align: center !important;
+}
+   
+tr[id*="_ctl00_CartGrid_trHeaderRow"] {
+	text-align: right !important;
+}   
+   
+td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdCartItemTotalCell_0"] {
+   	text-align: right;
+}
+   
+div[id*="_ctl00_CartGrid_cartPanel"] {
+	background-color: var(--color-grey);
+    width: 100%;
+    display: block;
+    padding: 20px;
+    border-radius: 16px;
+    box-shadow: 0 7px 15px 4px rgba(0, 0, 0, .2);
+   	margin-top: 40px;
+}   
+   
 div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions {
 	display: flex;
 	justify-content: flex-end;
 	gap: 10px;
+   	padding-bottom: 20px;
 }
 
 div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_UpdateCartLink,
-div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_RemoveAllLink {
+.PaymentPart_Controls .BBFormSubmitbutton.PaymentPartSubmitButton {
 	color: var(--color-white) !important;
     border-color: var(--color-brand-red);
     background-color: var(--color-brand-red);
     text-decoration: none;
-    margin: 5px;
-    padding: 7px 32px;
+    margin: 0px;
+    padding: 7px 32px !important;
     box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
     border-width: 2px !important;
@@ -9158,19 +9200,30 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
     transition: background 0.1s;
     display: inline-block;
 }
-
+  
+th[id*="_ctl00_CartGrid_thHeaderQuantity"],
+td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdCartQuantityCell_0"],
+td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdImageItem_0"],
+th[id*="PC29567_ctl00_CartGrid_thRemove"].PaymentPart_CartHeaderCell.PaymentPart_CartHeaderRemoveCell,
 div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_RemoveAllLink {
-	background: none !important;
-    color: var(--color-brand-red) !important;
-    border: 1px solid var(--color-brand-red);
+   	display: none;
+}
+   
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell .PaymentPart_CartItemRemoveText {}
+
+   
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell {
+ 	text-align: right;  
 }
 
 div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_UpdateCartLink:hover,
-div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_RemoveAllLink:hover {
+.PaymentPart_Controls .BBFormSubmitbutton.PaymentPartSubmitButton:hover {
 	color: var(--color-white) !important;
 	background-color: var(--color-uc-dark-red) !important;
     border-color: var(--color-uc-dark-red) !important;
 }
+   
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell .PaymentPart_CartItemRemoveText:hover {}
 
 .PaymentPart_Cart .PaymentPart_CartList .PaymentPart_CartHeader .PaymentPart_CartRows.PaymentPart_CartHeaderRow th,
 .PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {
@@ -9178,6 +9231,10 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
 	font-weight: bold;
 }
 
+.PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {
+	padding-bottom: 0;   
+}   
+   
 input.PaymentPart_CartItemRemoveImage {
 	display: none !important;
 }
@@ -9200,7 +9257,96 @@ input.PaymentPart_CartItemRemoveImage {
     font-weight: bold;
 	display: inline-block;
 }
+   
+td.PaymentPart_CartCell.PaymentPart_CartDescriptionCell,
+td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell,
+td.PaymentPart_CartCell.PaymentPart_CartRemoveCell {
+   	min-height: 69.8px;
+   	vertical-align: middle !important;
+}
+   
+td[id*="_tdCartQuantityCell_0"].PaymentPart_CartCell.PaymentPart_CartCurrencyCell,
+td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
+   	text-align: center;
+}
+   
+.PaymentPart_CartCell.PaymentPart_CartDescriptionCell *,
+.PaymentPart_CartCell.PaymentPart_CartCurrencyCell *,
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell * {
+	vertical-align: center;
+}
+   
+#dd-company-name-input {
+   	width: 100%;
+	min-width: 100%;   
+}
+   
+.PaymentPart_PersonalInfoContainer {
+	padding: 10px !important;   
+}
 
+.BBListingHeading.PaymentPart_SectionHeading > * {
+	font-weight: bold;   
+}
+   
+.PaymentPart_UseAsBillingContainer .PaymentPart_PesonalInfoCheckbox {
+   	display: flex;
+   	justify-content: flex-start;
+   	align-items: center;
+   	gap: 10px;
+   	padding: 10px 0;
+}
+   
+.PaymentPart_Controls {
+    margin-right: 0px !important;
+   	float: none !important;
+   	display: flex !important;
+   	justify-content: flex-end;
+   	padding: 10px !important;
+}   
+
+.PaymentPart_Controls > input {
+   	margin-bottom: 10px !important;
+   	width: unset;
+}
+   
+@media (max-width: 600px) {
+   
+   	tbody.PaymentPart_CartBody > tr[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_PaymentPartGridRow_0"] {
+   		display: flex;
+   		flex-direction: column;
+   		flex-wrap: wrap;
+   		width: 100%;
+   	}
+   
+   	td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdUnitPrice_0"],
+   	td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdCartItemTotalCell_0"] {
+   		width: 100%;
+   	}
+   
+   	td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdCartItemTotalCell_0"] span {
+   		display: block;
+   		text-align: right;
+   	}
+   
+   	tbody.PaymentPart_CartBody > tr[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_PaymentPartGridRow_0"] > td[id*="_ctl00_CartGrid_rptCategories_rptItems_0_itemTemplate_0_tdCartQuantityCell_0"] {
+   		display: none;
+   	}
+   
+   	td.PaymentPart_CartCell.PaymentPart_CartDescriptionCell, 
+   	td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell, 
+   	td.PaymentPart_CartCell.PaymentPart_CartRemoveCell {
+   		min-height: unset;
+   	}
+   
+}
+   
+@media (max-width: 775px) {
+   	#dd-company-name-input {
+   		width: 100% !important;
+   	}
+}
+   
 .breadcrumbs .form-step {
 	height: 45px;
 	width: 45px;
