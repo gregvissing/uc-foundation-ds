@@ -1336,11 +1336,11 @@ p.intro-text {
 }
 
 .contact-card .col-image {
-	width: 110px;
+	width: 80px;
 }
 
 .contact-card .body {
-	padding: 0 1em;
+	padding: 0;
 }
 
 .contact-card .body p:first-class {
@@ -2464,12 +2464,21 @@ table caption {
 .tab-content.bg-img-content {
 	padding-top: 6em !important;
 	padding-bottom: 6em !important;
-	background-size: 75% !important;
+	/* background-size: 75% !important; */
 	background-repeat: no-repeat;
-	background-position: right;
+	/* background-position: right; */
+	background-size: cover !important;
+	background-position: center;
+}
+
+.tab-content.bg-img-content .flex.relative > .one-half {
+	border: 1px solid white;
+    background: rgba(243, 243, 243, 0.95);
 }
 
 .tab-content.bg-img-content:before {
+
+	/* 
 	content: "";
 	position: absolute;
 	top: 0;
@@ -2479,21 +2488,20 @@ table caption {
 	width: 120%;
 	height: 101%;
 	transform: skew(-30deg);
-	/* background: rgba(255, 255, 255, 0.75); */
-	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+60,ffffff+100&0.9+0,0.9+60,0+100 */
+	background: rgba(255, 255, 255, 0.75); 
 	background: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 0.95) 0%,
 		rgba(255, 255, 255, 0.95) 50%,
 		rgba(255, 255, 255, 0) 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	); 
 
 	background: linear-gradient(
 		to right,
 		rgba(255, 255, 255, 1) 0%,
 		rgba(255, 255, 255, 1) 50%,
 		rgba(255, 255, 255, 0) 100%
-	); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	); */
 }
 
 .tab-content.bg-img-content:after {
@@ -3376,9 +3384,15 @@ iframe.youtube-video {
 	height: 100%;
 	aspect-ratio: 16 / 9;
 }
+   
+iframe.youtube-video.video-home {
+   	width: 75%;
+	height: 75%;
+}
 
 @media (max-width: 700px) {
-	.youtube-video {
+	.youtube-video,
+   	iframe.youtube-video.video-home {
 		max-width: 95%;
 	}
 }
@@ -4764,6 +4778,17 @@ ul.nav.main > li.search > a:after {
 	background: var(--color-uc-dark-red);
 	text-decoration: underline !important;
 	color: var(--color-white) !important;
+}
+   
+@media (max-width: 600px) {
+   	.anchor-scroll-nav {
+   		position: relative;
+   		top: 0;
+   	}
+   
+   	.anchor-scroll-nav ul {
+   		flex-direction: column;
+   	}
 }
 
 /*------------------------------------*\
@@ -6179,6 +6204,23 @@ main p > a:hover {
 /*------------------------------------*\
     #EXCEPTIONS
 \*------------------------------------*/
+   
+@media (max-width: 767px) {
+   	#vision .floating-img {
+   		display: flex;
+   		flex-direction: column-reverse;   
+   		width: 90vw;
+        max-width: 90vw;
+        min-width: 90vw;
+   		margin-left: auto;
+   		margin-right: auto;
+   	}
+   
+   	#vision .floating-img figure {
+   		float: none;
+   		margin: 1rem auto !important;
+   	}
+}
 
 #videoPlayer {
 	display: -webkit-box;
@@ -6931,7 +6973,7 @@ main p > a:hover {
     #STANDARD DONATION FORM
 \*------------------------------------*/
    
-div[id*="_UpdatePanel"] tr:has(> td[id*="ParentControl"]) {   
+div[id*="_UpdatePanel"] tr:has(td[id*="ParentControl"]) {   
  	display: flex;
    	flex-direction: column;
 }
@@ -7186,11 +7228,7 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
    
     table[id*="_tblAmount"].length-6 > tbody > tr:last-child > td:last-child {
    		grid-area: 2 / 2 / 3 / 4; 
-   	}
-
-
-   
-   
+   	}   
    
 }
 
