@@ -3144,6 +3144,14 @@ ul.nav.main > li[class*="menuItem"].button-primary > a:hover {
 	border-color: rgba(255, 255, 255, 0.9) !important;
 	background-color: rgba(255, 255, 255, 0.9) !important;
 }
+   
+.BBFormTable.EventTable a.btn-link {
+   	padding: 7px 32px !important;
+}
+   
+.BBFormTable.EventTable .btn-link.c-btn--bare.btn-secondary {
+	color: var(--color-brand-red) !important;   
+}
 
 /*------------------------------------*\
    #DEFINITION LIST
@@ -6186,6 +6194,39 @@ main p > a:hover {
 	display: inline-block;
 	margin: 0 auto;
 	border: none;
+}
+   
+#dd-container {
+	margin-bottom: 2rem;   
+}   
+   
+#dd-container .lets-check {
+   	color: var(--color-white) !important;
+    border-color: var(--color-brand-red) !imoprtant;
+    background-color: var(--color-brand-red) !important;
+    text-decoration: none;
+    margin: 5px;
+    padding: 7px 32px;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, .25);
+    border-radius: 6px;
+    border-width: 2px !important;
+    border-style: solid;
+    font-family: Jost, sans-serif;
+    font-size: 1em;
+   	font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+    display: inline-block;
+}
+   
+#dd-container .lets-check:hover {
+    background-color: var(--color-uc-dark-red) !important;
+    border-color: var(--color-uc-dark-red) !important;
+    color: var(--color-white);
+    outline: 0;
+    text-decoration: none;
+    border-width: 2px;
 }
    
 @media (max-width: 767px) {
@@ -9930,6 +9971,52 @@ input#tributeCheckbox {
 
 .otherAmt.amount input {
 	padding-left: 2.25em !important;
+}
+   
+.bbformbuilder-form-part > div, 
+.bbformbuilder-section-column1 {
+	width: 700px;
+   	max-width: 100%;
+}
+   
+.bbformbuilder-validator-boundry {
+   	display: flex;
+   	flex-direction: column;
+}
+   
+.bbformbuilder-validator-boundry,
+.bbformbuilder-validator-boundry .bbformbuilder-inputandmsg-container,
+.bbformbuilder-validator-boundry .bbformbuilder-inputandmsg-container .bbformbuilder-input-container.bbformbuilder-float-none,
+.bbcommunicationpreference-divCommunicationHeader .bbcommunicationpreference-divCommunicationElement,
+.bbcommunicationpreference-divCommunicationElement {
+   	width: 100% !important;
+}
+   
+.bbformbuilder-required-mark {
+   	color: var(--color-uc-dark-red);
+}
+   
+.bbformbuilder-label-container.bbformbuilder-float-lalign,
+.bbformbuilder-input-container.bbformbuilder-float-none {
+   	padding-left: 0;
+   	padding-right: 0;
+}
+   
+.x-form-text.x-form-field {
+	padding: 0.35rem 0.5rem !important;
+   	height: 44px;
+   	width: 50% !important;
+   	font-size: 16px !important;
+}
+   
+@media (max-width: 768px) {
+   	.bbformbuilder-form-part > div {
+   		padding: 0 1em !important;
+   	}
+   
+    .x-form-text.x-form-field {
+        width: 100% !important;
+    }   
 }
 
 /*------------------------------------*\
