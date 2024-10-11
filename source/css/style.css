@@ -6202,7 +6202,7 @@ main p > a:hover {
    
 #dd-container .lets-check {
    	color: var(--color-white) !important;
-    border-color: var(--color-brand-red) !imoprtant;
+    border-color: var(--color-brand-red) !important;
     background-color: var(--color-brand-red) !important;
     text-decoration: none;
     margin: 5px;
