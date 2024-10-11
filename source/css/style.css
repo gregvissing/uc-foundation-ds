@@ -1378,7 +1378,6 @@ p.intro-text {
 
 .col-image .image {
 	display: block;
-	background: #e00122;
 	border-radius: 50%;
 	height: 0;
 	padding-bottom: 100%;
@@ -6182,6 +6181,12 @@ main p > a:hover {
 /*------------------------------------*\
     #EXCEPTIONS
 \*------------------------------------*/
+
+#annualReport a {
+	display: inline-block;
+	margin: 0 auto;
+	border: none;
+}
    
 @media (max-width: 767px) {
    	#vision .floating-img {
@@ -6284,7 +6289,7 @@ main p > a:hover {
 }
 
 #videoPlayer .thumbnail-img {
-	width: 44%;
+	width: 15%;
 	overflow: hidden;
 }
 
@@ -6293,9 +6298,8 @@ main p > a:hover {
 }
 
 #videoPlayer .thumbnail-info {
-	margin-left: 10px;
-	width: 55%;
-   	padding: 5px;
+	width: 85%;
+   	padding: 5px 10px;
 }
 
 #videoPlayer .thumbnail h3 {
@@ -11556,3 +11560,97 @@ div[id*="_DesignPanePanel"] {
 }
 
 /*# sourceMappingURL=style.css.map */
+
+@media (min-width: 700px) {
+   
+   	.mega-menu.parent button[aria-expanded=true]:after {
+   		width: 100% !important;
+   	}
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 {
+   		left: 0;
+       	right: 0;
+       	width: 100%;
+       	min-width: unset;
+       	top: 62px;
+       	position: fixed;
+   		padding: 2em 4em;
+   		background: var(--color-white);
+   	}
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1:after {
+   		content: "";
+   		bottom: 0;
+   		left: 0;
+   		right: 0;
+   		position: absolute;
+   		height: 5px;
+   		width: 100%;
+   		background: var(--color-brand-red);
+   	}
+   
+	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1:before {
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: -10%;
+        margin: auto;
+        background-image: url(https://foundation.uc.edu/image/transparent-monogram-forty-percent_cropped.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 200px;
+        height: 200px;
+    }   	
+   
+    .mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 {     	
+       	display: flex;
+		flex-direction: row;
+   		justify-content: center;
+    }
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li {  
+   		width: 25%;
+   	}
+   
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li > a, 
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > a {  
+   		border-bottom: none !important;
+   		font-weight: bold;
+   	}
+   
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent) > a,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent) > a {
+   		color: var(--color-brand-red) !important;
+   		border-bottom: 1px solid var(--color-brand-red) !important;
+   		display: inline-block;
+   		padding: 0 !important;
+   	}
+   
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent) > a:hover,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent) > a:hover {
+   		border-bottom: 2px solid var(--color-brand-red) !important;
+   		background-color: unset;
+   	}
+   
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li.parent > a:hover, 
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li.parent > a:hover { 
+   		color: var(--color-brand-black) !important;
+    	background-color: unset;
+   	}
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 {     	
+       	display: flex !important;
+		flex-direction: column;
+   		padding: 15px;
+    }
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 a:hover {
+   		border-bottom: 2px solid var(--color-brand-red) !important;
+   	}
+   	   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 > li:not(.last) { 
+   		margin-bottom: 10px;
+   	}
+   
+   
+}
