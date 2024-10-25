@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 		
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1727448014598" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1727448014598" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1729860142639" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1729860142639" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -27,7 +27,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1727448014598" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1729860142639" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -3478,6 +3478,202 @@
 		
 			<script type="text/json" id="pl-pattern-data-molecules-primary-nav" class="pl-js-pattern-data">
 			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"organisms-header","lineagePath":"../../patterns/organisms-global-header/organisms-global-header.rendered.html"}],"lineageR":[{"lineagePattern":"organisms-header","lineagePath":"../../patterns/organisms-global-header/organisms-global-header.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"navigation"},"patternExtension":"hbs","patternName":"Primary Nav","patternPartial":"molecules-primary-nav","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="viewall-molecules-other" class="pl-c-category">
+				
+			<h2 class="pl-c-category__title">
+				<a href="../../patterns/molecules-other&#x2F;index.html" class="pl-c-category__title-link patternLink" data-patternpartial="viewall-molecules-other">Other</a>
+			</h2><!--end pl-c-category__title-->
+		
+			<div class="pl-c-category__description pl-c-text-passage">
+				
+			</div><!--end pl-c-category__description-->
+			
+		</div><!--end pl-c-category-->
+					<div id="molecules-countdown" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/molecules-other-countdown&#x2F;molecules-other-countdown.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="molecules-countdown" title="Link to Pattern">
+						Countdown
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-molecules-countdown" data-patternpartial="molecules-countdown" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-molecules-countdown">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="countdown-container">
+	<div class="text-center">
+      	<h2>#GivingTuesday Countdown!</h2>
+      	<h3>December 3</h3>		
+  	</div>
+  	<div id="countdown-timer"></div>
+</div>
+
+<script
+  src="https://code.jquery.com/jquery-3.7.1.min.js"
+  integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+  crossorigin="anonymous"></script>
+<script>
+function CountdownTracker(label, value) {
+  var el = document.createElement("span");
+
+  el.className = "flip-clock__piece";
+  el.innerHTML =
+    '<b class="flip-clock__card card"><b class="card__top"></b><b class="card__bottom"></b><b class="card__back"><b class="card__bottom"></b></b></b>' +
+    '<span class="flip-clock__slot">' +
+    label +
+    "</span>";
+
+  this.el = el;
+
+  var top = el.querySelector(".card__top"),
+    bottom = el.querySelector(".card__bottom"),
+    back = el.querySelector(".card__back"),
+    backBottom = el.querySelector(".card__back .card__bottom");
+
+  this.update = function (val) {
+    //val = ("0" + val).slice(-2);
+    if (val > 99) {
+      val = ( '0' + val ).slice(-3);
+    } else {
+      val = ( '0' + val ).slice(-2);
+    }
+    
+    if (val !== this.currentValue) {
+      if (this.currentValue >= 0) {
+        back.setAttribute("data-value", this.currentValue);
+        bottom.setAttribute("data-value", this.currentValue);
+      }
+      this.currentValue = val;
+      top.innerText = this.currentValue;
+      backBottom.setAttribute("data-value", this.currentValue);
+
+      this.el.classList.remove("flip");
+      void this.el.offsetWidth;
+      this.el.classList.add("flip");
+    }
+  };
+
+  this.update(value);
+}
+
+// Calculation adapted from https://www.sitepoint.com/build-javascript-countdown-timer-no-dependencies/
+
+function getTimeRemaining(endtime) {
+  var t = Date.parse(endtime) - Date.parse(new Date());
+  return {
+    Total: t,
+    Days: Math.floor(t / (1000 * 60 * 60 * 24)),
+    Hours: Math.floor((t / (1000 * 60 * 60)) % 24),
+    Minutes: Math.floor((t / 1000 / 60) % 60),
+    Seconds: Math.floor((t / 1000) % 60)
+  };
+}
+
+function getTime() {
+  var t = new Date();
+  return {
+    Total: t,
+    Hours: t.getHours() % 12,
+    Minutes: t.getMinutes(),
+    Seconds: t.getSeconds()
+  };
+}
+
+function Clock(countdown, callback) {
+  countdown = countdown ? new Date(Date.parse(countdown)) : false;
+  callback = callback || function () {};
+
+  var updateFn = countdown ? getTimeRemaining : getTime;
+
+  this.el = document.createElement("div");
+  this.el.className = "flip-clock";
+
+  var trackers = {},
+    t = updateFn(countdown),
+    key,
+    timeinterval;
+
+  for (key in t) {
+    if (key === "Total") {
+      continue;
+    }
+    trackers[key] = new CountdownTracker(key, t[key]);
+    this.el.appendChild(trackers[key].el);
+  }
+
+  var i = 0;
+  function updateClock() {
+    timeinterval = requestAnimationFrame(updateClock);
+
+    // throttle so it's not constantly updating the time.
+    if (i++ % 10) {
+      return;
+    }
+
+    var t = updateFn(countdown);
+    if (t.Total < 0) {
+      cancelAnimationFrame(timeinterval);
+      for (key in trackers) {
+        trackers[key].update(0);
+      }
+      callback();
+      return;
+    }
+
+    for (key in trackers) {
+      trackers[key].update(t[key]);
+    }
+  }
+
+  setTimeout(updateClock, 500);
+}
+
+if( $("#countdown-timer").length != 0 ) {
+
+  //var deadline = new Date(Date.parse(new Date()) + 12 * 24 * 60 * 60 * 1000);
+  var deadline = "December 3 2024 12:00:00 EST";
+  var c = new Clock(deadline, function () {
+    
+    //alert('countdown complete')
+  });
+  document.getElementById("countdown-timer").appendChild(c.el);
+
+  var clock = new Clock();
+  //document.body.appendChild(clock.el);
+
+}
+</script>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-molecules-countdown" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"molecules","patternSubgroup":"other"},"patternExtension":"hbs","patternName":"Countdown","patternPartial":"molecules-countdown","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
 			</script>
 		
 		</div><!--end pl-c-pattern-->
@@ -16177,10 +16373,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1727448014598">
+<script id="pl-js-polyfill-insert-1729860142639">
   (function() {
     if (self != top) {
-      var cb = '1727448014598';
+      var cb = '1729860142639';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -16193,7 +16389,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1727448014598" nomodule>
+<script id="pl-js-insert-1729860142639" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
