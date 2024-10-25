@@ -11781,6 +11781,8 @@ div[id*="_DesignPanePanel"] {
 	background: #222;
 	padding: 0.25em 0.25em;
 	border-radius: 0.15em 0.15em 0 0;
+	-webkit-backface-visibility: hidden;
+  	-moz-backface-visibility: hidden;
 	backface-visiblity: hidden;
 	transform-style: preserve-3d;
 	width: 1.8em;
