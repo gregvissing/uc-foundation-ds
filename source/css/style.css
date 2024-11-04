@@ -2129,7 +2129,7 @@ pre[class*="language-"] {
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -70%);
 }
 
 @media only screen and(max-width: 767px) {
@@ -2140,6 +2140,10 @@ pre[class*="language-"] {
 
 	.hero.video-bg .flex.flex-between.flex-row.full-width.relative {
 		margin: 0 !important;
+	}
+
+	.hero .video-wrapper iframe {
+		transform: translate(-50%, -50%);
 	}
 }
 
@@ -2152,6 +2156,10 @@ pre[class*="language-"] {
 	.hero .video-wrapper {
 		height: calc(100vh - 430px);
 	}
+
+	.hero .video-wrapper iframe {
+        transform: translate(-50%, -53%);
+    }
 }
 
 .hero .video-control {
@@ -4697,7 +4705,7 @@ ul.nav.main > li.search > a:after {
 	border-bottom: 1px solid var(--color-brand-black) !important;
 }
 
-.nav.flex.main.c-primary-nav__list li.parent .nccUlMenuSub1 > li > a:hover {
+.nav.flex.main.c-primary-nav__list li.parent:not(.mega-menu) .nccUlMenuSub1 > li > a:hover {
 	border-bottom: 1px solid var(--color-brand-black);
 	color: var(--color-white) !important;
 	background-color: var(--color-brand-black);
@@ -11729,14 +11737,14 @@ div[id*="_DesignPanePanel"] {
    
    	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent) > a,
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent) > a {
-   		color: var(--color-brand-red) !important;
-   		border-bottom: 1px solid var(--color-brand-red) !important;
+   		/* color: var(--color-brand-red) !important;
+   		border-bottom: 1px solid var(--color-brand-red) !important; */
    		display: inline-block;
    		padding: 0 !important;
    	}
    
-   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent) > a:hover,
-   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent) > a:hover {
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success) > a:hover,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success) > a:hover {
    		border-bottom: 2px solid var(--color-brand-red) !important;
    		background-color: unset;
    	}
@@ -11751,16 +11759,16 @@ div[id*="_DesignPanePanel"] {
        	display: flex !important;
 		flex-direction: column;
    		padding: 15px;
+   		gap: 10px;
     }
    
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 a:hover {
    		border-bottom: 2px solid var(--color-brand-red) !important;
    	}
    	   
-   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 > li:not(.last) { 
+   	/* .mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 > li:not(.last) { 
    		margin-bottom: 10px;
-   	}
-   
+   	} */   
    
    	.mega-menu.single-column button[aria-expanded=true] + .nccUlMenuSub1 {
    		display: grid;
@@ -11768,6 +11776,13 @@ div[id*="_DesignPanePanel"] {
         grid-template-rows: repeat(5, 1fr);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
+   	}
+   
+   	.mega-menu.single-column > .nccUlMenuSub1 > li {
+   		display: flex;
+   		align-items: center;
+   		position: relative;
+   		height: fit-content;
    	}
    
    	.mega-menu.single-column > .nccUlMenuSub1 > li:first-child {
@@ -11810,11 +11825,25 @@ div[id*="_DesignPanePanel"] {
    		content: " ";
    	}
    
+   	.mega-menu.single-column > .nccUlMenuSub1 > li.featured {
+   		text-align: center;
+   	}
+   
+   	.mega-menu.single-column > .nccUlMenuSub1 > li.featured > a,
+   	.mega-menu > .nccUlMenuSub1 > li.student-success > a {
+   		width: max-content;
+   		display: block;
+   		text-align: center;
+   		position: relative;
+   		font-weight: 300 !important;
+   	}
+   
    	.mega-menu.single-column > .nccUlMenuSub1 > li.featured > a:before {
    		content: "";
    		display: block;
    		width: 250px;
    		height: 173px;
+   		margin: 0 auto 5px;
    		background: url(https://foundation.uc.edu/view.image?Id=9147);
    		background-repeat: no-repeat;
    		background-position: center;
@@ -11823,8 +11852,18 @@ div[id*="_DesignPanePanel"] {
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
    	}
    
-   	.mega-menu.single-column > .nccUlMenuSub1 > li > a {
-   		margin-bottom: 10px;
+   	.mega-menu > .nccUlMenuSub1 > li.student-success > a:before {
+   		content: "";
+   		display: block;
+   		width: 250px;
+   		height: 173px;
+   		margin: 0 auto 5px;
+   		background: url(https://foundation.uc.edu/view.image?Id=9193);
+   		background-repeat: no-repeat;
+   		background-position: center;
+   		background-size: cover;
+   		border-radius: 16px;
+   		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
    	}
    
    	.mega-menu.single-column > .nccUlMenuSub1 > li > a {
@@ -11833,8 +11872,30 @@ div[id*="_DesignPanePanel"] {
    
    	.mega-menu.parent > .nccUlMenuSub1 > li  a {
    		border-bottom: none !important;
+   	}   
+   
+   	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li > a,
+   	.mega-menu.single-column.parent > .nccUlMenuSub1 > li > a {
+   		color: var(--color-brand-black) !important;
    	}
    
+   	.mega-menu.single-column > .nccUlMenuSub1 > li.featured > a:hover,
+   	.mega-menu > .nccUlMenuSub1 > li.student-success > a:hover {
+   		background-color: var(--color-white) !important;
+   	}
+   
+   	.mega-menu.single-column > .nccUlMenuSub1 > li.featured > a:hover:after,
+   	.mega-menu > .nccUlMenuSub1 > li.student-success > a:hover:after {
+   		content: "";
+   		position: absolute;
+   		bottom: 0;
+   		left: 0;
+   		right: 0;
+   		height: 2px;
+   		width: 100%;
+   		background-color: var(--color-brand-red);
+   	}
+
 }
    
 @media (max-width: 980px) {
