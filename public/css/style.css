@@ -7191,7 +7191,8 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
    	}
    
    	/* FIVE AMOUNTS ( .length-5 ) */
-   	table[id*="_tblAmount"].length-5 > tbody {
+   	table[id*="_tblAmount"].length-5 > tbody,
+   	table[id*="_tblAmount"]:not(.length) > tbody {
 		display: grid;
 		grid-template-columns: repeat(5, 1fr);
 		/* grid-template-rows: repeat(2, 1fr); */
@@ -7200,34 +7201,48 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
 		grid-row-gap: 0px !important;
 	}
 
-	table[id*="_tblAmount"].length-5 > tbody > tr:first-child {
+	table[id*="_tblAmount"].length-5 > tbody > tr:first-child,
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr:first-child {
 		grid-area: 1 / 1 / 2 / 2;
 	}
 
-	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(2) {
+	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(2),
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr:nth-child(2) {
 		grid-area: 1 / 2 / 2 / 3;
 	}
 
-	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(3) {
+	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(3),
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr:nth-child(3) {
 		grid-area: 1 / 3 / 2 / 4;
 	}
 
-	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(4) {
+	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(4),
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr:nth-child(4) {
 		grid-area: 1 / 4 / 2 / 5;
 	}
 
-	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(5) {
+	table[id*="_tblAmount"].length-5 > tbody > tr:nth-child(5),
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr:nth-child(5) {
 		grid-area: 1 / 5 / 2 / 6;
 	}
 
-	table[id*="_tblAmount"].length-5 > tbody > tr:last-child {
+	table[id*="_tblAmount"].length-5 > tbody > tr:last-child,
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr[id*="_trOther"] {
 		grid-area: 2 / 1 / 3 / 6;
 	}
-	table[id*="_tblAmount"].length-5 > tbody > tr:last-child > td:first-child {
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr[id*="_trOther"] > td:first-child {
+		width: 148px;
+	}
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr[id*="_trOther"] > td:last-child {
+		width: 306px;
+	}
+	table[id*="_tblAmount"].length-5 > tbody > tr:last-child > td:first-child,
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr[id*="_trOther"] > td:first-child {
 		grid-area: 2 / 1 / 3 / 2;
 		/* min-width: 148px; */
 	}
-	table[id*="_tblAmount"].length-5 > tbody > tr:last-child > td:last-child {
+	table[id*="_tblAmount"].length-5 > tbody > tr:last-child > td:last-child,
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr[id*="_trOther"] > td:last-child {
 		grid-area: 2 / 2 / 3 / 4;
 	}
    	
@@ -7475,8 +7490,9 @@ table[id*="_tblAmount"] > tbody tr:not(:last-child) {
 	padding: 0;
 }
 
+table[id*="_tblAmount"]:not(.length) > tbody > tr, 
 tr[id*="_trOther"] {
-	padding: 10px 0;
+	margin: 10px 0;
 }
 
 tr[id*="_trOther"] > td {
@@ -7776,6 +7792,81 @@ tr[id*="_trComments"] {
 	flex-direction: column;
 	gap: 10px;
 }
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] {
+  	width: 100%;
+   	margin: 1em 0;
+   	display: flex;
+   	flex-direction: column;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid span.ColumnNoWrapHelper { 
+   	position: relative;   
+   	display: flex;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid label[id*="_dgCart_lblAmountSymbol_"] { 
+   	position: relative;
+   	left: 0;
+   	top: 0;
+   	bottom: 0;
+   	height: 48.8px;
+   	margin: auto;
+   	padding: 15px 5px;
+   	color: var(--color-white);
+   	background: var(--color-brand-black);
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridHeader > td {
+   	background: var(--color-grey);
+   	font-weight: bold;
+   	padding: 5px;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridEvenRow .DonationGridCell span[id*="_dgCart_lblDesignation_"],
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridOddRow .DonationGridCell span[id*="_dgCart_lblDesignation_"] {
+	height: 48.8px;
+   	padding: 10px 5px;
+   	display: block;
+} 
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter > td {
+   	padding: 5px;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter > td span {
+   	font-weight: bold;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid {
+	border: 0 !important;   
+}
+
+@media (max-width: 600px) {
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid > tbody {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+   
+    tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridHeader,
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridEvenRow,
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridOddRow,
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridFooter {
+   		display: flex;
+   		flex-direction: column;
+   	}
+   
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridHeader > td:last-child,
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridFooter > td:last-child{
+   		display: none;
+   	}
+   
+   	tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid .DonationGridFooter > td {
+   		text-align: right;
+   	}
+}   
+   
 
 /* SOURCE */
 tr[id*="_trSource"] {
@@ -7965,6 +8056,11 @@ div.ui-datepicker.ui-widget {
 		display: block;
 		width: 100% !important;
 	}
+   
+   	table[id*="_tblAmount"]:not(.length) > tbody > tr, 
+   	tr[id*="_trOther"] {
+   		margin: 0;
+   	}
 }
 
 div[id*="_UpdatePanel"]

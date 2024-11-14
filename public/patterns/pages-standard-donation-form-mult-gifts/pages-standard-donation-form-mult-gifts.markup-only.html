@@ -1,0 +1,221 @@
+<div id="PC30104_UpdatePanel">
+    <style type="text/css">
+        .ColumnNoWrapHelper {
+        white-space: nowrap;
+        }
+        .hdCheckoutCompleteBtn {
+        display: none;
+        }
+    </style>
+    <input name="PC30104$HiddenID" type="hidden" id="PC30104_HiddenID" value="839">
+    <input name="PC30104$hdnDesignationIds" type="hidden" id="PC30104_hdnDesignationIds">
+    <div id="PC30104_pnlDonationForm" role="main">
+        <h1 style="display: none;">Donation Form</h1>
+        <input type="button" name="PC30104$btnPopupCheckoutComplete" value="" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;PC30104$btnPopupCheckoutComplete&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, true))" id="btnPopupCheckoutComplete" class="hdCheckoutCompleteBtn">
+        <table class="BBFormTable DonationFormTable">
+            <tbody>
+                <tr>
+                    <td class="BBMessage DonationMessage" colspan="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="BBMessage DonationMessage" colspan="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <div id="PC30104_ValidationSummary1" class="BBFormValidatorSummary DonationValidationSummary DonationClientValidationSummary" style="display:none;">
+                        </div>
+                        <div id="PC30104_ValidationSummary2" class="BBFormValidatorSummary DonationValidationSummary" style="display:none;">
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td id="PC30104_DonorChallengeInfo" colspan="2" class="BBMessage DonationMessage DonorChallenge">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="BBListingHeading DonationListingHeading" colspan="2">
+                        <span id="PC30104_lblPersonal">Donation Information</span>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody id="PC30104_TB_pnlDonation" class="DonationFormTable_DonationPanel">
+                <tr>
+                    <td id="PC30104_thCaptionAmount" class="BBFieldCaption DonationFieldCaption" valign="top">
+                        <label for="PC30104_txtAmount" id="PC30104_lblAmountCaption">Amount:</label>
+                    </td>
+                    <td class="BBFieldControlCell DonationFieldControlCell">
+                        <table id="PC30104_tblAmount" class="taLeft" cellpadding="3" onkeydown="javascript:if (isEnterPressed(event)) {try{document.getElementById('PC30104_btnAddToCart').click();return false;} catch(e) {}} else return true;">
+                            <tbody>
+                                <tr>
+                                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="837" amount="50.00"><input id="PC30104_rdo_837_5" type="radio" name="PC30104$givingLevels" value="rdo_837_5" onclick="rdo_OnClick(this);" aria-labelledby="PC30104_tblAmount"><label for="PC30104_rdo_837_5">$50</label></span></td>
+                                    <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$50.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="838" amount="100.00"><input id="PC30104_rdo_838_5" type="radio" name="PC30104$givingLevels" value="rdo_838_5" onclick="rdo_OnClick(this);" aria-labelledby="PC30104_tblAmount"><label for="PC30104_rdo_838_5">$100</label></span></td>
+                                    <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$100.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="839" amount="250.00"><input id="PC30104_rdo_839_5" type="radio" name="PC30104$givingLevels" value="rdo_839_5" checked="checked" onclick="rdo_OnClick(this);" aria-labelledby="PC30104_tblAmount"><label for="PC30104_rdo_839_5">$250</label></span></td>
+                                    <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$250.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="840" amount="500.00"><input id="PC30104_rdo_840_5" type="radio" name="PC30104$givingLevels" value="rdo_840_5" onclick="rdo_OnClick(this);" aria-labelledby="PC30104_tblAmount"><label for="PC30104_rdo_840_5">$500</label></span></td>
+                                    <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$500.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                                </tr>
+                                <tr>
+                                    <td class="BBFieldControlCell DonationFieldControlCell"><span class="vaTop" itemindex="841" amount="1000.00"><input id="PC30104_rdo_841_5" type="radio" name="PC30104$givingLevels" value="rdo_841_5" onclick="rdo_OnClick(this);" aria-labelledby="PC30104_tblAmount"><label for="PC30104_rdo_841_5">$1,000</label></span></td>
+                                    <td class="vaBottom BBFieldControlCell DonationFieldControlCell"><span>$1,000.00</span><span class="BBConvertedCurrencyLabel"></span></td>
+                                </tr>
+                                <tr id="PC30104_trOther" style="display:;">
+                                    <td id="PC30104_tdOther" class="BBFieldControlCell DonationFieldControlCell"><span itemindex="-1"><input id="PC30104_rdoOther" type="radio" name="PC30104$givingLevels" value="rdoOther" onclick="rdo_OnClick(this);" aria-labelledby="PC30104_tblAmount"><label for="PC30104_rdoOther">Other</label></span></td>
+                                    <td class="wsNowrap BBFieldControlCell DonationFieldControlCell">
+                                        <table style="margin-left: -3px">
+                                            <tbody>
+                                                <tr>
+                                                    <td>
+                                                        <span id="PC30104_lblSymbol" class="DonationFormTable_DonationPanel_SymbolLabel">$</span>
+                                                    </td>
+                                                    <td id="PC30104_Td1">
+                                                        <input name="PC30104$txtAmount" type="text" maxlength="10" id="PC30104_txtAmount" disabled="disabled" class="aspNetDisabled BBFormTextbox DonationTextboxNarrow" onkeyup="UpdateSummary();">
+                                                        &nbsp;
+                                                        <span id="PC30104_ReqFldValidatorAmount" style="display:none;"></span><span id="PC30104_CmpValidatorAmount" style="display:none;"></span>
+                                                    </td>
+                                                    <td>
+                                                        &nbsp;
+                                                    </td>
+                                                    <td>
+                                                        <span id="PC30104_lblAmtRequiredMarker" class="BBFormRequiredFieldMarker DonationRequiredFieldMarker" style="visibility:hidden;">*</span>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr id="PC30104_trDesignation">
+                    <td class="BBFieldCaption DonationFieldCaption DonationFieldDropDownCaption">
+                        <label for="PC30104_ddlDesignations" id="PC30104_lblDesignationCaption">Choose an area to support:</label>
+                    </td>
+                    <td class="BBFieldControlCell DonationFieldControlCell">
+                        <select name="PC30104$ddlDesignations" id="PC30104_ddlDesignations" class="BBFormSelectList DonationSelectList" style="max-width: 355px !Important;">
+                            <option value="1676">Cheerleading Development Fund</option>
+                            <option value="2057">Dance Team Development Fund</option>
+                            <option selected="selected" value="1691">Bearcats Mascot Fund</option>
+                        </select>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody id="PC30104_tbdCart">
+                <tr id="PC30104_trAddToCart">
+                    <td class="BBFieldCaption DonationFieldCaption"></td>
+                    <td>
+                        <input type="button" name="PC30104$btnAddToCart" value="Add Gift" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;PC30104$btnAddToCart&quot;, &quot;&quot;, true, &quot;PC30104_TB_pnlDonation&quot;, &quot;&quot;, false, true))" id="PC30104_btnAddToCart" class="BBFormSubmitButton DonationSubmitButton">
+                        &nbsp;
+                    </td>
+                </tr>
+                <tr id="PC30104_trCart">
+                    <td class="BBFieldCaption DonationFieldCaption"></td>
+                    <td>
+                        <table class="DonationGrid" cellspacing="0" rules="all" border="1" id="PC30104_dgCart" style="border-collapse:collapse;">
+                            <tbody>
+                                <tr class="DonationGridHeader">
+                                    <td class="DonationGridHeaderCell">Amount:</td>
+                                    <td class="DonationGridHeaderCell">Choose an area to support:</td>
+                                    <td class="DonationGridHeaderCell">&nbsp;</td>
+                                </tr>
+                                <tr class="DonationGridEvenRow">
+                                    <td class="DonationGridCell" align="right">
+                                        <span class="ColumnNoWrapHelper">
+                                        <label for="PC30104_dgCart_txtDesAmount_0" id="PC30104_dgCart_lblAmountSymbol_0">$</label>
+                                        <input name="PC30104$dgCart$ctl02$txtDesAmount" type="text" value="50.00" onchange="javascript:setTimeout('__doPostBack(\'PC30104$dgCart$ctl02$txtDesAmount\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="PC30104_dgCart_txtDesAmount_0">
+                                        </span>
+                                    </td>
+                                    <td class="DonationGridCell">
+                                        <span id="PC30104_dgCart_lblDesignation_0">Cheerleading Development Fund</span>
+                                    </td>
+                                    <td class="DonationGridCell" align="center">
+                                        <input type="button" name="PC30104$dgCart$ctl02$btnRemove" value="Remove" onclick="javascript:__doPostBack('PC30104$dgCart$ctl02$btnRemove','')" id="PC30104_dgCart_btnRemove_0" title="Remove from Cart" class="BBFormSubmitButton DonationSubmitButton">
+                                    </td>
+                                </tr>
+                                <tr class="DonationGridOddRow">
+                                    <td class="DonationGridCell" align="right">
+                                        <span class="ColumnNoWrapHelper">
+                                        <label for="PC30104_dgCart_txtDesAmount_1" id="PC30104_dgCart_lblAmountSymbol_1">$</label>
+                                        <input name="PC30104$dgCart$ctl03$txtDesAmount" type="text" value="100.00" onchange="javascript:setTimeout('__doPostBack(\'PC30104$dgCart$ctl03$txtDesAmount\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="PC30104_dgCart_txtDesAmount_1">
+                                        </span>
+                                    </td>
+                                    <td class="DonationGridCell">
+                                        <span id="PC30104_dgCart_lblDesignation_1">Dance Team Development Fund</span>
+                                    </td>
+                                    <td class="DonationGridCell" align="center">
+                                        <input type="button" name="PC30104$dgCart$ctl03$btnRemove" value="Remove" onclick="javascript:__doPostBack('PC30104$dgCart$ctl03$btnRemove','')" id="PC30104_dgCart_btnRemove_1" title="Remove from Cart" class="BBFormSubmitButton DonationSubmitButton">
+                                    </td>
+                                </tr>
+                                <tr class="DonationGridEvenRow">
+                                    <td class="DonationGridCell" align="right">
+                                        <span class="ColumnNoWrapHelper">
+                                        <label for="PC30104_dgCart_txtDesAmount_2" id="PC30104_dgCart_lblAmountSymbol_2">$</label>
+                                        <input name="PC30104$dgCart$ctl04$txtDesAmount" type="text" value="250.00" onchange="javascript:setTimeout('__doPostBack(\'PC30104$dgCart$ctl04$txtDesAmount\',\'\')', 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="PC30104_dgCart_txtDesAmount_2">
+                                        </span>
+                                    </td>
+                                    <td class="DonationGridCell">
+                                        <span id="PC30104_dgCart_lblDesignation_2">Bearcats Mascot Fund</span>
+                                    </td>
+                                    <td class="DonationGridCell" align="center">
+                                        <input type="button" name="PC30104$dgCart$ctl04$btnRemove" value="Remove" onclick="javascript:__doPostBack('PC30104$dgCart$ctl04$btnRemove','')" id="PC30104_dgCart_btnRemove_2" title="Remove from Cart" class="BBFormSubmitButton DonationSubmitButton">
+                                    </td>
+                                </tr>
+                                <tr class="DonationGridFooter">
+                                    <td class="DonationGridCell" align="right">
+                                        <span id="PC30104_dgCart_lblDesTotal">$400.00</span>
+                                        <span id="PC30104_dgCart_lblDesTotalConverted" class="BBConvertedCurrencyLabel"></span>
+                                        <span id="PC30104_dgCart_lblDesTotalWithoutCurrency" class="lblDesTotalWithoutCurrency" style="display: none">400.00</span>
+                                    </td>
+                                    <td class="DonationGridCell">
+                                        <span id="PC30104_dgCart_lblTxtTotal">Total</span>
+                                    </td>
+                                    <td class="DonationGridCell" valign="top">&nbsp;</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+            <tbody>
+                <tr id="PC30104_trAdditInformation">
+                    <td class="BBListingHeading DonationListingHeading" colspan="3">
+                        <span id="PC30104_lblAdditInformation">Additional Information</span>
+                    </td>
+                </tr>
+                <tr id="PC30104_trComments">
+                    <td class="vaTop BBFieldCaption DonationFieldCaption">
+                        <label for="PC30104_txtComments" id="PC30104_lblCommentsCaption">If you are making a gift on behalf of a specific member of the Spirit Squad, please include their name in the field below.</label>
+                    </td>
+                    <td colspan="2">
+                        <textarea name="PC30104$txtComments" rows="2" cols="20" maxlength="255" id="PC30104_txtComments" class="BBFormTextArea DonationTextArea"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="BBFieldControlCell DonationFieldControlCell DonationVerificationCell" colspan="3">
+                    </td>
+                </tr>
+                <tr>
+                    <td class="BBFormButtonCell DonationButtonCell" colspan="3">
+                        <input type="submit" name="PC30104$btnNext" value="Continue" onclick="(function(btn){var bDisableMe=true;if(typeof(Page_ClientValidate)=='function'){bDisableMe=Page_ClientValidate('PC30104');}__doPostBack('PC30104$btnNext','');btn.disabled=bDisableMe;})(this);return false;WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;PC30104$btnNext&quot;, &quot;&quot;, true, &quot;PC30104&quot;, &quot;&quot;, false, false))" id="PC30104_btnNext" class="BBFormSubmitButton DonationSubmitButton">
+                    </td>
+                </tr>
+                <input type="hidden" name="PC30104$hdnTId" id="hdnTId">
+            </tbody>
+        </table>
+    </div>
+    <div id="bbspLoadingOverlay" class="bbspLoadingOverlay">
+        <img src="https://foundation.uc.edu/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
+    </div>
+</div>
