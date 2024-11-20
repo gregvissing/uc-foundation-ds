@@ -1247,6 +1247,10 @@ p.intro-text {
 	line-height: 1.45;
 }
 
+p.intro-text a {
+    font-size: inherit;
+}
+
 /* Byline styles */
 .byline {
 	margin-bottom: 1em;
@@ -1637,7 +1641,7 @@ blockquote:after {
 
 .pull-quote-attribution {
 	color: var(--color-brand-red);
-	text-align: right;
+	text-align: left;
 	padding: 0px 50px 0px 20px;
 	margin-left: 50px;
 	position: relative;
@@ -1668,6 +1672,7 @@ blockquote:after {
 .pull-quote-attribution:before {
 	content: "–";
 	left: 5px;
+	position: absolute;
 }
 
 .pull-quote-attribution.flex:before {
@@ -1748,6 +1753,10 @@ blockquote:after {
 		margin: 0 auto;
 	}
 
+	.pull-quote-attribution:before {
+		left: 0;
+	}
+
 	blockquote:before {
 		left: 3px;
 		top: 0;
@@ -1767,6 +1776,18 @@ blockquote:after {
 	.pull-quote.with-headshot > .pull-quote-attribution.flex.align-start.flex-end {
 		flex-direction: column !important;
 	}
+}
+
+.red-bg blockquote p,
+.red-bg .pull-quote-attribution,
+.red-bg .pull-quote-attribution {
+	color: var(--color-brand-black);
+}
+
+.red-bg blockquote:before,
+.red-bg blockquote:after {
+	-webkit-text-stroke: var(--color-brand-black);
+	color: var(--color-brand-black);
 }
 
 /**
@@ -10392,6 +10413,33 @@ div[id*="_UpdatePanel"] > .EventTable {
 	background-color: #ccc;
 	margin: auto;
 }
+   
+@media (max-width: 600px) {
+   	.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr:before {
+   		left: 0;
+   		right: 0;
+   		width: 100%;
+   	}
+   
+   	.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:before {
+   		z-index: 2;
+   	}
+   
+   	.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr:after {
+   		content: "";
+        position: absolute;
+        z-index: 0;
+        bottom: 4.5em;
+        width: 80%;
+        height: 10px;
+        background-color: #ccc;
+        margin: auto;
+   		left: 0;
+   		right: 0;
+   		width: 100%;
+   		z-index: 1;
+   	}
+}
 
 .BBFormTable.EventTable
 	tr[id*="_trProgress"]
@@ -10611,6 +10659,32 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_"] > tbody > tr > td {
 	> tr
 	> td.BBFieldControlCell.EventItemRegistrationControlCellDescription {
 	width: 33%;
+}
+   
+@media (max-width: 600px) {
+   	.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr {
+        display: flex;
+   		flex-wrap: wrap;
+    }
+   
+   	.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellDescription {
+   		width: 80%;
+   	}
+   
+   	.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellPrice,
+   	.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr > td.BBFieldControlCell.EventItemRegistrationControlCellNumParticipants {
+   		width: 100%;
+   	}
+   
+   	div[id*="_UpdatePanel"] table[id*="_Wizard1"] > tbody > tr > td > table.w100p > tbody > tr {
+   		display: flex;
+   		flex-direction: column;
+   	}
+   
+   	div[id*="_UpdatePanel"] table[id*="_Wizard1"] table.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr {
+   		display: flex;
+   		flex-direction: unset;
+   	}
 }
 
 .BBFormTitle.EventItemTitleName {
@@ -10900,10 +10974,14 @@ table[id$="_Wizard1"]
 	> td
 	> table.w100p
 	> tbody
-	> tr:last-child
+	> tr:not([id$="_Wizard1_trAdditionalDonation"]):last-child
 	> td:first-child {
 	display: none !important;
 	width: 0px !important;
+}
+   
+tr[id$="_Wizard1_trAdditionalDonation"] {
+   margin-top: 1em;
 }
 
 span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
@@ -10919,8 +10997,8 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
 @media (max-width: 600px) {
 	div[id*="_UpdatePanel"] {
 		width: 100%;
-		padding-left: 1em;
-		padding-right: 1em;
+		padding-left: 0em;
+		padding-right: 0em;
 	}
 
 	div[id*="_UpdatePanel"]
@@ -10946,7 +11024,7 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
 		> td
 		> table.w100p
 		> tbody
-		> tr:last-child
+		> tr:not([id$="_Wizard1_trAdditionalDonation"]):last-child
 		> td:first-child {
 		display: none !important;
 		width: 0px !important;
