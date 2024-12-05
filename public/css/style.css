@@ -1333,6 +1333,7 @@ p.intro-text a {
 	height: 100%;
 	margin: 60px auto !important;
 	flex-direction: row;
+	gap: 2%;
 }
 
 .contact-card p.name * {
@@ -1340,11 +1341,13 @@ p.intro-text a {
 }
 
 .contact-card .col-image {
-	width: 80px;
+	/* width: 80px; */
+	width: 18%;
 }
 
 .contact-card .body {
 	padding: 0;
+	width: 80%;
 }
 
 .contact-card .body p:first-class {
@@ -5153,6 +5156,10 @@ ul.nav.main > li.search > a:after {
 	max-width: 80rem;
 	margin-bottom: 2rem;
 }
+   
+.BBSearchDescriptionStyle {
+	white-space: unset !important;   
+}
 
 /*------------------------------------*\
 	#TOTAL CONTAINER
@@ -7071,6 +7078,10 @@ div[id*="_UpdatePanel"]
 	flex-direction: column;
 	gap: 1.5em;
 }
+   
+div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"] label[id*="_lblDesignationCaption"] {
+	font-weight: 600;
+}
 
 div[id*="_UpdatePanel"] .DonationFieldCaption label {
 	font-family: "Jost", sans-serif;
@@ -7147,7 +7158,7 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
        grid-template-columns: repeat(3, 1fr);
        grid-template-rows: repeat(2, 1fr);
        grid-column-gap: 10px !important;
-       grid-row-gap: 0px;
+       grid-row-gap: 10px;
      }
 
 	table[id*="_tblAmount"].length-3 > tbody > tr:first-child { 
@@ -7180,7 +7191,7 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
         grid-template-columns: repeat(4, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 10px !important;
-        grid-row-gap: 0px;
+        grid-row-gap: 10px;
     }
 
     table[id*="_tblAmount"].length-4 > tbody > tr:first-child {
@@ -7219,7 +7230,7 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
 		/* grid-template-rows: repeat(2, 1fr); */
 		grid-template-rows: auto;
 		grid-column-gap: 10px !important;
-		grid-row-gap: 0px !important;
+		grid-row-gap: 10px !important;
 	}
 
 	table[id*="_tblAmount"].length-5 > tbody > tr:first-child,
@@ -7274,7 +7285,7 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(2, 1fr);
         grid-column-gap: 10px !important;
-        grid-row-gap: 0px;
+        grid-row-gap: 10px;
     }
 
     table[id*="_tblAmount"].length-6 > tbody > tr:first-child {
@@ -7511,10 +7522,12 @@ table[id*="_tblAmount"] > tbody tr:not(:last-child) {
 	padding: 0;
 }
 
+/*
 table[id*="_tblAmount"]:not(.length) > tbody > tr, 
 tr[id*="_trOther"] {
 	margin: 10px 0;
 }
+*/
 
 tr[id*="_trOther"] > td {
 	/* width: 18% !important; */
@@ -8091,7 +8104,7 @@ div.ui-datepicker.ui-widget {
    
    	table[id*="_tblAmount"]:not(.length) > tbody > tr, 
    	tr[id*="_trOther"] {
-   		margin: 0;
+   		width: 100% !important;
    	}
 }
 
@@ -8102,6 +8115,12 @@ div[id*="_UpdatePanel"]
 	> tr
 	> td:last-child {
 	padding: 10px 0;
+}
+   
+@media (max-width: 600px) {
+   	div[id*="_pnlDonationForm"] {
+   		padding: 0 1em;
+   	}
 }
 
 /*------------------------------------*\
@@ -12133,3 +12152,282 @@ div[id*="_DesignPanePanel"] {
    	}*/
    
 }
+   
+/*
+	KELCE CHALLENGE - Styles   
+*/
+   
+/*  
+.thermometer {
+  	width: 56px;
+    height: 300px;
+  	background: var(--color-brand-red);
+    border: 5px solid var(--color-brand-black);
+  	border-bottom: none;
+    border-radius: 50px 50px 0 0;
+  	position: relative;
+  	z-index: 2;
+  	margin-bottom: 75px;
+  
+  	box-shadow: 
+      	0 1px 1px hsl(0deg 0% 0% / .075), 
+      	0 2px 2px hsl(0deg 0% 0% / .075), 
+      	0 4px 4px hsl(0deg 0% 0% / .075), 
+      	0 8px 8px hsl(0deg 0% 0% / .075), 
+      	0 16px 16px hsl(0deg 0% 0% / .075);
+}
+  
+.thermometer:before {
+  	content: "";
+  	z-index: 2;
+  	position: absolute;
+  	left: 0px;
+  	bottom: 0px;
+  	margin: auto;
+  	width: 36px;
+    height: 290px;
+  	background-color: var(--color-brand-red);
+  	border-bottom: none;
+    border-radius: 50px 50px 0 0;
+}
+
+.thermometer:after {
+  	content: "";
+  	z-index: 1;
+  	position: absolute;
+  	left: -12px;
+  	left: -18px;
+  	bottom: -42px;
+  	margin: auto;
+  	width: 80px;
+  	height: 80px;
+  	border: 5px solid var(--color-brand-black);
+  	background-color: var(--color-white);
+  	border-radius: 50px;
+  
+  	box-shadow: 
+      	0 1px 1px hsl(0deg 0% 0% / .075), 
+      	0 2px 2px hsl(0deg 0% 0% / .075), 
+      	0 4px 4px hsl(0deg 0% 0% / .075), 
+      	0 8px 8px hsl(0deg 0% 0% / .075), 
+      	0 16px 16px hsl(0deg 0% 0% / .075);
+}
+  
+.thermometer #graduations {
+  	height: 90%;
+  	top: 5%;
+    width: 50%;
+  	display: flex;
+  	flex-direction: column;
+  	justify-content: space-evenly;
+}
+  
+.thermometer #graduations, 
+.thermometer #graduations:before {
+  	content: "";
+    position: absolute;
+  	z-index: 3;
+}
+  
+.thermometer #graduations .mark {
+  	width: 100%;
+  	height: 2px;
+  	background: rgba(0, 0, 0, 0.5);
+  	display: inline-block;
+}
+  
+.fill {
+	z-index: 2;
+  	content: "";
+  	position: absolute;
+  	bottom: 0;
+  	left: 0;
+  	background-color: var(--color-white);
+  	width: 100%;
+  	height: 13%;
+}
+*/   
+  
+.kelce-bg {
+	background-image: url(https://foundation.uc.edu/image/LockerRoom-1600x500-black-gradient.jpg);
+  	background-repeat: no-repeat;
+  	background-size: cover;
+  	background-position: center;
+  	position: relative;
+}
+  
+.kelce-bg:before {
+  	content: "";
+  	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	background: rgba(255, 255, 255, 0.6);
+  	z-index: 1;
+}
+  
+.kelce-bg .content {
+  	position: relative;
+  	z-index: 2;
+}
+  
+.thermometer-cpaw {
+  	position: absolute;
+  	bottom: -25px;
+  	left: 0;
+  	right: 0;
+  	margin: auto;
+  	width: 70%;
+  	z-index: 2;
+}
+
+   
+/* hide amount displayed by CRM */
+#kelce-amount {
+	height: 0;
+  	opacity: 0;
+}   
+   
+/* HTML Thermometer */ 
+   
+.thermometer {
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+   
+.thermometer .vertical {
+  height: 200px;
+  width: 60px;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+  position: relative;
+  z-index: 1;
+  border: 10px solid var(--color-white);
+  border-bottom: none;
+}
+   
+.thermometer .vertical .graduations {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: lightgray;
+  border-top-left-radius: 50px;
+  border-top-right-radius: 50px;
+}
+   
+.thermometer .vertical .graduations i#fill {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 0;
+  z-index: 0;
+  transition: height 0.4s ease-in-out;
+  background-color: var(--color-brand-red);
+}
+   
+.thermometer .vertical .graduations #fillAmount {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 160px;
+  height: 30px;
+  line-height: 1.25;
+  z-index: 2;
+  margin: auto;
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid var(--color-brand-red);
+  border-right: none;
+  font-style: normal;
+  transform: translateX(-110%);
+  transition: bottom 0.4s ease-in-out;
+  background: var(--color-white);
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+   box-shadow: 8px 8px 10px rgba(0, 0, 0, .25);
+}
+   
+.thermometer .vertical .graduations #fillAmount:after {
+   	content: "";
+   	position: absolute;
+   	top: 0;
+   	bottom: 0;
+   	right: -9%;
+   	margin: auto;
+   	width: 0; 
+  	height: 0; 
+  	border-top: 15px solid transparent;
+  	border-bottom: 15px solid transparent;  
+  	border-left: 15px solid var(--color-brand-red);
+}
+   
+.thermometer .vertical .graduations span {
+  position: relative;
+  height: 10%;
+  width: 60%;
+  z-index: 1;
+}
+   
+.thermometer .vertical .graduations span:nth-child(5) {
+  width: 75%;
+}
+   
+.thermometer .vertical .graduations span:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+  background-color: var(--color-brand-black);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+   
+.thermometer .vertical .graduations span:first-child {
+  border-top: none;
+}
+   
+.thermometer .bulb {
+  height: 85px;
+  width: 85px;
+  background: var(--color-brand-red);
+  border-radius: 85px;
+  border: 10px solid var(--color-white);
+  position: absolute;
+  bottom: -69px;
+}   
+   
+#raised {
+	margin-top: 3.5em;
+   	display: none;
+}
+   
+tr[id*="_trDesignation"] span[id*="_lblDesignationValue"] {
+   	font-weight: 400;
+}
+   
+@media (max-width: 768px) {
+    main span[id*="_ctl00_lblSummary"] > section > .l-container {
+       padding-left: 0 !important;
+       padding-right: 0 !important;
+       width: 90vw;
+       max-width: 90vw;
+       min-width: 90vw;
+       margin-left: auto;
+       margin-right: auto;
+    }
+}
+   

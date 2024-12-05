@@ -1333,6 +1333,7 @@ p.intro-text a {
 	height: 100%;
 	margin: 60px auto !important;
 	flex-direction: row;
+	gap: 2%;
 }
 
 .contact-card p.name * {
@@ -1340,11 +1341,13 @@ p.intro-text a {
 }
 
 .contact-card .col-image {
-	width: 80px;
+	/* width: 80px; */
+	width: 18%;
 }
 
 .contact-card .body {
 	padding: 0;
+	width: 80%;
 }
 
 .contact-card .body p:first-class {
