@@ -1,0 +1,94 @@
+<div id="PC26487_dvOuter">
+    <div class="mini-donation skyContainer" id="104ba7d7-78f4-451c-9355-8dba8882a065" hidewizard="True">
+        <!-- design for mini donation  -->
+        <div class="bbminiform-container bbminiform-table" id="dvFormContainer">
+            <!-- design for donation caption -->
+            <div class="bbminiform-row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <h1>Make a donation</h1>
+                    <p>Select your gift amount and continue.</p>
+                </div>
+            </div>
+            <!-- Wizard will start from here-->
+            <div id="PC26487_stepWizard" class="bcmsWizard">
+                <!-- Wizard Header Start-->
+                <!-- Wizard Header End-->
+                <!-- Wizard Steps Start-->
+                <!--Step 1 start-->
+                <!--Step 1 end-->
+                <!--Step 2 start-->
+                <div class="" id="dvGiftDetailsStepContent" showgiftdetails="False" style="display: none;">
+                    <div class="bbminiform-row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <h2 class="bbSectionHeader">Gift Details</h2>
+                        </div>
+                    </div>
+                    <div>
+                        <hr>
+                    </div>
+                </div>
+                <!--Step 2 end-->
+                <!--Step 3 start. This is just a placeholder now and will be done when we do Personal Info story.-->
+                <!--Step 2 end-->
+                <!-- Wizard Steps End-->
+                <!-- Wizard Footer Start-->
+                <div class="bbminiform-row bcmsWizardFooter" id="wizardFooter">
+                    <div class="bbminiform-buttonwrapper bbminiform-clear" id="dvPaymentButtons">
+                    </div>
+                    <div class="bbminiform-buttonwrapper bbminiform-clear" id="buttonWrapper">
+                    </div>
+                </div>
+                <!-- Wizard Footer End-->
+            </div>
+            <div class="bcmsWizardStepContent" id="dvGiftInfoStepContent">
+                <!-- Design for donation giving levels -->
+                <div class="bbminiform-row-amount">
+                    <div id="PC26487_dvGivingLevels" class="bbminiform-list-group bbminiform-segmented-control">
+                        <div class="bbminiform-amtboxmain">
+                            <div class="bbminiform-amtboxcaption" style="height:30px;">$25</div>
+                            <div class="bbminiform-amtbox height60px" amt="25" giftattribute="cspxA6u3zDs=">$25</div>
+                        </div>
+                        <div class="bbminiform-amtboxmain">
+                            <div class="bbminiform-amtboxcaption" style="height:30px;">$100</div>
+                            <div class="bbminiform-amtbox bbminiform-amtbox-active bbminiform-selectedamount height60px" amt="100" giftattribute="ptzFDC16wpo=">$100</div>
+                        </div>
+                        <div class="bbminiform-amtboxmain">
+                            <div class="bbminiform-amtboxcaption" style="height:30px;">$500</div>
+                            <div class="bbminiform-amtbox height60px" amt="500" giftattribute="MhBm/MYAmCA=">$500</div>
+                        </div>
+                        <div class="bbminiform-amtboxmain">
+                            <div class="bbminiform-amtboxcaption" style="height:30px;"></div>
+                            <input class="bbminiform-otheramount height60px" placeholder="Other" amt="Other" id="txtOtherAmount" aria-label="Other Amount" giftattribute="B98MO0SVi+DB2iGmPXnUDqXG7eVZaUhieZFCZ0BUSrVLkLXCtdfajg==" style="">
+                        </div>
+                    </div>
+                </div>
+                <div id="PC26487_divCommonHiddenFields" style="display: none;" class="bbminiform-row">
+                    <div style="display:none;">
+                        <input type="hidden" value="^(1[0-2]|0?[1-9])/(3[01]|[12][0-9]|0?[1-9])/(?:[0-9]{2})?[0-9]{2}$" id="regExDateFormat">
+                        <input type="hidden" fullname="United States" value="United_States" id="selectedCountry">
+                        <input type="hidden" fullname="United States" value="United_States" id="selectedAcknowledgeeCountry">
+                        <input type="hidden" value="((\(\d{3}\) ?)|(\d{3}[-/ ]?))\d{3}[- \.,]?\d{4}\s?((([xX]|[eE][xX][tT])\.?\s*(\d+))*)$" id="regExPhoneUS">
+                        <input type="hidden" value="^[0-9 \+\)\(\-]{6,20}\s?((([xX]|[eE][xX][tT])\.?\s*(\d+))*)$" id="regExPhoneOthers">
+                        <input type="hidden" value="^[ ]*[A-Za-z0-9\-_'`!#$%&amp;*+/=?^{|}~]+(\.[A-Za-z0-9\-_'`!#$%&amp;*+/=?^{|}~]+)*@[A-Za-z0-9][A-Za-z0-9\-]*(\.[A-Za-z0-9][A-Za-z0-9\-]*)*\.[A-Za-z]{2,22}[ ]*$" id="regExEmail">
+                        <input type="hidden" value="Confirm email and Preferred email do not match" id="emailMismatch">
+                        <input type="hidden" value="CTY_USA" id="backOfficeCountry">
+                        <input type="hidden" value="(((\%3C)|<)|((\%3E)|>)|((%26)|&amp;))" id="regExName">
+                        <input type="hidden" value="(((\%3C)|<)|((\%3E)|>))" id="regExOrgName">
+                        <input type="hidden" value="150" id="hdnAddressMaxlength">
+                        <input type="hidden" value=" Cannot exceed 150 characters" id="hdnMaxLengthMessage">
+                    </div>
+                </div>
+                <div id="dvGiftDetails">
+                    <!-- Design for gift aid -->
+                </div>
+            </div>
+            <div id="PC26487_dvDonateNowPlaceholder" class="bbminiform-donatenowplaceholder" style="height:30px;"></div>
+            <button type="button" class="btn btn-primary bbminiform-button btn-text btnFooterAction btnWizardFinish btmMakePayment nonWizard" paymenttype="CC" id="btmMakePayment">
+            Donate Now <i class="fa fa-lock bb-lock"></i>
+            </button>
+        </div>
+    </div>
+    <div id="bbspLoadingOverlay" class="bbspLoadingOverlay">
+        <img src="/images/FormEngine/Loading.gif" alt="" class="bbspLoadingImage">
+    </div>
+</div>

@@ -7043,6 +7043,39 @@ main p > a:hover {
 }
 
 /*------------------------------------*\
+    #MINI DONATION FORM
+\*------------------------------------*/
+
+.mini-donation {
+	margin: 1em 0;
+}
+
+.mini-donation .btn.btn-primary {
+	color: var(--color-white) !important;
+    border-color: var(--color-brand-red) !important;
+    background-color: var(--color-brand-red) !important;
+    text-decoration: none;
+    margin: 0px;
+    padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+    border-width: 2px !important;
+    border-style: solid !important;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 1em !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background 0.1s;
+    height: unset;
+}
+
+.mini-donation .bbminiform-amtboxcaption {
+	display: none;
+}
+
+/*------------------------------------*\
     #STANDARD DONATION FORM
 \*------------------------------------*/
    
@@ -9380,19 +9413,15 @@ td.PaymentPart_CartItemType {
 tr[id*="_PaymentPartGridRow_"].PaymentPart_CartRows {
  	position: relative;  
 }
-   
+
 th[id*="_ctl00_CartGrid_thDesecription"] {
-   	display: inline;
-}
+   	display: inline-block;
+}   
    
 th[id*="_ctl00_CartGrid_thUnitPrice"],
 th[id*="_ctl00_CartGrid_thTotal"] {
    	text-align: center !important;
-}
-   
-tr[id*="_ctl00_CartGrid_trHeaderRow"] {
-	text-align: right !important;
-}   
+} 
    
 td[id*="_tdCartItemTotalCell_"].PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
    	text-align: right;
