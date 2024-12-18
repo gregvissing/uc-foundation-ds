@@ -1349,6 +1349,10 @@ p.intro-text a {
 	width: 80%;
 }
 
+.contact-card .body .address > a:last-child {
+	display: table-cell;
+}
+
 .contact-card .body p:first-class {
 	line-height: 0.9;
 }
@@ -6246,6 +6250,10 @@ main p > a:hover {
 	border: none;
 }   
    
+#annualReport .image img {
+   	margin: 0 auto;
+}
+   
 #dd-container {
 	margin-bottom: 2rem;   
 }   
@@ -7074,7 +7082,57 @@ main p > a:hover {
 .mini-donation .bbminiform-amtboxcaption {
 	display: none;
 }
+   
+.mini-donation .bbminiform-amtbox.height60px,
+.mini-donation .bbminiform-otheramount.height60px {
+	height: unset !important;
+   	min-height: unset !important;
+}
+   
+.mini-donation .bbminiform-amtbox-active {
+ 	color: var(--color-white);
+    background-color: var(--color-brand-red);  
+}
+   
+.mini-donation .bbminiform-amtboxmain {
+   	color: var(--color-brand-black);
+}
+   
+.mini-donation .bbminiform-amtbox:not(.bbminiform-amtbox-active) {
+   	color: var(--color-brand-black);
+}
+   
+.mini-donation .bbminiform-amtbox, 
+.mini-donation .bbminiform-button {
+   	border-color: var(--color-brand-black) !important;
+}
+   
+.bbminiform-otheramount {
+	color: var(--color-brand-black) !important;
+   	border: 1px solid var(--color-brand-black) !important;
+}
+   
+.bbminiform-otheramount::placeholder {
+	color: var(--color-brand-black) !important;
+   	font-weight: bold;
+}
+   
+.bbminiform-amtbox:hover, 
+.bbminiform-button:hover, 
+#btnCompleteDDPayment:hover {
+   	background-color: var(--color-brand-black) !important;
+   	color: var(--color-white) !important;
+}
 
+.bbminiform-amtbox,
+.bbminiform-otheramount {
+	font-family: "Open Sans", sans-serif !important;
+   	font-size: 18px !important;
+   	line-height: 35px !important;
+   	padding: 5px !important;
+   	min-height: unset !important;
+}
+   
 /*------------------------------------*\
     #STANDARD DONATION FORM
 \*------------------------------------*/
@@ -7117,11 +7175,29 @@ div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"] label[id*="_lblDesignationCa
 
 div[id*="_UpdatePanel"] .DonationFieldCaption label {
 	font-family: "Jost", sans-serif;
+   	line-height: 1.25;
 }
 
 div[id*="_UpdatePanel"] * {
 	padding: 0;
 	margin: 0;
+}
+   
+tr[id*="_trTributeFirstName"],
+tr[id*="_trTributeLastName"] {
+   	position: relative;
+}
+   
+tr[id*="_trTributeFirstName"] .BBFormRequiredFieldMarker.DonationRequiredFieldMarker,
+tr[id*="_trTributeLastName"] .BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
+   	position: absolute;
+   	left: -14px;
+   	top: 14px;
+}
+   
+div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
+	left: 0;
+   	top: 0;
 }
 
 /* AMOUNTS */
@@ -8004,7 +8080,6 @@ tbody[id*="pnlAcknowledgee"] > tr {
 tbody[id*="pnlAcknowledgee"] > tr > td:first-child {
 	display: flex;
 	align-items: center;
-	padding-left: 20px;
 	/* height: 52px; */
 }
 
@@ -8013,8 +8088,8 @@ tbody[id*="pnlAcknowledgee"]
 	> td.BBFormRequiredFieldMarker.DonationRequiredFieldMarker,
 tbody[id*="pnlAcknowledgee"] > tr > td[id*="_tdreq_"] {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 5px;
+	left: -15px;
 	width: 10px;
 	height: 18px;
 	line-height: 1;
