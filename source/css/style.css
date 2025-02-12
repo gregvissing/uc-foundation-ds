@@ -1242,8 +1242,8 @@ span.large {
 }
 
 p.large a {
-	font-weight: inherit;
-	font-size: inherit;
+    font-weight: inherit;
+    font-size: inherit;
 }
 
 p.intro-text {
@@ -7256,6 +7256,64 @@ div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMark
 	left: 0;
    	top: 0;
 }
+   
+/* BILLING INFORMATION */
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr {
+   	display: flex;
+   	width: 100%;
+   	position: relative;
+}  
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption {
+   	display: block;
+   	width: 25%;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+   	margin-left: 15px;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+   	display: block;
+   	width: 75%;
+} 
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker,
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td[id*="_tdreq_stateUS"] > span {
+   	position: absolute;
+   	left: 0;
+} 
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:first-child {
+   	display: flex;
+   	width: 100%;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:first-child td {
+   	width: 100%;
+}
+   
+@media (max-width: 600px) {
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption,
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+        display: block;
+        width: 100%;
+    }
+   
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+        margin-left: 0px;
+    }
+}
+   
+/* FINDER NUMBER */
+@media (max-width: 600px) {
+   	.BBFormTable.DonationFormTable tbody[id*="_tbdyFinderNumber"] tr {
+   		display: flex;
+   		flex-direction: column;
+	}
+}   
 
 /* AMOUNTS */
 tbody[id*="_TB_pnlDonation"] tr {
@@ -7316,6 +7374,35 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
    		Five amounts, excluding Other, would make the class 'length-5'.
    		This class would be added to amounts parent element table[id*="_tblAmount"] to determine grid 
    	*/
+   
+   	/* TWO AMOUNTS ( .length-2 ) */
+   	table[id*="_tblAmount"].length-2 > tbody {
+       	display: grid;
+       	grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+       	grid-column-gap: 10px !important;
+       	grid-row-gap: 10px;
+     }
+   
+   	table[id*="_tblAmount"].length-2 > tbody > tr:first-child { 
+   		grid-area: 1 / 1 / 2 / 2; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:nth-child(2) { 
+   		grid-area: 1 / 2 / 2 / 3; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:last-child { 
+   		grid-area: 2 / 1 / 3 / 3; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:last-child > td:first-child { 
+   		grid-area: 2 / 1 / 3 / 2; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:last-child > td:last-child { 
+   		grid-area: 2 / 2 / 3 / 3; 
+   	}
    
    	/* THREE AMOUNTS ( .length-3 ) */
 	table[id*="_tblAmount"].length-3 > tbody {
@@ -8283,7 +8370,7 @@ div[id*="_UpdatePanel"]
    
 @media (max-width: 600px) {
    	div[id*="_pnlDonationForm"] {
-   		padding: 0 1em;
+   		padding: 0;
    	}
 }
 

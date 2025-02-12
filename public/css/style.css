@@ -1241,6 +1241,11 @@ span.large {
 	font-size: 1.25em;
 }
 
+p.large a {
+    font-weight: inherit;
+    font-size: inherit;
+}
+
 p.intro-text {
 	font-size: 24px;
 	letter-spacing: 0.3px;
@@ -1249,6 +1254,13 @@ p.intro-text {
 
 p.intro-text a {
     font-size: inherit;
+}
+
+@media (max-width: 600px) {
+	div.intro-home p.large {
+		font-size: 1em;
+		line-height: 1.4;
+	}
 }
 
 /* Byline styles */
@@ -1349,6 +1361,10 @@ p.intro-text a {
 	width: 80%;
 }
 
+.contact-card .body .address > a:last-child {
+	display: table-cell;
+}
+
 .contact-card .body p:first-class {
 	line-height: 0.9;
 }
@@ -1428,6 +1444,7 @@ p.intro-text a {
 .story .story-image img {
 	margin: 0 auto;
 	display: block;
+	width: 100%;
 }
 
 .story .l-container {
@@ -2177,11 +2194,15 @@ pre[class*="language-"] {
 	}
 
 	.hero .video-wrapper {
-		height: calc(100vh - 430px);
+		height: calc(100vh - 420px);
 	}
 
 	.hero .video-wrapper iframe {
-        transform: translate(-50%, -53%);
+        /* transform: translate(-50%, -46%); */
+		transform: translate(0%, 0%);
+		top: 0;
+		left: 0;
+		min-height: 320px;
     }
 }
 
@@ -2273,7 +2294,8 @@ pre[class*="language-"] {
 		padding: 3em 0;
 	}
 
-	.hero h1 span.large {
+	.hero h1 span.large,
+	.hero h1 {
 		font-size: 1.25em !important;
 	}
 
@@ -2289,7 +2311,25 @@ pre[class*="language-"] {
 	.hero .video-control button {
 		width: 40px;
 		height: 40px;
+		margin: 0 !important;
 	}
+
+	.hero a {
+		margin: 0 !important;
+		padding: 5px 16px !important;
+	}
+
+	.hero .video-control {
+		width: 40px !important;
+        height: 40px;
+        position: absolute;
+        right: 1em;
+		bottom: 1em;
+		z-index: 10;
+        max-width: unset !important;
+        min-width: unset !important; 
+	}
+
 }
 
 .lockup-bg:before {
@@ -5232,6 +5272,20 @@ ul.nav.main > li.search > a:after {
 /*------------------------------------*\
     #UTILITY CLASSES
 \*------------------------------------*/
+   
+.mobile-only {
+	display: none !important;   
+}
+   
+@media (max-width: 600px) {
+	.desktop-tablet {
+   		display: none !important;
+   	}
+   
+   	.mobile-only {
+        display: block !important;   
+    }
+}
 
 .hide {
 	display: none !important;
@@ -5339,17 +5393,23 @@ strong * {
 .video.card > div:first-child:before {
 	content: "";
 	position: absolute;
-	top: 15%;
+	top: 0;
 	bottom: 0;
 	left: 0;
 	right: 0;
 	margin: auto;
-	width: 50%;
+	width: 60px;
+   	height: 53.25px;
 	z-index: 1;
 	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-white.svg);
 	background-repeat: no-repeat;
 	background-size: contain;
 	opacity: 0.9;
+   	transition: transform 1s ease-in-out;
+}
+   
+.video.card:hover > div:first-child:before {
+   	transform: scale(1.1);
 }
 
 .callout-card {
@@ -6246,6 +6306,10 @@ main p > a:hover {
 	border: none;
 }   
    
+#annualReport .image img {
+   	margin: 0 auto;
+}
+   
 #dd-container {
 	margin-bottom: 2rem;   
 }   
@@ -7074,7 +7138,57 @@ main p > a:hover {
 .mini-donation .bbminiform-amtboxcaption {
 	display: none;
 }
+   
+.mini-donation .bbminiform-amtbox.height60px,
+.mini-donation .bbminiform-otheramount.height60px {
+	height: unset !important;
+   	min-height: unset !important;
+}
+   
+.mini-donation .bbminiform-amtbox-active {
+ 	color: var(--color-white);
+    background-color: var(--color-brand-red);  
+}
+   
+.mini-donation .bbminiform-amtboxmain {
+   	color: var(--color-brand-black);
+}
+   
+.mini-donation .bbminiform-amtbox:not(.bbminiform-amtbox-active) {
+   	color: var(--color-brand-black);
+}
+   
+.mini-donation .bbminiform-amtbox, 
+.mini-donation .bbminiform-button {
+   	border-color: var(--color-brand-black) !important;
+}
+   
+.bbminiform-otheramount {
+	color: var(--color-brand-black) !important;
+   	border: 1px solid var(--color-brand-black) !important;
+}
+   
+.bbminiform-otheramount::placeholder {
+	color: var(--color-brand-black) !important;
+   	font-weight: bold;
+}
+   
+.bbminiform-amtbox:hover, 
+.bbminiform-button:hover, 
+#btnCompleteDDPayment:hover {
+   	background-color: var(--color-brand-black) !important;
+   	color: var(--color-white) !important;
+}
 
+.bbminiform-amtbox,
+.bbminiform-otheramount {
+	font-family: "Open Sans", sans-serif !important;
+   	font-size: 18px !important;
+   	line-height: 35px !important;
+   	padding: 5px !important;
+   	min-height: unset !important;
+}
+   
 /*------------------------------------*\
     #STANDARD DONATION FORM
 \*------------------------------------*/
@@ -7116,13 +7230,90 @@ div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"] label[id*="_lblDesignationCa
 }
 
 div[id*="_UpdatePanel"] .DonationFieldCaption label {
-	font-family: "Jost", sans-serif;
+	/* font-family: "Jost", sans-serif; */
+   	line-height: 1.25;
+   	font-weight: 400;
 }
 
 div[id*="_UpdatePanel"] * {
 	padding: 0;
 	margin: 0;
 }
+   
+tr[id*="_trTributeFirstName"],
+tr[id*="_trTributeLastName"] {
+   	position: relative;
+}
+   
+tr[id*="_trTributeFirstName"] .BBFormRequiredFieldMarker.DonationRequiredFieldMarker,
+tr[id*="_trTributeLastName"] .BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
+   	position: absolute;
+   	left: -14px;
+   	top: 14px;
+}
+   
+div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
+	left: 0;
+   	top: 0;
+}
+   
+/* BILLING INFORMATION */
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr {
+   	display: flex;
+   	width: 100%;
+   	position: relative;
+}  
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption {
+   	display: block;
+   	width: 25%;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+   	margin-left: 15px;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+   	display: block;
+   	width: 75%;
+} 
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker,
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td[id*="_tdreq_stateUS"] > span {
+   	position: absolute;
+   	left: 0;
+} 
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:first-child {
+   	display: flex;
+   	width: 100%;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:first-child td {
+   	width: 100%;
+}
+   
+@media (max-width: 600px) {
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption,
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+        display: block;
+        width: 100%;
+    }
+   
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
+.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+        margin-left: 0px;
+    }
+}
+   
+/* FINDER NUMBER */
+@media (max-width: 600px) {
+   	.BBFormTable.DonationFormTable tbody[id*="_tbdyFinderNumber"] tr {
+   		display: flex;
+   		flex-direction: column;
+	}
+}   
 
 /* AMOUNTS */
 tbody[id*="_TB_pnlDonation"] tr {
@@ -7183,6 +7374,35 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
    		Five amounts, excluding Other, would make the class 'length-5'.
    		This class would be added to amounts parent element table[id*="_tblAmount"] to determine grid 
    	*/
+   
+   	/* TWO AMOUNTS ( .length-2 ) */
+   	table[id*="_tblAmount"].length-2 > tbody {
+       	display: grid;
+       	grid-template-columns: repeat(2, 1fr);
+		grid-template-rows: repeat(2, 1fr);
+       	grid-column-gap: 10px !important;
+       	grid-row-gap: 10px;
+     }
+   
+   	table[id*="_tblAmount"].length-2 > tbody > tr:first-child { 
+   		grid-area: 1 / 1 / 2 / 2; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:nth-child(2) { 
+   		grid-area: 1 / 2 / 2 / 3; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:last-child { 
+   		grid-area: 2 / 1 / 3 / 3; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:last-child > td:first-child { 
+   		grid-area: 2 / 1 / 3 / 2; 
+   	}
+   
+    table[id*="_tblAmount"].length-2 > tbody > tr:last-child > td:last-child { 
+   		grid-area: 2 / 2 / 3 / 3; 
+   	}
    
    	/* THREE AMOUNTS ( .length-3 ) */
 	table[id*="_tblAmount"].length-3 > tbody {
@@ -8004,7 +8224,6 @@ tbody[id*="pnlAcknowledgee"] > tr {
 tbody[id*="pnlAcknowledgee"] > tr > td:first-child {
 	display: flex;
 	align-items: center;
-	padding-left: 20px;
 	/* height: 52px; */
 }
 
@@ -8013,8 +8232,8 @@ tbody[id*="pnlAcknowledgee"]
 	> td.BBFormRequiredFieldMarker.DonationRequiredFieldMarker,
 tbody[id*="pnlAcknowledgee"] > tr > td[id*="_tdreq_"] {
 	position: absolute;
-	top: 0;
-	left: 0;
+	top: 5px;
+	left: -15px;
 	width: 10px;
 	height: 18px;
 	line-height: 1;
@@ -8151,7 +8370,7 @@ div[id*="_UpdatePanel"]
    
 @media (max-width: 600px) {
    	div[id*="_pnlDonationForm"] {
-   		padding: 0 1em;
+   		padding: 0;
    	}
 }
 
@@ -12147,10 +12366,50 @@ div[id*="_DesignPanePanel"] {
    		width: 100%;
    		background-color: var(--color-brand-red);
    	}
+   
+   
+   	.mega-menu .nccUlMenuSub1 > li.parent > button {
+   		appearance: none;
+   		border: none;
+   		background-color: transparent;
+   		font-weight: bold;
+   		cursor: default;
+   	}
+   
+   	.mega-menu .nccUlMenuSub1 > li.parent > button:focus {
+   		outline: unset !important;
+   		outline-offset: unset !important;
+   	}
+   
+   	.mega-menu .nccUlMenuSub1 > li.parent > button > svg {
+   		display: none;
+   	}
 
 }
    
 @media (max-width: 980px) {
+   	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 {
+   		display: block !important;
+   		background-color: var(--color-white);
+   		border: 1px solid var(--color-brand-black) !important;
+   	}
+   
+   	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 > li > a {
+   		display: block;
+   		padding: 10px !important;
+   		color: var(--color-brand-black) !important;
+   		border-bottom: none !important;
+   	}
+   
+   	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 > li:not(.last) > a {
+   		border-bottom: 1px solid rgb(239, 239, 239) !important;
+   	}
+   
+   	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2[hidden] {
+   		display: none !important;
+   	}
+   
+   
    	/*
    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" aria-hidden="true"%3E%3Cpath fill="currentColor" d="M5.293 9.707l6 6c0.391 0.391 1.024 0.391 1.414 0l6-6c0.391-0.391 0.391-1.024 0-1.414s-1.024-0.391-1.414 0l-5.293 5.293-5.293-5.293c-0.391-0.391-1.024-0.391-1.414 0s-0.391 1.024 0 1.414z"%3E%3C/path%3E%3C/svg%3E'); 
    */
