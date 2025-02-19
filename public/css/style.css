@@ -6393,8 +6393,9 @@ main p > a:hover {
 	cursor: pointer;
 	padding-top: 0px;
 	padding-bottom: 0px;
-	padding-right: 5px;
+	padding-right: 0px;
 	border: none;
+   	flex-direction: column;
 }
 
 /*#videoPlayer .thumbnail:nth-child(2n) {
@@ -6427,10 +6428,31 @@ main p > a:hover {
 	border: none;
 	margin: 0 10px !important;
 }
+   
+.video-list > div {
+	border-radius: 16px;   
+}
 
 #videoPlayer .thumbnail.active,
-#videoPlayer .thumbnail:hover {
+#videoPlayer .thumbnail:hover,
+.video-list > div.active,
+.video-list > div:hover {
 	background-color: var(--color-brand-black);
+}
+   
+.video-list > div.active .c-stacked-block__body,
+.video-list > div:hover .c-stacked-block__body {
+	background-color: var(--color-brand-black); 
+}
+   
+.video-list > div.active .c-stacked-block__body p,
+.video-list > div:hover .c-stacked-block__body p {
+	color: var(--color-white) !important; 
+}
+   
+.video-list > div.active .c-stacked-block__body:after,
+.video-list > div:hover .c-stacked-block__body:after {
+   	background-color: var(--color-brand-red) !important; 
 }
 
 #videoPlayer .thumbnail.active p,
@@ -6444,7 +6466,7 @@ main p > a:hover {
 }
 
 #videoPlayer .thumbnail-img {
-	width: 15%;
+	width: 100%;
 	overflow: hidden;
 }
 
@@ -6453,7 +6475,7 @@ main p > a:hover {
 }
 
 #videoPlayer .thumbnail-info {
-	width: 85%;
+	width: 100%;
    	padding: 5px 10px;
 }
 
