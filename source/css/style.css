@@ -1600,13 +1600,16 @@ p.intro-text a {
  * Blockquote base styles
  */
 .pull-quote {
-	padding-right: 70px;
-	margin-bottom: 0;
+	/* padding-right: 70px; */
+	padding: 16% 6% 5%;
+    margin-bottom: 20px;
+	position: relative;
+	font-family: "Gentium Book Plus", serif !important;
 	/* margin-bottom: var(--flow-space, 1em) !important; */
 }
 
 div.pull-quote {
-	margin-bottom: 40px !important;
+	margin-bottom: 20px !important;
 }
 
 .pull-quote.with-headshot {
@@ -1614,31 +1617,54 @@ div.pull-quote {
 }
 
 blockquote {
-	font-style: italic;
-	color: #808080;
+	/* font-style: italic; */
+	/* color: #808080; */
 	/* padding-left: 1rem; */
 	/* margin-bottom: 1rem; */
 
 	border-left: 0;
-	font-weight: 300;
-	text-indent: -32px;
-	margin-left: 50px;
-	line-height: 1.2;
+	/* font-weight: 300; */
+	/* text-indent: -32px; */
+	/* margin-left: 50px; */
+	/* line-height: 1.2; */
 	/* padding: 0 !important; */
-	color: var(--color-brand-red);
-	padding: 40px 50px 20px 20px;
+	/* color: var(--color-brand-red); */
+	/* padding: 40px 50px 20px 20px; */
 	position: relative;
+	font: inherit;
 }
 
 blockquote p {
-	font-size: calc(1.75em * var(--text-multiplier, 1)) !important;
-	line-height: normal !important;
-	color: var(--color-brand-red);
-	/* font-family: "Gentium Book Basic", serif; */
-	display: inline;
-	font-style: normal;
+	/* font-size: calc(1.75em * var(--text-multiplier, 1)) !important; */
+	/* line-height: normal !important; */
+	/* color: var(--color-brand-red); */
+	font: inherit;
+	/* display: inline; */
+	/* font-style: normal; */
+	
+	color: var(--color-brand-black);
+	font-size: calc(2.6em);
+    font-weight: 600;
+    line-height: 1.2em;
+    letter-spacing: 0.95px;
+    margin-bottom: 30px;
+    text-wrap: pretty;
 }
 
+.pull-quote .pull-quote-background {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(https://foundation.uc.edu/image/pull-quote-black.svg);
+    background-size: 40%;
+    background-position: top left;
+    background-repeat: no-repeat;
+}
+
+/*
 blockquote:before,
 blockquote:after {
 	color: transparent;
@@ -1657,20 +1683,34 @@ blockquote:before {
 blockquote:after {
 	content: "”";
 }
+*/
 
 .pull-quote-attribution {
-	color: var(--color-brand-red);
+	color: var(--color-brand-black);
 	text-align: left;
-	padding: 0px 50px 0px 20px;
-	margin-left: 50px;
+	/* padding: 0px 50px 0px 20px; */
+	/* margin-left: 50px; */
 	position: relative;
+
+	padding: 1.5% 2%;
+    margin-left: 15px;
+    border-left: 2px solid #333;
+    font-family: Jost, sans-serif;
+    font-size: 1.45em;
+    font-weight: 700;
+    line-height: 1.05em;
 }
 
 .pull-quote-attribution span {
-	font-weight: 600;
+	/* font-weight: 600;
 	font-size: 0.8em;
-	line-height: 1.25;
+	line-height: 1.25; */
 	text-wrap: pretty;
+
+	font-family: Jost, sans-serif;
+    font-size: 1.25em;
+    font-weight: 700;
+    line-height: 1.05em;
 }
 
 .pull-quote-attribution span.headshot {
@@ -1688,11 +1728,11 @@ blockquote:after {
 	opacity: 1;
 }
 
-.pull-quote-attribution:before {
+/* .pull-quote-attribution:before {
 	content: "–";
 	left: 5px;
 	position: absolute;
-}
+} */
 
 .pull-quote-attribution.flex:before {
 	content: "";
