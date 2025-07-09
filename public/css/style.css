@@ -2754,6 +2754,7 @@ table caption {
 	border-bottom: 1px solid var(--color-brand-black);
 	background: transparent;
 	position: relative;
+	padding-right: 40px;
 }
 
 .tabbed.vertical .tabs h3 {
@@ -5475,7 +5476,7 @@ strong * {
 }
 
 .card.related:hover .image {
-	transform: scale(1.1);
+	/* transform: scale(1.1); Remove zooming of image on :hover  */
 	transition: transform 1s ease-in-out;
 }
 
@@ -5499,10 +5500,6 @@ strong * {
 	background-size: contain;
 	opacity: 0.9;
    	transition: transform 1s ease-in-out;
-}
-   
-.video.card:hover > div:first-child:before {
-   	transform: scale(1.1);
 }
 
 .callout-card {
@@ -6069,6 +6066,10 @@ main p > a {
 
 main p > a:hover {
 	border-bottom: 2px solid var(--color-brand-red) !important;
+}
+   
+.balance {
+	 text-wrap: balance;   
 }
 
 /*------------------------------------*\
@@ -7194,6 +7195,95 @@ main p > a:hover {
 		margin-bottom: 1em;
 	}
 }
+   
+/* 513 Day - landing page */
+   
+#hero513.campus {
+	background-image: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/513-day-Web-headers.jpg");
+	background-size: cover;
+  	background-repeat: no-repeat;
+  	display: flex;
+  	justify-content: center;
+  	padding-top: 3rem;
+}
+  
+#hero513.campus:before {
+  	content: "";
+	position: absolute;
+  	top: 0;
+  	bottom: 0;
+  	left: 0;
+  	right: 0;
+  	background: rgba(255, 255, 255, 0.75);
+  	width: 100%;
+  	height: 100%;
+}
+  
+#hero513.campus h1 {
+	font-size: 5rem !important;
+  	margin-bottom: 0 !important;
+}
+  
+.day513 .number .c-stacked-block__header .c-stacked-block__media:before {
+  	position: absolute;
+  	z-index: 5;
+  	top: 0;
+  	bottom: -420px;
+    left: 0;
+  	right: 0;
+  	background: rgba(0, 0, 0, 0.8);
+  	margin: auto;
+  	width: 100%;
+  	height: 100%;
+  	transition: all 1s ease-in-out;
+  	opacity: 0;
+  	border-top-left-radius: 16px;
+  	border-top-right-radius: 16px;
+}
+  
+.day513 .number.number-513 .c-stacked-block__header .c-stacked-block__media:before {
+	content: "";
+  	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/513-Day-Logotype-transparent-background-white.png);
+  	background-size: 75%;
+  	background-repeat: no-repeat;
+  	background-position: center center;
+}
+  
+.day513 a.number:hover .c-stacked-block__header .c-stacked-block__media:before {
+	bottom: 0px;
+  	opacity: 1;
+}
+
+#chevronDown { 
+	position: relative;
+  	bottom: 1em;
+  	left: 0;
+  	right: 0;
+  	margin: auto;
+  	z-index: 1;
+  	width: 50px;
+  	height: 50px;
+  	display: inline-block;
+}
+  
+#hero513.campus h1 img {
+	width: 70%;
+  	margin: 0 auto;
+  	display: block;
+}
+   
+.day513 .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
 
 /*------------------------------------*\
    OTHER OUT OF BOX PARTS
@@ -7373,51 +7463,51 @@ div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMark
 }
    
 /* BILLING INFORMATION */
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr {
    	display: flex;
    	width: 100%;
    	position: relative;
 }  
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption {
    	display: block;
    	width: 25%;
 }
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
    	margin-left: 15px;
 }
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
    	display: block;
    	width: 75%;
 } 
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker,
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td[id*="_tdreq_stateUS"] > span {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker,
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td[id*="_tdreq_stateUS"] > span {
    	position: absolute;
    	left: 0;
 } 
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:first-child {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:first-child {
    	display: flex;
    	width: 100%;
 }
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:first-child td {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:first-child td {
    	width: 100%;
 }
    
 @media (max-width: 600px) {
-   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption,
-   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption,
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
         display: block;
         width: 100%;
     }
    
-   	.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
-.BBFormTable.DonationCaptureFormTable.pnlDonor.billingInfo > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
         margin-left: 0px;
     }
 }
@@ -8159,6 +8249,26 @@ div[id*="_pnlDonationForm"]
 	height: 30px;
 }
 
+/* ALLOW MATCHING GIFTS (Under Donoar Options) */   
+tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr,
+tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr td, 
+tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr td span {
+	display: block;
+   	width: 100%;
+}
+   
+tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr td span.BBFieldCheckboxCaption.DonationFieldCheckboxCaption {
+	display: flex;
+   	align-items: center;
+   	justify-content: flex-start;
+   	gap: 1em;
+   	padding-top: 10px;
+}
+   
+tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr[id*="_DonationCapture1_tr_MGCompany"] > td.BBFieldCaption.DonationCaptureFieldCaption {
+   	background-color: transparent;
+}
+   
 /* CORPORATE */
 tr[id*="_trCorporate"] {
 	display: flex;
