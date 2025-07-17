@@ -2754,12 +2754,13 @@ table caption {
 	border-bottom: 1px solid var(--color-brand-black);
 	background: transparent;
 	position: relative;
-	padding-right: 40px;
+	padding: 1rem 40px 1rem 30px;
 }
 
 .tabbed.vertical .tabs h3 {
 	padding: 10px 30px;
 	margin: 0;
+	border-bottom: 1px solid var(--color-brand-black);
 }
 
 .tabbed.vertical [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label, 
@@ -2793,7 +2794,32 @@ table caption {
 	color: var(--color-white);
 }
 
-/* &rarr; */
+@media (max-width: 600px) { 
+	.vertical.tabbed {
+		flex-direction: column;
+	}
+
+	.tabbed.vertical .tabs,
+	.tabbed.vertical .tab-content {
+		width: 100%;
+	}
+
+	.tabbed.vertical .tabs .tab label:after {
+		display: none;
+	}
+	
+	.tabbed.vertical .tabs .tab label {
+	    padding: 0.5rem 20px;
+	}
+
+	.tabbed.vertical .tabs ul {
+		padding: 0;
+	}
+
+	.tabbed.vertical .tabs .tab {
+		list-style: none;
+	}
+}
 
 /*------------------------------------*\
     #ACCORDIONS
@@ -3626,6 +3652,12 @@ body.modal-open {
 		transform: translateY(-50%);
 		transition: opacity 0.2s ease-in-out, transform 0.2s ease-in-out;
 	}
+}
+   
+@media (max-width: 500px) {
+   	.a11y-modal {
+   		max-width: 100%;
+   	}
 }
 
 /**
@@ -7611,11 +7643,11 @@ table[id*="_tblAmount"] > tbody > tr:first-child:nth-last-child(5) ~ tr {
    
    	/* THREE AMOUNTS ( .length-3 ) */
 	table[id*="_tblAmount"].length-3 > tbody {
-       display: grid;
-       grid-template-columns: repeat(3, 1fr);
-       grid-template-rows: repeat(2, 1fr);
-       grid-column-gap: 10px !important;
-       grid-row-gap: 10px;
+       	display: grid;
+       	grid-template-columns: repeat(3, 1fr);
+       	grid-template-rows: repeat(2, 1fr);
+       	grid-column-gap: 10px !important;
+      	grid-row-gap: 10px;
      }
 
 	table[id*="_tblAmount"].length-3 > tbody > tr:first-child { 
@@ -10097,6 +10129,10 @@ fieldset.billingInformation {
 
 .steps {
 	display: none;
+}
+   
+.form-group.hide {
+	display: none !important;   
 }
 
 .steps.active {
@@ -14094,4 +14130,3 @@ tr[id*="_trDesignation"] span[id*="_lblDesignationValue"] {
        margin-right: auto;
     }
 }
-   
