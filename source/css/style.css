@@ -11031,6 +11031,96 @@ li {
 }
 
 /*------------------------------------*\
+    #DONATION CONFIRMATION
+\*------------------------------------*/
+
+.BBDonationConfirmation dl {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+	clear: both;
+}
+
+.BBDonationConfirmation dt {
+	display: block;
+	padding: 0px;
+	margin: 0px;
+}
+
+.BBDonationConfirmation dd {
+	display: block;
+	overflow: auto;
+	padding: 0px;
+	margin: 0px;
+}
+
+.BBDonationConfirmation .DonationListingHeading {
+	color: var(--color-white);
+	display: block;
+	font-size: 1.25em;
+	padding: 5px 0;
+	text-align: center;
+	text-transform: Capitalize;
+	margin-bottom: 10px;
+}
+
+.BBDonationConfirmation .DonationFieldCaption {
+	background-color: var(--color-grey);
+	color: var(--color-brand-black);
+	padding: 2px;
+	text-align: right;
+	width: 100%;
+	height: 100%;
+	display: block;
+	line-height: unset;
+}
+
+.BBDonationConfirmation .DonationFieldControlCell {
+	font-style: italic;
+	padding: 2px;
+}
+
+.BBDonationConfirmation .mergefield {
+	clear: both;
+	padding: 0;
+	margin: 0;
+}
+
+.BBDonationConfirmation {
+	max-width: 600px;
+}
+
+.BBDonationConfirmation {
+	width: 700px !important;
+    max-width: 100% !important;
+	margin: 1em auto;
+	display: auto;
+}
+
+.BBDonationConfirmation .BBListingHeading.DonationListingHeading {
+	background-color: var(--color-brand-black);
+	clear: none;
+	display: block;
+	height: unset;
+}
+
+.BBDonationConfirmation dl > dt,
+.BBDonationConfirmation dl > dd {
+	padding: 0;
+	margin: 0;
+}
+
+.BBDonationConfirmation dl > dt {
+	width: 33%;
+	display: flex;
+	align-items: flex-end;
+}
+
+.BBDonationConfirmation dl > dd {
+	width: 66%;
+}
+
+/*------------------------------------*\
     #CHECKOUT - PAYMENT 2.0
 \*------------------------------------*/
 .PaymentPart_FormContainer {
