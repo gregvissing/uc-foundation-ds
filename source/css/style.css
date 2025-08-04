@@ -3228,11 +3228,13 @@ iframe {
 	background: var(--color-brand-red) !important;
 }
 
-button.btn-link.btn-secondary {
+button.btn-link.btn-secondary,
+a.btn-link.btn-secondary {
 	color: var(--color-brand-red) !important;
 }
 
-button.btn-link.btn-secondary:hover {
+button.btn-link.btn-secondary:hover,
+a.btn-link.btn-secondary:hover {
 	color: var(--color-white) !important;
 }
 
