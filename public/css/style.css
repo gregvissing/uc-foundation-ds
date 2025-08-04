@@ -9722,6 +9722,16 @@ div#dvMaintxtTruePledgeNoOfInstallmentFieldDetails .bbDonationInputField {
 }
 
 /* Custom styles to match design system */
+   
+div[id*="_dvOuter"] {
+	max-width: 800px;
+   	margin: -2em auto 0;
+   	display: block;
+   	padding: 0 2.5rem;
+   	position: relative;
+   	z-index: 5;
+}
+   
 .mini-donation.skyContainer,
 .bbminiform-container.bbminiform-table,
 .bbminiform-row > div[class*="col-"] {
@@ -9774,6 +9784,10 @@ div#dvMaintxtTruePledgeNoOfInstallmentFieldDetails .bbDonationInputField {
 }
 
 @media (max-width: 500px) {
+   	div[id*="_dvOuter"] {
+   		padding: 0;
+   	}
+   
 	.bbminiform-segmented-control {
 		display: flex;
 		flex-direction: row;
