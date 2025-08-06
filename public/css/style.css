@@ -13604,6 +13604,48 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
   	#BBIS - DESIGNATION SEARCH & RESULTS
 */
 
+.BBDesignationSearchContainer {
+	width: 83.5%;
+	display: inline-block;
+}
+
+.BBDesignationSearchButtonContainer {
+	width: 16%;
+	min-width: 147.7px;
+	display: inline-block;
+	text-align: right;
+}
+
+.BBDesignationSearchButtonContainer .BBDesignationSearchButton {
+	margin: 0 !important; 
+	float: none;
+}
+
+.BBDesignationSearchCriteriaCaption {
+	font-weight: bold;
+}
+
+.BBDesignationSearchResultContainer > span {
+	display: block;
+	padding: 5px;
+}
+
+.BBDesignationSearchResultContainer > span:nth-child(odd) {
+	background-color: var(--color-grey);
+}
+
+.BBPager {
+	display: flex;
+	justify-content: center;
+	gap: 1em;
+	margin: 1em 0;
+}
+
+.BBPager .aspNetDisabled.BBPagerPageSelectedLink {
+	font-weight: bold !important;
+	border-bottom: none !important;
+	color: var(--color-brand-black) !important;
+}
    
 /*------------------------------------*\
   	#ADMIN VIEW FIXES
