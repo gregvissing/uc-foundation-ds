@@ -12510,7 +12510,8 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList"]
 }
 
 /* Event Button styles */
-.BBFormSubmitButton {
+.BBFormSubmitButton,
+.BBDesignationSearchButton {
 	color: var(--color-white) !important;
 	border-color: var(--color-brand-red);
 	background-color: var(--color-brand-red);
@@ -13598,6 +13599,11 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
    	background-color: var(--color-uc-dark-red) !important;
     border-color: var(--color-uc-dark-red) !important;
 }
+
+/* 
+  	#BBIS - DESIGNATION SEARCH & RESULTS
+*/
+
    
 /*------------------------------------*\
   	#ADMIN VIEW FIXES
