@@ -9751,6 +9751,13 @@ div[id*="_dvOuter"] {
    	position: relative;
    	z-index: 5;
 }
+
+@media (min-width: 1200px) {
+	div[id*="_dvOuter"] .skyContainer {
+		width: 100%;
+	}
+}
+
    
 .mini-donation.skyContainer,
 .bbminiform-container.bbminiform-table,
