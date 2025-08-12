@@ -4024,6 +4024,26 @@ a.c-stacked-block:hover * {
 }
 
 /*------------------------------------*\
+    $SUB-FOOTER
+\*------------------------------------*/
+.sub-footer .one-third {
+	background: var(--color-bearcats-black);
+}
+
+.sub-footer .one-third a:not(.btn-link) {
+	color: var(--color-white) !important;
+	border-color: var(--color-white) !important;
+}
+
+.sub-footer .one-third ul {
+	padding: 0;
+}
+
+.sub-footer .one-third ul li {
+	list-style: none;
+}
+
+/*------------------------------------*\
     $FOOTER
 \*------------------------------------*/
 /**
