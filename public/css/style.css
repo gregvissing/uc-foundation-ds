@@ -3275,13 +3275,20 @@ nav .button-primary a,
 	border-radius: 6px;
 	border-width: 2px !important;
 	border-style: solid;
-	font-family: Jost, sans-serif;
+	font-family: "Jost", sans-serif;
 	/* font-weight: 500; */
 	font-size: 1em;
 	text-transform: uppercase;
 	text-align: center;
 	transition: background 0.1s;
 	display: inline-block;
+}
+
+a.btn-link,
+button.btn-link {
+	letter-spacing: 1px;
+	border-width: 2px !important;
+	font-weight: 700;
 }
 
 .btn-link:hover {
