@@ -221,6 +221,10 @@ a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.m
 	border-bottom: 2px solid var(--color-brand-red);
 }
 
+.pl-js-pattern-example a:hover {
+	border-bottom: 2px solid var(--color-brand-red) !important;
+}
+
 .scrollToTop {
 	width: 55px;
 	height: auto;
@@ -3896,7 +3900,7 @@ a.c-stacked-block:hover * {
 }
 
 .c-stacked-block.quote .pull-quote blockquote {
-	text-indent: -30px;
+	/* text-indent: -30px; */
 }
 
 .c-stacked-block.quote .pull-quote blockquote:before,
@@ -9751,12 +9755,17 @@ div#dvMaintxtTruePledgeNoOfInstallmentFieldDetails .bbDonationInputField {
 /* Custom styles to match design system */
    
 div[id*="_dvOuter"] {
-	max-width: 800px;
+	max-width: 100%;
+    width: 800px;
    	margin: -2em auto 0;
    	display: block;
    	padding: 0 2.5rem;
    	position: relative;
    	z-index: 5;
+}
+
+.pl-js-pattern-example div[id*="_dvOuter"] {
+	margin: 0 auto;
 }
 
 @media (min-width: 1200px) {
