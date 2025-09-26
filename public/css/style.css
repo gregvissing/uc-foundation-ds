@@ -221,7 +221,7 @@ a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.m
 	border-bottom: 2px solid var(--color-brand-red);
 }
 
-.pl-js-pattern-example a:hover {
+.pl-js-pattern-example a:not(.card):hover {
 	border-bottom: 2px solid var(--color-brand-red) !important;
 }
 
