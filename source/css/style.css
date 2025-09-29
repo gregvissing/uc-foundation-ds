@@ -715,6 +715,20 @@ main ul li {
 	font-size: 18px !important;
 }
 
+.pl-js-pattern-example main ol,
+.pl-js-pattern-example main ul {
+	display: flex;
+	flex-direction: column;
+}
+
+.pl-js-pattern-example main ul li {
+	list-style: disc !important;
+}
+
+.pl-js-pattern-example main ol li {
+	list-style: decimal !important;
+}
+
 /*------------------------------------*\
     #HEADINGS
 \*------------------------------------*/
