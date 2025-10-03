@@ -3913,10 +3913,6 @@ a.c-stacked-block:hover * {
 	margin-right: 10px;
 }
 
-.c-stacked-block.quote .pull-quote blockquote {
-	/* text-indent: -30px; */
-}
-
 .c-stacked-block.quote .pull-quote blockquote:before,
 .c-stacked-block.quote .pull-quote blockquote:after {
 	font-size: 40px;
@@ -11265,8 +11261,6 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
 	background-color: var(--color-uc-dark-red) !important;
     border-color: var(--color-uc-dark-red) !important;
 }
-   
-.PaymentPart_CartCell.PaymentPart_CartRemoveCell .PaymentPart_CartItemRemoveText:hover {}
 
 .PaymentPart_Cart .PaymentPart_CartList .PaymentPart_CartHeader .PaymentPart_CartRows.PaymentPart_CartHeaderRow th,
 .PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {

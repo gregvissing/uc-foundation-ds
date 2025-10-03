@@ -1260,6 +1260,103 @@
 
             getRndInteger(0, 3);
 
+            /* ************************
+                CATEGORIES BAR
+            ************************* */
+            categoriesBar = function() {
+                var e = {}
+                , c = $(".categoriesListScrollContainer")
+                , l = c.find(".categoriesList")
+                , d = ""
+                , u = "";
+                return e.init = function() {
+                    function o() {
+                        var e = 0;
+                        return l.find(">li").each(function() {
+                            e += $(this).outerWidth(!0)
+                        }),
+                        e
+                    }
+                    $(window).bind("touchmove", function(e) {
+                        0
+                    });
+                    var s = 0;
+                    function t(e) {
+                        var t = o()
+                        , n = c.width()
+                        , e = parseInt(l.css("left")) + e * (n - l.find(">li").width());
+                        e <= 0 && n - t < e ? l.stop().animate({
+                            left: e
+                        }) : 0 < e ? l.stop().animate({
+                            left: 0
+                        }) : e <= n - t && (t = n - t,
+                        l.stop().animate({
+                            left: t
+                        })),
+                        setTimeout(r, 50),
+                        setTimeout(r, 500)
+                    }
+                    function n() {
+                        document.selection && document.selection.empty ? document.selection.empty() : window.getSelection && window.getSelection().removeAllRanges()
+                    }
+                    function r() {
+                        var e = o()
+                        , t = parseInt(l.css("left"));
+                        $(".categoriesArrowLeft, .categoriesArrowRight").removeClass("disabled"),
+                        0 === t ? $(".categoriesArrowLeft").addClass("disabled") : t == c.width() - e && $(".categoriesArrowRight").addClass("disabled")
+                    }
+                    l.on("touchstart touchmove touchend", function(e) {
+                        e.preventDefault();
+                        var t = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]
+                        , n = o();
+                        switch (e.type) {
+                        case "touchstart":
+                            s = parseInt(t.clientX) - parseInt(l.css("left"));
+                            break;
+                        case "touchmove":
+                            var i = c.width()
+                            , a = parseInt(t.clientX) - s;
+                            a <= 0 && i - n < a ? l.css({
+                                left: a
+                            }) : 0 < a ? l.css({
+                                left: 0
+                            }) : a <= i - n && l.css({
+                                left: i - n
+                            }),
+                            r();
+                            break;
+                        case "touchend":
+                            "touchstart" === d && (window.location.href = u)
+                        }
+                        d = e.type
+                    }),
+                    l.on("touchstart", "a", function(e) {
+                        u = e.currentTarget.href
+                    }),
+                    $(window).on("resize", function() {
+                        l.css({
+                            left: 0
+                        })
+                    }),
+                    $(".categoriesArrowLeft").on("click", function(e) {
+                        e.preventDefault(),
+                        t(1),
+                        setTimeout(n, 1)
+                    }),
+                    $(".categoriesArrowRight").on("click", function(e) {
+                        e.preventDefault(),
+                        t(-1),
+                        setTimeout(n, 1)
+                    }),
+                    r()
+                }
+                ,
+                e
+            }(),
+            $(function() {
+                categoriesBar.init()
+            })
+
         </script>
 
         <script>

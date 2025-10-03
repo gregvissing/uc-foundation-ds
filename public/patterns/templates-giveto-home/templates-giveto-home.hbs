@@ -1,0 +1,321 @@
+{{> molecules-skip-link }}
+{{> organisms-header }}
+
+<main id="main" role="main">
+    <section>
+        <div class="full-width">
+            <img class="full-width" src="https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/image/250416crStudent-Life0105.jpg" alt="University of Cincinnati students walking through campus">
+        </div>  
+    </section>
+
+    <style>
+
+        .categoriesBar {
+            position: relative;
+            overflow: hidden;
+            background: #f3f3f3;
+        }
+        
+        .categoriesBar .whereToGive {
+            width: 180px; /* 210px; */
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            border-right: solid 2px #fff;
+        }
+        
+        .categoriesBar .whereToGive > div {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }
+        
+        .categoriesBar .whereToGive h2 {
+            display: table-cell;
+            vertical-align: middle;
+            font-size: 22px;
+            text-align: center;
+        }
+        
+        .categoriesBar .whereToGive h2 a {
+            text-decoration: none;
+            border-bottom: none !important;
+            text-wrap: balance;
+            display: block;
+            font-weight: 500;
+        }
+        
+        .categoriesBar .categoriesListScrollContainer {
+            margin: 0 75px 0 257px;
+            height: 120px;
+            width: auto;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .categoriesBar ul.categoriesList {
+            overflow: hidden;
+            height: 120px;
+            width: 4000px;
+            position: relative;
+            left: 0;
+            padding: 0 !important;
+        }
+        
+        .categoriesBar ul.categoriesList > li {
+            float: left;
+            list-style: none;
+            height: 120px;
+            border-bottom: 1px solid #ececec;
+            transition: all .3s ease-in-out;
+        }
+        
+        .categoriesBar ul.categoriesList > li > div {
+            display: table;
+            height: 100%;
+            width: 100%;
+        }  
+        
+        .categoriesBar ul.categoriesList > li a {
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+            padding: 0 20px;
+            color: var(--color-brand-black) !important;
+            text-decoration: none;
+            position: relative;
+            transition: all .3s ease-in-out;
+            border-bottom: none !important;
+        }  
+        
+        .categoriesBar ul.categoriesList > li a span.icon {
+            top: 40px;
+            width: 40px;
+            height: 40px;
+            vertical-align: middle;
+            font-size: 40px;
+            text-align: center;
+            margin-right: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .categoriesBar ul.categoriesList > li a span.text {
+            font-weight: 400;
+        }
+        
+        .categoriesBar ul.categoriesList > li a:hover {
+            background: var(--color-white);
+        }
+        
+        .categoriesBar .categoriesArrowLeft.disabled {
+            background-position: 26px 45px !important;
+        }
+
+        .categoriesBar .categoriesArrowLeft {
+            left: 180px;
+            background-position: 26px 45px !important;
+            box-shadow: 7px 0px 10px -5px rgba(50, 50, 50, .08);
+        }
+        
+        .categoriesBar .categoriesArrowRight {
+            right: 0;
+            background-position: -155px 45px !important;
+            box-shadow: -1px 1px 14px 0px rgba(50, 50, 50, .08);
+        }
+        
+        .categoriesBar .categoriesArrow {
+            display: block;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 75px;
+            cursor: pointer;
+            background: rgba(0, 0, 0, .5);
+            background-image: url(https://foundation.uc.edu/image/sliderarrows.png);
+            background-repeat: no-repeat;
+        }
+        
+    </style>
+
+    <section>
+        <div class="categoriesBar">
+            <div class="whereToGive">
+                <div>
+                    <h2>
+                        <a href="/find-funds">
+                        What Matters Most to You?
+                        </a>
+                    </h2>
+                </div>
+            </div>
+            <div class="categoriesListScrollContainer">
+                <ul class="categoriesList" style="left: 0px;">
+                    <li class="arts">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/arts" data-track="Homepage What Matters Most To You?|Click|Arts">
+                                <span class="icon icon-cause-arts"></span>
+                                <span class="text">Arts</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="athletics">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/athletics" data-track="Homepage What Matters Most To You?|Click|Athletics">
+                                <span class="icon icon-cause-athletics"></span>
+                                <span class="text">Athletics</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="business">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/business" data-track="Homepage What Matters Most To You?|Click|Business">
+                                <span class="icon icon-cause-business"></span>
+                                <span class="text">Business</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="community">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/community" data-track="Homepage What Matters Most To You?|Click|Community">
+                                <span class="icon icon-cause-community"></span>
+                                <span class="text">Community</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="environment">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/environment" data-track="Homepage What Matters Most To You?|Click|Environment">
+                                <span class="icon icon-cause-environment"></span>
+                                <span class="text">Environment</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="faculty-support">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/faculty-support" data-track="Homepage What Matters Most To You?|Click|Faculty Support">
+                                <span class="icon icon-cause-faculty-support"></span>
+                                <span class="text">Faculty Support</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="global-impact">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/global-impact" data-track="Homepage What Matters Most To You?|Click|Global Impact">
+                                <span class="icon icon-cause-global-impact"></span>
+                                <span class="text">Global Impact</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="health">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/health" data-track="Homepage What Matters Most To You?|Click|Health">
+                                <span class="icon icon-cause-health"></span>
+                                <span class="text">Health</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="humanities">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/humanities" data-track="Homepage What Matters Most To You?|Click|Humanities">
+                                <span class="icon icon-cause-humanities"></span>
+                                <span class="text">Humanities</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="law">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/law" data-track="Homepage What Matters Most To You?|Click|Law">
+                                <span class="icon icon-cause-law"></span>
+                                <span class="text">Law</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="research">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/research" data-track="Homepage What Matters Most To You?|Click|Research">
+                                <span class="icon icon-cause-research"></span>
+                                <span class="text">Research</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="sciences">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/sciences" data-track="Homepage What Matters Most To You?|Click|Sciences">
+                                <span class="icon icon-cause-sciences"></span>
+                                <span class="text">Sciences</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="student-support">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/student-support" data-track="Homepage What Matters Most To You?|Click|Student Support">
+                                <span class="icon icon-cause-student-support"></span>
+                                <span class="text">Student Support</span>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="technology-innovation">
+                        <div>
+                            <a href="https://giveto.ucla.edu/cause/technology" data-track="Homepage What Matters Most To You?|Click|Technology">
+                                <span class="icon icon-cause-technology-innovation"></span>
+                                <span class="text">Technology</span>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div><!-- categoriesListScrollContainer -->
+            <div class="categoriesArrow categoriesArrowLeft disabled"></div>
+            <div class="categoriesArrow categoriesArrowRight"></div>
+        </div>
+    </section>
+
+    <section class="py-3">
+        <div class="l-container flow text-center">
+            <h2>Why Give?</h2>
+            <p class="balance">Supporting the University Cincinnati is one of the best investments you can make. Every gift, no matter what the size, contributes to a circle of support. The cumulative impact of giving goes beyond the borders of the campus, into the local community and out into the world.</p>
+            <a href="#" class="btn-link">Learn Why</a>
+        </div>
+    </section>
+
+    <section class="sub-footer black-bg py-2">
+        <div class="l-container flex flex-row gap-1">
+            <div class="one-third text-center flex flex-column flex-between flow p-1">
+                <div class="flow">
+                <h3>FAQ</h3>
+                <p>Still have questions?</p>
+                <p class="balance">Check out our FAQ for assistance.</p>
+                </div>
+                <p><a href="#" class="btn-link">View the FAQ</a></p>
+            </div>
+            <div class="one-third text-center flex flex-column flex-between flow p-1">
+                <div class="flow">
+                    <h3>Contact Us</h3>
+                    <p class="balance">Can't find the fund you're looking for or have other questions?</p>
+                    <p>
+                        <a href="mailto:foundpub@foundation.uc.edu">foundpub@foundation.uc.edu</a>
+                        <a href="tel:5135566781">513-556-6781 </a>
+                    </p>
+                </div>
+                <p><a href="#" class="btn-link">Contact Details</a></p>
+            </div>
+            <div class="one-third text-center flex flex-column flex-between flow p-1">
+                <div class="flow">
+                    <h3>More Ways to Give</h3>
+                    <ul>
+                        <li><a href="">Give Online</a></li>
+                        <li><a href="">Faculty/Staff Giving</a></li>
+                        <li><a href="">Matching Gifts</a></li>
+                        <li><a href="">Cryptocurrency</a></li>
+                        <li><a href="">Legacy Giving</a></li>
+                        <li><a href="">Stock Transfer</a></li>
+                    </ul>
+                </div>          	
+                <p><a href="#" class="btn-link">Learn More</a></p>
+            </div>
+        </div>
+    </section>
+</main>
+
+{{> molecules-back-to-top }}
+{{> organisms-footer }}

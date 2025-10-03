@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1759506854836" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1759506854836" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1759509075517" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1759509075517" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -1432,6 +1432,103 @@
 
             getRndInteger(0, 3);
 
+            /* ************************
+                CATEGORIES BAR
+            ************************* */
+            categoriesBar = function() {
+                var e = {}
+                , c = $(".categoriesListScrollContainer")
+                , l = c.find(".categoriesList")
+                , d = ""
+                , u = "";
+                return e.init = function() {
+                    function o() {
+                        var e = 0;
+                        return l.find(">li").each(function() {
+                            e += $(this).outerWidth(!0)
+                        }),
+                        e
+                    }
+                    $(window).bind("touchmove", function(e) {
+                        0
+                    });
+                    var s = 0;
+                    function t(e) {
+                        var t = o()
+                        , n = c.width()
+                        , e = parseInt(l.css("left")) + e * (n - l.find(">li").width());
+                        e <= 0 && n - t < e ? l.stop().animate({
+                            left: e
+                        }) : 0 < e ? l.stop().animate({
+                            left: 0
+                        }) : e <= n - t && (t = n - t,
+                        l.stop().animate({
+                            left: t
+                        })),
+                        setTimeout(r, 50),
+                        setTimeout(r, 500)
+                    }
+                    function n() {
+                        document.selection && document.selection.empty ? document.selection.empty() : window.getSelection && window.getSelection().removeAllRanges()
+                    }
+                    function r() {
+                        var e = o()
+                        , t = parseInt(l.css("left"));
+                        $(".categoriesArrowLeft, .categoriesArrowRight").removeClass("disabled"),
+                        0 === t ? $(".categoriesArrowLeft").addClass("disabled") : t == c.width() - e && $(".categoriesArrowRight").addClass("disabled")
+                    }
+                    l.on("touchstart touchmove touchend", function(e) {
+                        e.preventDefault();
+                        var t = e.originalEvent.touches[0] || e.originalEvent.changedTouches[0]
+                        , n = o();
+                        switch (e.type) {
+                        case "touchstart":
+                            s = parseInt(t.clientX) - parseInt(l.css("left"));
+                            break;
+                        case "touchmove":
+                            var i = c.width()
+                            , a = parseInt(t.clientX) - s;
+                            a <= 0 && i - n < a ? l.css({
+                                left: a
+                            }) : 0 < a ? l.css({
+                                left: 0
+                            }) : a <= i - n && l.css({
+                                left: i - n
+                            }),
+                            r();
+                            break;
+                        case "touchend":
+                            "touchstart" === d && (window.location.href = u)
+                        }
+                        d = e.type
+                    }),
+                    l.on("touchstart", "a", function(e) {
+                        u = e.currentTarget.href
+                    }),
+                    $(window).on("resize", function() {
+                        l.css({
+                            left: 0
+                        })
+                    }),
+                    $(".categoriesArrowLeft").on("click", function(e) {
+                        e.preventDefault(),
+                        t(1),
+                        setTimeout(n, 1)
+                    }),
+                    $(".categoriesArrowRight").on("click", function(e) {
+                        e.preventDefault(),
+                        t(-1),
+                        setTimeout(n, 1)
+                    }),
+                    r()
+                }
+                ,
+                e
+            }(),
+            $(function() {
+                categoriesBar.init()
+            })
+
         </script>
 
         <script>
@@ -1481,10 +1578,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1759506854836">
+<script id="pl-js-polyfill-insert-1759509075517">
   (function() {
     if (self != top) {
-      var cb = '1759506854836';
+      var cb = '1759509075517';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -1497,7 +1594,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1759506854836" nomodule>
+<script id="pl-js-insert-1759509075517" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
