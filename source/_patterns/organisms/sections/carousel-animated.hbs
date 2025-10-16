@@ -1,0 +1,191 @@
+<style>
+
+.carousel__button {
+	z-index: 2;  
+}
+  
+.story .story-image:after {
+  	height: 100%;
+	/* background: unset !important;  */
+}
+  
+@media (max-width: 1130px) {
+  	section#hero-carousel > .hero-text {
+      	padding: 0 3.5rem;
+  	}
+}
+  
+@media (min-width: 600px) {
+  
+	.story .story-image img {
+    	margin-top: -120px;
+	}
+  
+}
+  
+@media (max-width: 599px) {
+  	.flex.flex-center.flex-column.align-start.flow.l-container {
+  		text-align: center;
+  	}
+  
+  	.flex.flex-center.flex-column.align-start.flow.l-container > a {
+  		margin-left: auto;
+      	margin-right: auto;
+      	margin-bottom: 1em !important;
+  	}
+  
+  	h2.white {
+    	width: 100%;
+      	text-align: center;
+      	margin-top: 1em !important;
+      	margin-bottom: 0em !important;
+  	}
+
+  	#carousel {
+  		aspect-ratio: 445 / 200 !important;
+  	}
+  
+  	section#hero-carousel > .hero-text {
+      	padding: 0 4rem;
+  	}
+}
+  
+
+  
+</style>
+
+<section id="hero-carousel" class="p-0 relative" style="background-image: url(https://foundation.uc.edu/image/home-page-1.jpg); background-size; cover; background-repeat: no-repeat;">
+  	<div class="hero-text flex flex-center flex-column align-start flow l-container" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; z-index: 10;">
+		<h2 class="white">Breaking through to<br>create what’s possible.</h2>
+        <a href="https://issuu.com/uc_foundation/docs/uc_foundation_fy25_annual_report_50_years?fr=xKAE9_zMzM0osQ9jbGMofbiYcbkEmwdwE8MEKl2pa6P5rOnPbGMgmHMgWBhz-ayY7bv5qOzpQAQ" target="_blank" class="btn-link">Read Annual Report</a>
+    </div>
+    <div id="article" class="story relative">      	
+     	<div class="story-image">
+          	<div id="carousel" class="carousel" aria-roledescription="carousel" aria-label="Accessible Carousel" style="aspect-ratio: 445 / 139;"> 
+    			<div id="carousel__slides" class="carousel__slides"></div>
+              		<a href="#" class="carousel__button carousel__button--prev" aria-label="Previous slide"></a>
+                	<a href="#" class="carousel__button carousel__button--next" aria-label="Next slide"></a>
+            	</div>          
+        	</div>      
+      		<script>
+      	
+          	document.addEventListener("DOMContentLoaded", function () {
+                const images = [
+                  'https://foundation.uc.edu/image/home-page-1.jpg', 
+                  'https://foundation.uc.edu/image/home-page-2.jpg', 
+                  'https://foundation.uc.edu/image/home-page-3.jpg',  
+                  'https://foundation.uc.edu/image/home-page-4.jpg',  
+                  'https://foundation.uc.edu/image/home-page-5.jpg',  
+                  'https://foundation.uc.edu/image/home-page-6.jpg', 
+                  'https://foundation.uc.edu/image/home-page-7.jpg', 
+                  'https://foundation.uc.edu/image/home-page-8.jpg' 
+                ];
+
+                const shuffle = array => {
+                  	for (let i = array.length - 1; i > 0; i--) {
+                    	const j = Math.floor(Math.random() * (i + 1));
+                    	const temp = array[i];
+                    	array[i] = array[j];
+                   		array[j] = temp;
+                  	}
+                }
+
+                // const shuffledArray = shuffle(images); 
+
+                const container = document.getElementById("carousel__slides");
+
+                for (let i = 0; i < images.length; i++) {
+                  	const newDiv = document.createElement("div");
+                  	newDiv.classList.add("carousel__slide");
+                  	newDiv.setAttribute("aria-roledescription", "slide");
+                  	let slideNumber = i + 1;
+                  	newDiv.setAttribute("aria-label", slideNumber + " of 4");
+
+                  	const img = document.createElement('img');
+                  	img.src = images[i];
+                  	newDiv.appendChild(img);
+                  	container.appendChild(newDiv);
+                }
+
+                const carousel = document.querySelector(".carousel__slides");
+                const slides = document.querySelectorAll(".carousel__slide");
+                const prevButton = document.querySelector(".carousel__button--prev");
+                const nextButton = document.querySelector(".carousel__button--next");
+                let currentSlide = 0;
+              
+              	let currentIndex = 0;
+                const slideInterval = 10000; // Time in milliseconds for each slide (e.g., 3 seconds)
+                let autoRotateInterval;
+
+                function updateSlide(position) {
+                  	carousel.style.transform = `translateX(-${position * 100}%)`;
+                  	carousel.setAttribute(
+                    	"aria-label",
+                    	`Slide ${position + 1} of ${slides.length}`
+                  	);
+                }
+
+                function showNextSlide() {
+                  	currentSlide = (currentSlide + 1) % slides.length;
+                  	updateSlide(currentSlide);
+                }
+
+                function showPrevSlide() {
+                  	currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                  	updateSlide(currentSlide);
+                }
+              
+              	// Start auto-rotation
+                function startAutoRotate() {
+                    autoRotateInterval = setInterval(showNextSlide, slideInterval);
+                }
+
+                // Stop auto-rotation (e.g., when a user interacts with the carousel)
+                function stopAutoRotate() {
+                    clearInterval(autoRotateInterval);
+                }
+
+                // nextButton.addEventListener("click", showNextSlide);
+                // prevButton.addEventListener("click", showPrevSlide);
+              
+                // Event listeners for navigation buttons
+                nextButton.addEventListener('click', () => {
+                    stopAutoRotate(); // Stop auto-rotation on manual interaction
+                    showNextSlide();
+                    startAutoRotate(); // Restart auto-rotation after a delay if desired
+                });
+
+                prevButton.addEventListener('click', () => {
+                    stopAutoRotate(); // Stop auto-rotation on manual interaction
+                    showPrevSlide();
+                    startAutoRotate(); // Restart auto-rotation after a delay if desired
+                });
+
+                document.addEventListener("keydown", function (event) {
+                  	event.preventDefault();
+                  	if (event.key === "ArrowRight") {
+                    	showNextSlide();
+                  	} else if (event.key === "ArrowLeft") {
+                    	showPrevSlide();
+                  	}
+                });
+
+                slides.forEach((slide, index) => {
+                  	slide.setAttribute("tabindex", index === 0 ? 0 : -1);
+                });
+
+                carousel.addEventListener("focusin", function (event) {
+                    event.preventDefault();
+                    const focusIndex = Array.from(slides).indexOf(document.activeElement);
+                    if (focusIndex !== -1) {
+                        currentSlide = focusIndex;
+                        updateSlide(currentSlide);
+                    }
+                });
+              
+              	startAutoRotate(); // Start auto-rotation when the page loads
+        	});
+      	
+      		</script>
+  		</div>
+</section>

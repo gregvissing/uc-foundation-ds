@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1760621594850" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1760621594850" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1760621861279" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1760621861279" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -27,7 +27,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1760621594850" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1760621861279" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -11455,7 +11455,386 @@
 			</div><!--end pl-c-category__description-->
 			
 		</div><!--end pl-c-category-->
-					<div id="organisms-stacked-block-section" class="pl-c-pattern">
+					<div id="organisms-carousel-animated" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-sections-carousel-animated&#x2F;organisms-sections-carousel-animated.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-carousel-animated" title="Link to Pattern">
+						Carousel Animated
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-carousel-animated" data-patternpartial="organisms-carousel-animated" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-carousel-animated">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<style>
+
+.carousel__button {
+	z-index: 2;  
+}
+  
+.story .story-image:after {
+  	height: 100%;
+	/* background: unset !important;  */
+}
+  
+@media (max-width: 1130px) {
+  	section#hero-carousel > .hero-text {
+      	padding: 0 3.5rem;
+  	}
+}
+  
+@media (min-width: 600px) {
+  
+	.story .story-image img {
+    	margin-top: -120px;
+	}
+  
+}
+  
+@media (max-width: 599px) {
+  	.flex.flex-center.flex-column.align-start.flow.l-container {
+  		text-align: center;
+  	}
+  
+  	.flex.flex-center.flex-column.align-start.flow.l-container > a {
+  		margin-left: auto;
+      	margin-right: auto;
+      	margin-bottom: 1em !important;
+  	}
+  
+  	h2.white {
+    	width: 100%;
+      	text-align: center;
+      	margin-top: 1em !important;
+      	margin-bottom: 0em !important;
+  	}
+
+  	#carousel {
+  		aspect-ratio: 445 / 200 !important;
+  	}
+  
+  	section#hero-carousel > .hero-text {
+      	padding: 0 4rem;
+  	}
+}
+  
+
+  
+</style>
+
+<section id="hero-carousel" class="p-0 relative" style="background-image: url(https://foundation.uc.edu/image/home-page-1.jpg); background-size; cover; background-repeat: no-repeat;">
+  	<div class="hero-text flex flex-center flex-column align-start flow l-container" style="position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; z-index: 10;">
+		<h2 class="white">Breaking through to<br>create what’s possible.</h2>
+        <a href="https://issuu.com/uc_foundation/docs/uc_foundation_fy25_annual_report_50_years?fr=xKAE9_zMzM0osQ9jbGMofbiYcbkEmwdwE8MEKl2pa6P5rOnPbGMgmHMgWBhz-ayY7bv5qOzpQAQ" target="_blank" class="btn-link">Read Annual Report</a>
+    </div>
+    <div id="article" class="story relative">      	
+     	<div class="story-image">
+          	<div id="carousel" class="carousel" aria-roledescription="carousel" aria-label="Accessible Carousel" style="aspect-ratio: 445 / 139;"> 
+    			<div id="carousel__slides" class="carousel__slides"></div>
+              		<a href="#" class="carousel__button carousel__button--prev" aria-label="Previous slide"></a>
+                	<a href="#" class="carousel__button carousel__button--next" aria-label="Next slide"></a>
+            	</div>          
+        	</div>      
+      		<script>
+      	
+          	document.addEventListener("DOMContentLoaded", function () {
+                const images = [
+                  'https://foundation.uc.edu/image/home-page-1.jpg', 
+                  'https://foundation.uc.edu/image/home-page-2.jpg', 
+                  'https://foundation.uc.edu/image/home-page-3.jpg',  
+                  'https://foundation.uc.edu/image/home-page-4.jpg',  
+                  'https://foundation.uc.edu/image/home-page-5.jpg',  
+                  'https://foundation.uc.edu/image/home-page-6.jpg', 
+                  'https://foundation.uc.edu/image/home-page-7.jpg', 
+                  'https://foundation.uc.edu/image/home-page-8.jpg' 
+                ];
+
+                const shuffle = array => {
+                  	for (let i = array.length - 1; i > 0; i--) {
+                    	const j = Math.floor(Math.random() * (i + 1));
+                    	const temp = array[i];
+                    	array[i] = array[j];
+                   		array[j] = temp;
+                  	}
+                }
+
+                // const shuffledArray = shuffle(images); 
+
+                const container = document.getElementById("carousel__slides");
+
+                for (let i = 0; i < images.length; i++) {
+                  	const newDiv = document.createElement("div");
+                  	newDiv.classList.add("carousel__slide");
+                  	newDiv.setAttribute("aria-roledescription", "slide");
+                  	let slideNumber = i + 1;
+                  	newDiv.setAttribute("aria-label", slideNumber + " of 4");
+
+                  	const img = document.createElement('img');
+                  	img.src = images[i];
+                  	newDiv.appendChild(img);
+                  	container.appendChild(newDiv);
+                }
+
+                const carousel = document.querySelector(".carousel__slides");
+                const slides = document.querySelectorAll(".carousel__slide");
+                const prevButton = document.querySelector(".carousel__button--prev");
+                const nextButton = document.querySelector(".carousel__button--next");
+                let currentSlide = 0;
+              
+              	let currentIndex = 0;
+                const slideInterval = 10000; // Time in milliseconds for each slide (e.g., 3 seconds)
+                let autoRotateInterval;
+
+                function updateSlide(position) {
+                  	carousel.style.transform = `translateX(-${position * 100}%)`;
+                  	carousel.setAttribute(
+                    	"aria-label",
+                    	`Slide ${position + 1} of ${slides.length}`
+                  	);
+                }
+
+                function showNextSlide() {
+                  	currentSlide = (currentSlide + 1) % slides.length;
+                  	updateSlide(currentSlide);
+                }
+
+                function showPrevSlide() {
+                  	currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                  	updateSlide(currentSlide);
+                }
+              
+              	// Start auto-rotation
+                function startAutoRotate() {
+                    autoRotateInterval = setInterval(showNextSlide, slideInterval);
+                }
+
+                // Stop auto-rotation (e.g., when a user interacts with the carousel)
+                function stopAutoRotate() {
+                    clearInterval(autoRotateInterval);
+                }
+
+                // nextButton.addEventListener("click", showNextSlide);
+                // prevButton.addEventListener("click", showPrevSlide);
+              
+                // Event listeners for navigation buttons
+                nextButton.addEventListener('click', () => {
+                    stopAutoRotate(); // Stop auto-rotation on manual interaction
+                    showNextSlide();
+                    startAutoRotate(); // Restart auto-rotation after a delay if desired
+                });
+
+                prevButton.addEventListener('click', () => {
+                    stopAutoRotate(); // Stop auto-rotation on manual interaction
+                    showPrevSlide();
+                    startAutoRotate(); // Restart auto-rotation after a delay if desired
+                });
+
+                document.addEventListener("keydown", function (event) {
+                  	event.preventDefault();
+                  	if (event.key === "ArrowRight") {
+                    	showNextSlide();
+                  	} else if (event.key === "ArrowLeft") {
+                    	showPrevSlide();
+                  	}
+                });
+
+                slides.forEach((slide, index) => {
+                  	slide.setAttribute("tabindex", index === 0 ? 0 : -1);
+                });
+
+                carousel.addEventListener("focusin", function (event) {
+                    event.preventDefault();
+                    const focusIndex = Array.from(slides).indexOf(document.activeElement);
+                    if (focusIndex !== -1) {
+                        currentSlide = focusIndex;
+                        updateSlide(currentSlide);
+                    }
+                });
+              
+              	startAutoRotate(); // Start auto-rotation when the page loads
+        	});
+      	
+      		</script>
+  		</div>
+</section>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-carousel-animated" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"sections"},"patternExtension":"hbs","patternName":"Carousel Animated","patternPartial":"organisms-carousel-animated","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-carousel-not-animated" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-sections-carousel-not-animated&#x2F;organisms-sections-carousel-not-animated.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-carousel-not-animated" title="Link to Pattern">
+						Carousel Not Animated
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-carousel-not-animated" data-patternpartial="organisms-carousel-not-animated" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-carousel-not-animated">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<section class="p-0">
+    <div id="article" class="story">
+      	
+     	<div class="story-image">
+          	<div id="carousel" class="carousel" aria-roledescription="carousel" aria-label="Accessible Carousel" style="aspect-ratio: 445 / 139;">
+                <div id="carousel__slides" class="carousel__slides"></div>
+              	<a href="#" class="carousel__button carousel__button--prev" aria-label="Previous slide"></a>
+                <a href="#" class="carousel__button carousel__button--next" aria-label="Next slide"></a>
+            </div>          
+        </div>      
+      	<script>
+      	
+          	document.addEventListener("DOMContentLoaded", function () {
+                const images = [
+                  'https://foundation.uc.edu/image/231129ckMemory028.jpg',
+                  'https://foundation.uc.edu/image/Stroke-Patient-Journey-060.jpg',
+                  'https://foundation.uc.edu/image/CG-Photos-0704-X3.jpg', 
+                  'https://foundation.uc.edu/image/DDC-ALS-Clinic-92-X3.jpg', 
+                  'https://foundation.uc.edu/image/7A8A0002-X3.jpg', 
+                  'https://foundation.uc.edu/image/Dr.-Ngwenya-with-patient.jpg',
+                  'https://foundation.uc.edu/image/Stroke-Research-Meeting-26-X3.jpg',
+                  'https://foundation.uc.edu/image/Cheng-0413.jpg',
+                  'https://foundation.uc.edu/image/Adogwa-OR-31.jpg'
+                ];
+
+                const shuffle = array => {
+                  	for (let i = array.length - 1; i > 0; i--) {
+                    	const j = Math.floor(Math.random() * (i + 1));
+                    	const temp = array[i];
+                    	array[i] = array[j];
+                   		array[j] = temp;
+                  	}
+                }
+
+                const shuffledArray = shuffle(images); 
+
+                const container = document.getElementById("carousel__slides");
+
+                for (let i = 0; i < images.length; i++) {
+                  	const newDiv = document.createElement("div");
+                  	newDiv.classList.add("carousel__slide");
+                  	newDiv.setAttribute("aria-roledescription", "slide");
+                  	let slideNumber = i + 1;
+                  	newDiv.setAttribute("aria-label", slideNumber + " of 4");
+
+                  	const img = document.createElement('img');
+                  	img.src = images[i];
+                  	newDiv.appendChild(img);
+                  	container.appendChild(newDiv);
+                }
+
+                const carousel = document.querySelector(".carousel__slides");
+                const slides = document.querySelectorAll(".carousel__slide");
+                const prevButton = document.querySelector(".carousel__button--prev");
+                const nextButton = document.querySelector(".carousel__button--next");
+                let currentSlide = 0;            
+
+                function updateSlide(position) {
+                  	carousel.style.transform = `translateX(-${position * 100}%)`;
+                  	carousel.setAttribute(
+                    	"aria-label",
+                    	`Slide ${position + 1} of ${slides.length}`
+                  	);
+                }
+
+                function showNextSlide() {
+                  	currentSlide = (currentSlide + 1) % slides.length;
+                  	updateSlide(currentSlide);
+                }
+
+                function showPrevSlide() {
+                  	currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+                  	updateSlide(currentSlide);
+                }
+
+                nextButton.addEventListener("click", showNextSlide);
+                prevButton.addEventListener("click", showPrevSlide);
+
+                document.addEventListener("keydown", function (event) {
+                  	event.preventDefault();
+                  	if (event.key === "ArrowRight") {
+                    	showNextSlide();
+                  	} else if (event.key === "ArrowLeft") {
+                    	showPrevSlide();
+                  	}
+                });
+
+                slides.forEach((slide, index) => {
+                  	slide.setAttribute("tabindex", index === 0 ? 0 : -1);
+                });
+
+                carousel.addEventListener("focusin", function (event) {
+                    event.preventDefault();
+                    const focusIndex = Array.from(slides).indexOf(document.activeElement);
+                    if (focusIndex !== -1) {
+                        currentSlide = focusIndex;
+                        updateSlide(currentSlide);
+                    }
+                });
+        	});
+      	
+      	</script>      
+  	</div>
+</section>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-carousel-not-animated" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"sections"},"patternExtension":"hbs","patternName":"Carousel Not Animated","patternPartial":"organisms-carousel-not-animated","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-stacked-block-section" class="pl-c-pattern">
 		
 			<div class="pl-c-pattern__header">
 		
@@ -13264,10 +13643,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1760621594850">
+<script id="pl-js-polyfill-insert-1760621861279">
   (function() {
     if (self != top) {
-      var cb = '1760621594850';
+      var cb = '1760621861279';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -13280,7 +13659,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1760621594850" nomodule>
+<script id="pl-js-insert-1760621861279" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
