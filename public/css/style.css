@@ -2550,7 +2550,6 @@ table caption {
 	padding: 0;
 	/* border-bottom: 1px solid var(--color-ltGray); */
 	width: 100%;
-
 	justify-content: space-between;
 }
 
@@ -2664,6 +2663,7 @@ table caption {
 }
 
 /* As we cannot replace the numbers with variables or calls to element properties, the number of this selector parts is our tab count limit */
+/*
 .tabbed [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label,
 .tabbed [type="radio"]:nth-of-type(2):checked ~ .tabs .tab:nth-of-type(2) label,
 .tabbed [type="radio"]:nth-of-type(3):checked ~ .tabs .tab:nth-of-type(3) label,
@@ -2671,7 +2671,6 @@ table caption {
 .tabbed [type="radio"]:nth-of-type(5):checked ~ .tabs .tab:nth-of-type(5) label,
 .tabbed [type="radio"]:nth-of-type(6):checked ~ .tabs .tab:nth-of-type(6) label {
 	border-bottom-color: var(--color-white);
-	/* border-top-color: var(--color-brand-black); */
 	background: var(--color-white);
 	color: #222;
 	transition: all 0.3s;
@@ -2685,7 +2684,6 @@ table caption {
 .tabbed [type="radio"]:nth-of-type(6):checked ~ .tab-content:nth-of-type(6) {
 	opacity: 1;
 	height: auto;
-	/* transition: all 0.3s; */
 }
 
 .tabbed [type="radio"]:nth-of-type(1):checked ~ .tab-content:nth-of-type(1) h4,
@@ -2705,7 +2703,6 @@ table caption {
 .tabbed [type="radio"]:nth-of-type(6):not(:checked) ~ .tab-content:nth-of-type(6) {
 	opacity: 0;
 	height: 0;
-	/* transition: all 0.3s; */
 	padding: 0;
 	border-bottom: none;
 	display: none;
@@ -2718,7 +2715,7 @@ table caption {
 .tabbed [type="radio"]:nth-of-type(5):not(:checked) ~ .tab-content:nth-of-type(5) h4,
 .tabbed [type="radio"]:nth-of-type(6):not(:checked) ~ .tab-content:nth-of-type(6) h4 {
 	margin: 0;
-}
+} */
 
 .tabbed .tab-content ul,
 .tabbed .tab-content ol {
