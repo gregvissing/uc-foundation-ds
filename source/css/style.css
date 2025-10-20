@@ -7686,30 +7686,74 @@ div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMark
 }
    
 /* BILLING INFORMATION */
-.BBFormTable.DonationCaptureFormTable.pnlDonor > tr {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr,
+tbody.BBFormTable.DonationCaptureFormTable > tr {
    	display: flex;
    	width: 100%;
    	position: relative;
 }  
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption,
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldCaption.DonationCaptureFieldCaption {
    	display: flex;
     align-items: center;
    	width: 25%;
 }
+
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldCaption.DonationCaptureFieldCaption > label {
+	display: block;
+	width: 100%;
+}
    
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
-.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span,
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldCaption.DonationCaptureFieldCaption > label {
    	margin-left: 15px;
  	display: inline-block;
    	height: unset;
 }
    
-.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell {
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldControlCell.DonationCaptureFieldControlCell,
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldControlCell.DonationCaptureFieldControlCell,
+tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell {
    	display: block;
    	width: 75%;
 } 
-   
+
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldControlCell.DonationCaptureFieldControlCell input.BBFormTextbox.DonationCaptureTextboxNarrow {
+	width: 50%;
+}
+
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldControlCell.DonationCaptureFieldControlCell a.BBLinkHelpIcon {
+	display: inline-block;
+	border-bottom: none !important;
+}
+
+tbody.BBFormTable.DonationCaptureFormTable td.BBFieldControlCell.DonationCaptureFieldControlCell {
+	display: flex;
+	align-items: center;
+}
+
+tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table {
+	margin-left: 0 !important;
+}
+
+tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table > tbody > tr {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table > tbody > tr > td {
+	display: flex;
+	flex-grow: 1;	
+}
+
+tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonationCaptureFieldControlCell > table > tbody > tr > td label[id*="_DonationCapture1_lblTxtYear"] {
+	line-height: 46px;
+	padding: 0 5px;
+}
+
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker,
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td[id*="_tdreq_stateUS"] > span {
    	position: absolute;
