@@ -548,10 +548,23 @@
     </div>
     <div class="row">
         <fieldset class="form-group" id="billingInfo">
-            <!--<legend>
-                <h3>Billing Information</h3>
-                </legend>-->
             <label class="">Billing Information</label>
+            <div class="flex gap-1">
+                <div class="formrow form-group required fname-input flex flex-column flex-between one-half">
+                    <label for="personalFirstName" class="labelText">First name (Required)</label>
+                    <div class="relative req-field">
+                        <input type="text" class="firstName form-control" id="personalFirstName" maxlength="30" placeholder="First name" required="">
+                        <span class="req">*</span>
+                    </div>
+                </div>
+                <div class="formrow form-group required lname-input flex flex-column flex-between one-half">
+                    <label for="personalLastName" class="labelText">Last name (Required)</label>
+                    <div class="relative req-field">
+                        <input type="text" class="lastName form-control" id="personalLastName" maxlength="60" placeholder="Last name" required="">
+                        <span class="req">*</span>
+                    </div>
+                </div>
+            </div>
             <div class="row">
                 <div class="g-1-2 remove-bottom">
                     <label for="personalTitle" class="adfFormLabel">Title</label>
