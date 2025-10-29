@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1760973840469" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1760973840469" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1761739419114" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1761739419114" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -27,7 +27,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1760973840469" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1761739419114" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -5109,6 +5109,1066 @@
 		
 			<script type="text/json" id="pl-pattern-data-organisms-event-registration-classic-confirmation" class="pl-js-pattern-data">
 			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":true,"patternLineagesR":[{"lineagePattern":"templates-event-registration-classic-confirmation","lineagePath":"../../patterns/templates-event-registration-classic-confirmation/templates-event-registration-classic-confirmation.rendered.html"}],"lineageR":[{"lineagePattern":"templates-event-registration-classic-confirmation","lineagePath":"../../patterns/templates-event-registration-classic-confirmation/templates-event-registration-classic-confirmation.rendered.html"}],"patternLineageEExists":true,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"BBIS"},"patternExtension":"hbs","patternName":"Event Registration Classic Confirmation","patternPartial":"organisms-event-registration-classic-confirmation","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
+			</script>
+		
+		</div><!--end pl-c-pattern-->
+		<div id="organisms-main-giving-form" class="pl-c-pattern">
+		
+			<div class="pl-c-pattern__header">
+		
+				<h3 class="pl-c-pattern__title">
+		
+					<a href="../../patterns/organisms-BBIS-main-giving-form&#x2F;organisms-BBIS-main-giving-form.rendered.html" class="pl-c-pattern__title-link patternLink" data-patternpartial="organisms-main-giving-form" title="Link to Pattern">
+						Main Giving Form
+		
+		
+					</a><!--end pl-c-pattern__title-link-->
+		
+				</h3><!--end pl-c-pattern__title-->
+		
+				<button class="pl-c-pattern__extra-toggle pl-js-pattern-extra-toggle" id="pl-pattern-extra-toggle-organisms-main-giving-form" data-patternpartial="organisms-main-giving-form" title="View Pattern Info" type="button">
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--expand">Expand</span>
+					<span class="pl-c-pattern__extra-toggle-text pl-c-pattern__extra-toggle-text--collapse">Collapse</span>
+						<svg viewBox="0 0 16 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--expand">
+							<path fill="currentColor" d="M9 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+						</svg>
+		
+						<svg viewBox="0 0 20 16" width="20" height="20" class="pl-c-pattern__toggle-icon pl-c-pattern__toggle-icon--collapse">
+							<path fill="currentColor" d="M13 11.5l1.5 1.5 5-5-5-5-1.5 1.5 3.5 3.5z"></path>
+							<path fill="currentColor" d="M7 4.5l-1.5-1.5-5 5 5 5 1.5-1.5-3.5-3.5z"></path>
+							<path fill="currentColor" d="M10.958 2.352l1.085 0.296-3 11-1.085-0.296 3-11z"></path>
+						</svg>
+				</button>
+		
+			</div><!--end pl-c-pattern__header-->
+		
+			<div class="pl-c-pattern__extra pl-js-pattern-extra" id="pl-pattern-extra-organisms-main-giving-form">
+		    </div><!--end pl-c-pattern__extra-->
+		
+			<div class="pl-js-pattern-example">
+			<div class="form-width" id="donationForm">
+    <div class="row">
+        <div id="queryLoader" style="display: none;">
+            <i aria-hidden="true" class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <span>Funds Loading ...</span>
+        </div>
+        <fieldset class="form-group fundSelect" style="">
+            <label>Gift Details</label>
+            <!--<a id="help-link" class="block-help-link">Help <i class="fa fa-chevron-down"></i></a>
+                <div id="help-content" style="display: none;">
+                        <p>Directions:</p>
+                        <ol style="margin: 0 1.25rem;">
+                            <li>Select Area to support. If College/Units is selected, choose College/Unit to support</li>
+                            <li>Select Fund to support. Selected fund will be added to GIFT SUMMARY section where donation amount can be added.</li>
+                            <li>Select Gift Type</li>
+                    </ol>
+                </div>-->
+            <div>
+                <label for="areaSupportSelect" class="adfFormLabel">I Want to Support</label>
+                <span class="marker"></span>
+                <div class="select">
+                    <select id="areaSupportSelect">
+                        <option disabled="" selected="" value="First select">
+                            Select an Area to Support
+                        </option>
+                        <option value="The UC Fund" class="des-cat cat-0">The UC Fund</option>
+                        <option value="Scholarships" class="des-cat cat-1">Scholarships</option>
+                        <option value="UC Health" class="des-cat cat-2">UC Health</option>
+                        <option value="Colleges/Units" class="des-cat cat-3">Colleges/Units</option>
+                    </select>
+                </div>
+            </div>
+            <div class="collegeUnitToggle" style="display: none;">
+                <label for="collegeUnitSelect" class="adfFormLabel">Select a College/Unit to Support</label>
+                <span class="marker"></span>
+                <div class="select">
+                    <select id="collegeUnitSelect" disabled="">
+                        <option disabled="" selected="" value="First select">
+                            Select a College/Unit to Support
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="fundToggle" style="display: none;">
+                <label for="fundSelect" class="adfFormLabel">Select a Fund to Support</label>
+                <span class="marker"></span>
+                <div class="select">
+                    <select id="fundSelect" disabled="">
+                        <option disabled="" selected="" value="First select">
+                            Select a Fund to Support
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <!--<p class="note">Search funds by name. If the fund is not found, <a id="toggleOtherFund">click here</a> to enter the name.</p>-->
+            <div class="relative fund-list margin-mobile">
+                <label for="desSearch" class="adfFormLabel">Search funds by name</label>
+                <span class="twitter-typeahead" style="position: relative; display:
+                    inline-block;">
+                    <input class="adfInput form-control tt-hint" type="text" data-value="" readonly="" autocomplete="off" spellcheck="false" tabindex="-1" style="position: absolute; top: 0px; left: 0px; border-color: transparent;
+                        box-shadow: none; opacity: 1; background: none 0% 0% / auto repeat scroll
+                        padding-box border-box rgb(255, 255, 255);" dir="ltr">
+                    <span class="twitter-typeahead" style="position: relative; display: inline-block;">
+                        <input class="adfInput form-control tt-input tt-hint" type="text" data-value="" autocomplete="off" spellcheck="false" dir="ltr" style="position: absolute; vertical-align: top; background: none 0% 0% / auto repeat scroll padding-box border-box rgb(255, 255, 255); top: 0px; left: 0px; border-color: transparent; box-shadow: none; opacity: 1;" readonly="" tabindex="-1"><input id="desSearch" class="adfInput form-control tt-input" type="text" placeholder="Results are loaded as you type" data-value="" autocomplete="off" spellcheck="false" dir="auto" style="position: relative; vertical-align: top;
+                            background-color: transparent;">
+                        <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre; font-family: &quot;Open Sans&quot;, arial, sans-serif; font-size: 16px; font-style: normal; font-variant: normal; font-weight: 400; word-spacing: 0px; letter-spacing: 0px; text-indent: 0px; text-rendering: auto; text-transform: none;"></pre>
+                        <div class="tt-menu" style="position: absolute; top: 100%; left: 0px; z-index: 100; display: none;">
+                            <div class="tt-dataset tt-dataset-search"></div>
+                        </div>
+                    </span>
+                    <pre aria-hidden="true" style="position: absolute; visibility: hidden; white-space: pre;
+                        font-family: 'Open Sans', arial, sans-serif; font-size: 16px; font-style:
+                        normal; font-variant: normal; font-weight: 400; word-spacing: 0px;
+                        letter-spacing: 0px; text-indent: 0px; text-rendering: auto;
+                        text-transform: none;"></pre>
+                    <div class="tt-menu" style="position: absolute; top: 100%; left: 0px;
+                        z-index: 100; display: none;">
+                        <div class="tt-dataset tt-dataset-search"></div>
+                    </div>
+                </span>
+                <svg class="svg-inline--fa fa-keyboard fa-w-18" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="keyboard" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" data-fa-i2svg="">
+                    <path fill="currentColor" d="M528 448H48c-26.51 0-48-21.49-48-48V112c0-26.51 21.49-48
+                        48-48h480c26.51 0 48 21.49 48 48v288c0 26.51-21.49 48-48 48zM128
+                        180v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm-336
+                        96v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm-336
+                        96v-40c0-6.627-5.373-12-12-12H76c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12zm288
+                        0v-40c0-6.627-5.373-12-12-12H172c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h232c6.627 0 12-5.373 12-12zm96
+                        0v-40c0-6.627-5.373-12-12-12h-40c-6.627 0-12 5.373-12 12v40c0 6.627 5.373
+                        12 12 12h40c6.627 0 12-5.373 12-12z">
+                    </path>
+                </svg>
+                <!-- <span class="fas fa-keyboard"></span> -->
+            </div>
+            <!--
+                <div class="toggleOtherFund" style="margin: 0.5em 0;">
+                    <span class="adfPlacholderLabel">If the fund is not listed above, <a id="toggleOtherFund">click here</a> to enter the name.</span>
+                    <div class="toggleOtherFund" style="position: relative; display:none;">
+                        <label class="adfFormLabel" for="otherArea">Enter a fund</label>
+                        <input class="adfInputWithPlaceholder" id="otherArea" name="otherArea" placeholder="Enter a fund" type="text" data-guid="6f0e4d60-1df1-495a-9e01-82b3e9d91aff">
+                        <a href="#" class="button add-other"><span class="fa fa-plus"></span>&nbsp;&nbsp;Add Fund</a>
+                    </div>
+                </div>
+                -->
+        </fieldset>
+    </div>
+    <div class="row">
+        <fieldset class="form-group">
+            <label>Gift Type</label>
+            <div>
+                <label for="giftTypeSelect" class="adfFormLabel">Select Gift Type:</label>
+                <span class="marker"></span>
+                <div class="select">
+                    <select id="giftTypeSelect" class="required">
+                        <option value="One-Time">
+                            One-Time Gift
+                        </option>
+                        <option value="Monthly">
+                            Monthly Gift
+                        </option>
+                        <option value="Pledge">
+                            Pledge Payment
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <fieldset class="Monthly toggle hide">
+                <div class="[ box-flex space-between ]">
+                    <div class="width-half">
+                        <label for="frequency" class="adfFormLabel">Frequency:</label>
+                        <span class="marker"></span>
+                        <div class="select">
+                            <select id="frequency" class="required">
+                                <option value="2">
+                                    Monthly
+                                </option>
+                                <option value="3">
+                                    Quarterly
+                                </option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="width-forty">
+                        <label id="datepickerLabel" for="startDate" class="adfFormLabel">Start Date:</label>
+                        <span class="marker"></span><input class="required hasDatepicker" id="startDate" type="text" readonly="readOnly">
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="Pledge toggle hide">
+                <label for="pledgeId" class="adfFormLabel">Pledge ID:</label>
+                <span class="marker"></span><input id="pledgeId" placeholder="Pledge ID" type="text" class="required">
+                <label for="pledgeAmount" class="adfFormLabel">Gift amount:</label> <span class="marker"></span><input id="pledgeAmount" class="required" placeholder="0.00" type="text"><span class="currency">$</span>
+            </fieldset>
+        </fieldset>
+    </div>
+    <div class="row">
+        <fieldset class="form-group" id="giftSummary">
+            <label>Gift Summary</label>
+            <div class="fund-card empty">
+                <div class="fund-card-header">
+                    <p>No gifts selected yet</p>
+                </div>
+                <div class="fund-card-block">
+                    <p>Choose a gift from above.</p>
+                </div>
+            </div>
+            <div class="fund-card proc-fee hidden">
+                <div class="fund-card-header">
+                    <p><span class="fund-cat">Additional Fees</span></p>
+                </div>
+                <div class="fund-card-block">
+                    <div class="row">
+                        <div class="g-5 t-g-2 relative remove-bottom">
+                            <p class="fund-name">Transaction Fee</p>
+                            <p class="fund-guid hidden">390854e0-3f32-41cb-81cc-39f319cea897</p>
+                        </div>
+                        <div class="g-3 t-g-2 relative remove-bottom">
+                            <p class="symbol">$</p>
+                            <input class="adfInput form-control" type="number" disabled="">
+                        </div>
+                    </div>
+                </div>
+                <div class="fund-card-footer">
+                    <a href="#" class="button remove-fee"><span class="fas fa-times"></span>&nbsp;&nbsp;Remove Fee</a>
+                </div>
+            </div>
+            <div class="total-amount">
+                <p class="large bold">Total: <span>$0.00</span></p>
+            </div>
+        </fieldset>
+    </div>
+    <div class="row">
+        <fieldset id="additional" class="form-group">
+            <label>Additional Information</label>
+            <div class="s-cb">
+                <input aria-checked="false" value="corporateGift" id="corporateGift" type="checkbox"> <label for="corporateGift">This is a corporate/company gift.</label>
+            </div>
+            <div class="corporateGift hidden">
+                <label for="companyName" class="adfFormLabel">Company Name</label>
+                <div class="companyName">
+                    <span class="marker"></span><input id="companyName" class="required" placeholder="Company Name" type="text">
+                </div>
+            </div>
+            <div class="s-cb">
+                <input aria-checked="false" value="matchingGift" id="matchingGift" type="checkbox"> <label for="matchingGift">Make a matching gift.</label>
+            </div>
+            <div class="matchingGift hide">
+                <label class="adfFormLabel" for="matchingGiftName">Matching Gift Company Name:</label>
+                <div class="matchingGiftName">
+                    <span class="marker"></span><input id="matchingGiftName" class="required" placeholder="Company Name" type="text">
+                </div>
+            </div>
+            <div class="s-cb">
+                <input aria-checked="false" value="anonymous" id="anonymous" type="checkbox"> <label for="anonymous">Make my gift anonymous.</label>
+            </div>
+            <div class="s-cb">
+                <input aria-checked="false" value="honorOf" id="honorOf" type="checkbox"> <label for="honorOf">This gift is a tribute/memorial in honor of:</label>
+            </div>
+            <div class="honorOf hide">
+                <fieldset>
+                    <label for="tributeType" class="adfFormLabel">Tribute Information:</label>
+                    <span class="marker"></span>
+                    <div class="select">
+                        <select id="tributeType" class="required">
+                            <option value="in honor of">
+                                In Honor Of
+                            </option>
+                            <option value="in memory of">
+                                In Memory Of
+                            </option>
+                        </select>
+                    </div>
+                    <div class="row">
+                        <div class="g-1-2 remove-bottom margin-mobile">
+                            <label class="adfFormLabel" for="tributeFirstName">Honoree First Name:</label> <span class="marker"></span><input id="tributeFirstName" class="required" placeholder="Honoree First Name" type="text">
+                        </div>
+                        <div class="g-1-2 remove-bottom">
+                            <label class="adfFormLabel" for="tributeLastName">Honoree Last Name:</label> <span class="marker"></span><input id="tributeLastName" class="required" placeholder="Honoree Last Name" type="text">
+                        </div>
+                    </div>
+                    <div class="s-cb">
+                        <input aria-checked="false" value="mailLetter" id="mailLetter" type="checkbox"> <label for="mailLetter">Mail a letter on my behalf to:</label>
+                    </div>
+                    <div class="mailLetter hide">
+                        <fieldset>
+                            <div class="row">
+                                <div class="g-1-2 remove-bottom margin-mobile">
+                                    <label class="adfFormLabel" for="ackFirstName">First Name:</label>
+                                    <span class="marker"></span><input id="ackFirstName" placeholder="First Name" class="adfInput form-control required" type="text" required="">
+                                </div>
+                                <div class="g-1-2 remove-bottom">
+                                    <label class="adfFormLabel" for="ackLastName">Last Name:</label>
+                                    <span class="marker"></span><input id="ackLastName" placeholder="Last Name" class="adfInput form-control required" type="text" required="">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="g-1-2 remove-bottom margin-mobile">
+                                    <label for="ackEmail" class="adfFormLabel">Email:</label> 
+                                    <input id="ackEmail" placeholder="Email" type="email">
+                                </div>
+                                <div class="g-1-2 remove-bottom">
+                                    <label for="ackPhoneNumber" class="adfFormLabel">Phone:</label> 
+                                    <input id="ackPhoneNumber" placeholder="(123) 123-4567" type="tel">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <label class="adfFormLabel" for="ackAddress">Address:</label> 
+                                <span class="marker"></span><input id="ackAddress" class="required" placeholder="Address" type="text">
+                            </div>
+                            <div class="row">
+                                <div class="g-1-2 remove-bottom margin-mobile">
+                                    <label class="adfFormLabel" for="ackCity">City:</label> 
+                                    <span class="marker"></span><input id="ackCity" class="required" placeholder="City" type="text">
+                                </div>
+                                <div class="g-1-2 remove-bottom">
+                                    <label class="adfFormLabel" for="ackState">State:</label>
+                                    <span class="marker"></span>
+                                    <div class="select">
+                                        <select id="ackState" class="adfSelect form-control required" required="">
+                                            <option value="-1">State/Territory
+                                            </option>
+                                            <option value="AL">Alabama</option>
+                                            <option value="AK">Alaska</option>
+                                            <option value="AS">American Samoa</option>
+                                            <option value="AZ">Arizona</option>
+                                            <option value="AR">Arkansas</option>
+                                            <option value="AA">Armed Forces Americas</option>
+                                            <option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option>
+                                            <option value="AP">Armed Forces Pacific</option>
+                                            <option value="CA">California</option>
+                                            <option value="CZ">Canal Zone</option>
+                                            <option value="CO">Colorado</option>
+                                            <option value="CT">Connecticut</option>
+                                            <option value="DE">Delaware</option>
+                                            <option value="DC">District of Columbia</option>
+                                            <option value="FM">Federated States of Micronesia</option>
+                                            <option value="FL">Florida</option>
+                                            <option value="GA">Georgia</option>
+                                            <option value="GU">Guam</option>
+                                            <option value="HI">Hawaii</option>
+                                            <option value="ID">Idaho</option>
+                                            <option value="IL">Illinois</option>
+                                            <option value="IN">Indiana</option>
+                                            <option value="IA">Iowa</option>
+                                            <option value="KS">Kansas</option>
+                                            <option value="KY">Kentucky</option>
+                                            <option value="LA">Louisiana</option>
+                                            <option value="ME">Maine</option>
+                                            <option value="MH">Marshall Islands</option>
+                                            <option value="MD">Maryland</option>
+                                            <option value="MA">Massachusetts</option>
+                                            <option value="MI">Michigan</option>
+                                            <option value="MN">Minnesota</option>
+                                            <option value="MS">Mississippi</option>
+                                            <option value="MO">Missouri</option>
+                                            <option value="MT">Montana</option>
+                                            <option value="NE">Nebraska</option>
+                                            <option value="NV">Nevada</option>
+                                            <option value="NH">New Hampshire</option>
+                                            <option value="NJ">New Jersey</option>
+                                            <option value="NM">New Mexico</option>
+                                            <option value="NY">New York</option>
+                                            <option value="NC">North Carolina</option>
+                                            <option value="ND">North Dakota</option>
+                                            <option value="MP">Northern Mariana Islands</option>
+                                            <option value="OH">Ohio</option>
+                                            <option value="OK">Oklahoma</option>
+                                            <option value="OR">Oregon</option>
+                                            <option value="PW">Palau</option>
+                                            <option value="PA">Pennsylvania</option>
+                                            <option value="PR">Puerto Rico</option>
+                                            <option value="RI">Rhode Island</option>
+                                            <option value="SC">South Carolina</option>
+                                            <option value="SD">South Dakota</option>
+                                            <option value="TN">Tennessee</option>
+                                            <option value="TX">Texas</option>
+                                            <option value="UT">Utah</option>
+                                            <option value="VT">Vermont</option>
+                                            <option value="VI">Virgin Islands</option>
+                                            <option value="VA">Virginia</option>
+                                            <option value="WA">Washington</option>
+                                            <option value="WV">West Virginia</option>
+                                            <option value="WI">Wisconsin</option>
+                                            <option value="WY">Wyoming</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="g-1-2 remove-bottom margin-mobile">
+                                    <label class="adfFormLabel" for="ackZipCode">Zip Code:</label> 
+                                    <span class="marker"></span><input id="ackZipCode" class="required" placeholder="Zip Code" type="text">
+                                </div>
+                                <div class="g-1-2 remove-bottom">
+                                    <label class="adfFormLabel" for="ackCountry">Country:</label>
+                                    <span class="marker"></span>
+                                    <div class="select">
+                                        <select id="ackCountry" class="adfSelect form-control required" required="">
+                                            <option value="d81cef85-7569-4b2e-8f2e-f7cf998a3342" selected="">United States
+                                            </option>
+                                            <option value="Afghanistan" id="cff2822a-f7cf-45da-ba77-98adb1f8651c">Afghanistan</option>
+                                            <option value="Albania" id="75820893-966c-4779-9aae-d94b0c3d31a3">Albania</option>
+                                            <option value="Algeria" id="ba1671c7-8317-451a-b1e7-0c1d593db7aa">Algeria</option>
+                                            <option value="American Samoa" id="b58c7d73-5b94-470e-9372-063f1bc65cde">American Samoa</option>
+                                            <option value="Andorra" id="a3a3aa20-1d89-4c40-9bb0-7a943588eef9">Andorra</option>
+                                            <option value="Angola" id="54f797c2-0ceb-4cb2-b905-4ef1586573bc">Angola</option>
+                                            <option value="Antigua and Barbuda" id="4dec75d7-d966-4c8e-9a8c-48e93da898ae">Antigua and Barbuda</option>
+                                            <option value="Argentina" id="62fab607-2dbb-42a1-976a-e128183e8e2c">Argentina</option>
+                                            <option value="Armenia" id="4ebb1ea1-31af-43ad-a7a5-b50b3bad3727">Armenia</option>
+                                            <option value="Aruba" id="9a671dd9-6718-45f9-b807-08391a80f077">Aruba</option>
+                                            <option value="Australia" id="9dcf9c73-25c0-40a3-bd07-ac6c84ecce59">Australia</option>
+                                            <option value="Austria" id="500f9bff-73d3-42df-98fb-6801dd8a908e">Austria</option>
+                                            <option value="Azerbaijan" id="e8830493-1883-40d5-acd3-873b281a068b">Azerbaijan</option>
+                                            <option value="Bahamas" id="7690b76d-3ea5-45cf-a911-73b32ccce890">Bahamas</option>
+                                            <option value="Bahrain" id="349dd00d-c6e3-45c9-8b0d-292bf12e9dfd">Bahrain</option>
+                                            <option value="Bangladesh" id="438a1e55-e68a-4214-9b84-2c7f263ec361">Bangladesh</option>
+                                            <option value="Barbados" id="dc84fd25-6923-40eb-8055-4cdbf89cdb81">Barbados</option>
+                                            <option value="Belgium" id="e6c0a6a0-f0f5-4ad2-9f41-1335c2a12707">Belgium</option>
+                                            <option value="Belize" id="01ef07e5-8def-443d-b7f2-f2d1dde8f337">Belize</option>
+                                            <option value="Benin" id="d386d09e-efd8-48af-b467-a14494cf9122">Benin</option>
+                                            <option value="Bermuda" id="6f89deb3-2de1-4878-8363-cdd89d7e1f29">Bermuda</option>
+                                            <option value="Bolivia" id="43864de0-0551-4b27-8bf1-f2593cc0e5fc">Bolivia</option>
+                                            <option value="Bosnia and Herzegowina" id="ff69efa7-bf52-440c-920e-892d37ed6d72">Bosnia and Herzegowina</option>
+                                            <option value="Botswana" id="2fbc12e9-aa1c-431f-9c4c-d2940b5227e1">Botswana</option>
+                                            <option value="Brazil" id="f1b80b04-09fe-4da3-9596-525a4157db24">Brazil</option>
+                                            <option value="British Indian Ocean Territory" id="73fb3f9f-132c-46bf-aafd-16f1b45ad696">British Indian Ocean Territory</option>
+                                            <option value="Brunei" id="8bef29be-6932-4df2-8c0d-2349e2d47035">Brunei</option>
+                                            <option value="Bulgaria" id="34491af7-0052-42e9-899f-50b42106c9dc">Bulgaria</option>
+                                            <option value="Burkina Faso" id="a9115118-630c-4c5a-9751-17a461f2bbdf">Burkina Faso</option>
+                                            <option value="Burundi" id="9215afb6-75af-4cce-a7b7-36b7cd9fc748">Burundi</option>
+                                            <option value="Cambodia" id="2ee06df2-f1f7-4a9f-a811-d2efb584d877">Cambodia</option>
+                                            <option value="Cameroon" id="bb67c19d-3ca0-4232-9b4c-2cb48c4fe926">Cameroon</option>
+                                            <option value="Canada" id="b7439698-a713-433f-ba04-6eeb569b918e">Canada</option>
+                                            <option value="Cayman Islands" id="d8e92b06-6f74-40da-9846-09c12a3c2257">Cayman Islands</option>
+                                            <option value="Central African Republic" id="25b38653-249e-4aec-9e37-e7a16a11beb5">Central African Republic</option>
+                                            <option value="Chile" id="87dfd807-0523-46ec-b8b0-cd326cc051ec">Chile</option>
+                                            <option value="China" id="e1a2f875-bea0-43a0-8424-39589f6e32ca">China</option>
+                                            <option value="Colombia" id="0a48a6b6-26ba-4736-9773-e32b71348a68">Colombia</option>
+                                            <option value="Costa Rica" id="2a547de9-1924-4a0a-8eaf-f34315c65b18">Costa Rica</option>
+                                            <option value="Cote D'Ivoire" id="d2a65fe9-f779-46aa-b27a-d90f95164942">Cote D'Ivoire</option>
+                                            <option value="Croatia" id="6bb0296f-f409-46c8-97f9-057b6d8afcf6">Croatia</option>
+                                            <option value="Cyprus" id="fb034d5e-41a5-4c75-a80e-e71221936199">Cyprus</option>
+                                            <option value="Czech Republic" id="99f36fe4-c704-4351-9c7a-56247ef6fd8a">Czech Republic</option>
+                                            <option value="Denmark" id="f1ae152a-b9cc-4a67-9172-3b82834184d1">Denmark</option>
+                                            <option value="Dominican Republic" id="5c7b1821-6cf7-43c0-9cff-d677bf16c1b9">Dominican Republic</option>
+                                            <option value="Ecuador" id="b12bddcc-2880-4755-bc5a-27517bfae9e8">Ecuador</option>
+                                            <option value="Egypt" id="137b6c38-ab45-4a0e-bdd1-1eaf8ffbc223">Egypt</option>
+                                            <option value="El Salvador" id="cdf09e70-7fa9-4246-8685-276c8273b7bf">El Salvador</option>
+                                            <option value="Eritrea" id="be4f7666-a308-43b6-b51a-1ef7bf518926">Eritrea</option>
+                                            <option value="Ethiopia" id="e04cd40d-5842-40a5-ad75-8eaa35b81c65">Ethiopia</option>
+                                            <option value="Fiji" id="d1a8f369-92ad-41bc-ac5a-989ad7e5477c">Fiji</option>
+                                            <option value="Finland" id="99159dc6-c4bc-4bcc-b0b9-be427ac670e7">Finland</option>
+                                            <option value="France" id="9ee72fe0-a337-4b59-9422-cc2ebd53a4c1">France</option>
+                                            <option value="Georgia" id="242569f4-53ef-4bf2-bdb9-adaa416e0c5e">Georgia</option>
+                                            <option value="Germany" id="2e7f39e8-8a27-4994-b6fd-3820b0c39eef">Germany</option>
+                                            <option value="Ghana" id="7828160e-dbb7-43a1-85a4-4089795f5566">Ghana</option>
+                                            <option value="Great Britian" id="af4c970c-ef51-461c-9661-8b193d184525">Great Britian</option>
+                                            <option value="Greece" id="4e214b9d-d7b6-462f-b6d5-1b8f77f05a4c">Greece</option>
+                                            <option value="Guam" id="e507ed20-3b6f-4a9e-ab5e-13e7b2176809">Guam</option>
+                                            <option value="Guatemala" id="6de0751d-101d-4e5c-85a9-b07143435b66">Guatemala</option>
+                                            <option value="Guyana" id="66543648-544a-40d9-88c9-6a3f586b3fec">Guyana</option>
+                                            <option value="Haiti" id="f379501a-05ad-42ae-9798-95975f3fc1c6">Haiti</option>
+                                            <option value="Honduras" id="360e77ea-78e3-4039-a2ab-6c665865f64e">Honduras</option>
+                                            <option value="Hong Kong" id="ffbfa840-bd2f-4073-8dc2-df5df4201c06">Hong Kong</option>
+                                            <option value="Hungary" id="8471f8ba-29f5-4a5b-b298-f4de06f4f91d">Hungary</option>
+                                            <option value="Iceland" id="0666f89c-fb2c-46bf-812e-dce46ab1036c">Iceland</option>
+                                            <option value="India" id="d38407ef-620a-4c3a-99b9-e0275a4906ff">India</option>
+                                            <option value="Indonesia" id="a100096a-cf7a-4a2f-adbf-a0fd17f08d40">Indonesia</option>
+                                            <option value="Iran (Islamic Republic of)" id="39a8f9f6-927e-4a78-94e2-4ea8802e94a7">Iran (Islamic Republic of)</option>
+                                            <option value="Iraq" id="c2296514-226e-41ba-baa8-cd22d77ca015">Iraq</option>
+                                            <option value="Ireland" id="45197f52-728f-45ab-a63d-181aef138257">Ireland</option>
+                                            <option value="Israel" id="e31d6957-b510-46bf-824c-eaa248749ba0">Israel</option>
+                                            <option value="Italy" id="0e9a15e2-5eab-4018-9b96-c051f2943ccb">Italy</option>
+                                            <option value="Jamaica" id="1ccb4dda-bae0-4cdd-9a87-f53309e788d2">Jamaica</option>
+                                            <option value="Japan" id="e4ea9442-0a6d-4594-8fd6-39e56047f6ff">Japan</option>
+                                            <option value="Jordan" id="5825f029-8869-4bc4-91d1-486024c8c4c9">Jordan</option>
+                                            <option value="Kazakhstan" id="c0a8eebe-d831-4dfe-8cbe-324f961e2227">Kazakhstan</option>
+                                            <option value="Kenya" id="32b2c072-5316-4f0f-965a-1eafbed103b1">Kenya</option>
+                                            <option value="Korea, D.P.R.O." id="3680569d-0136-4d0f-8783-d409938350db">Korea, D.P.R.O.</option>
+                                            <option value="Korea, Republic of" id="236d40d1-f14f-46d0-b5fa-bdbf6a9609aa">Korea, Republic of</option>
+                                            <option value="Kuwait" id="a3dce12c-f824-4de8-8565-6f65749057d4">Kuwait</option>
+                                            <option value="Kyrgyzstan" id="b0e59266-db27-4bd4-8f67-926521c66bcb">Kyrgyzstan</option>
+                                            <option value="Latvia" id="b8963779-4353-4323-923a-fa2b016ab660">Latvia</option>
+                                            <option value="Lebanon" id="9ce35505-cc8d-43cf-9a14-c28d8ec3202e">Lebanon</option>
+                                            <option value="Libyan Arab Jamahiriya" id="dd7edb7c-672a-4c76-b6d3-ff52cf9ef1c5">Libyan Arab Jamahiriya</option>
+                                            <option value="Liechtenstein" id="02af1341-b0cf-47a6-beae-115872f85b6b">Liechtenstein</option>
+                                            <option value="Lithuania" id="e3cb7548-32e0-4fbd-9620-978f4f9451b8">Lithuania</option>
+                                            <option value="Luxembourg" id="6ab5a801-5428-4076-968d-778aa4ba9cfa">Luxembourg</option>
+                                            <option value="Macao" id="0e1b356d-4e32-48ae-97b7-c3cb77ee8b8f">Macao</option>
+                                            <option value="Macedonia" id="03af22f9-42e8-4df7-92a4-b202d2cd8aa0">Macedonia</option>
+                                            <option value="Madagascar" id="cbaad64a-8210-4a48-a677-02b53d06242e">Madagascar</option>
+                                            <option value="Malaysia" id="3ea24c91-87f0-4d12-a9d8-68e8bc14a3fc">Malaysia</option>
+                                            <option value="Malta" id="b63096ed-e3f0-4e2f-9638-c8db72b671c1">Malta</option>
+                                            <option value="Marshall Islands" id="d084585f-c689-4012-87e3-d55f3ae48a91">Marshall Islands</option>
+                                            <option value="Mauritania" id="5abca937-52d2-4041-93da-6350fa1dc126">Mauritania</option>
+                                            <option value="Mauritius" id="721e394c-8d3f-4b6c-ab5d-b5c74e6fd43f">Mauritius</option>
+                                            <option value="Metro Manila" id="fed15e15-e374-4bb3-8147-45b62858d65e">Metro Manila</option>
+                                            <option value="Mexico" id="a3a2f411-d33a-46cc-9710-72070ae871c6">Mexico</option>
+                                            <option value="Moldova, Republic of" id="0dcef63d-7668-4c61-be22-d96ade28d889">Moldova, Republic of</option>
+                                            <option value="Monaco" id="dcd0d37b-fc42-4281-a0f6-3d44878c2df2">Monaco</option>
+                                            <option value="Morocco" id="75f22973-2ff5-41c3-a4de-f5127aa9a02d">Morocco</option>
+                                            <option value="Mozambique" id="64febbe0-3c09-48d0-8ad7-ef8ff0e54676">Mozambique</option>
+                                            <option value="Myanmar" id="727c24e5-d2c8-44af-ad6e-a453451cab6a">Myanmar</option>
+                                            <option value="Nepal" id="25fe4a6d-7fec-4d8f-8bf4-bcbd9277a21a">Nepal</option>
+                                            <option value="Netherlands" id="e34f392a-79b8-4933-b057-10ef94c8ebd6">Netherlands</option>
+                                            <option value="New Zealand" id="ceec051e-f176-4f04-b76a-2c9497ce4c38">New Zealand</option>
+                                            <option value="Nicaragua" id="3a96769c-4bda-4aab-a5fc-c6bf72ce4d81">Nicaragua</option>
+                                            <option value="Niger" id="a54f5f9d-098b-42e4-b0d5-281a4c761891">Niger</option>
+                                            <option value="Nigeria" id="41a40244-8d3b-485f-8c3e-d44859b36e04">Nigeria</option>
+                                            <option value="Norway" id="630a4615-71a4-4bf9-b8a4-a7abad2b386e">Norway</option>
+                                            <option value="Oman" id="7f8c121e-dc87-4a6e-bacf-2f9b60199f35">Oman</option>
+                                            <option value="Pakistan" id="a8eeb873-567a-4218-b701-2d8c36bf533e">Pakistan</option>
+                                            <option value="Palau" id="98a2051a-cbff-4ebb-b675-792604a48984">Palau</option>
+                                            <option value="Panama" id="1f4fd673-41c5-4a30-96b9-a36c8d2e6021">Panama</option>
+                                            <option value="Papua New Guinea" id="cb58bcf1-a033-4db3-81b3-e2df98f0dbec">Papua New Guinea</option>
+                                            <option value="Paraguay" id="2fa68b79-b9bd-4f47-b1a9-0a6f0c4e6f50">Paraguay</option>
+                                            <option value="Peru" id="5af669e3-9f2a-4421-8cc0-af9229c55806">Peru</option>
+                                            <option value="Philippines" id="d71e5e70-2f09-4bca-8b22-addae296e032">Philippines</option>
+                                            <option value="Poland" id="07682a92-76af-4d17-b0e7-2b8342982fc7">Poland</option>
+                                            <option value="Portugal" id="cee28453-cee6-4fb4-88b4-7ba18a8061ed">Portugal</option>
+                                            <option value="Puerto Rico" id="b7b7b225-0113-4a90-bc1b-715a9728d1e8">Puerto Rico</option>
+                                            <option value="Qatar" id="e871f30d-bd14-4763-93f1-5fd2c78406a3">Qatar</option>
+                                            <option value="Romania" id="00c98873-a8a8-496c-8076-ee982e5b09e3">Romania</option>
+                                            <option value="Russian Federation" id="a2012389-3f0f-46f7-a563-97350d7372a4">Russian Federation</option>
+                                            <option value="Saudi Arabia" id="b2919df4-22b1-40ec-bee6-ab08678da520">Saudi Arabia</option>
+                                            <option value="Senegal" id="b46306c3-d772-418e-92f2-17079dca77fd">Senegal</option>
+                                            <option value="Serbia" id="7628ca2e-a908-4a8b-9240-259e8e8da56d">Serbia</option>
+                                            <option value="Sierra Leone" id="6efc0ab9-5146-4b5e-bdbe-4eb7bab2638e">Sierra Leone</option>
+                                            <option value="Singapore" id="973e6769-cba6-43e2-9119-e473eeda04cc">Singapore</option>
+                                            <option value="Slovenia" id="f4507cbb-d00e-46bb-9236-1a763c96abc3">Slovenia</option>
+                                            <option value="South Africa" id="72a5204e-2404-4f6d-8cf3-5aec665e9af1">South Africa</option>
+                                            <option value="South Korea" id="4a1ac8c4-ea5c-412d-93af-d57774b2c97a">South Korea</option>
+                                            <option value="Spain" id="35e438a5-8da4-4fe6-86fd-7f401c77be7c">Spain</option>
+                                            <option value="Sri Lanka" id="e1006389-6d97-40f0-9343-3d679fcb68f7">Sri Lanka</option>
+                                            <option value="Sudan" id="c4d7abcf-4873-431c-8f7b-1036e74b27b1">Sudan</option>
+                                            <option value="Swaziland" id="41ed40a1-5f43-4a5e-ac81-32c2df12385a">Swaziland</option>
+                                            <option value="Sweden" id="7d28813e-4488-401a-846b-33cff1667e2a">Sweden</option>
+                                            <option value="Switzerland" id="935daafe-90dc-4b5d-9d62-9f8bb0442d94">Switzerland</option>
+                                            <option value="Syrian Arab Republic" id="4a7e2598-83d6-459d-bded-1bdd9860f507">Syrian Arab Republic</option>
+                                            <option value="Taiwan" id="38799e0c-8f9a-4d7c-8ad9-0d6b6e1340a1">Taiwan</option>
+                                            <option value="Tanzania" id="57389453-53c4-4fe2-89af-f60c9218a437">Tanzania</option>
+                                            <option value="Thailand" id="d47d669e-794b-4a2f-b431-a4fa84323a6d">Thailand</option>
+                                            <option value="Trinidad and Tobago" id="8984ce70-7620-4406-81e9-a24481b53e30">Trinidad and Tobago</option>
+                                            <option value="Tunisia" id="8c4abbc1-fcd7-4a38-afba-f6f0f261164e">Tunisia</option>
+                                            <option value="Turkey" id="2dc8bd1b-04ca-433e-a9bf-8e4cfcbf6052">Turkey</option>
+                                            <option value="Uganda" id="69841c75-53a5-43ae-85e7-5613bf2e7d43">Uganda</option>
+                                            <option value="Ukraine" id="b2db7e09-5af5-49d9-994b-0dcadb57302a">Ukraine</option>
+                                            <option value="United Arab Emirates" id="b7953db8-17f5-4936-84d7-1751e8d451d2">United Arab Emirates</option>
+                                            <option value="United Kingdom" id="0609b403-c516-431d-affc-dfa9e206fa27">United Kingdom</option>
+                                            <option value="United States" id="4fc81243-c3ac-4ad8-be11-721be5795482">United States</option>
+                                            <option value="Uruguay" id="ca1fb1a8-c014-4a64-ad8e-51961c545233">Uruguay</option>
+                                            <option value="Uzbekistan" id="b9eecc2a-9314-45a2-aa30-f6e127f279ef">Uzbekistan</option>
+                                            <option value="Venezuela" id="12d94616-1df8-4c89-9d06-2a406d512adb">Venezuela</option>
+                                            <option value="Vietnam" id="a368c320-9112-4d9f-b2c6-55ad00e3274a">Vietnam</option>
+                                            <option value="Virgin Islands (U.S.)" id="6fe3fd43-1f61-4126-9659-705403ac68ce">Virgin Islands (U.S.)</option>
+                                            <option value="Yemen" id="82024569-bef2-4baa-8936-a1a04bf8b6bd">Yemen</option>
+                                            <option value="Zambia" id="ac8e6c58-4d37-4ed2-8393-6b363f0ac76d">Zambia</option>
+                                            <option value="Zimbabwe" id="195528b1-6522-41ee-8297-efb6f010be26">Zimbabwe</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </fieldset>
+                        <!-- end: mailLetter hide -->
+                    </div>
+                </fieldset>
+                <!-- end: honorOf hide -->
+            </div>
+        </fieldset>
+        <!-- end: #additional -->
+    </div>
+    <div class="row">
+        <fieldset class="form-group" id="billingInfo">
+            <!--<legend>
+                <h3>Billing Information</h3>
+                </legend>-->
+            <label class="">Billing Information</label>
+            <div class="row">
+                <div class="g-1-2 remove-bottom">
+                    <label for="personalTitle" class="adfFormLabel">Title</label>
+                    <span class="marker"></span>
+                    <div class="select">
+                        <select id="personalTitle" class="adfSelect form-control required" required="">
+                            <option value="-1">Title
+                            </option>
+                            <option value="Miss">Miss
+                            </option>
+                            <option value="Mr.">Mr.
+                            </option>
+                            <option value="Mrs.">Mrs.
+                            </option>
+                            <option value="Ms.">Ms.
+                            </option>
+                            <option value="1st Lieutenant">1st Lieutenant
+                            </option>
+                            <option value="2nd Lieutenant">2nd Lieutenant
+                            </option>
+                            <option value="ADM">ADM
+                            </option>
+                            <option value="BG">BG
+                            </option>
+                            <option value="Bishop">Bishop
+                            </option>
+                            <option value="Brigadier General">Brigadier General
+                            </option>
+                            <option value="Brother">Brother
+                            </option>
+                            <option value="Captain">Captain
+                            </option>
+                            <option value="CDR">CDR
+                            </option>
+                            <option value="Chaplain">Chaplain
+                            </option>
+                            <option value="Colonel">Colonel
+                            </option>
+                            <option value="Commander">Commander
+                            </option>
+                            <option value="CPT">CPT
+                            </option>
+                            <option value="Dean">Dean
+                            </option>
+                            <option value="Dean Emeritus">Dean Emeritus
+                            </option>
+                            <option value="Dr.">Dr.
+                            </option>
+                            <option value="Ensign">Ensign
+                            </option>
+                            <option value="Father">Father
+                            </option>
+                            <option value="Field Svc Instructor-Geo">Field Svc Instructor-Geo
+                            </option>
+                            <option value="General">General
+                            </option>
+                            <option value="Governor">Governor
+                            </option>
+                            <option value="The Honorable">The Honorable
+                            </option>
+                            <option value="Judge">Judge
+                            </option>
+                            <option value="LCDR">LCDR
+                            </option>
+                            <option value="Lt Col">Lt Col
+                            </option>
+                            <option value="LtCol">LtCol
+                            </option>
+                            <option value="Lt Gen">Lt Gen
+                            </option>
+                            <option value="LTC">LTC
+                            </option>
+                            <option value="LTG">LTG
+                            </option>
+                            <option value="Lt.">Lt.
+                            </option>
+                            <option value="Lt. Colonel">Lt. Colonel
+                            </option>
+                            <option value="Lt. Commander">Lt. Commander
+                            </option>
+                            <option value="Lt. Corporal">Lt. Corporal
+                            </option>
+                            <option value="Lt. General">Lt. General
+                            </option>
+                            <option value="Lt. Governor">Lt. Governor
+                            </option>
+                            <option value="Lt. Junior Grade">Lt. Junior Grade
+                            </option>
+                            <option value="Magistrate">Magistrate
+                            </option>
+                            <option value="Major">Major
+                            </option>
+                            <option value="Major General">Major General
+                            </option>
+                            <option value="Master Sergeant">Master Sergeant
+                            </option>
+                            <option value="Mayor">Mayor
+                            </option>
+                            <option value="Monsignor">Monsignor
+                            </option>
+                            <option value="Most Reverend">Most Reverend
+                            </option>
+                            <option value="Pastor">Pastor
+                            </option>
+                            <option value="Professor">Professor
+                            </option>
+                            <option value="Rabbi">Rabbi
+                            </option>
+                            <option value="Rear Admiral">Rear Admiral
+                            </option>
+                            <option value="Rep.">Rep.
+                            </option>
+                            <option value="The Reverend">The Reverend
+                            </option>
+                            <option value="The Reverend Dr.">The Reverend Dr.
+                            </option>
+                            <option value="Senator">Senator
+                            </option>
+                            <option value="Sergeant">Sergeant
+                            </option>
+                            <option value="Sir">Sir
+                            </option>
+                            <option value="Sister">Sister
+                            </option>
+                            <option value="Staff Sergeant">Staff Sergeant
+                            </option>
+                            <option value="SSgt">SSgt
+                            </option>
+                            <option value="VADM">
+                                VADM
+                                <!--<option value="cb68381c-05ee-4ee9-bf2f-5fe7d448d77c">Admiral</option>
+                                    <option value="a1d251fe-bc53-498e-92fe-1b8497e04133">Ambassador</option>
+                                    <option value="dc56acc5-3688-4f79-902c-4ccbb1ab2345">Brother</option>
+                                    <option value="442748c1-212a-4278-95bb-09d8ef982d91">Captain</option>
+                                    <option value="76aa43bd-df40-4ae2-b18f-80b48fbea508">Chief</option>
+                                    <option value="ba21e7d4-f5dc-4254-b739-e91e83762768">Cmdr.</option>
+                                    <option value="d45930b7-00e3-480f-8426-97d220f3fda6">Col.</option>
+                                    <option value="2cb62401-b90e-4e72-9b48-d402b5a525b3">Dr.</option>
+                                    <option value="731d6200-1433-4ff6-b00e-01019e343fc9">Drs.</option>
+                                    <option value="5e9349fb-7f85-4939-a5bd-9f9144cd9fdd">Father</option>
+                                    <option value="e566786d-f99c-4d64-8f8f-d638e1efbaf3">General</option>
+                                    <option value="665182d2-3dc7-411c-98df-f90cb1d0be23">Governor</option>
+                                    <option value="68a12929-d0da-421b-b3dc-b7af2a0db8b3">Judge</option>
+                                    <option value="39b7cb05-cf72-47f6-a40e-71296cbf635b">Lt.</option>
+                                    <option value="782ab63e-f353-44f9-9ece-236055ee16dc">Madam</option>
+                                    <option value="9bc24b11-cec3-4d79-96fa-72b297b94130">Major</option>
+                                    <option value="01a8b6d6-3e72-4b6f-8c67-4c9eb8850b6c">Master</option>
+                                    <option value="3c6193d5-718b-4167-b393-f41b1ccd080a">Miss</option>
+                                    <option value="5061c07d-59ec-49a8-9066-3d9890e6cce8">Mr.</option>
+                                    <option value="6fd37e00-6409-4318-80be-0d4b2eaf61dc">Mrs.</option>
+                                    <option value="d0257dda-e099-4877-92cf-9da7cb7a969e">Ms.</option>
+                                    <option value="926b52d2-77f6-4af4-8f87-6c7f7df30183">Pastor</option>
+                                    <option value="b7339686-3cb6-45c5-a486-7b7ab6d6cb6e">Prof.</option>
+                                    <option value="1ae94d7d-da32-4bf9-9809-d0f099fe6524">Rabbi</option>
+                                    <option value="8306b773-27d0-4091-804a-8b8deec035ff">Reverend</option>
+                                    <option value="aee545b3-9942-48f9-8489-b90cdc9dab4c">Senator</option>
+                                    <option value="b7861f8e-2f61-4a77-97b4-47f70188549a">Sir</option>
+                                    <option value="769202b9-358a-4a6f-81fe-10952b62ed26">Sir/Madam</option>
+                                    <option value="16976b9c-0555-4824-b63f-c6fb92b1100d">Sister</option>
+                                    <option value="2e27af6f-d7f9-40de-b215-3ef00473ed0c">The Honorable</option>-->
+                            </option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="g-1-2 remove-bottom margin-mobile">
+                    <label for="personalFirstName" class="adfFormLabel">First Name</label>
+                    <span class="marker"></span><input id="personalFirstName" class="adfInput form-control required" type="text" placeholder="First Name" required="">
+                </div>
+                <div class="g-1-2 remove-bottom">
+                    <label for="personalLastName" class="adfFormLabel">Last Name</label>
+                    <span class="marker"></span><input id="personalLastName" class="adfInput form-control required" type="text" placeholder="Last Name" required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="g-12 remove-bottom">
+                    <label for="personalAddress" class="adfFormLabel">Address</label>
+                    <span class="marker"></span><input id="personalAddress" class="adfInput form-control required" type="text" placeholder="Address" required="">
+                </div>
+            </div>
+            <div class="row">
+                <div class="g-1-2 remove-bottom margin-mobile">
+                    <label for="personalCity" class="adfFormLabel">City</label>
+                    <span class="marker"></span><input id="personalCity" class="adfInput form-control required" type="text" placeholder="City" required="">
+                </div>
+                <div class="g-1-2 remove-bottom">
+                    <label for="personalState" class="adfFormLabel">State/Territory</label>
+                    <span class="marker"></span>
+                    <div class="select">
+                        <select id="personalState" class="adfSelect form-control required" required="">
+                            <option value="-1">State/Territory
+                            </option>
+                            <option value="AL">Alabama</option>
+                            <option value="AK">Alaska</option>
+                            <option value="AS">American Samoa</option>
+                            <option value="AZ">Arizona</option>
+                            <option value="AR">Arkansas</option>
+                            <option value="AA">Armed Forces Americas</option>
+                            <option value="AE">Armed Forces Europe/Canada/Middle East/Africa</option>
+                            <option value="AP">Armed Forces Pacific</option>
+                            <option value="CA">California</option>
+                            <option value="CZ">Canal Zone</option>
+                            <option value="CO">Colorado</option>
+                            <option value="CT">Connecticut</option>
+                            <option value="DE">Delaware</option>
+                            <option value="DC">District of Columbia</option>
+                            <option value="FM">Federated States of Micronesia</option>
+                            <option value="FL">Florida</option>
+                            <option value="GA">Georgia</option>
+                            <option value="GU">Guam</option>
+                            <option value="HI">Hawaii</option>
+                            <option value="ID">Idaho</option>
+                            <option value="IL">Illinois</option>
+                            <option value="IN">Indiana</option>
+                            <option value="IA">Iowa</option>
+                            <option value="KS">Kansas</option>
+                            <option value="KY">Kentucky</option>
+                            <option value="LA">Louisiana</option>
+                            <option value="ME">Maine</option>
+                            <option value="MH">Marshall Islands</option>
+                            <option value="MD">Maryland</option>
+                            <option value="MA">Massachusetts</option>
+                            <option value="MI">Michigan</option>
+                            <option value="MN">Minnesota</option>
+                            <option value="MS">Mississippi</option>
+                            <option value="MO">Missouri</option>
+                            <option value="MT">Montana</option>
+                            <option value="NE">Nebraska</option>
+                            <option value="NV">Nevada</option>
+                            <option value="NH">New Hampshire</option>
+                            <option value="NJ">New Jersey</option>
+                            <option value="NM">New Mexico</option>
+                            <option value="NY">New York</option>
+                            <option value="NC">North Carolina</option>
+                            <option value="ND">North Dakota</option>
+                            <option value="MP">Northern Mariana Islands</option>
+                            <option value="OH">Ohio</option>
+                            <option value="OK">Oklahoma</option>
+                            <option value="OR">Oregon</option>
+                            <option value="PW">Palau</option>
+                            <option value="PA">Pennsylvania</option>
+                            <option value="PR">Puerto Rico</option>
+                            <option value="RI">Rhode Island</option>
+                            <option value="SC">South Carolina</option>
+                            <option value="SD">South Dakota</option>
+                            <option value="TN">Tennessee</option>
+                            <option value="TX">Texas</option>
+                            <option value="UT">Utah</option>
+                            <option value="VT">Vermont</option>
+                            <option value="VI">Virgin Islands</option>
+                            <option value="VA">Virginia</option>
+                            <option value="WA">Washington</option>
+                            <option value="WV">West Virginia</option>
+                            <option value="WI">Wisconsin</option>
+                            <option value="WY">Wyoming</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="g-1-2 remove-bottom margin-mobile">
+                    <label for="personalZip" class="adfFormLabel">ZIP/Postal Code</label>
+                    <span class="marker"></span><input id="personalZip" class="adfInput form-control required" type="text" maxlength="10" placeholder="ZIP/Postal Code" required="">
+                </div>
+                <div class="g-1-2 remove-bottom">
+                    <label for="personalCountry" class="adfFormLabel">Country</label>
+                    <span class="marker"></span>
+                    <div class="select">
+                        <select id="personalCountry" class="adfSelect form-control required" required="">
+                            <option value="d81cef85-7569-4b2e-8f2e-f7cf998a3342" selected="">United States
+                            </option>
+                            <option value="Afghanistan" id="cff2822a-f7cf-45da-ba77-98adb1f8651c">Afghanistan</option>
+                            <option value="Albania" id="75820893-966c-4779-9aae-d94b0c3d31a3">Albania</option>
+                            <option value="Algeria" id="ba1671c7-8317-451a-b1e7-0c1d593db7aa">Algeria</option>
+                            <option value="American Samoa" id="b58c7d73-5b94-470e-9372-063f1bc65cde">American Samoa</option>
+                            <option value="Andorra" id="a3a3aa20-1d89-4c40-9bb0-7a943588eef9">Andorra</option>
+                            <option value="Angola" id="54f797c2-0ceb-4cb2-b905-4ef1586573bc">Angola</option>
+                            <option value="Antigua and Barbuda" id="4dec75d7-d966-4c8e-9a8c-48e93da898ae">Antigua and Barbuda</option>
+                            <option value="Argentina" id="62fab607-2dbb-42a1-976a-e128183e8e2c">Argentina</option>
+                            <option value="Armenia" id="4ebb1ea1-31af-43ad-a7a5-b50b3bad3727">Armenia</option>
+                            <option value="Aruba" id="9a671dd9-6718-45f9-b807-08391a80f077">Aruba</option>
+                            <option value="Australia" id="9dcf9c73-25c0-40a3-bd07-ac6c84ecce59">Australia</option>
+                            <option value="Austria" id="500f9bff-73d3-42df-98fb-6801dd8a908e">Austria</option>
+                            <option value="Azerbaijan" id="e8830493-1883-40d5-acd3-873b281a068b">Azerbaijan</option>
+                            <option value="Bahamas" id="7690b76d-3ea5-45cf-a911-73b32ccce890">Bahamas</option>
+                            <option value="Bahrain" id="349dd00d-c6e3-45c9-8b0d-292bf12e9dfd">Bahrain</option>
+                            <option value="Bangladesh" id="438a1e55-e68a-4214-9b84-2c7f263ec361">Bangladesh</option>
+                            <option value="Barbados" id="dc84fd25-6923-40eb-8055-4cdbf89cdb81">Barbados</option>
+                            <option value="Belgium" id="e6c0a6a0-f0f5-4ad2-9f41-1335c2a12707">Belgium</option>
+                            <option value="Belize" id="01ef07e5-8def-443d-b7f2-f2d1dde8f337">Belize</option>
+                            <option value="Benin" id="d386d09e-efd8-48af-b467-a14494cf9122">Benin</option>
+                            <option value="Bermuda" id="6f89deb3-2de1-4878-8363-cdd89d7e1f29">Bermuda</option>
+                            <option value="Bolivia" id="43864de0-0551-4b27-8bf1-f2593cc0e5fc">Bolivia</option>
+                            <option value="Bosnia and Herzegowina" id="ff69efa7-bf52-440c-920e-892d37ed6d72">Bosnia and Herzegowina</option>
+                            <option value="Botswana" id="2fbc12e9-aa1c-431f-9c4c-d2940b5227e1">Botswana</option>
+                            <option value="Brazil" id="f1b80b04-09fe-4da3-9596-525a4157db24">Brazil</option>
+                            <option value="British Indian Ocean Territory" id="73fb3f9f-132c-46bf-aafd-16f1b45ad696">British Indian Ocean Territory</option>
+                            <option value="Brunei" id="8bef29be-6932-4df2-8c0d-2349e2d47035">Brunei</option>
+                            <option value="Bulgaria" id="34491af7-0052-42e9-899f-50b42106c9dc">Bulgaria</option>
+                            <option value="Burkina Faso" id="a9115118-630c-4c5a-9751-17a461f2bbdf">Burkina Faso</option>
+                            <option value="Burundi" id="9215afb6-75af-4cce-a7b7-36b7cd9fc748">Burundi</option>
+                            <option value="Cambodia" id="2ee06df2-f1f7-4a9f-a811-d2efb584d877">Cambodia</option>
+                            <option value="Cameroon" id="bb67c19d-3ca0-4232-9b4c-2cb48c4fe926">Cameroon</option>
+                            <option value="Canada" id="b7439698-a713-433f-ba04-6eeb569b918e">Canada</option>
+                            <option value="Cayman Islands" id="d8e92b06-6f74-40da-9846-09c12a3c2257">Cayman Islands</option>
+                            <option value="Central African Republic" id="25b38653-249e-4aec-9e37-e7a16a11beb5">Central African Republic</option>
+                            <option value="Chile" id="87dfd807-0523-46ec-b8b0-cd326cc051ec">Chile</option>
+                            <option value="China" id="e1a2f875-bea0-43a0-8424-39589f6e32ca">China</option>
+                            <option value="Colombia" id="0a48a6b6-26ba-4736-9773-e32b71348a68">Colombia</option>
+                            <option value="Costa Rica" id="2a547de9-1924-4a0a-8eaf-f34315c65b18">Costa Rica</option>
+                            <option value="Cote D'Ivoire" id="d2a65fe9-f779-46aa-b27a-d90f95164942">Cote D'Ivoire</option>
+                            <option value="Croatia" id="6bb0296f-f409-46c8-97f9-057b6d8afcf6">Croatia</option>
+                            <option value="Cyprus" id="fb034d5e-41a5-4c75-a80e-e71221936199">Cyprus</option>
+                            <option value="Czech Republic" id="99f36fe4-c704-4351-9c7a-56247ef6fd8a">Czech Republic</option>
+                            <option value="Denmark" id="f1ae152a-b9cc-4a67-9172-3b82834184d1">Denmark</option>
+                            <option value="Dominican Republic" id="5c7b1821-6cf7-43c0-9cff-d677bf16c1b9">Dominican Republic</option>
+                            <option value="Ecuador" id="b12bddcc-2880-4755-bc5a-27517bfae9e8">Ecuador</option>
+                            <option value="Egypt" id="137b6c38-ab45-4a0e-bdd1-1eaf8ffbc223">Egypt</option>
+                            <option value="El Salvador" id="cdf09e70-7fa9-4246-8685-276c8273b7bf">El Salvador</option>
+                            <option value="Eritrea" id="be4f7666-a308-43b6-b51a-1ef7bf518926">Eritrea</option>
+                            <option value="Ethiopia" id="e04cd40d-5842-40a5-ad75-8eaa35b81c65">Ethiopia</option>
+                            <option value="Fiji" id="d1a8f369-92ad-41bc-ac5a-989ad7e5477c">Fiji</option>
+                            <option value="Finland" id="99159dc6-c4bc-4bcc-b0b9-be427ac670e7">Finland</option>
+                            <option value="France" id="9ee72fe0-a337-4b59-9422-cc2ebd53a4c1">France</option>
+                            <option value="Georgia" id="242569f4-53ef-4bf2-bdb9-adaa416e0c5e">Georgia</option>
+                            <option value="Germany" id="2e7f39e8-8a27-4994-b6fd-3820b0c39eef">Germany</option>
+                            <option value="Ghana" id="7828160e-dbb7-43a1-85a4-4089795f5566">Ghana</option>
+                            <option value="Great Britian" id="af4c970c-ef51-461c-9661-8b193d184525">Great Britian</option>
+                            <option value="Greece" id="4e214b9d-d7b6-462f-b6d5-1b8f77f05a4c">Greece</option>
+                            <option value="Guam" id="e507ed20-3b6f-4a9e-ab5e-13e7b2176809">Guam</option>
+                            <option value="Guatemala" id="6de0751d-101d-4e5c-85a9-b07143435b66">Guatemala</option>
+                            <option value="Guyana" id="66543648-544a-40d9-88c9-6a3f586b3fec">Guyana</option>
+                            <option value="Haiti" id="f379501a-05ad-42ae-9798-95975f3fc1c6">Haiti</option>
+                            <option value="Honduras" id="360e77ea-78e3-4039-a2ab-6c665865f64e">Honduras</option>
+                            <option value="Hong Kong" id="ffbfa840-bd2f-4073-8dc2-df5df4201c06">Hong Kong</option>
+                            <option value="Hungary" id="8471f8ba-29f5-4a5b-b298-f4de06f4f91d">Hungary</option>
+                            <option value="Iceland" id="0666f89c-fb2c-46bf-812e-dce46ab1036c">Iceland</option>
+                            <option value="India" id="d38407ef-620a-4c3a-99b9-e0275a4906ff">India</option>
+                            <option value="Indonesia" id="a100096a-cf7a-4a2f-adbf-a0fd17f08d40">Indonesia</option>
+                            <option value="Iran (Islamic Republic of)" id="39a8f9f6-927e-4a78-94e2-4ea8802e94a7">Iran (Islamic Republic of)</option>
+                            <option value="Iraq" id="c2296514-226e-41ba-baa8-cd22d77ca015">Iraq</option>
+                            <option value="Ireland" id="45197f52-728f-45ab-a63d-181aef138257">Ireland</option>
+                            <option value="Israel" id="e31d6957-b510-46bf-824c-eaa248749ba0">Israel</option>
+                            <option value="Italy" id="0e9a15e2-5eab-4018-9b96-c051f2943ccb">Italy</option>
+                            <option value="Jamaica" id="1ccb4dda-bae0-4cdd-9a87-f53309e788d2">Jamaica</option>
+                            <option value="Japan" id="e4ea9442-0a6d-4594-8fd6-39e56047f6ff">Japan</option>
+                            <option value="Jordan" id="5825f029-8869-4bc4-91d1-486024c8c4c9">Jordan</option>
+                            <option value="Kazakhstan" id="c0a8eebe-d831-4dfe-8cbe-324f961e2227">Kazakhstan</option>
+                            <option value="Kenya" id="32b2c072-5316-4f0f-965a-1eafbed103b1">Kenya</option>
+                            <option value="Korea, D.P.R.O." id="3680569d-0136-4d0f-8783-d409938350db">Korea, D.P.R.O.</option>
+                            <option value="Korea, Republic of" id="236d40d1-f14f-46d0-b5fa-bdbf6a9609aa">Korea, Republic of</option>
+                            <option value="Kuwait" id="a3dce12c-f824-4de8-8565-6f65749057d4">Kuwait</option>
+                            <option value="Kyrgyzstan" id="b0e59266-db27-4bd4-8f67-926521c66bcb">Kyrgyzstan</option>
+                            <option value="Latvia" id="b8963779-4353-4323-923a-fa2b016ab660">Latvia</option>
+                            <option value="Lebanon" id="9ce35505-cc8d-43cf-9a14-c28d8ec3202e">Lebanon</option>
+                            <option value="Libyan Arab Jamahiriya" id="dd7edb7c-672a-4c76-b6d3-ff52cf9ef1c5">Libyan Arab Jamahiriya</option>
+                            <option value="Liechtenstein" id="02af1341-b0cf-47a6-beae-115872f85b6b">Liechtenstein</option>
+                            <option value="Lithuania" id="e3cb7548-32e0-4fbd-9620-978f4f9451b8">Lithuania</option>
+                            <option value="Luxembourg" id="6ab5a801-5428-4076-968d-778aa4ba9cfa">Luxembourg</option>
+                            <option value="Macao" id="0e1b356d-4e32-48ae-97b7-c3cb77ee8b8f">Macao</option>
+                            <option value="Macedonia" id="03af22f9-42e8-4df7-92a4-b202d2cd8aa0">Macedonia</option>
+                            <option value="Madagascar" id="cbaad64a-8210-4a48-a677-02b53d06242e">Madagascar</option>
+                            <option value="Malaysia" id="3ea24c91-87f0-4d12-a9d8-68e8bc14a3fc">Malaysia</option>
+                            <option value="Malta" id="b63096ed-e3f0-4e2f-9638-c8db72b671c1">Malta</option>
+                            <option value="Marshall Islands" id="d084585f-c689-4012-87e3-d55f3ae48a91">Marshall Islands</option>
+                            <option value="Mauritania" id="5abca937-52d2-4041-93da-6350fa1dc126">Mauritania</option>
+                            <option value="Mauritius" id="721e394c-8d3f-4b6c-ab5d-b5c74e6fd43f">Mauritius</option>
+                            <option value="Metro Manila" id="fed15e15-e374-4bb3-8147-45b62858d65e">Metro Manila</option>
+                            <option value="Mexico" id="a3a2f411-d33a-46cc-9710-72070ae871c6">Mexico</option>
+                            <option value="Moldova, Republic of" id="0dcef63d-7668-4c61-be22-d96ade28d889">Moldova, Republic of</option>
+                            <option value="Monaco" id="dcd0d37b-fc42-4281-a0f6-3d44878c2df2">Monaco</option>
+                            <option value="Morocco" id="75f22973-2ff5-41c3-a4de-f5127aa9a02d">Morocco</option>
+                            <option value="Mozambique" id="64febbe0-3c09-48d0-8ad7-ef8ff0e54676">Mozambique</option>
+                            <option value="Myanmar" id="727c24e5-d2c8-44af-ad6e-a453451cab6a">Myanmar</option>
+                            <option value="Nepal" id="25fe4a6d-7fec-4d8f-8bf4-bcbd9277a21a">Nepal</option>
+                            <option value="Netherlands" id="e34f392a-79b8-4933-b057-10ef94c8ebd6">Netherlands</option>
+                            <option value="New Zealand" id="ceec051e-f176-4f04-b76a-2c9497ce4c38">New Zealand</option>
+                            <option value="Nicaragua" id="3a96769c-4bda-4aab-a5fc-c6bf72ce4d81">Nicaragua</option>
+                            <option value="Niger" id="a54f5f9d-098b-42e4-b0d5-281a4c761891">Niger</option>
+                            <option value="Nigeria" id="41a40244-8d3b-485f-8c3e-d44859b36e04">Nigeria</option>
+                            <option value="Norway" id="630a4615-71a4-4bf9-b8a4-a7abad2b386e">Norway</option>
+                            <option value="Oman" id="7f8c121e-dc87-4a6e-bacf-2f9b60199f35">Oman</option>
+                            <option value="Pakistan" id="a8eeb873-567a-4218-b701-2d8c36bf533e">Pakistan</option>
+                            <option value="Palau" id="98a2051a-cbff-4ebb-b675-792604a48984">Palau</option>
+                            <option value="Panama" id="1f4fd673-41c5-4a30-96b9-a36c8d2e6021">Panama</option>
+                            <option value="Papua New Guinea" id="cb58bcf1-a033-4db3-81b3-e2df98f0dbec">Papua New Guinea</option>
+                            <option value="Paraguay" id="2fa68b79-b9bd-4f47-b1a9-0a6f0c4e6f50">Paraguay</option>
+                            <option value="Peru" id="5af669e3-9f2a-4421-8cc0-af9229c55806">Peru</option>
+                            <option value="Philippines" id="d71e5e70-2f09-4bca-8b22-addae296e032">Philippines</option>
+                            <option value="Poland" id="07682a92-76af-4d17-b0e7-2b8342982fc7">Poland</option>
+                            <option value="Portugal" id="cee28453-cee6-4fb4-88b4-7ba18a8061ed">Portugal</option>
+                            <option value="Puerto Rico" id="b7b7b225-0113-4a90-bc1b-715a9728d1e8">Puerto Rico</option>
+                            <option value="Qatar" id="e871f30d-bd14-4763-93f1-5fd2c78406a3">Qatar</option>
+                            <option value="Romania" id="00c98873-a8a8-496c-8076-ee982e5b09e3">Romania</option>
+                            <option value="Russian Federation" id="a2012389-3f0f-46f7-a563-97350d7372a4">Russian Federation</option>
+                            <option value="Saudi Arabia" id="b2919df4-22b1-40ec-bee6-ab08678da520">Saudi Arabia</option>
+                            <option value="Senegal" id="b46306c3-d772-418e-92f2-17079dca77fd">Senegal</option>
+                            <option value="Serbia" id="7628ca2e-a908-4a8b-9240-259e8e8da56d">Serbia</option>
+                            <option value="Sierra Leone" id="6efc0ab9-5146-4b5e-bdbe-4eb7bab2638e">Sierra Leone</option>
+                            <option value="Singapore" id="973e6769-cba6-43e2-9119-e473eeda04cc">Singapore</option>
+                            <option value="Slovenia" id="f4507cbb-d00e-46bb-9236-1a763c96abc3">Slovenia</option>
+                            <option value="South Africa" id="72a5204e-2404-4f6d-8cf3-5aec665e9af1">South Africa</option>
+                            <option value="South Korea" id="4a1ac8c4-ea5c-412d-93af-d57774b2c97a">South Korea</option>
+                            <option value="Spain" id="35e438a5-8da4-4fe6-86fd-7f401c77be7c">Spain</option>
+                            <option value="Sri Lanka" id="e1006389-6d97-40f0-9343-3d679fcb68f7">Sri Lanka</option>
+                            <option value="Sudan" id="c4d7abcf-4873-431c-8f7b-1036e74b27b1">Sudan</option>
+                            <option value="Swaziland" id="41ed40a1-5f43-4a5e-ac81-32c2df12385a">Swaziland</option>
+                            <option value="Sweden" id="7d28813e-4488-401a-846b-33cff1667e2a">Sweden</option>
+                            <option value="Switzerland" id="935daafe-90dc-4b5d-9d62-9f8bb0442d94">Switzerland</option>
+                            <option value="Syrian Arab Republic" id="4a7e2598-83d6-459d-bded-1bdd9860f507">Syrian Arab Republic</option>
+                            <option value="Taiwan" id="38799e0c-8f9a-4d7c-8ad9-0d6b6e1340a1">Taiwan</option>
+                            <option value="Tanzania" id="57389453-53c4-4fe2-89af-f60c9218a437">Tanzania</option>
+                            <option value="Thailand" id="d47d669e-794b-4a2f-b431-a4fa84323a6d">Thailand</option>
+                            <option value="Trinidad and Tobago" id="8984ce70-7620-4406-81e9-a24481b53e30">Trinidad and Tobago</option>
+                            <option value="Tunisia" id="8c4abbc1-fcd7-4a38-afba-f6f0f261164e">Tunisia</option>
+                            <option value="Turkey" id="2dc8bd1b-04ca-433e-a9bf-8e4cfcbf6052">Turkey</option>
+                            <option value="Uganda" id="69841c75-53a5-43ae-85e7-5613bf2e7d43">Uganda</option>
+                            <option value="Ukraine" id="b2db7e09-5af5-49d9-994b-0dcadb57302a">Ukraine</option>
+                            <option value="United Arab Emirates" id="b7953db8-17f5-4936-84d7-1751e8d451d2">United Arab Emirates</option>
+                            <option value="United Kingdom" id="0609b403-c516-431d-affc-dfa9e206fa27">United Kingdom</option>
+                            <option value="United States" id="4fc81243-c3ac-4ad8-be11-721be5795482">United States</option>
+                            <option value="Uruguay" id="ca1fb1a8-c014-4a64-ad8e-51961c545233">Uruguay</option>
+                            <option value="Uzbekistan" id="b9eecc2a-9314-45a2-aa30-f6e127f279ef">Uzbekistan</option>
+                            <option value="Venezuela" id="12d94616-1df8-4c89-9d06-2a406d512adb">Venezuela</option>
+                            <option value="Vietnam" id="a368c320-9112-4d9f-b2c6-55ad00e3274a">Vietnam</option>
+                            <option value="Virgin Islands (U.S.)" id="6fe3fd43-1f61-4126-9659-705403ac68ce">Virgin Islands (U.S.)</option>
+                            <option value="Yemen" id="82024569-bef2-4baa-8936-a1a04bf8b6bd">Yemen</option>
+                            <option value="Zambia" id="ac8e6c58-4d37-4ed2-8393-6b363f0ac76d">Zambia</option>
+                            <option value="Zimbabwe" id="195528b1-6522-41ee-8297-efb6f010be26">Zimbabwe</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="g-1-2 remove-bottom margin-mobile">
+                    <label for="personalPhone" class="adfFormLabel">Phone Number</label>
+                    <input id="personalPhone" class="adfInput form-control" type="tel" placeholder="Phone Number">
+                </div>
+                <div class="g-1-2 remove-bottom">
+                    <label for="personalEmail" class="adfFormLabel">Email Address</label>
+                    <span class="marker"></span><input id="personalEmail" class="adfInput form-control required" type="email" placeholder="Email Address" required="" pattern="\b[\w\.-]+@[\w\.-]+\.\w{2,4}\b">
+                </div>
+            </div>
+        </fieldset>
+        <fieldset class="form-group" id="commentsSection">
+            <label>Comments</label>
+            <label for="comments" class="adfFormLabel">Comments</label>
+            <textarea id="comments" class="adfText form-control" placeholder="Comments" maxlength="250"></textarea>
+            <p class="char-counter"><span>250</span> characters left</p>
+        </fieldset>
+        <div class="row">
+            <div id="adfError" class="add-bottom">
+                <span class="fa fa-exclamation-circle" aria-hidden="true"></span> 
+                <p>Some required information is missing. Form submission is disabled until all required information is entered.</p>
+            </div>
+        </div>
+    </div>
+    <div class="row button-container [ box-flex align-start ]">
+        <!--<a class=" donate [ button ] [ font-base text-base weight-bold pad-left-500 ]" href="giveToUC.html"><span>PAYMENT INFO</span></a>-->
+        <button class="donate [ button ] [ font-base text-base weight-bold pad-left-500 ]" id="adfSubmitButton" type="button">Next</button>
+    </div>
+    <input id="designationId" type="hidden" value="7318410e-17bd-4d1f-8437-d5742754a93a">
+</div>
+			</div><!--end pl-js-pattern-example-->
+		
+			<script type="text/json" id="pl-pattern-data-organisms-main-giving-form" class="pl-js-pattern-data">
+			{"cssEnabled":false,"patternLineageExists":false,"patternLineages":[],"lineage":[],"patternLineageRExists":false,"patternLineagesR":[],"lineageR":[],"patternLineageEExists":false,"patternDesc":"","patternBreadcrumb":{"patternGroup":"organisms","patternSubgroup":"BBIS"},"patternExtension":"hbs","patternName":"Main Giving Form","patternPartial":"organisms-main-giving-form","patternState":"","patternEngineName":"handlebars","extraOutput":{}}
 			</script>
 		
 		</div><!--end pl-c-pattern-->
@@ -12910,10 +13970,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1760973840469">
+<script id="pl-js-polyfill-insert-1761739419114">
   (function() {
     if (self != top) {
-      var cb = '1760973840469';
+      var cb = '1761739419114';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -12926,7 +13986,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1760973840469" nomodule>
+<script id="pl-js-insert-1761739419114" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 

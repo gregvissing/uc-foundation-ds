@@ -2817,12 +2817,10 @@ table caption {
 	border-bottom: 0;
 	position: relative;
 	top: 1px;
-
 }
 
 [role="tabpanel"] {
 	border: 1px solid;
-	/* padding: 1.5rem; */
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
 }
@@ -7637,8 +7635,8 @@ tr[id*="_trTributeDesc"] > td:first-child > *,
 tr[id*="_trTributeName"] > td:first-child > *, 
 tr[id*="_trTributeFirstName"] > td:first-child > *, 
 tr[id*="_trTributeLastName"] > td:first-child > * {
-   	margin-left: 15px;
-   	padding: 0 5px;
+   	margin-left: 0;
+   	padding: 0 5px 0 0;
 }
    
 tr[id*="_trTributeDesc"] > td[id*="_tdTribDescCaption"]:not(.DonationRequiredFieldMarker),
@@ -7678,6 +7676,7 @@ tr[id*="_trTributeLastName"] .BBFormRequiredFieldMarker.DonationRequiredFieldMar
    	position: absolute;
    	left: 5px;
    	top: 14px;
+   	display: none;
 }
    
 div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
@@ -7703,12 +7702,17 @@ tbody.BBFormTable.DonationCaptureFormTable td.BBFieldCaption.DonationCaptureFiel
 tbody.BBFormTable.DonationCaptureFormTable td.BBFieldCaption.DonationCaptureFieldCaption > label {
 	display: block;
 	width: 100%;
+   	padding-left: 5px;
+}
+   
+tbody.BBFormTable.DonationCaptureFormTable td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker {
+   	left: 0;
 }
    
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span,
 tbody.BBFormTable.DonationCaptureFormTable td.BBFieldCaption.DonationCaptureFieldCaption > label {
-   	margin-left: 15px;
+   	margin: 0;
  	display: inline-block;
    	height: unset;
 }
@@ -7758,7 +7762,43 @@ tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonat
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td[id*="_tdreq_stateUS"] > span {
    	position: absolute;
    	left: 0;
+   	display: none;
 } 
+   
+tbody.pnlDonor tr:has(.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker) {
+   	position: relative;
+}
+   
+.w100p.BBFieldControlCell.DonationCaptureFieldControlCell:has(span.BBFieldCheckboxCaption.DonationFieldCheckboxCaption) {
+   	display: block;
+   	margin-top: 1em;
+}
+   
+tbody.pnlDonor tr:has(.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker) > td.BBFieldCaption.DonationCaptureFieldCaption > * {
+   	display: inline-block;
+   	width: unset;
+   	position: relative;
+}
+   
+div.PaymentPart_PersonalInfoContainer div.BBDivFieldContainer {
+   	position: relative;
+}
+   
+tbody.pnlDonor tr:has(.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker) > td.BBFieldCaption.DonationCaptureFieldCaption > *:after,
+tbody.pnlDonor tr:has(td[id*="RequiredCell"]) > td.BBFieldCaption.DonationCaptureFieldCaption > *:after,
+tbody#pnlAcknowledgee tr:has(.BBFormRequiredFieldMarker.DonationRequiredFieldMarker) > td.BBFieldCaption.DonationFieldCaption > *:after,
+div.PaymentPart_PersonalInfoContainer div.BBDivFieldContainer:has(.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker) > *:first-child:after {
+   	content: "*";
+   	position: relative;
+   	color: var(--color-uc-dark-red);
+    line-height: 1;
+   	padding: 0 5px;
+   	vertical-align: middle;
+}
+   
+div.PaymentPart_PersonalInfoContainer div.BBDivFieldContainer .BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker {
+	display: none;   
+}
    
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:first-child {
    	display: flex;
@@ -7799,7 +7839,7 @@ tbody.BBFormTable.DonationCaptureFormTable td.wsNowrap.BBFieldControlCell.sDonat
    	tr[id*="_trTributeLastName"] td.BBFieldControlCell.DonationFieldControlCell,
    	tr[id*="_trTributeDesc2"] > td[id*="_tdTrib2Caption"],
    	tr[id*="_trTributeDesc2"] > td[id*="_tdTrib2Controls"] {
-   		width: 100%;
+   		width: 100% !important;
    	}
    
    	tr[id*="_trTribute"] > td:first-child {
@@ -8166,7 +8206,7 @@ tbody[id*="_tbdCart"] tr[id*="_trAddToCart"] td * {
 }
 
 div[id*="_UpdatePanel"] .BBFormButtonCell.DonationButtonCell {
-   	padding: 2em 0 !important;
+   	padding: 1em 0 !important;
 }   
   
 div[id*="_UpdatePanel"] input.BBFormSubmitButton.DonationSubmitButton {
@@ -8524,8 +8564,8 @@ tbody[id*="pnlAcknowledgee"] > tr > td:first-child {
 }
    
 tbody[id*="pnlAcknowledgee"] > tr > td:first-child > * {
-	margin-left: 15px;
-   	padding: 0 5px;
+	margin-left: 0;
+   	padding: 0 5px 0 0;
 }
    
 tbody[id*="pnlAcknowledgee"] > tr > td:nth-child(2) {
@@ -8542,6 +8582,7 @@ tbody[id*="pnlAcknowledgee"] > tr > td[id*="_tdreq_"] {
 	top: 14px;
 	left: 5px;
 	width: 10px;
+   	display: none;
 }
    
 tbody[id*="pnlAcknowledgee"] td[id*="_AddressCtl_lblreq_addrline"].BBFormRequiredFieldMarker.DonationRequiredFieldMarker {
@@ -11367,8 +11408,40 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
    
 .PaymentPart_PersonalInfoContainer {
-	padding: 10px !important;   
+	padding: 10px !important;
+   	width: 100%;
+   	max-width: 800px !important;
+   	margin: 0 auto;
 }
+   
+@media (min-width: 600px) {
+   	.PaymentPart_PersonalInfoContainer {
+   		display: flex;
+   		flex-direction: column;
+   	}
+   	
+   	.PaymentPart_PersonalInfoContainer > div.BBDivFieldContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+   		flex-direction: row;
+   		flex-wrap: nowrap;
+    }
+   
+   	.PaymentPart_PersonalInfoContainer > div.BBDivFieldContainer > *:nth-child(2) {
+     	width: 75% !important;
+    }
+   
+   	.PaymentPart_PersonalInfoContainer > div.BBDivFieldContainer:has(#dd-company-name-input) {
+   		order: 1;
+   		flex-direction: column !important;
+   		justify-content: flex-start;
+   		align-items: unset;
+   		margin-top: 1em;
+   		gap: 5px;
+   	}
+}
+
 
 .BBListingHeading.PaymentPart_SectionHeading > * {
 	font-weight: bold;   
@@ -11383,11 +11456,13 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
    
 .PaymentPart_Controls {
-    margin-right: 0px !important;
+    margin: 0px auto !important;
    	float: none !important;
    	display: flex !important;
-   	justify-content: flex-end;
+   	justify-content: flex-start;
    	padding: 10px !important;
+   	width: 100%;
+   	max-width: 800px;
 }   
 
 .PaymentPart_Controls > input {
@@ -12694,8 +12769,8 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"]
 	display: block;
 	width: 100% !important;
 	/* margin-bottom: 1rem !important; */
-	height: 46px !important;
-	line-height: 46px !important;
+	height: unset !important;
+	line-height: 1 !important;
 	font-weight: bold;
 }
 
@@ -12708,6 +12783,20 @@ table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"]
 	table.w100p
 	td {
 	padding: 5px 0.5em !important;
+}
+   
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"]
+	tr[class*="RowStyle"]
+	table.w100p
+	tr {
+		position: relative;
+}
+
+table[id*="Wizard1_dgEventItems3_dgRegistrationsList_0_dgRegistrantList"]
+	tr[class*="RowStyle"]
+	table.w100p
+	tr td.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker {
+		bottom: unset;
 }
 
 table[id*="Wizard1_dgEventItems3_dgRegistrationsList_"]
@@ -12795,7 +12884,7 @@ table[id*="Wizard1_dgAttendeesSummary2_dgEventTickets2_"] td {
 	display: block;
 	height: 100%;
 	line-height: 1;
-	padding: 0 5px;
+	padding: 0 5px 0 0;
 	margin: 5px 0;
 }
 
@@ -13017,7 +13106,7 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
 	.BBFormTable.DonationCaptureFormTable.pnlDonor
 		tr
 		.BBFieldCaption.DonationCaptureFieldCaption {
-		padding-left: 1.25em;
+		padding-left: 0;
 	}
    
    	.BBFormRequiredFieldMarker.DonationCaptureRequiredFieldMarker {
