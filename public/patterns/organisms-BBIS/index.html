@@ -13,8 +13,8 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Gentium+Book+Plus:ital,wght@0,400;0,700;1,400;1,700&family=Jost:ital,wght@0,400;0,700;0,800;1,400;1,700;1,800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
 
-		<link rel="stylesheet" type="text/css" href="../../css/style.css?1761740096536" media="all" />
-		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1761740096536" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/style.css?1761740292459" media="all" />
+		<link rel="stylesheet" type="text/css" href="../../css/pattern-scaffolding.css?1761740292459" media="all" />
 
 		<link rel="stylesheet" id="eventStylesEventUIMediaQuery" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIMediaQuery.css?&iuqt=1" type="text/css" disabled />
 		<link rel="stylesheet" id="eventStylesEventUIStep1" href="https://foundation.uc.edu/Client/Styles/Admin/EventUIStep1.css?&iuqt=1" type="text/css" disabled />
@@ -27,7 +27,7 @@
 
 		<!--<Deject>-->
 		<!-- Begin Pattern Lab (Required for Pattern Lab to run properly) -->
-		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1761740096536" media="all">
+		<link rel="stylesheet" href="../../styleguide/css/pattern-lab.css?1761740292459" media="all">
 		<!-- End Pattern Lab -->
 		<!--</Deject>-->
 
@@ -5866,7 +5866,23 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="flex gap-1">
+                <div class="formrow form-group required fname-input flex flex-column flex-between one-half">
+                    <label for="personalFirstName" class="labelText">First name (Required)</label>
+                    <div class="relative req-field">
+                        <input type="text" class="firstName form-control" id="personalFirstName" maxlength="30" placeholder="First name" required="">
+                        <span class="req">*</span>
+                    </div>
+                </div>
+                <div class="formrow form-group required lname-input flex flex-column flex-between one-half">
+                    <label for="personalLastName" class="labelText">Last name (Required)</label>
+                    <div class="relative req-field">
+                        <input type="text" class="lastName form-control" id="lastName" maxlength="60" placeholder="Last name" required="">
+                        <span class="req">*</span>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="row">
                 <div class="g-1-2 remove-bottom margin-mobile">
                     <label for="personalFirstName" class="adfFormLabel">First Name</label>
                     <span class="marker"></span><input id="personalFirstName" class="adfInput form-control required" type="text" placeholder="First Name" required="">
@@ -5875,7 +5891,7 @@
                     <label for="personalLastName" class="adfFormLabel">Last Name</label>
                     <span class="marker"></span><input id="personalLastName" class="adfInput form-control required" type="text" placeholder="Last Name" required="">
                 </div>
-            </div>
+            </div>-->
             <div class="row">
                 <div class="g-12 remove-bottom">
                     <label for="personalAddress" class="adfFormLabel">Address</label>
@@ -13968,10 +13984,10 @@
   }
 </script>
 
-<script id="pl-js-polyfill-insert-1761740096536">
+<script id="pl-js-polyfill-insert-1761740292459">
   (function() {
     if (self != top) {
-      var cb = '1761740096536';
+      var cb = '1761740292459';
       var js = [];
       scriptLoader.run(js,cb,'pl-js-polyfill-insert');
     }
@@ -13984,7 +14000,7 @@
   import('../../styleguide/js/patternlab-pattern.modern.js');
 </script>
 
-<script id="pl-js-insert-1761740096536" nomodule>
+<script id="pl-js-insert-1761740292459" nomodule>
   /*! loadJS: load a JS file asynchronously. [c]2014 @scottjehl, Filament Group, Inc. (Based on https://goo.gl/REQGQ by Paul Irish). Licensed MIT */
   !function(e){var t=function(t,n){"use strict";var o=e.document.getElementsByTagName("script")[0],r=e.document.createElement("script");return r.src=t,r.async=!0,o.parentNode.insertBefore(r,o),n&&"function"==typeof n&&(r.onload=n),r};"undefined"!=typeof module?module.exports=t:e.loadJS=t}("undefined"!=typeof global?global:this);
 
