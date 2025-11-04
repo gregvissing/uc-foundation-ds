@@ -1731,6 +1731,17 @@ blockquote:after {
     line-height: 1.05em;
 }
 
+.pull-quote-attribution > span {
+	display: flex;
+	flex-direction: column;
+}
+
+.pull-quote-attribution > span > span:nth-of-type(2) {
+	font-size: 0.75em;
+    font-weight: 300;
+    line-height: 1em;
+}
+
 .pull-quote-attribution span.headshot {
 	border-radius: 50%;
 	background-image: url(https://foundation.uc.edu/image/Neville-Pinto.jpg);
@@ -14580,4 +14591,14 @@ tr[id*="_trDesignation"] span[id*="_lblDesignationValue"] {
    .text.floating-img.flow figure.image {
    		width: 100% !important;
    }
+}
+   
+.search-content {
+   	margin: 0 !important;
+	height: 0 !important;   
+}
+   
+.DesignerPanePanelPart .search-content {
+   	margin: unset !important;
+	height: unset !important;   
 }
