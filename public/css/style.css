@@ -716,7 +716,7 @@ main ul li {
 }
 
 .pl-js-pattern-example main ol,
-.pl-js-pattern-example main ul {
+.pl-js-pattern-example main ul:not(.social-media-icons) {
 	display: flex;
 	flex-direction: column;
 }
