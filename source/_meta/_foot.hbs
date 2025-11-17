@@ -1258,7 +1258,11 @@
                 return value;
             }
 
-            getRndInteger(0, 3);
+            if ($("footer").length !== 0) {
+                getRndInteger(0, 3);
+            } else {
+                // do nothing
+            }
 
             /* ************************
                 CATEGORIES BAR
