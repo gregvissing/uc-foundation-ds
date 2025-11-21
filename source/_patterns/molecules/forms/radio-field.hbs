@@ -26,3 +26,36 @@
     {{/ if }}
 
 </div><!-- end c-field -->
+
+<div class="row">
+    <div class="one-third">
+        <div class="c-field {{ additionalClasses }}">
+
+            <label for="{{ id }}" class="c-field__label">{{ label }}</label>
+
+            <div class="c-field__body">
+
+                <ul class="c-option-list {{ additionalClasses }} flex flex-row">
+
+                    {{#each radios }}
+                    <li class="c-option-list__item js-radio-trigger-parent">
+
+                        <label class="c-input-group" for="{{ name }}{{ id }}">
+                            <input id="{{ name }}{{ id }}" type="radio" name="{{ name }}{{ name }}" value="{{ value }}" class="c-input-group__control js-radio-trigger" {{#if checked}}checked{{/ if }} {{#if disabled }}disabled{{/ if }} {{#if readOnly }}readonly{{/ if }}>
+                            <span class="c-input-group__text">{{ label }}</span>
+                        </label>
+
+                    </li><!-- end c-radio-list__item -->
+                    {{/ each }}
+
+                </ul><!-- end c-option-list -->
+
+            </div><!-- end c-field__body -->
+
+            {{#if fieldNote }}
+            <div class="c-field__note">{{{ fieldNote }}}</div>
+            {{/ if }}
+
+        </div><!-- end c-field -->
+    </div>
+</div>
