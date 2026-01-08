@@ -1570,8 +1570,8 @@ p.intro-text a {
     Icon over text 
  */
 
-.icon-text-container .icon-text:nth-child(2) {
-	border-left: 1px solid var(--color-ltGray);
+
+.icon-text-container .icon-text:not(:last-child) {
 	border-right: 1px solid var(--color-ltGray);
 }
 
@@ -1850,7 +1850,7 @@ blockquote:after {
 		top: 0;
 	}
 
-	blockquote:after {
+	/* blockquote:after {
 		content: "”";
 		top: 0;
 		right: 0;
@@ -1859,7 +1859,7 @@ blockquote:after {
 	blockquote:before,
 	blockquote:after {
 		font-size: 30px;
-	}
+	} */
 
 	.pull-quote.with-headshot > .pull-quote-attribution.flex.align-start.flex-end {
 		flex-direction: column !important;
@@ -2607,8 +2607,8 @@ table caption {
 }
 
 .tab-content.bg-img-content {
-	padding-top: 6em !important;
-	padding-bottom: 6em !important;
+	padding-top: 6em;
+	padding-bottom: 6em;
 	background-repeat: no-repeat;
 	background-size: cover !important;
 	background-position: center;
@@ -2667,9 +2667,12 @@ table caption {
 
 	.tab-content.bg-img-content,
 	.tab-content {
-		background-image: none !important;
 		padding: 1em 0 !important;
 		border-top: 1px solid var(--color-ltGray);
+	}
+
+	.tab-content.bg-img-content {
+		padding: 1em !important;
 	}
 }
 
@@ -2902,7 +2905,7 @@ table caption {
 	height: auto;
 }
 
-.tab-content.bg-img-content {
+/* .tab-content.bg-img-content {
 	padding-top: 6em !important;
 	padding-bottom: 6em !important;
 	background-repeat: no-repeat;
@@ -2910,7 +2913,7 @@ table caption {
 	background-position: center;
 	border-bottom-left-radius: 15px;
 	border-bottom-right-radius: 15px;
-}
+} */
 
 /*------------------------------------*\
     #ACCORDIONS
@@ -3366,7 +3369,7 @@ nav .button-primary a,
 	border-radius: 6px;
 	border-width: 2px !important;
 	border-style: solid;
-	font-family: "Jost", sans-serif;
+	font-family: Jost, sans-serif;
 	/* font-weight: 500; */
 	font-size: 1em;
 	text-transform: uppercase;
@@ -3374,7 +3377,7 @@ nav .button-primary a,
 	transition: background 0.1s;
 	display: inline-block;
 }
-
+   
 a.btn-link,
 button.btn-link {
 	letter-spacing: 1px;
@@ -3986,6 +3989,10 @@ a.c-stacked-block:hover * {
 	margin-right: 10px;
 }
 
+.c-stacked-block.quote .pull-quote blockquote {
+	text-indent: -30px;
+}
+
 .c-stacked-block.quote .pull-quote blockquote:before,
 .c-stacked-block.quote .pull-quote blockquote:after {
 	font-size: 40px;
@@ -4364,6 +4371,16 @@ footer .social-media li a.twitterx:focus,
 .sharing a.twitterx:hover,
 .sharing a.twitterx:focus {
 	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/TwitterX-black.svg);
+}
+   
+footer .social-media li a.tiktok {
+	background-image: url(https://foundation.uc.edu/file/social-media/TikTok-white.svg);
+   	background-size: 61%;
+}
+
+footer .social-media li a.tiktok:hover,
+footer .social-media li a.tiktok:focus {
+	background-image: url(https://foundation.uc.edu/file/social-media/TikTok-red.svg);
 }
 
 #share-print {
@@ -7811,6 +7828,11 @@ div.PaymentPart_PersonalInfoContainer div.BBDivFieldContainer .BBFormRequiredFie
 	display: none;   
 }
    
+div.PaymentPart_PersonalInfoContainer label,
+div.PaymentPart_PersonalInfoContainer span.BBDivFieldCaption.DCFieldCaption {
+   	font-weight: 400;
+}
+   
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:first-child {
    	display: flex;
    	width: 100%;
@@ -7828,7 +7850,7 @@ div.PaymentPart_PersonalInfoContainer div.BBDivFieldContainer .BBFormRequiredFie
     }
    
    	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > label,
-.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
+	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:not(:first-child) > td.BBFieldCaption.DonationCaptureFieldCaption > span {
         margin-left: 0px;
     }
    
@@ -9860,7 +9882,7 @@ div#dvMaintxtTruePledgeNoOfInstallmentFieldDetails .bbDonationInputField {
    
 div[id*="_dvOuter"] {
 	max-width: 800px;
-   	margin: -2em auto 0;
+   	margin: 0 auto;
    	display: block;
    	padding: 0 2.5rem;
    	position: relative;
@@ -10240,8 +10262,8 @@ fieldset.billingInformation {
 .donationForm .steps .step-buttons {
 	/* text-align: center; */
 	display: flex;
-	justify-content: space-between;
-	gap: 10px;
+	justify-content: center;
+	gap: 2em;
 }
 
 .donationForm .steps .step-button {
@@ -10982,7 +11004,7 @@ li {
 	line-height: 1.1;
 	margin: 0 0 10px 0;
 	text-transform: none;
-	font-weight: 400;
+	font-weight: 400 !important;
 	padding: 0;
 }
 
@@ -11341,6 +11363,7 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
     text-align: center;
     transition: background 0.1s;
     display: inline-block;
+   	font-weight: 700;
 }
   
 th[id*="_ctl00_CartGrid_thHeaderQuantity"],
@@ -11353,6 +11376,20 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
    
 .PaymentPart_CartCell.PaymentPart_CartRemoveCell {
  	text-align: right;  
+}
+   
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell a.PaymentPart_CartItemRemoveText {
+ 	border-bottom: none !important;
+    /* background: var(--color-brand-red); */
+    color: transparent !important;
+    border-radius: 6px;
+    padding: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+   	width: 25px;
+   	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23e00122" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"></path></svg>');
+   	background-repeat: no-repeat;
+   	background-position: center;
 }
 
 div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubmitButton.PaymentPart_UpdateCartLink:hover,
@@ -11453,9 +11490,16 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
    	}
 }
 
+.BBListingHeading.PaymentPart_SectionHeading {
+   	margin-bottom: 20px;
+}
 
 .BBListingHeading.PaymentPart_SectionHeading > * {
-	font-weight: bold;   
+	font-weight: 650;
+   	font-size: 1.75em !important;
+   	font-family: "Jost", sans-serif;
+    letter-spacing: .25px;
+    line-height: 1.2;
 }
    
 .PaymentPart_UseAsBillingContainer .PaymentPart_PesonalInfoCheckbox {
@@ -11532,14 +11576,25 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	z-index: 1;
 	overflow: hidden;
 }
+   
+.breadcrumbs .form-step span,
+.breadcrumbs .breadcrumb span:last-child {
+   	font-weight: 400;
+}
+   
+.breadcrumbs .breadcrumb span:last-child {
+   	padding: 5px;
+   	line-height: 1.1;
+}
 
 .breadcrumbs {
 	/*line-height: 1.5;*/
-	color: var(--color-dkGray);
+	/*color: var(--color-dkGray);*/
 	/*font-size: .8em;*/
-	font-style: italic;
+	/*font-style: italic;*/
 	text-align: center;
 	position: relative;
+   	color: var(--color-brand-black);
 }
 
 .breadcrumbs:before {
@@ -11585,7 +11640,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .breadcrumbs .breadcrumb {
-	color: var(--color-dkGray) !important;
+	color: var(--color-brand-black) !important;
 	/*background-color: none;*/
 	display: inline-block;
 	/*font-size: 1.3em;*/
@@ -12238,6 +12293,7 @@ input#tributeCheckbox {
 	overflow: auto;
 	padding: 0;
 	visibility: visible;
+   	z-index: 100;
 }
 
 @media (max-width: 980px) {
@@ -12338,6 +12394,16 @@ div[id*="_UpdatePanel"] * {
 
 div[id*="_UpdatePanel"] > .EventTable {
 	width: 100%;
+}
+   
+table.BBFormTable.EventTable table[id$="_Wizard1"] > tbody > tr > td > table.w100p > tbody > tr:nth-child(2) > td:first-child  {
+  	display: none !important;
+  	width: 0px !important;
+  	max-width: 0px !important;
+}
+ 
+.w100p.BBFormTable.EventItemRegistrationsTable tr {
+  	padding: 0 1rem;
 }
 
 .BBFormTable.EventTable tr[id*="_trProgress"] {
@@ -12514,6 +12580,10 @@ div[id*="_UpdatePanel"] > .EventTable {
 	border: 1px solid var(--color-grey);
 	padding: 10px !important;
 }
+   
+.EventItemsSelectionGrid br {
+	display: none;
+}
 
 .EventItemsSelectionGrid .BBFormTable.EventItemsTable > tbody > tr > td {
 	padding: 0.5rem 1rem;
@@ -12558,6 +12628,7 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_"] > tbody > tr > td {
 	> td.BBFieldControlCell.EventItemRegistrationControlCellQuantity {
 	width: 7%;
 	min-width: 50px;
+   	padding: 5px 0;
 }
 
 .w100p.BBFormTable.EventItemRegistrationsTable
@@ -12583,8 +12654,7 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_"] > tbody > tr > td {
 	> tr
 	> td.BBFieldControlCell.EventItemRegistrationControlCellPrice
 	* {
-	line-height: 36px;
-	height: 100%;
+	line-height: 1.25;
 	width: 100%;
 	display: block;
 	padding: 5px;
@@ -12633,12 +12703,12 @@ table[id$="Wizard1_dgEventItems2_dgPriceList_"] > tbody > tr > td {
    		width: 100%;
    	}
    
-   	div[id*="_UpdatePanel"] table[id*="_Wizard1"] > tbody > tr > td > table.w100p > tbody > tr {
+   	div[id*="_UpdatePanel"] table[id$="_Wizard1"] > tbody > tr > td > table.w100p > tbody > tr {
    		display: flex;
    		flex-direction: column;
    	}
    
-   	div[id*="_UpdatePanel"] table[id*="_Wizard1"] table.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr {
+   	div[id*="_UpdatePanel"] table[id$="_Wizard1"] table.w100p.BBFormTable.EventItemRegistrationsTable > tbody > tr {
    		display: flex;
    		flex-direction: unset;
    	}
@@ -12947,8 +13017,8 @@ table[id$="_Wizard1"]
 	width: 0px !important;
 }
    
-tr[id$="_Wizard1_trAdditionalDonation"] {
-   margin-top: 1em;
+tr[id$="_Wizard1_trAdditionalDonation"] > .BBFieldCaption {
+   padding-top: 1em;
 }
 
 span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
@@ -13145,6 +13215,49 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
 	display: block;
 }
 
+/*------------------------------------*\
+    #REGISTRATION - ADD TO CALENDAR BUTTON
+\*------------------------------------*/
+   
+#cal {
+    text-align: center;
+    display: inline-block;
+    margin: 0 auto;
+}
+
+#cal .add-to-calendar-dropdown {
+    margin-top: 40px;
+    top: 60px;
+    flex-direction: column;
+    width: 100%;
+}
+
+#cal .add-to-calendar-dropdown a {
+    opacity: 1;
+    padding-bottom: 0px;
+    border: none !important;
+    padding: 10px 20px;
+   	font-weight: 400;
+    display: block;
+  	transition: all 0.4s ease-in-out;
+}
+
+#cal .add-to-calendar-dropdown a:not(:last-child) {
+	border-bottom: 1px solid var(--color-grey) !important;  
+}
+
+#cal .add-to-calendar-dropdown a:hover {
+    background: var(--color-brand-red);
+  	color: var(--color-white);
+    cursor: pointer;
+}
+
+#cal .add-to-calendar-label,
+#cal .add-to-calendar-dropdown {
+    border: 2px solid var(--color-brand-red);
+    border-radius: 6px;
+}
+   
 /*------------------------------------*\
     #REGISTRATION FORM
 \*------------------------------------*/
@@ -13929,6 +14042,42 @@ div[id*="_DesignPanePanel"] {
    		width: 25%;
    	}
    
+   	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu {  
+   		width: 50%;
+   		margin-top: 52px;
+   	}
+   
+   	.menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {
+   		margin-top: 52px;
+   	}
+   
+   	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu > .nccUlMenuSub2 {  
+   		display: flex;
+   		flex-wrap: wrap;
+   		flex-direction: unset;
+   		gap: 2%
+   	}
+   
+   	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu > .nccUlMenuSub2 > li {  
+   		width: 48%;
+   		margin-bottom: 5px;
+   	}
+   
+   	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu > .nccUlMenuSub2 > li:last-child {  
+   		width: 100%;
+   		text-align: center;
+   	}
+   
+  	.menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1:before {
+   		content: "Explore UC and UC Health’s key areas where philanthropy can drive impact and empower our next generation of innovators and leaders. Click on the links below to learn more.";
+   		display: block;
+   		position: absolute;
+   		top: 5%;
+   		width: 65%;
+   		margin: auto;
+   		font-size: 16px;
+   	}
+   
    	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li > a, 
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > a {  
    		border-bottom: none !important;
@@ -14051,6 +14200,20 @@ div[id*="_DesignPanePanel"] {
    		height: 173px;
    		margin: 0 auto 5px;
    		background: url(https://foundation.uc.edu/view.image?Id=9193);
+   		background-repeat: no-repeat;
+   		background-position: center;
+   		background-size: cover;
+   		border-radius: 16px;
+   		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:before {
+   		content: "";
+   		display: block;
+   		width: 150px;
+   		height: 200px;
+   		margin: 0 auto 5px;
+   		background: url(https://foundation.uc.edu/image/2025AnnualReport.jpg);
    		background-repeat: no-repeat;
    		background-position: center;
    		background-size: cover;
@@ -14568,6 +14731,10 @@ div[id*="_DesignPanePanel"] {
    
 #raised {
 	margin-top: 3.5em;
+   	display: none;
+}
+
+#PC30107_pnlDonationForm .BBListingHeading.DonationListingHeading {
    	display: none;
 }
    
