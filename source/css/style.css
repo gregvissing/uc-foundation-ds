@@ -640,7 +640,7 @@ body {
 	-webkit-text-size-adjust: 100%;
 	/* 1 */
 	background-color: var(--color-white);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 /*------------------------------------*\
@@ -1100,7 +1100,7 @@ select.select2-input {
 	/* height: 2rem; */
 	height: 46px !important;
 	background: var(--color-white);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	position: relative;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -1493,7 +1493,7 @@ p.intro-text a {
 }
 
 .story h2 {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 @media (min-width: 768px) {
@@ -1660,7 +1660,7 @@ blockquote p {
 	/* display: inline; */
 	/* font-style: normal; */
 	
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	font-size: calc(2.6em);
     font-weight: 600;
     line-height: 1.2em;
@@ -1704,7 +1704,7 @@ blockquote:after {
 */
 
 .pull-quote-attribution {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	text-align: left;
 	/* padding: 0px 50px 0px 20px; */
 	/* margin-left: 50px; */
@@ -1869,13 +1869,13 @@ blockquote:after {
 .red-bg blockquote p,
 .red-bg .pull-quote-attribution,
 .red-bg .pull-quote-attribution {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 .red-bg blockquote:before,
 .red-bg blockquote:after {
-	-webkit-text-stroke: var(--color-brand-black);
-	color: var(--color-brand-black);
+	-webkit-text-stroke: var(--color-bearcats-black);
+	color: var(--color-bearcats-black);
 }
 
 /**
@@ -2287,7 +2287,7 @@ pre[class*="language-"] {
 	cursor: pointer;
 	border-radius: 50% !important;
 	background: rgba(255, 255, 255, 0.8) !important;
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	border: none;
 	padding: 7px !important;
 	margin: 0 5px !important;
@@ -2318,7 +2318,7 @@ pre[class*="language-"] {
 
 .hero .video-control button i:before {
 	font-size: 1em;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 .hero .video-control button:hover {
@@ -2574,7 +2574,7 @@ table caption {
 	padding: 10px 30px;
 	border: 1px solid var(--color-ltGray);
 	background: #eee;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	font-size: 1.3em !important;
 	font-weight: 600 !important;
 	cursor: pointer;
@@ -2586,7 +2586,7 @@ table caption {
 }
 
 .tab:hover label {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 .tab-content {
@@ -2594,7 +2594,7 @@ table caption {
 	height: 0;
 	position: relative;
 	top: 0;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	border: 1px solid var(--color-ltGray);
 	border-top: none;
 	padding: 1rem 30px;
@@ -2756,7 +2756,7 @@ table caption {
 	bottom: 0;
 	height: 25px;
 	margin: auto;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 .tabbed.vertical [type="radio"]:nth-of-type(1):checked ~ .tabs .tab:nth-of-type(1) label:after, 
@@ -2817,7 +2817,7 @@ table caption {
 	border-top-left-radius: 15px;
 	border-top-right-radius: 15px;
 	background: #eee;
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	font-size: 1.3em !important;
 	font-weight: 600 !important;
 	cursor: pointer;
@@ -2968,7 +2968,7 @@ table caption {
 	border: none;
 	border-radius: 0;
 	box-shadow: none;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	cursor: pointer;
 	display: block;
 	font-size: inherit;
@@ -3152,6 +3152,16 @@ table caption {
 
 	footer > .l-container {
 		flex-direction: column !important;
+	}
+}
+
+@media all and (max-width: 500px) {
+	main > .l-container,
+	main > section:not(.page-title) > .l-container {
+		width: 100%;
+		max-width: 100%;
+		min-width: 100%;
+		padding: 1em !important;
 	}
 }
 
@@ -3878,7 +3888,7 @@ body.modal-open {
 }
 
 .c-stacked-block__body p {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .date.pub-date {
@@ -3892,7 +3902,7 @@ body.modal-open {
 	/* margin-top: 35px; */
 	margin: 0;
 	letter-spacing: 1px;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	transition: color 0.15s ease-out;
 	font-size: 22px !important;
 }
@@ -4581,7 +4591,7 @@ header {
 }
 
 .nav-toggle {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .nav-closeBtn {
@@ -4598,7 +4608,7 @@ header {
 		display: flex !important;
 		gap: 0.5em;
 		align-items: center;
-		color: var(--color-brand-black) !important;
+		color: var(--color-bearcats-black) !important;
 		text-transform: capitalize !important;
 		font-size: 1em !important;
 		padding: 10px 5px !important;
@@ -4936,7 +4946,7 @@ ul.nav.main > li.search > a {
 	letter-spacing: 0.25px !important;
 
 	background-color: var(--color-white) !important;
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	line-height: 26px !important;
 	/* height: 56px; */
 	letter-spacing: 0.25px;
@@ -5055,7 +5065,7 @@ ul.nav.main > li.search > a:after {
 }
 
 .nav.flex.main.c-primary-nav__list li.parent .nccUlMenuSub1 > li > a {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	border-bottom: 1px solid var(--color-brand-black) !important;
 }
 
@@ -5301,7 +5311,7 @@ ul.nav.main > li.search > a:after {
 }
 
 .is-disabled .c-progress-tracker__number {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	border-color: var(--color-brand-red);
 }
 
@@ -5710,7 +5720,7 @@ strong * {
 }
 
 .callout-card h2 {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	margin-top: unset !important;
 }
 
@@ -5976,7 +5986,7 @@ img.imgLeft {
 #skip-link {
 	text-decoration: none;
 	background: var(--color-white);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	padding: 0.5rem 1rem;
 	border: 1px solid #aaa;
 	border-radius: 2px;
@@ -7030,7 +7040,7 @@ main p > a:hover {
 }
 
 .highlights .highlight-card h2 {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	font-size: 1.75rem;
 	letter-spacing: 0;
 	line-height: 40px;
@@ -7104,7 +7114,7 @@ main p > a:hover {
 }
 
 .pillar-cards * {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .pillar-cards {
@@ -7283,7 +7293,7 @@ main p > a:hover {
 	font-size: clamp(1em, 2vw, 3em);
 	line-height: 1.4;
 	letter-spacing: 0.3px;
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	line-height: 1.6 !important;
 	font-size: 1.125em !important;
 	font-weight: 300 !important;
@@ -7557,11 +7567,11 @@ main p > a:hover {
 }
    
 .mini-donation .bbminiform-amtboxmain {
-   	color: var(--color-brand-black);
+   	color: var(--color-bearcats-black);
 }
    
 .mini-donation .bbminiform-amtbox:not(.bbminiform-amtbox-active) {
-   	color: var(--color-brand-black);
+   	color: var(--color-bearcats-black);
 }
    
 .mini-donation .bbminiform-amtbox, 
@@ -7570,12 +7580,12 @@ main p > a:hover {
 }
    
 .bbminiform-otheramount {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
    	border: 1px solid var(--color-brand-black) !important;
 }
    
 .bbminiform-otheramount::placeholder {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
    	font-weight: bold;
 }
    
@@ -8164,7 +8174,7 @@ table[id*="_tblAmount"] > tbody > tr > td:first-child span label,
 table[id*="_rdoGiftType"] > tbody > tr > td label {
 	/* border-radius: 2em; */
 	/* border: 2px solid transparent; */
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	display: block;
 	padding: 0.55em 0.75em;
 	text-align: center;
@@ -8647,7 +8657,7 @@ tbody#pnlAcknowledgee label {
 .ui-widget-content .ui-state-default {
 	border: 1px solid var(--color-steger-silver) !important;
 	background: var(--color-main-street-mist);
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .ui-state-active,
@@ -10047,7 +10057,7 @@ fieldset.billingInformation {
 
 @media (max-width: 700px) {
 	.donationForm {
-		padding: 0 10px !important;
+		padding: 0 !important;
 	}
 
 	fieldset.donationInformation,
@@ -10247,12 +10257,6 @@ fieldset.billingInformation {
 
 .donationForm p {
 	font-size: 1em !important;
-}
-
-.line-items {
-	padding: 10px;
-	border: 1px solid var(--color-ltGray);
-	border-radius: 7px;
 }
 
 .line-items > div:last-of-type {
@@ -10693,6 +10697,12 @@ a.add-gift:hover {
 .donationForm #designationSearchBtn svg {
 	margin: 0;
 }
+   
+@media (max-width: 600px) {
+   	.donationForm #designationSearchBtn {
+   		width: 15%;
+   	}
+}
 
 /* Select2 styles */
 /*
@@ -10824,7 +10834,7 @@ a.badge:focus {
 /* h1 {
     font-size: 26px;
     font-weight: 500;
-    color: var(--color-brand-black);
+    color: var(--color-bearcats-black);
     margin-bottom: 20px;
     line-height: 1.3;
 }
@@ -10961,7 +10971,7 @@ li {
 }
 
 .donationForm .form h3 {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 #donation-form .donationForm .formrow label {
@@ -11000,7 +11010,7 @@ li {
 
 .designations p,
 .labelText {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	line-height: 1.1;
 	margin: 0 0 10px 0;
 	text-transform: none;
@@ -11155,14 +11165,14 @@ li {
 .line-item.total {
 	text-align: right;
 	line-height: 1.8;
-	font-size: 1.35em;
-	color: var(--color-dkGray);
+	font-size: 18px;
+	color: var(--color-bearcats-black);
 }
 
 .line-item-amount {
 	float: right;
-	font-size: 1.25em;
-	color: var(--color-dkGray);
+	font-size: 18px;
+	color: var(--color-bearcats-black);
 	line-height: 1.8;
 	position: relative;
 }
@@ -11244,7 +11254,7 @@ li {
 
 .BBDonationConfirmation .DonationFieldCaption {
 	background-color: var(--color-grey);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	padding: 2px;
 	text-align: right;
 	width: 100%;
@@ -11388,6 +11398,7 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
     transition: all 0.3s ease-in-out;
    	width: 25px;
    	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23e00122" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"></path></svg>');
+   	background-size: 25%;
    	background-repeat: no-repeat;
    	background-position: center;
 }
@@ -11568,7 +11579,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	margin: 0 auto;
 	border-radius: 50%;
 	border: 1px solid var(--color-brand-black);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	background: var(--color-white);
 	text-decoration: none;
 	line-height: 2.5;
@@ -11594,7 +11605,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	/*font-style: italic;*/
 	text-align: center;
 	position: relative;
-   	color: var(--color-brand-black);
+   	color: var(--color-bearcats-black);
 }
 
 .breadcrumbs:before {
@@ -11634,13 +11645,29 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 .breadcrumbs.progress-3:after {
 	width: 60%;
 }
+   
+.payroll .breadcrumbs.progress-1:after {
+	width: 0%;
+}
+
+.payroll .breadcrumbs.progress-2:after {
+	width: 23%;
+}
+
+.payroll .breadcrumbs.progress-3:after {
+	width: 45%;
+}
+   
+.payroll .breadcrumbs.progress-4:after {
+	width: 66%;
+}
 
 .breadcrumbs a:hover {
 	color: #500;
 }
 
 .breadcrumbs .breadcrumb {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	/*background-color: none;*/
 	display: inline-block;
 	/*font-size: 1.3em;*/
@@ -11653,6 +11680,12 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 .breadcrumbs .breadcrumb.active {
 	color: var(--color-brand-red) !important;
 	/* background-color: var(--color-callout-bg); */
+}
+   
+@media (max-width: 500px) {
+   	.breadcrumbs .breadcrumb.active {
+        background-color: var(--color-white);
+    }
 }
 
 /* 
@@ -11702,10 +11735,11 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 @media (max-width: 600px) {
 	.breadcrumbs:before {
 		width: 80% !important;
+   		display: none;
 	}
 
 	.breadcrumbs .breadcrumb {
-		width: 25% !important;
+		width: 50% !important;
 	}
 
 	.breadcrumbs.progress-2:after {
@@ -11715,6 +11749,13 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	.breadcrumbs.progress-3:after {
 		width: 53%;
 	}
+   
+   	.breadcrumbs {
+   		flex-wrap: wrap;
+   		flex-direction: unset !important;
+   		row-gap: 0px;
+   		margin-top: 0 !important;
+   	}
 }
 
 .checkmark__circle {
@@ -11797,6 +11838,10 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 .breadcrumbs .divider {
 	font-size: 1.2em;
 	margin: 0 5px 0 7px;
+}
+   
+.donationForm .select2-container {
+ 	display: block;  
 }
 
 /*** CHOSEN ***/
@@ -11881,8 +11926,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 #designationCount {
-	color: #999;
-	font-size: 0.9em;
+	color: var(--color-bearcats-black);
 }
 
 .validation-message {
@@ -12015,7 +12059,7 @@ input#tributeCheckbox {
 #donation-form h1 {
 	font-size: 26px;
 	font-weight: 500;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	margin-bottom: 20px;
 	line-height: 1.3;
 }
@@ -12031,7 +12075,7 @@ input#tributeCheckbox {
 }
 
 #donation-form h3 {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	margin-bottom: 10px;
 }
 
@@ -12097,7 +12141,7 @@ input#tributeCheckbox {
 }
 
 .donationForm.givingTuesday18 .designations .feature-masthead h3 {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	font-size: 28px;
 	font-weight: 600;
 }
@@ -12389,7 +12433,7 @@ div[id*="_pnlResults"] span[id*="rpResultList_SearchText"] span {
 \*------------------------------------*/
 
 div[id*="_UpdatePanel"] * {
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 div[id*="_UpdatePanel"] > .EventTable {
@@ -12478,7 +12522,7 @@ table.BBFormTable.EventTable table[id$="_Wizard1"] > tbody > tr > td > table.w10
 	display: block;
 	margin: 0 auto 5px;
 	background: var(--color-white);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	text-align: center;
 	border: 1px solid var(--color-brand-black);
 	line-height: 40px;
@@ -12554,7 +12598,7 @@ table.BBFormTable.EventTable table[id$="_Wizard1"] > tbody > tr > td > table.w10
 	height: auto !important;
 	/* background-color: #f0f0f0; */
 	text-align: center;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 }
 
 .BBFormTable.EventTable
@@ -13310,7 +13354,7 @@ div.skyContainer.EventContainer[role="banner"] > div > p:empty {
 
 ol.BBSequenceMap.BBEventRegSequenceMap.list-inline > li > * {
 	background-color: transparent;
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	border-bottom: none !important;
 }
 
@@ -13339,7 +13383,7 @@ ol.BBSequenceMap.BBEventRegSequenceMap.list-inline:before {
 	display: block;
 	margin: 0 auto 5px;
 	background: var(--color-white);
-	color: var(--color-brand-black);
+	color: var(--color-bearcats-black);
 	text-align: center;
 	border: 1px solid var(--color-brand-black);
 	line-height: 40px;
@@ -13394,15 +13438,15 @@ ol.BBSequenceMap.BBEventRegSequenceMap.list-inline:before {
 	border: 2px solid var(--color-brand-black) !important;
 	border-radius: 10px !important;
 	padding: 10px 12px;
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .EventLinkButton:before {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .EventContainer #divAddAttendee > button * {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 div[class*="Ev3_DivLaterChk"] {
@@ -13451,7 +13495,7 @@ div[class*="Ev3_DivLaterChk"] label[class*="_RegisterLaterText"] {
 }
 
 .Ev3_CancelButton {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
 
 .EventName.EventCursor.AlignLeft.EventDetail.EventCursorPointer.EventNameTextColor {
@@ -13686,7 +13730,7 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 
 .Ev3_AdAmtbox,
 .Ev3_AdAmtbox.Ev3_AdOtherAmtbox {
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 	border-color: var(--color-brand-black) !important;
 	transition: all 0.4s ease-in-out;
 }
@@ -13939,7 +13983,7 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 .BBPager .aspNetDisabled.BBPagerPageSelectedLink {
 	font-weight: bold !important;
 	border-bottom: none !important;
-	color: var(--color-brand-black) !important;
+	color: var(--color-bearcats-black) !important;
 }
    
 /*------------------------------------*\
@@ -14100,7 +14144,7 @@ div[id*="_DesignPanePanel"] {
    
    	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li.parent > a:hover, 
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li.parent > a:hover { 
-   		color: var(--color-brand-black) !important;
+   		color: var(--color-bearcats-black) !important;
     	background-color: unset;
    	}
    
@@ -14259,7 +14303,7 @@ div[id*="_DesignPanePanel"] {
    
    	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li > a,
    	.mega-menu.single-column.parent > .nccUlMenuSub1 > li > a {
-   		color: var(--color-brand-black) !important;
+   		color: var(--color-bearcats-black) !important;
    	}
    
    	.mega-menu.single-column > .nccUlMenuSub1 > li.featured > a:hover,
@@ -14429,7 +14473,7 @@ div[id*="_DesignPanePanel"] {
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 > li > a {
    		display: block;
    		padding: 10px !important;
-   		color: var(--color-brand-black) !important;
+   		color: var(--color-bearcats-black) !important;
    		border-bottom: none !important;
    	}
    
