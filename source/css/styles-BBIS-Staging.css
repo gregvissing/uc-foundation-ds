@@ -221,10 +221,6 @@ a:not(.patternLink):not(.navbar-link):not(.c-logo__link):not(.email-link):not(.m
 	border-bottom: 2px solid var(--color-brand-red);
 }
 
-.pl-js-pattern-example a:not(.card):hover {
-	border-bottom: 2px solid var(--color-brand-red) !important;
-}
-
 .scrollToTop {
 	width: 55px;
 	height: auto;
@@ -541,7 +537,7 @@ textarea:not([rows]) {
     font-style: normal;
     font-display: swap;
     font-weight: 400;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/fonts/Jost-Regular.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/fonts/Jost-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -549,7 +545,7 @@ textarea:not([rows]) {
     font-style: italic;
     font-display: swap;
     font-weight: 400;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/fonts/Jost-Italic.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/fonts/Jost-Italic.ttf") format("truetype");
 }
 
 @font-face {
@@ -557,7 +553,7 @@ textarea:not([rows]) {
     font-style: normal;
     font-display: swap;
     font-weight: 700;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/fonts/Jost-Bold.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/fonts/Jost-Bold.ttf") format("truetype");
 }
 
 @font-face {
@@ -565,7 +561,7 @@ textarea:not([rows]) {
     font-style: italic;
     font-display: swap;
     font-weight: 700;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/fonts/Jost-BoldItalic.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/fonts/Jost-BoldItalic.ttf") format("truetype");
 }
 */
 
@@ -576,7 +572,7 @@ textarea:not([rows]) {
     font-style: normal;
     font-display: swap;
     font-weight: 400;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/webdev/fonts/GenBkBasR.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/webdev/fonts/GenBkBasR.ttf") format("truetype");
 }
 
 @font-face {
@@ -584,7 +580,7 @@ textarea:not([rows]) {
     font-style: italic;
     font-display: swap;
     font-weight: 400;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/webdev/fonts/GenBkBasI.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/webdev/fonts/GenBkBasI.ttf") format("truetype");
 }
 
 @font-face {
@@ -592,7 +588,7 @@ textarea:not([rows]) {
     font-style: normal;
     font-display: swap;
     font-weight: 700;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/webdev/fonts/GenBkBasB.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/webdev/fonts/GenBkBasB.ttf") format("truetype");
 }
 
 @font-face {
@@ -600,7 +596,7 @@ textarea:not([rows]) {
     font-style: italic;
     font-display: swap;
     font-weight: 700;
-    src: url("https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/webdev/fonts/GenBkBasBI.ttf") format("truetype");
+    src: url("https://foundation.uc.edu/file/webdev/fonts/GenBkBasBI.ttf") format("truetype");
 }
 */
 
@@ -713,20 +709,6 @@ main ul li {
 	letter-spacing: 0.3px;
 	font-weight: 300;
 	font-size: 18px !important;
-}
-
-.pl-js-pattern-example main ol,
-.pl-js-pattern-example main ul:not(.social-media-icons) {
-	display: flex;
-	flex-direction: column;
-}
-
-.pl-js-pattern-example main ul li {
-	list-style: disc !important;
-}
-
-.pl-js-pattern-example main ol li {
-	list-style: decimal !important;
 }
 
 /*------------------------------------*\
@@ -1016,7 +998,7 @@ input[type="checkbox"]:checked:before {
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: 80%;
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/checkmark.svg);
+	background-image: url(https://foundation.uc.edu/file/icons/checkmark.svg);
 }
 
 input[type="checkbox"]:checked:before {
@@ -3117,9 +3099,9 @@ table caption {
 }
 
 @media (max-width: 768px) {
-	.l-container:not(.c-header__inner) {
+	/* .l-container:not(.c-header__inner) {
 		padding: 0 !important;
-	}
+	} */
 
 	main > section > .l-container {
 		width: 90vw;
@@ -4321,66 +4303,66 @@ footer .social-media li a {
 }
 
 footer .social-media li a.facebook {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Facebook-white.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/Facebook-white.svg);
 }
 
 footer .social-media li a.facebook:hover,
 footer .social-media li a.facebook:focus,
 .sharing a.facebook {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Facebook-red.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/Facebook-red.svg);
 }
 
 .sharing a.facebook:hover,
 .sharing a.facebook:focus {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Facebook-black.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/Facebook-black.svg);
 }
 
 footer .social-media li a.instagram {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Instagram-white.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/Instagram-white.svg);
 }
 
 footer .social-media li a.instagram:hover,
 footer .social-media li a.instagram:focus {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/Instagram-red.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/Instagram-red.svg);
 }
 
 footer .social-media li a.linkedin {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/LinkedIn-white.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/LinkedIn-white.svg);
 }
 
 footer .social-media li a.linkedin:hover,
 footer .social-media li a.linkedin:focus,
 .sharing a.linkedin {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/LinkedIn-red.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/LinkedIn-red.svg);
 }
 
 .sharing a.linkedin:hover,
 .sharing a.linkedin:focus {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/LinkedIn-black.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/LinkedIn-black.svg);
 }
 
 footer .social-media li a.youtube {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-white.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/YouTube-white.svg);
 }
 
 footer .social-media li a.youtube:hover,
 footer .social-media li a.youtube:focus {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/YouTube-red.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/YouTube-red.svg);
 }
 
 footer .social-media li a.twitterx {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/TwitterX-white.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/TwitterX-white.svg);
 }
 
 footer .social-media li a.twitterx:hover,
 footer .social-media li a.twitterx:focus,
 .sharing a.twitterx {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/TwitterX-red.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/TwitterX-red.svg);
 }
 
 .sharing a.twitterx:hover,
 .sharing a.twitterx:focus {
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/social-media/TwitterX-black.svg);
+	background-image: url(https://foundation.uc.edu/file/social-media/TwitterX-black.svg);
 }
    
 footer .social-media li a.tiktok {
@@ -4397,7 +4379,7 @@ footer .social-media li a.tiktok:focus {
 	border-radius: 50%;
 	padding: 10px !important;
 	background-size: 75%;
-	background-image: url(https://ucfnd-stg-bbisfoun.ucfnd.concourse.host/file/icons/print-icon-red.svg);
+	background-image: url(https://foundation.uc.edu/file/icons/print-icon-red.svg);
 }
 
 #share-print:hover,
@@ -9899,10 +9881,6 @@ div[id*="_dvOuter"] {
    	z-index: 5;
 }
 
-.pl-js-pattern-example div[id*="_dvOuter"] {
-	margin: 0 auto;
-}
-
 @media (min-width: 1200px) {
 	div[id*="_dvOuter"] .skyContainer {
 		width: 100%;
@@ -11192,7 +11170,6 @@ li {
 	font-size: 0.9em;
 	color: #888;
 	cursor: pointer;
-	margin-left: 9px;
 }
 
 .line-item-remove:hover {
@@ -11398,7 +11375,6 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
     transition: all 0.3s ease-in-out;
    	width: 25px;
    	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23e00122" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"></path></svg>');
-   	background-size: 25%;
    	background-repeat: no-repeat;
    	background-position: center;
 }
@@ -11409,6 +11385,8 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
 	background-color: var(--color-uc-dark-red) !important;
     border-color: var(--color-uc-dark-red) !important;
 }
+   
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell .PaymentPart_CartItemRemoveText:hover {}
 
 .PaymentPart_Cart .PaymentPart_CartList .PaymentPart_CartHeader .PaymentPart_CartRows.PaymentPart_CartHeaderRow th,
 .PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {
@@ -11679,13 +11657,6 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 
 .breadcrumbs .breadcrumb.active {
 	color: var(--color-brand-red) !important;
-	/* background-color: var(--color-callout-bg); */
-}
-   
-@media (max-width: 500px) {
-   	.breadcrumbs .breadcrumb.active {
-        background-color: var(--color-white);
-    }
 }
 
 /* 
@@ -11735,11 +11706,10 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 @media (max-width: 600px) {
 	.breadcrumbs:before {
 		width: 80% !important;
-   		display: none;
 	}
 
 	.breadcrumbs .breadcrumb {
-		width: 50% !important;
+		width: 25% !important;
 	}
 
 	.breadcrumbs.progress-2:after {
@@ -11755,7 +11725,16 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
    		flex-direction: unset !important;
    		row-gap: 0px;
    		margin-top: 0 !important;
+   		background-color: var(--color-white);
    	}
+   
+   	.validation {
+   		background-color: var(--color-white);
+   	}
+   
+   	.breadcrumbs .breadcrumb span:last-child {
+        padding: 5px 0;
+    }
 }
 
 .checkmark__circle {
