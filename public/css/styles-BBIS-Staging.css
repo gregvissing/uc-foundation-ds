@@ -10285,6 +10285,10 @@ fieldset.billingInformation {
 	.donationForm .steps .step-button {
 		padding: 7px 20px !important;
 	}
+   
+   	.donationForm .steps .step-buttons {
+   		gap: 1em !important;
+   	}
 }
 
 .steps {
@@ -11153,6 +11157,7 @@ li {
 	color: var(--color-bearcats-black);
 	line-height: 1.8;
 	position: relative;
+   	padding-left: 10px;
 }
 
 /* .line-item-name {
@@ -11175,24 +11180,41 @@ li {
 .line-item-remove:hover {
 	border-bottom: 2px solid var(--color-brand-red) !important;
 }
+   
+#donation-form h2.top-heading {
+	margin-top: 15px !important;
+}
 
 @media (max-width: 600px) {
-	.line-item {
+	/* .line-item {
 		display: flex;
 		flex-direction: column;
 	}
 
 	.line-item .line-item-name {
 		order: -1;
-	}
+	} */
 
 	.line-item .line-item-amount {
 		text-align: right;
 	}
-}
 
-.top-heading {
-	margin-top: 15px;
+   	#lineItems .line-item:not(.total) {
+		display: grid;
+   		grid-template-columns: repeat(2, 1fr);
+   		grid-template-rows: auto auto;
+   		grid-column-gap: 0px;
+   		grid-row-gap: 0px;
+	}
+
+    #lineItems .line-item .line-item-name { grid-area: 1 / 1 / 2 / 3; }
+    #lineItems .line-item .line-item-buttons { grid-area: 2 / 1 / 3 / 2; height: fit-content; }
+    #lineItems .line-item .line-item-amount { grid-area: 2 / 2 / 3 / 3; height: fit-content; }
+   
+   
+   	#donation-form h2.top-heading {
+        margin: 15px 0 !important;
+    }
 }
 
 /*------------------------------------*\
@@ -11375,6 +11397,7 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
     transition: all 0.3s ease-in-out;
    	width: 25px;
    	background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23e00122" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"></path></svg>');
+   	background-size: 25%;
    	background-repeat: no-repeat;
    	background-position: center;
 }
@@ -11593,7 +11616,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	top: 1em;
 	left: 2em;
 	right: 2em;
-	width: 90%;
+	width: 85%;
 	height: 10px;
 	background-color: #ccc;
 	margin: auto;
@@ -11604,7 +11627,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	position: absolute;
 	z-index: 0;
 	top: 1em;
-	left: 2em;
+	left: 60px;
 	width: 0%;
 	height: 10px;
 	background-color: green;
@@ -11617,11 +11640,15 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .breadcrumbs.progress-2:after {
-	width: 32%;
+	width: 41%;
 }
 
 .breadcrumbs.progress-3:after {
-	width: 60%;
+	width: 81%;
+}
+   
+#donation-form.payroll .breadcrumbs:before {
+   	width: 80%;
 }
    
 .payroll .breadcrumbs.progress-1:after {
@@ -11629,15 +11656,15 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .payroll .breadcrumbs.progress-2:after {
-	width: 23%;
+	width: 27%;
 }
 
 .payroll .breadcrumbs.progress-3:after {
-	width: 45%;
+	width: 54%;
 }
    
 .payroll .breadcrumbs.progress-4:after {
-	width: 66%;
+	width: 82%;
 }
 
 .breadcrumbs a:hover {
@@ -11651,7 +11678,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	/*font-size: 1.3em;*/
 	text-decoration: none;
 	border-bottom: none !important;
-	width: 100px;
+	width: 120px;
 	position: relative;
 }
 
@@ -11705,19 +11732,23 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 
 @media (max-width: 600px) {
 	.breadcrumbs:before {
-		width: 80% !important;
+		width: 70% !important;
 	}
+   
+   	.breadcrumbs:after {
+   		left: 3.5em;
+   	}
 
 	.breadcrumbs .breadcrumb {
-		width: 25% !important;
+		width: 33% !important;
 	}
 
 	.breadcrumbs.progress-2:after {
-		width: 27%;
+		width: 33%;
 	}
 
 	.breadcrumbs.progress-3:after {
-		width: 53%;
+		width: 66%;
 	}
    
    	.breadcrumbs {
@@ -11735,6 +11766,20 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
    	.breadcrumbs .breadcrumb span:last-child {
         padding: 5px 0;
     }
+   
+   	/* hiding last breadcrumb step on mobile to reduce clutter of words (Information and Payment text run into each other on mobile */
+   	.breadcrumbs .breadcrumb.bc-payment {
+   		display: none !important;
+   	}
+   	
+   	.gift-type.form-group {
+   		flex-direction: column !important;
+   		column-gap: 16.2px !important;
+   	}
+   
+   	.gift-type.form-group a {
+   		width: 100% !important;
+   	}
 }
 
 .checkmark__circle {
@@ -12464,7 +12509,7 @@ table.BBFormTable.EventTable table[id$="_Wizard1"] > tbody > tr > td > table.w10
    	.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] tr:before {
    		left: 0;
    		right: 0;
-   		width: 100%;
+   		width: 75%;
    	}
    
    	.BBFormTable.EventTable tr[id*="_trProgress"] table[id*="_tblProgress"] th:before {
@@ -12482,7 +12527,7 @@ table.BBFormTable.EventTable table[id$="_Wizard1"] > tbody > tr > td > table.w10
         margin: auto;
    		left: 0;
    		right: 0;
-   		width: 100%;
+   		width: 75%;
    		z-index: 1;
    	}
 }
@@ -13096,62 +13141,58 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
 	}
 
 	tr[id*="_trProgress"] table[id*="_tblProgress"] tbody tr th {
-		width: 50%;
+		width: 25%;
 	}
 
 	/* table[id*="_Wizard1"] .w100p > tbody > tr:nth-child(2) > td:first-child  {
         display: none;
     } */
 
-	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody {
+	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody,
+   	table[id*="_Wizard1_dgAttendeesSummary2_dgEventTickets2_"] > tbody {
 		display: flex;
 		flex-direction: column;
 	}
 
-	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr {
+	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr,
+   	table[id*="_Wizard1_dgAttendeesSummary2_dgEventTickets2_"] > tbody > tr {
 		width: 100%;
 		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
-	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"]
-		> tbody
-		> tr:nth-child(odd) {
+	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr:nth-child(odd),
+   	table[id*="_Wizard1_dgAttendeesSummary2_dgEventTickets2_"] > tbody > tr:nth-child(odd) {
 		background-color: var(--color-white);
 	}
 
-	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr > td {
+	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr > td,
+   	table[id*="_Wizard1_dgAttendeesSummary2_dgEventTickets2_"] > tbody > tr > td {
 		width: 33% !important;
 		text-align: left !important;
 	}
 
-	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"]
-		> tbody
-		> tr:last-child
-		> td {
+	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr:last-child > td,
+   	table[id*="_Wizard1_dgAttendeesSummary2_dgEventTickets2_"] > tbody > tr:last-child > td {
 		text-align: right;
 	}
 
-	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr > td {
+	table[id*="_Wizard1_dgAttendeesSummary_dgEventTickets_"] > tbody > tr > td,
+   	table[id*="_Wizard1_dgAttendeesSummary2_dgEventTickets2_"] > tbody > tr > td {
 		display: block;
 		/* width: 100% !important; */
 	}
 
-	.EventAttendeesCurrent
-		.w100p
-		> tbody
-		> tr:nth-child(2)
-		> td:not(.EventTicketsBodyCell):first-child,
-	.EventAttendeesCurrent
-		.w100p
-		> tbody
-		> tr:nth-child(2)
-		> td:not(.EventTicketsBodyCell):nth-child(2) {
+	.EventAttendeesCurrent .w100p > tbody > tr:nth-child(2) > td:not(.EventTicketsBodyCell):first-child,
+	.EventAttendeesCurrent .w100p > tbody > tr:nth-child(2) > td:not(.EventTicketsBodyCell):nth-child(2),
+   	.EventAttendeesComplete .w100p > tbody > tr:nth-child(2) > td:not(.EventTicketsBodyCell):first-child,
+	.EventAttendeesComplete .w100p > tbody > tr:nth-child(2) > td:not(.EventTicketsBodyCell):nth-child(2) {
 		display: none !important;
 	}
 
-	.EventAttendeesCurrent table.w100p > tbody > tr {
+	.EventAttendeesCurrent table.w100p > tbody > tr,
+   	.EventAttendeesComplete table.w100p > tbody > tr {
 		display: flex;
 	}
 
@@ -14791,4 +14832,262 @@ tr[id*="_trDesignation"] span[id*="_lblDesignationValue"] {
 .DesignerPanePanelPart .search-content {
    	margin: unset !important;
 	height: unset !important;   
+}
+   
+
+/* ************************** */
+/* STEPPED GIVING FORM STYLES */
+/* ************************** */
+   
+#donation-form .steps .collegeunit-select {
+  	transition: display 0.4s ease-in-out;
+}
+  
+main#main:has(#donation-form .steps) {
+  	background-color: #f8f8f8 !important;
+}
+  
+#donation-form.donationForm:has(.steps) {
+  	margin-bottom: 0 !important;
+    padding-bottom: 1em !important;
+}
+  
+#donation-form .steps h2 {
+	color: var(--color-bearcats-black) !important;
+}  
+
+#donation-form .steps #giftSummaryLineItems.line-items {
+  	border: none !important;
+}
+  
+#donation-form .steps.step3.active > div.flex > .billingInformation {
+  	/* order: -1; */
+  	padding: 1em !important;
+  	/* width: 60%; */
+}
+  
+@media (max-width: 900px) {
+  	#donation-form .steps.step3.active > .flex {
+    	flex-direction: column !important;  
+    }
+  
+  	#donation-form .steps.step3.active > .flex > aside,
+  	#donation-form .steps.step3.active > div.flex > .billingInformation {
+      	width: 100%;
+  	}
+}
+
+#donation-form .steps.step3 .line-items.form-group {
+  	padding: 0 !important;
+}
+
+#donation-form .steps.step3.active .line-item {
+  	display: flex;
+  	align-items: flex-start;
+	flex-wrap: wrap;
+  	padding: 5px 0 0 !important;
+}
+  
+#donation-form .steps.step3.active .line-item .line-item-name {
+  	width: 100%;
+}
+  
+#donation-form .steps.step3.active .line-item .line-item-buttons {
+  	width: 40%;
+}
+  
+#donation-form .steps.step3.active .line-item .line-item-amount {
+  	width: 60%;
+  	float: none !important;
+  	text-align: right;
+}
+  
+#donation-form .steps.step3.active .line-item > .line-item-amount {
+  	order: 1;
+}
+  
+main:has(#donation-form .steps)  h2.top-heading {
+    margin-top: 0 !important;
+}
+ 
+#donation-form.version2 .steps.step2.active .form-group:has(> .req-field) > .labelText,
+#donation-form.version2 .steps.step3.active .form-group:has(> .req-field) > .labelText {
+  	position: relative;
+  	display: block;
+  	width: 100%;
+}
+
+#donation-form.version2 .steps.step2.active .form-group:has(> .req-field) > .labelText > .req,
+#donation-form.version2 .steps.step3.active .form-group:has(> .req-field) > .labelText > .req {
+  	display: inline;
+  	position: relative;
+  	line-height: 1;
+}
+  
+#donation-form.version2 .steps.step3.active select.form-control {
+  	height: 48.8px !important;
+}
+  
+#donation-form .steps #giftSummaryLineItems .line-item.total {
+  	display: block !important;
+  	text-align: right;
+  	font-weight: 400;
+  	margin-bottom: 0 !important;
+}
+  
+#donation-form .form-link {
+  	color: var(--color-brand-red) !important;
+  	text-decoration: none !important;
+    border-bottom: 1px solid var(--color-brand-red) !important;
+}
+  
+#donation-form .steps .add-gift.link {
+  	border-bottom: 1px solid var(--color-brand-red) !important;
+  	color: var(--color-brand-red) !important;
+  	background-color: unset !important;
+  	padding: unset !important;
+  	box-shadow: none !important;
+  	font-family: "Open Sans", sans-serif;
+  	text-transform: unset;
+  	font-weight: 300 !important;
+  	border-radius: 0 !important;
+}
+  
+#donation-form .steps #lineItems > h3 {
+  	display: none !important;
+}
+  
+@media (max-width: 500px) {
+ 	#donation-form.donationForm .formrow .amounts {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 10px;
+        grid-row-gap: 10px;
+    }
+
+    #donation-form.donationForm .formrow .amounts #amt1 { grid-area: 1 / 1 / 2 / 2; }
+    #donation-form.donationForm .formrow .amounts #amt2 { grid-area: 1 / 2 / 2 / 3; }
+    #donation-form.donationForm .formrow .amounts #amt3 { grid-area: 2 / 1 / 3 / 2; }
+    #donation-form.donationForm .formrow .amounts #amt4 { grid-area: 2 / 2 / 3 / 3; }
+    #donation-form.donationForm .formrow .amounts #amt5 { grid-area: 3 / 1 / 4 / 2; }
+    #donation-form.donationForm .formrow .amounts .otherAmt.amount { grid-area: 3 / 2 / 4 / 3; }
+  
+  	#donation-form.donationForm .formrow .amounts .otherAmt.amount input#otherAmtInput {
+      	height: 47px !important;
+  	}
+  
+  	#donation-form.donationForm .formrow .amounts .otherAmt.amount span.input-group-addon {
+      	height: 100%;
+      	line-height: 35px;
+  	}
+   
+   	#donation-form > .l-container {
+   		padding: 0;
+   	}
+   
+   	#donation-form .donor .empty  {
+   		display: none;
+   	}
+   
+   	#donation-form .donor > div.flex.gap-1,
+   	#donation-form .address > div.flex.gap-1,
+   	#donation-form .donor > div.contact.flex.gap-1 {
+   		column-gap: 16.2px;
+   	}
+}
+  
+/* THIS VERSION ONLY */
+
+#donation-form .steps .designations > div:not(:first-child):not(:last-child) {
+    margin-bottom: 1em !important;
+}
+  
+/* TYPEAHEAD */
+#donation-form .steps .twitter-typeahead {
+    width: 100%;
+  	display: block !important;
+}
+  
+#donation-form .steps .twitter-typeahead .form-control.tt-input {
+    width: 100% !important;
+  	display: block !important;
+}
+
+#donation-form .steps .twitter-typeahead .tt-hint {
+    color: #949494;
+}
+
+#donation-form .steps .tt-menu {
+    background-color: #ececec;
+    border: 2px solid #c8c8c8;
+    border-top: none;
+    max-height: 50vh;
+    overflow: auto;
+    text-align: left;
+    top: 47px !important;
+    width: 100%;
+}
+
+#donation-form .steps .tt-menu .no-match {
+    background-color: #ececec;
+    font-size: .9rem;
+    line-height: 1.2;
+    padding: .5rem .65rem;
+}
+
+#donation-form .steps .tt-suggestion {
+    background-color: var(--color-white);
+    border-bottom: 1px solid #d8d8d8;
+    cursor: pointer;
+    line-height: 1.2;
+    padding: .5rem .65rem;
+}
+  
+#donation-form .steps .tt-dataset.tt-dataset-search .tt-suggestion:first-child {
+  	border-top: 1px solid #d8d8d8;
+}
+
+#donation-form .steps .tt-suggestion:last-child {
+    border-bottom: none;
+}
+
+#donation-form .steps .tt-cursor,
+#donation-form .steps .tt-suggestion:hover {
+    color: var(--color-white) !important;
+    background-color: var(--color-grey);
+}
+
+#donation-form .steps .tt-hierarchy {
+    font-size: .7rem;
+    margin-bottom: .5rem;
+}
+
+#donation-form .steps .tt-label {
+    margin-bottom: 0 !important;
+}
+  
+#donation-form .steps .marker {
+  	margin-left: 5px;
+}
+  
+#donation-form .steps .marker::before {
+    color: #dc3545;
+    content: "*";
+    left: 1px;
+    position: relative;
+    top: 1px;
+}
+   
+.BBDonationApiContainer h2.accordion__heading {
+   	font-size: 22px !important;
+   	font-weight: 400 !important;
+}
+   
+#bb-checkout-wrapper #btnCancelTransaction {
+   	background-color: var(--color-bearcats-black) !important;
+}
+   
+#bb-checkout-wrapper #returnToDonationButton {
+   	color: var(--color-bearcats-black) !important;
 }
