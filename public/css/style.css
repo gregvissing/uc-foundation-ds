@@ -2033,7 +2033,7 @@ pre[class*="language-"] {
 	}
 
 	.page-title h1 {
-		font-size: 1.35em !important;
+		font-size: 1.75em !important;
 		padding: 10px 1rem;
 		display: block;
 		line-height: 1.2;
@@ -2051,7 +2051,7 @@ pre[class*="language-"] {
 	}
 
 	.page-title.multi-line h1 {
-		line-height: 30px;
+		line-height: 1.2;
 	}
 }
 
@@ -2669,6 +2669,17 @@ table caption {
 	.tab-content {
 		padding: 1em 0 !important;
 		border-top: 1px solid var(--color-ltGray);
+	}
+
+	.tab-content.floating-img > .flow > h3,
+	.tab-content.floating-img > .flow > p {
+		padding-left: 1em;
+		padding-right: 1em;
+	}
+
+	.tab-content.floating-img > .flow > ul {
+		padding-left: 2em;
+		padding-right: 1em;
 	}
 
 	.tab-content.bg-img-content {
@@ -5147,6 +5158,7 @@ ul.nav.main > li.search > a:after {
    	.anchor-scroll-nav {
    		position: relative;
    		top: 0;
+   		display: none;
    	}
    
    	.anchor-scroll-nav ul {
@@ -6658,6 +6670,10 @@ main p > a:hover {
    	#vision .floating-img figure {
    		float: none;
    		margin: 1rem auto !important;
+   	}
+   
+   	#vision .floating-img figure img {
+   		margin: 0 auto;
    	}
 }
 
@@ -8475,21 +8491,28 @@ tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridHeader > 
    	background: var(--color-grey);
    	font-weight: bold;
    	padding: 5px;
+   	border: none !important;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridEvenRow > td,
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridOddRow > td,
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter > td {
+   	border: none !important;
+}
+   
+tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter {
+   	border-top: 1px solid var(--color-bearcats-black);
 }
    
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridEvenRow .DonationGridCell span[id*="_dgCart_lblDesignation_"],
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridOddRow .DonationGridCell span[id*="_dgCart_lblDesignation_"] {
 	min-height: 48.8px;
-   	padding: 15px 5px 5px 5px;
+   	padding: 5px;
    	display: block;
 } 
    
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter > td {
    	padding: 5px;
-}
-   
-tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter > td span {
-   	font-weight: bold;
 }
    
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid {
@@ -9061,15 +9084,15 @@ div[id*="_UpdatePanel"]
     display: none;
 }
 
-    .bbminiform-errorsummary ul {
-        display: block;
-        list-style-type: disc;
-        -webkit-margin-before: 1em;
-        -webkit-margin-after: 1em;
-        -webkit-margin-start: 0px;
-        -webkit-margin-end: 0px;
-        -webkit-padding-start: 40px;
-    }
+.bbminiform-errorsummary ul {
+   display: block;
+   list-style-type: disc;
+   -webkit-margin-before: 1em;
+   -webkit-margin-after: 1em;
+   -webkit-margin-start: 0px;
+   -webkit-margin-end: 0px;
+   -webkit-padding-start: 40px;
+}
 
 .bbminiform-closeicon {
     display: block;
@@ -10179,6 +10202,10 @@ fieldset.billingInformation {
     }
 }
    
+.donationForm .formrow .amounts label.otherAmt { 
+    display: flex;
+}
+   
 @media (max-width: 699px) { 
    	.donationForm .formrow .amounts {
    		display: flex;
@@ -10227,17 +10254,17 @@ fieldset.billingInformation {
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	border-radius: 0px;
-	height: 40px;
+	height: 100%;
 	padding: 6px 12px;
 	line-height: 1.5;
 }
 
 #otherAmtInput {
 	transition: all 0.3s ease-in-out;
-	border: 1px solid var(--color-ltGray) !important;
+	/* border: 1px solid var(--color-ltGray) !important; */
 	border-left: 0px !important;
 	outline: none;
-	height: 40px;
+	height: 100%;
 	width: 100%;
 	font-size: 1em !important;
 }
@@ -11236,6 +11263,7 @@ li {
    
    	#donation-form h2.top-heading {
         margin: 15px 0 !important;
+   		text-wrap: unset !important;
     }
 }
 
@@ -12049,37 +12077,25 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	outline: none;
 	border: 1px solid var(--color-ltGray);
 	border-right: 0;
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-transition: border-color ease-in-out 0.15s,
-		-webkit-box-shadow ease-in-out 0.15s;
-	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	border-radius: 0px;
-	height: 40px;
+	height: 100%;
 }
 
 #otherAmtInput:focus,
 #otherAmtInput:focus {
-	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-	-webkit-transition: border-color ease-in-out 0.15s,
-		-webkit-box-shadow ease-in-out 0.15s;
-	-o-transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
 	background-color: white;
 }
 
 #otherAmtInput {
-	-webkit-transition: all 0.3s ease-in-out;
-	-moz-transition: all 0.3s ease-in-out;
-	-ms-transition: all 0.3s ease-in-out;
-	-o-transition: all 0.3s ease-in-out;
 	transition: all 0.3s ease-in-out;
-	border: 1px solid var(--color-ltGray);
+	/* border: 1px solid var(--color-ltGray); */
 	border-left: 0px;
 	outline: none;
-	height: 40px;
+	height: 100%;
 	width: 100%;
 }
 
@@ -12219,6 +12235,7 @@ input#tributeCheckbox {
 	background: var(--color-brand-black);
 	color: var(--color-white);
 	padding: 5px 10px;
+   	line-height: 33px;
 }
 
 .otherAmt.amount input {
@@ -14139,7 +14156,9 @@ div[id*="_DesignPanePanel"] {
    		display: flex;
    		flex-wrap: wrap;
    		flex-direction: unset;
-   		gap: 2%
+   		gap: 2%;
+   		padding-left: 0 !important;
+   		padding-right: 0 !important;
    	}
    
    	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu > .nccUlMenuSub2 > li {  
@@ -14191,7 +14210,7 @@ div[id*="_DesignPanePanel"] {
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 {     	
        	display: flex !important;
 		flex-direction: column;
-   		padding: 15px;
+   		padding: 15px 0;
    		gap: 10px;
     }
    
@@ -14370,6 +14389,8 @@ div[id*="_DesignPanePanel"] {
    		background-color: transparent;
    		font-weight: bold;
    		cursor: default;
+   		padding-left: 0;
+   		padding-right: 0;
    	}
    
    	.mega-menu .nccUlMenuSub1 > li.parent > button:focus {
