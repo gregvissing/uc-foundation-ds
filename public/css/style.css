@@ -7640,7 +7640,7 @@ div[id*="_UpdatePanel"] td[id*="_tdTrib2Controls"] span {
 
 div[id*="_UpdatePanel"] {
 	padding: 15px 2.5rem;
-	margin: 0 auto 1.5em;
+	margin: 0 auto 1em;
 	max-width: 800px;
 }
 
@@ -7654,7 +7654,7 @@ div[id*="_UpdatePanel"]
 	> .BBFormTable.DonationFormTable {
 	display: flex;
 	flex-direction: column;
-	gap: 1.5em;
+	gap: 1em;
 }
    
 div[id*="_UpdatePanel"] div[id*="_pnlDonationForm"] label[id*="_lblDesignationCaption"] {
@@ -7670,6 +7670,11 @@ div[id*="_UpdatePanel"] .DonationFieldCaption label {
 div[id*="_UpdatePanel"] * {
 	padding: 0;
 	margin: 0;
+}
+   
+div[id*="_UpdatePanel"] .additionalInfo {
+   	display: flex;
+   	flex-direction: column;
 }
    
 td[id*="PC33620_thCaptionAmount"] {
@@ -8245,7 +8250,7 @@ tr[id*="_trDesignation"] {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 }
 
 tr[id*="_trDesignation"] > td:last-child {
@@ -8292,7 +8297,7 @@ div[id*="_UpdatePanel"] span[id$="Caption"] {
 tr[id*="_trGiftType"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 	/* gap: 10px; */
 }
 
@@ -8318,7 +8323,7 @@ span[id*="lblAnonymousCaption"] {
 tr[id*="_trRecurrence"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 	/* gap: 10px; */
 }
 
@@ -8426,7 +8431,7 @@ tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr[id*="_DonationCapture1_tr_
 tr[id*="_trCorporate"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1.5em;
+	margin-bottom: 0.5em;
 	gap: 10px;
 }
 
@@ -8440,8 +8445,9 @@ tr[id*="_trCorporate"] .BBFieldControlCell.DonationFieldControlCell > span {
 tr[id*="_trAnonymous"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 1.5em;
-	gap: 10px;
+	margin-top: 0.5em;
+	gap: 10px;   
+   	order: 1;
 }
 
 tr[id*="_trAnonymous"] td.BBFieldControlCell.DonationFieldControlCell span {
@@ -8455,6 +8461,7 @@ tr[id*="_trComments"] {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
+   	margin-bottom: 0.5em;
 }
    
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] {
@@ -8510,6 +8517,27 @@ tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridOddRow .D
    	padding: 5px;
    	display: block;
 } 
+   
+tbody[id*="_tbdCart"]>tr[id*="_trCart"] .DonationGrid .DonationGridEvenRow .DonationGridCell:last-child input {
+   	position: relative;   
+}
+   
+tbody[id*="_tbdCart"]>tr[id*="_trCart"] .DonationGrid .DonationGridEvenRow .DonationGridCell:last-child input {
+   	border: none !important;
+    color: transparent !important;
+    border-radius: 6px;
+    padding: 5px;
+    font-weight: bold;
+    transition: all .3s ease-in-out;
+    width: 25px;
+   	background-color: var(--color-white) !important;
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path fill="%23e00122" d="M170.5 51.6L151.5 80h145l-19-28.4c-1.5-2.2-4-3.6-6.7-3.6H177.1c-2.7 0-5.2 1.3-6.7 3.6zm147-26.6L354.2 80H368h48 8c13.3 0 24 10.7 24 24s-10.7 24-24 24h-8V432c0 44.2-35.8 80-80 80H112c-44.2 0-80-35.8-80-80V128H24c-13.3 0-24-10.7-24-24S10.7 80 24 80h8H80 93.8l36.7-55.1C140.9 9.4 158.4 0 177.1 0h93.7c18.7 0 36.2 9.4 46.6 24.9zM80 128V432c0 17.7 14.3 32 32 32H336c17.7 0 32-14.3 32-32V128H80zm80 64V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16zm80 0V400c0 8.8-7.2 16-16 16s-16-7.2-16-16V192c0-8.8 7.2-16 16-16s16 7.2 16 16z"></path></svg>');
+    background-size: 25%;
+    background-repeat: no-repeat;
+    background-position: center;
+   	box-shadow: none !important;
+   	cursor: pointer;
+}
    
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] .DonationGrid tr.DonationGridFooter > td {
    	padding: 5px;
@@ -11627,7 +11655,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	width: 45px;
 	margin: 0 auto;
 	border-radius: 50%;
-	border: 1px solid var(--color-brand-black);
+	border: 1px solid #ccc;
 	color: var(--color-bearcats-black);
 	background: var(--color-white);
 	text-decoration: none;
@@ -11637,9 +11665,12 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	overflow: hidden;
 }
    
-.breadcrumbs .form-step span,
-.breadcrumbs .breadcrumb span:last-child {
+.breadcrumbs .form-step span {
    	font-weight: 400;
+}
+   
+.breadcrumbs .breadcrumb span:last-child {
+   	font-weight: 500;
 }
    
 .breadcrumbs .breadcrumb span:last-child {
@@ -11688,11 +11719,15 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .breadcrumbs.progress-2:after {
-	width: 41%;
+	width: 27%;
 }
 
 .breadcrumbs.progress-3:after {
-	width: 81%;
+	width: 54%;
+}
+   
+.breadcrumbs.progress-4:after {
+	width: 82%;
 }
    
 #donation-form.payroll .breadcrumbs:before {
@@ -11788,19 +11823,23 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
    	}
 
 	.breadcrumbs .breadcrumb {
-		width: 33% !important;
+		width: 25% !important;
 	}
 
 	.breadcrumbs.progress-2:after {
-		width: 33%;
+		width: 22%;
 	}
 
 	.breadcrumbs.progress-3:after {
-		width: 66%;
+		width: 48%;
+	}
+   
+   	.breadcrumbs.progress-4:after {
+		width: 72%;
 	}
    
    	.breadcrumbs {
-   		flex-wrap: wrap;
+   		flex-wrap: nowrap;
    		flex-direction: unset !important;
    		row-gap: 0px;
    		margin-top: 0 !important;
@@ -11816,9 +11855,9 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
     }
    
    	/* hiding last breadcrumb step on mobile to reduce clutter of words (Information and Payment text run into each other on mobile */
-   	.breadcrumbs .breadcrumb.bc-payment {
+   	/* .breadcrumbs .breadcrumb.bc-payment {
    		display: none !important;
-   	}
+   	} */
    	
    	.gift-type.form-group {
    		flex-direction: column !important;
@@ -11841,12 +11880,13 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .checkmark {
-	width: 43x;
+	width: 43px;
 	height: 43px;
 	border-radius: 50%;
 	display: block;
-	stroke-width: 2;
+	stroke-width: 7;
 	stroke: green;
+   	/* stroke: var(--color-white); */
 	stroke-miterlimit: 10;
 	margin: 10% auto;
 	box-shadow: inset 0px 0px 0px #7ac142;
@@ -11903,8 +11943,8 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .breadcrumbs .breadcrumb.active .form-step {
-	color: var(--color-white);
-	background: var(--color-brand-black);
+	color: var(--color-bearcats-black);
+	background: var(--color-white);
 }
 
 .breadcrumbs .divider {
@@ -14950,7 +14990,8 @@ main#main:has(#donation-form .steps) {
 main:has(#donation-form .steps)  h2.top-heading {
     margin-top: 0 !important;
 }
- 
+
+#donation-form.version2 .steps.step1.active .form-group:has(> .req-field) > .labelText,
 #donation-form.version2 .steps.step2.active .form-group:has(> .req-field) > .labelText,
 #donation-form.version2 .steps.step3.active .form-group:has(> .req-field) > .labelText {
   	position: relative;
@@ -14958,6 +14999,7 @@ main:has(#donation-form .steps)  h2.top-heading {
   	width: 100%;
 }
 
+#donation-form.version2 .steps.step1.active .form-group:has(> .req-field) > .labelText > .req,
 #donation-form.version2 .steps.step2.active .form-group:has(> .req-field) > .labelText > .req,
 #donation-form.version2 .steps.step3.active .form-group:has(> .req-field) > .labelText > .req {
   	display: inline;
@@ -14980,6 +15022,10 @@ main:has(#donation-form .steps)  h2.top-heading {
   	color: var(--color-brand-red) !important;
   	text-decoration: none !important;
     border-bottom: 1px solid var(--color-brand-red) !important;
+}
+   
+#donation-form .form-link:hover {
+   	border-bottom: 2px solid var(--color-brand-red) !important;
 }
   
 #donation-form .steps .add-gift.link {
