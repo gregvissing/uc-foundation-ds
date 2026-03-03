@@ -10917,6 +10917,10 @@ h1 a:visited {
 .donationForm ul {
 	list-style-type: none;
 }
+   
+.donationForm .accordion ul {
+	list-style-type: disc;
+}
 
 .donationForm fieldset {
 	border: none;
@@ -11213,6 +11217,10 @@ li {
 	line-height: 1.8;
 	position: relative;
    	padding-left: 10px;
+}
+   
+.line-item .line-item-amount:before {
+   	font-weight: bold;
 }
 
 /* .line-item-name {
@@ -11631,31 +11639,32 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
    
 .breadcrumbs .form-step {
-	height: 45px;
-	width: 45px;
+	height: 20px;
+	width: 20px;
 	margin: 0 auto;
 	border-radius: 50%;
 	border: 1px solid #ccc;
 	color: var(--color-bearcats-black);
-	background: var(--color-white);
+	background: #ccc;
 	text-decoration: none;
 	line-height: 2.5;
 	position: relative;
 	z-index: 1;
-	overflow: hidden;
+	overflow: visible;
 }
    
 .breadcrumbs .form-step span {
    	font-weight: 400;
 }
    
-.breadcrumbs .breadcrumb span:last-child {
+.breadcrumbs .breadcrumb span.text {
    	font-weight: 500;
 }
    
-.breadcrumbs .breadcrumb span:last-child {
-   	padding: 5px;
-   	line-height: 1.1;
+.breadcrumbs .breadcrumb span.text {
+   	padding: 10px 0 5px;
+   	line-height: 1;
+   	font-size: 16px;
 }
 
 .breadcrumbs {
@@ -11672,11 +11681,11 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	content: "";
 	position: absolute;
 	z-index: 0;
-	top: 1em;
+	top: 7px;
 	left: 2em;
 	right: 2em;
-	width: 85%;
-	height: 10px;
+	width: 81%;
+	height: 5px;
 	background-color: #ccc;
 	margin: auto;
 }
@@ -11685,10 +11694,10 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	content: "";
 	position: absolute;
 	z-index: 0;
-	top: 1em;
+	top: 7px;
 	left: 60px;
 	width: 0%;
-	height: 10px;
+	height: 5px;
 	background-color: green;
 	transition: width 0.4s ease-in-out;
 	margin: auto;
@@ -11719,15 +11728,19 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 }
 
 .payroll .breadcrumbs.progress-2:after {
-	width: 27%;
+	width: 20.5%;
 }
 
 .payroll .breadcrumbs.progress-3:after {
-	width: 54%;
+	width: 40.5%;
 }
    
 .payroll .breadcrumbs.progress-4:after {
-	width: 82%;
+	width: 61%;
+}
+   
+.payroll .breadcrumbs.progress-5:after {
+	width: 81%;
 }
 
 .breadcrumbs a:hover {
@@ -11788,18 +11801,18 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	position: absolute;
 	top: 0;
 	bottom: 0;
-	left: 0;
+	left: -7px;
 	right: 0;
 	margin: auto;
 }
 
 @media (max-width: 600px) {
 	.breadcrumbs:before {
-		width: 70% !important;
+		width: 75% !important;
 	}
    
    	.breadcrumbs:after {
-   		left: 3.5em;
+   		left: 12.5%;
    	}
 
 	.breadcrumbs .breadcrumb {
@@ -11807,15 +11820,15 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	}
 
 	.breadcrumbs.progress-2:after {
-		width: 22%;
+		width: 25%;
 	}
 
 	.breadcrumbs.progress-3:after {
-		width: 48%;
+		width: 50%;
 	}
    
    	.breadcrumbs.progress-4:after {
-		width: 72%;
+		width: 75%;
 	}
    
    	.breadcrumbs {
@@ -11858,15 +11871,19 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 	fill: none;
 	/* animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards; */
 }
+   
+a.complete .checkmark__circle {
+ 	fill: green;
+}
 
 .checkmark {
-	width: 43px;
-	height: 43px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
 	display: block;
 	stroke-width: 7;
-	stroke: green;
-   	/* stroke: var(--color-white); */
+	/* stroke: green; */
+   	stroke: var(--color-white);
 	stroke-miterlimit: 10;
 	margin: 10% auto;
 	box-shadow: inset 0px 0px 0px #7ac142;
@@ -12256,6 +12273,7 @@ input#tributeCheckbox {
 	color: var(--color-white);
 	padding: 5px 10px;
    	line-height: 33px;
+   	font-weight: bold;
 }
 
 .otherAmt.amount input {
