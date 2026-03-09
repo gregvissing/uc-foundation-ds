@@ -7640,7 +7640,7 @@ div[id*="_UpdatePanel"] td[id*="_tdTrib2Controls"] span {
 
 div[id*="_UpdatePanel"] {
 	padding: 15px 2.5rem;
-	margin: 0 auto 1em;
+	margin: 0 auto;
 	max-width: 800px;
 }
 
@@ -7672,9 +7672,15 @@ div[id*="_UpdatePanel"] * {
 	margin: 0;
 }
    
-div[id*="_UpdatePanel"] .additionalInfo {
+div[id*="_UpdatePanel"] .additionalInfo,
+div[id*="_UpdatePanel"] .BBFormTable.DonationFormTable > tbody:has([id*="_trAdditInformation"]) {
    	display: flex;
    	flex-direction: column;
+}
+   
+div[id*="_UpdatePanel"] .additionalInfo > * + *,
+div[id*="_UpdatePanel"] .BBFormTable.DonationFormTable > tbody:has([id*="_trAdditInformation"]) > * + * {
+   	margin-top: var(--flow-space, 1em) !important;
 }
    
 td[id*="PC33620_thCaptionAmount"] {
@@ -8250,7 +8256,6 @@ tr[id*="_trDesignation"] {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-	margin-bottom: 0.5em;
 }
 
 tr[id*="_trDesignation"] > td:last-child {
@@ -8297,7 +8302,6 @@ div[id*="_UpdatePanel"] span[id$="Caption"] {
 tr[id*="_trGiftType"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 0.5em;
 	/* gap: 10px; */
 }
 
@@ -8323,7 +8327,6 @@ span[id*="lblAnonymousCaption"] {
 tr[id*="_trRecurrence"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 0.5em;
 	/* gap: 10px; */
 }
 
@@ -8431,7 +8434,6 @@ tbody[id*="_DonationCapture1_tbdyMatchingGifts"] > tr[id*="_DonationCapture1_tr_
 tr[id*="_trCorporate"] {
 	display: flex;
 	flex-direction: column;
-	margin-bottom: 0.5em;
 	gap: 10px;
 }
 
@@ -8445,7 +8447,6 @@ tr[id*="_trCorporate"] .BBFieldControlCell.DonationFieldControlCell > span {
 tr[id*="_trAnonymous"] {
 	display: flex;
 	flex-direction: column;
-	margin-top: 0.5em;
 	gap: 10px;   
    	order: 1;
 }
@@ -8461,7 +8462,6 @@ tr[id*="_trComments"] {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
-   	margin-bottom: 0.5em;
 }
    
 tbody[id*="_tbdCart"] > tr[id*="_trCart"] {
@@ -8602,7 +8602,7 @@ tr[id*="_trTribute"] > td:nth-child(2) {
 tr[id*="_trTribute"] > td:first-child {
 	display: flex;
 	align-items: center;
-	height: 52px;
+	height: 45px;
 }
 
 .w100p.BBFieldControlCell.DonationCaptureFieldControlCell
@@ -10249,7 +10249,7 @@ fieldset.billingInformation {
 .amounts a {
 	padding: 10px 2px 10px 2px;
 	background-color: #e5e5e5 !important;
-	color: #444444 !important;
+	color: var(--color-bearcats-black) !important;
 	font-weight: bold;
 	line-height: 1.5;
 	display: inline-block;
@@ -10277,7 +10277,6 @@ fieldset.billingInformation {
 .input-group-addon {
 	background-color: var(--color-white);
 	outline: none;
-	border: 1px solid var(--color-ltGray);
 	border-right: 0;
 	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 	transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
@@ -10285,12 +10284,11 @@ fieldset.billingInformation {
 	height: 100%;
 	padding: 6px 12px;
 	line-height: 1.5;
+   	font-weight: bold !important;
 }
 
 #otherAmtInput {
 	transition: all 0.3s ease-in-out;
-	/* border: 1px solid var(--color-ltGray) !important; */
-	border-left: 0px !important;
 	outline: none;
 	height: 100%;
 	width: 100%;
@@ -10565,6 +10563,15 @@ body .body_section .donationForm {
 .donationForm .gift-count {
   font-family: "Oswald", Helvetica, Arial, sans-serif;
 } */
+   
+div.BBDonationApiContainer ::placeholder {
+	color: #767676; /* This color has a 4.5:1 contrast ratio against white */
+   	opacity: 1; /* Firefox sets opacity to 0.54 by default */
+}
+   
+div.BBDonationApiContainer ::-ms-input-placeholder { /* Microsoft Edge */
+  	color: #767676;
+}
 
 section#donation-form {
 	background-color: var(--color-white) !important;
@@ -10592,10 +10599,6 @@ section#donation-form {
 	text-transform: none;
 	font-style: normal;
 }
-
-/* .donationForm .designation-categories a, .donationForm .amounts a {
-  font-family: "Oswald", Helvetica, Arial, sans-serif;
-} */
 
 /* .donationForm .designation-categories a.selected i {
     text-align: center;
@@ -10912,14 +10915,38 @@ h1 a:visited {
 	width: 220px;
 	height: 44px;
 	text-align: center;
-	margin-left: -110px;
 	margin-top: -22px;
 	padding: 5px;
 	box-shadow: 0 2px 5px var(--color-dkGray);
-	border: 1px solid #999999;
-	background: url(https://gail.uga.edu/images/ajaxwaitbar.gif) no-repeat scroll
+	border: 1px solid var(--color-bearcats-black);
+	background: url(https://foundation.uc.edu/image/ajaxwaitbar.gif) no-repeat scroll
 		center 25px Transparent;
 	background-color: #f5f5f5;
+}
+   
+.blockUI.blockMsg.blockElement {
+	top: 30% !important;  
+}  
+
+.BBElementBlock > span {
+  	height: 25px;
+    width: 100%;
+    display: block;
+    position: relative;
+    color: rgba(255, 255, 255, 0);
+}
+  
+.BBElementBlock > span:before {
+  	content: "Funds loading...";
+    display: block;
+    font-weight: 400;
+    position: absolute;
+    font-size: 18px;
+    color: var(--color-bearcats-black);
+    top: -5px;
+    left: 0;
+    right: 0;
+    width: 100%;
 }
 
 .BBPageBlock {
@@ -11029,8 +11056,10 @@ li {
 	font-family: "Open Sans", sans-serif;
 }
 
-.donationForm select {
-	width: 100% !important;
+.donationForm select,
+.donationForm input[type="text"] {
+	width: 100%;
+   	height: 47px !important;
 }
 
 .donationForm .form h3 {
@@ -11127,7 +11156,7 @@ li {
 
 .amounts a {
 	background-color: #e5e5e5;
-	color: #444444;
+	color: var(--color-bearcats-black);
 	font-weight: bold;
 	line-height: 1.5;
 	display: inline-block;
@@ -12051,7 +12080,8 @@ a.complete .checkmark__circle {
 }
 
 #designationDescription #desDescrText {
-	color: var(--color-dkGray);
+	color: var(--color-bearcats-black);
+   	margin: 0;
 }
 
 #designationCount {
@@ -12149,8 +12179,6 @@ a.complete .checkmark__circle {
 
 #otherAmtInput {
 	transition: all 0.3s ease-in-out;
-	/* border: 1px solid var(--color-ltGray); */
-	border-left: 0px;
 	outline: none;
 	height: 100%;
 	width: 100%;
@@ -12284,20 +12312,14 @@ input#tributeCheckbox {
 }
 
 .otherAmt.amount span {
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
+	display: inline-block;
 	margin: 0;
-	background: var(--color-brand-black);
-	color: var(--color-white);
+	background: #e5e5e5;
+	color: var(--color-bearcats-black);
 	padding: 5px 10px;
    	line-height: 33px;
-   	font-weight: bold;
-}
-
-.otherAmt.amount input {
-	padding-left: 2.25em !important;
+   	font-weight: bold;   
+   	border: none;
 }
    
 .bbformbuilder-form-part > div, 
@@ -13378,6 +13400,18 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
     #REGISTRATION - ADD TO CALENDAR BUTTON
 \*------------------------------------*/
    
+.cal-container {
+   	margin: 0 auto;
+    max-width: 800px;
+   	padding: 0 2.5rem;
+}
+   
+@media (max-width: 600px) {
+   	.cal-container {
+   		padding: 0;
+  	}
+}
+   
 #cal {
     text-align: center;
     display: inline-block;
@@ -13385,8 +13419,8 @@ span[id*="Wizard1_dgAttendeesSummary_lblEventName_"] {
 }
 
 #cal .add-to-calendar-dropdown {
-    margin-top: 40px;
-    top: 60px;
+    margin-top: 10px;
+    top: 50px;
     flex-direction: column;
     width: 100%;
 }
@@ -15091,7 +15125,8 @@ main:has(#donation-form .steps)  h2.top-heading {
    		padding: 0;
    	}
    
-   	#donation-form .donor .empty  {
+   	#donation-form .donor .empty,
+   	#donation-form .tribute .empty {
    		display: none;
    	}
    
@@ -15195,4 +15230,16 @@ main:has(#donation-form .steps)  h2.top-heading {
    
 #bb-checkout-wrapper #returnToDonationButton {
    	color: var(--color-bearcats-black) !important;
+}
+   
+   
+.CaptchaName {
+    text-align: right;
+    color: #595959 !important;
+    font-size: 85% !important;
+}
+   
+.CaptchaName sup {
+    vertical-align: super;
+    font-size: smaller !important;
 }
