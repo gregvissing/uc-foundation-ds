@@ -326,11 +326,11 @@ h1.c-logo a {
 
 footer a:not(.navbar-link):not(.email-link):not(.map-link) {
 	color: var(--color-white) !important;
-	border-bottom: 1px solid var(--color-white) !important;
+	/* border-bottom: 1px solid var(--color-white) !important; */
 }
 
 footer a:not(.navbar-link):not(.email-link):not(.map-link):hover {
-	border-bottom: 2px solid var(--color-white) !important;
+	/* border-bottom: 2px solid var(--color-white) !important; */
 }
 
 /*------------------------------------*\
@@ -712,7 +712,7 @@ main ul li {
 	font-family: "Open Sans", sans-serif;
 	letter-spacing: 0.3px;
 	font-weight: 300;
-	font-size: 18px !important;
+	font-size: 1.125rem !important;
 }
 
 .pl-js-pattern-example main ol,
@@ -737,7 +737,7 @@ main ul li {
 	font-family: "Open Sans", sans-serif;
 	letter-spacing: 0.3px;
 	font-weight: 300;
-	font-size: 18px;
+	font-size: 1.125rem;
 }
 
 h1,
@@ -1265,7 +1265,7 @@ p.large a {
 }
 
 p.intro-text {
-	font-size: 24px;
+	font-size: 1.5rem;
 	letter-spacing: 0.3px;
 	line-height: 1.45;
 }
@@ -1799,7 +1799,7 @@ blockquote:after {
 
 	blockquote:before,
 	blockquote:after {
-		font-size: 50px;
+		font-size: 3.125rem;
 		top: 10px;
 	}
 
@@ -3911,11 +3911,11 @@ body.modal-open {
 
 .c-stacked-block__title {
 	/* margin-top: 35px; */
-	margin: 0;
+	margin: 0 !important;
 	letter-spacing: 1px;
 	color: var(--color-bearcats-black);
 	transition: color 0.15s ease-out;
-	font-size: 22px !important;
+	font-size: 1.375rem !important;
 }
 
 a.c-stacked-block .c-stacked-block__title:hover {
@@ -4021,7 +4021,7 @@ a.c-stacked-block:hover * {
 }
 
 .c-stacked-block.quote .pull-quote p {
-	font-size: 18px !important;
+	font-size: 2.5rem !important;
 	line-height: 1.6;
 }
 
@@ -4204,19 +4204,20 @@ a.c-stacked-block:hover * {
  * 1) Global block at the bottom of each page that contains a navigation and other information
  */
 .c-footer {
-	padding: 2rem 0;
-	background: rgba(0, 0, 0, 0.85);
+	padding: 2em 0;
+	/* background: rgba(0, 0, 0, 0.85); */   	
 	position: relative;
 	border-top: 5px solid var(--color-brand-red);
-	background-image: url(https://foundation.uc.edu/image/Footer-bg.jpg) !important;
+	/* background-image: url(https://foundation.uc.edu/image/Footer-bg.jpg) !important; */
+   	background-image: none !important;
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-	padding: 3em 0 1em;
 	position: relative;
 	border-top: 5px solid var(--color-brand-red);
 	max-width: 100%;
 	margin: 0 auto;
+   	background: var(--color-bearcats-black) !important;
 }
 
 .c-footer:before {
@@ -4226,7 +4227,7 @@ a.c-stacked-block:hover * {
 	bottom: 0;
 	left: 0;
 	right: 0;
-	background: rgba(0, 0, 0, 0.15);
+	background: rgba(0, 0, 0, 0.5);
 	position: absolute;
 	width: 100%;
 	height: 100%;
@@ -4238,12 +4239,13 @@ a.c-stacked-block:hover * {
 
 .c-footer * {
 	color: var(--color-white) !important;
-	font-size: 0.9rem;
+	font-size: 1rem;
 	line-height: 1.3;
 }
 
 .c-footer p {
 	margin-bottom: 0 !important;
+   	line-height: 1.5 !important;
 }
 
 @media all and (min-width: 47em) {
@@ -4309,8 +4311,8 @@ footer .social-media li * {
 }
 
 footer .social-media li a {
-	height: 40px;
-	width: 40px;
+	height: 44px;
+	width: 44px;
 	padding: 5px;
 	background-position: center;
 	background-size: 80%;
@@ -4322,11 +4324,11 @@ footer .social-media li a {
 .sharing a {
 	content: "";
 	display: inline-block;
-	height: 30px !important;
-	width: 30px !important;
+	height: 44px !important;
+	width: 44px !important;
 	padding: 0;
 	background-position: center;
-	background-size: cover;
+	background-size: 85%;
 	background-repeat: no-repeat;
 	transition: all 0.3s ease-in-out;
 }
@@ -4729,6 +4731,7 @@ header {
 
 nav .search a {
 	border: none !important;
+   	color: var(--color-white) !important;
 }
 
 /*------------------------------------*\
@@ -4796,7 +4799,7 @@ nav .search a {
 
 .searchIcon {
 	width: 15px;
-	margin-right: 5px;
+   	margin-left: 4px;
 }
 
 .social-media-icons {
@@ -4966,11 +4969,15 @@ ul.nav.main > li.search > a {
 	display: flex;
 	align-items: center;
 	border: none;
-	padding: 10px 12px;
+	padding: 10px;
 	text-transform: uppercase !important;
 	overflow: visible;
 
 	border: none;
+}
+   
+ul.nav.main > li.search > a {
+	color: var(--color-white) !important;   
 }
 
 .parent {
@@ -6005,7 +6012,7 @@ img.imgLeft {
 	box-shadow: 4px 4px 1px 2px rgba(0, 0, 0, 0.1);
 	margin: 0.25rem;
 	width: max-content;
-	z-index: 2;
+	z-index: 100;
 }
 
 #skip-link:focus-visible {
@@ -6797,7 +6804,7 @@ main p > a:hover {
 }
 
 #videoPlayer .thumbnail h3 {
-	font-size: 16px;
+	font-size: 1rem;
 }
 
 #videoPlayer h3,
@@ -6816,7 +6823,7 @@ main p > a:hover {
 }
 
 #videoPlayer .thumbnail-views {
-	font-size: 14px;
+	font-size: 0.9rem;
 }
 
 #videoPlayer .thumbnail .thumbnail-img img {
@@ -7615,7 +7622,7 @@ main p > a:hover {
 .bbminiform-amtbox,
 .bbminiform-otheramount {
 	font-family: "Open Sans", sans-serif !important;
-   	font-size: 18px !important;
+   	font-size: 1.125rem !important;
    	line-height: 35px !important;
    	padding: 5px !important;
    	min-height: unset !important;
@@ -7922,12 +7929,17 @@ div.PaymentPart_PersonalInfoContainer span.BBDivFieldCaption.DCFieldCaption {
 }
    
 /* FINDER NUMBER */
+tbody[id*="_DonationCapture1_tbdyFinderNumber"] {
+	display: none !important;   
+}
+
+/*
 @media (max-width: 600px) {
    	.BBFormTable.DonationFormTable tbody[id*="_tbdyFinderNumber"] tr {
    		display: flex;
    		flex-direction: column;
 	}
-}   
+} */  
 
 /* AMOUNTS */
 tbody[id*="_TB_pnlDonation"] tr {
@@ -7983,14 +7995,12 @@ table[id*="_rdoGiftType"] input {
 
 div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label,
 table[id*="_rdoGiftType"] > tbody > tr label {
-	padding: 5px !important;
+	padding: 10px 2px !important;
 	background-color: #e5e5e5 !important;
-	/* border: 1px solid var(--color-brand-black); */
-	/* border-radius: var(--button-border-radius); */
 	cursor: pointer;
 	font-weight: bold;
-	line-height: 35px;
-	font-weight: 300;
+	line-height: 1.5 !important;
+	font-weight: 700 !important;
 }
 
 div[id*="_pnlDonationForm"] table[id*="_tblAmount"] tbody > tr td label:focus,
@@ -8013,6 +8023,7 @@ tr[id*="_trOther"] td[id*="_tdOther"] label {
 	display: block;
 	width: 100%;
 	text-align: center;
+   	height: 100%;
 }
 
 tr[id*="_trOther"] .wsNowrap.BBFieldControlCell.DonationFieldControlCell * {
@@ -8105,7 +8116,7 @@ tr[id*="_trOther"]
 	> td:nth-child(2) {
 	position: relative;
 	/* min-width: 306px; */
-	height: 45px;
+	height: 47px;
 	width: 100% !important;
 }
 
@@ -8179,6 +8190,7 @@ table[id*="_tblAmount"] > tbody > tr > td:first-child span,
 table[id*="_rdoGiftType"] > tbody > tr > td {
 	display: inline-block;
 	position: relative;
+   	height: 100%;
 }
 
 table[id*="_tblAmount"] > tbody > tr > td:first-child span input,
@@ -8187,8 +8199,8 @@ table[id*="_rdoGiftType"] > tbody > tr > td input {
 	-moz-appearance: none;
 	appearance: none;
 	background: none;
-	border: 2px solid;
-	height: 100%;
+	border: none;
+	height: 47px;
 	left: 0;
 	opacity: 0.00001;
 	position: absolute;
@@ -8253,6 +8265,10 @@ table[id*="_rdoGiftType"] > tbody > tr > td input:focus ~ label:after {
 
 /* DESIGNATION */
 tr[id*="_trDesignation"] {
+	display: none;
+}
+   
+tr[id*="_trDesignation"]:has(select) {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;
@@ -8294,7 +8310,7 @@ div[id*="_UpdatePanel"] .BBListingHeading.DonationListingHeading span {
 div[id*="_UpdatePanel"] label[id$="Caption"],
 div[id*="_UpdatePanel"] span[id$="Caption"] {
 	font-family: "Open Sans", sans-serif;
-	line-height: 1.1;
+	line-height: 1.5;
 	font-weight: 300;
 }
 
@@ -8448,10 +8464,11 @@ tr[id*="_trAnonymous"] {
 	display: flex;
 	flex-direction: column;
 	gap: 10px;   
-   	order: 1;
+   	/* order: 1; */
 }
 
-tr[id*="_trAnonymous"] td.BBFieldControlCell.DonationFieldControlCell span {
+tr[id*="_trAnonymous"] td.BBFieldControlCell.DonationFieldControlCell span,
+tr[id*="_trSpouse"] td:last-child {
 	display: flex;
 	flex-direction: row;
 	gap: 10px;
@@ -8850,6 +8867,10 @@ div[id*="_UpdatePanel"]
 .BBFormButtonCell.DonationButtonCell > .BBFormSubmitButton {
    	float: none !important;
 }
+   
+tr[id*="_DonationCapture1_AddressCtl_tr_stateUS"] + tr {
+    display: none !important;
+}
 
 /*------------------------------------*\
     #DONATION FORM - MINI
@@ -8865,7 +8886,7 @@ div[id*="_UpdatePanel"]
 #dvDirectDebitContentMain #dvMaininstructionText .bbDonationSeperator,
 #dvDirectDebitContentMain #dvMainddAgreement .bbDonationSeperator,
 #dvDirectDebitContentMain #dvMainddGuarantee .bbDonationSeperator {
-    font-size: 12px;
+    font-size: 0.75rem;
     word-break: keep-all;
 }
 
@@ -8967,7 +8988,7 @@ div[id*="_UpdatePanel"]
         }
 
 .bbminiform-lock {
-    font-size: 1.1 rem;
+    font-size: 1.1rem;
 }
 
 .bbminiform-amtbox, .bbminiform-button {
@@ -8990,7 +9011,7 @@ div[id*="_UpdatePanel"]
 
 .bbminiform-amtboxmain {
     color: #1A7BB7;
-    font-size: 14px;
+    font-size: 0.9rem;
     flex-grow: 1;
     padding-left: 0.8%;
     padding-top: 0.5%;
@@ -9002,7 +9023,7 @@ div[id*="_UpdatePanel"]
 
 .bbminiform-amtboxcaption {
     color: #292A2B;
-    font-size: 1.0em;
+    font-size: 1em;
     font-weight: bold;
     padding-bottom: 7px;
     padding-top: 7px;
@@ -9037,7 +9058,7 @@ div[id*="_UpdatePanel"]
     font-weight: bold !important;
     color: #666666;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: normal;
 }
 
@@ -9048,8 +9069,6 @@ div[id*="_UpdatePanel"]
 
     .bbminiform-giftaiddescription input[type="checkbox"] {
         margin-right: 2px;
-        -webkit-appearance: checkbox;
-        -moz-appearance: checkbox;
         margin-bottom: 4px;
     }
 
@@ -9093,7 +9112,7 @@ div[id*="_UpdatePanel"]
 
 .bbminiform-otheramount {
     color: #1A7BB7;
-    font-size: 14px;
+    font-size: 0.9rem;
     width: 100%;
     border: 1px solid #1A7BB7;
     text-align: center;
@@ -9189,7 +9208,7 @@ div.bcmsWizardFooter {
 .bbminiform-checkbox {
     display: inline-block !important;
     cursor: pointer;
-    font-size: 15px !important;
+    font-size: 0.95rem !important;
     font-weight: normal;
     /*margin: 0px !important;*/
     margin-left: 0px;
@@ -9211,7 +9230,7 @@ div.bcmsWizardFooter {
 }
 
 .bbminiform-span {
-    font-size: 14px;
+    font-size: 0.9rem;
     margin-bottom: 0.5em;
 }
 
@@ -9232,7 +9251,7 @@ div.bcmsWizardFooter {
 .bbminiform-txtbox {
     height: 44px;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: normal;
     color: #666666;
     border: 1px solid #D8D8D8;
@@ -9249,7 +9268,7 @@ div.bbPersonalInfoInputFieldContainer {
 }
 
 .bbminiform-subcaption {
-    font-size: 12px;
+    font-size: 0.75rem;
     color: #666666;
     word-wrap: break-word;
 }
@@ -9369,7 +9388,7 @@ div.mdfEndDateOption.bbSecondaryInfo {
     width: 140px;
     min-height: 36px;
     font-family: "Arial";
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: normal;
     text-align: center;
     display: inline-block;
@@ -9411,7 +9430,7 @@ div.mdfEndDateOption.bbSecondaryInfo {
     width: 100%;
     min-height: 36px;
     font-family: "Arial";
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: normal;
     text-align: center;
     display: inline-block;
@@ -9442,7 +9461,7 @@ div.mdfEndDateOption.bbSecondaryInfo {
             width: 160px;
             height: 50px;
             font-family: "Arial";
-            font-size: 14px;
+            font-size: 0.9rem;
             font-weight: normal;
             text-align: center;
             display: table-cell;
@@ -9493,7 +9512,7 @@ div#wizardFooter div#buttonWrapper button#btnWizardBack, #btnCancelDDPayment, di
     border-radius: 6px;
     font-family: "Arial";
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #666666;
     text-align: center;
     display: table-cell;
@@ -9508,7 +9527,7 @@ div#wizardFooter div#buttonWrapper button#btnWizardBack, #btnCancelDDPayment, di
     border-radius: 6px;
     font-family: "Arial";
     font-weight: normal;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #666666;
     text-align: center;
     display: table-cell;
@@ -9522,7 +9541,7 @@ button.btnWizardContinue {
     border-radius: 6px;
     font-family: "Arial";
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #FFFFFF;
     text-align: center;
     display: table-cell;
@@ -9537,7 +9556,7 @@ button.btnWizardFinish, #btnCompleteDDPayment {
     border-radius: 6px;
     font-family: "Arial";
     font-weight: bold;
-    font-size: 14px;
+    font-size: 0.9rem;
     color: #FFFFFF;
     text-align: center;
     display: table-cell;
@@ -9587,8 +9606,6 @@ button.btnWizardFinish, #btnCompleteDDPayment {
 }
 
 .bbDonationCheckBoxList input[type="checkbox"] {
-    -webkit-appearance: checkbox;
-    -moz-appearance: checkbox;
     margin-bottom: 5px;
     margin-right: 4px;
 }
@@ -9596,7 +9613,7 @@ button.btnWizardFinish, #btnCompleteDDPayment {
 .bbDonationInputFieldContainer .bbDonationInputField .bbDonationTextBox {
     height: 44px;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: normal;
     color: #666666;
     border: 1px solid #D8D8D8;
@@ -9609,7 +9626,7 @@ button.btnWizardFinish, #btnCompleteDDPayment {
 #txtComments {
     height: 88px;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: normal;
     color: #666666;
     border: 1px solid #D8D8D8;
@@ -9638,7 +9655,7 @@ button.btnWizardFinish, #btnCompleteDDPayment {
     max-width: 350px;
     border-radius: 0px 0px;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: normal;
     color: #666666;
 }
@@ -9658,7 +9675,7 @@ label.bbDonationRequired, span.BBRequired {
 div.bbDonationFieldMessage, div.bbminiform-validation, div.validation {
     color: #DF0000;
     font-family: Arial;
-    font-size: 12px;
+    font-size: 0.75rem;
     font-weight: normal;
     margin-bottom: 0px;
 }
@@ -9670,7 +9687,7 @@ div.bbDonationFieldMessage, div.bbminiform-validation, div.validation {
 .bbDonationInputField label.bbminiform-checkbox {
     color: #666666;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 0.75rem;
     font-weight: normal;
     margin-bottom: 0px;
 }
@@ -9678,7 +9695,7 @@ div.bbDonationFieldMessage, div.bbminiform-validation, div.validation {
 label.bbDonationInputLabel, div.bbDonationSeperator {
     color: #666666;
     font-family: Arial;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: normal;
     margin-bottom: 0px;
     line-height: 20px;
@@ -9687,7 +9704,7 @@ label.bbDonationInputLabel, div.bbDonationSeperator {
 .bbTributeConatiner span.bbDonationInputLabel {
     color: #666666;
     font-family: Arial;
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: normal;
     margin-bottom: 0px;
     line-height: 20px;
@@ -9696,14 +9713,14 @@ label.bbDonationInputLabel, div.bbDonationSeperator {
 h2 .bbSectionHeader {
     color: #666666;
     font-family: Arial;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: normal;
 }
 
 label.bbSecondaryInfo, div.bbSecondaryInfo, span.bbSecondaryInfo {
     color: #666666;
     font-family: Arial;
-    font-size: 12px;
+    font-size: 1.5rem;
     font-weight: normal;
     line-height: 18px;
 }
@@ -9714,7 +9731,7 @@ label.paddedLeft {
 
 .bbminiform-amtbox {
     font-family: "Arial";
-    font-size: 14px;
+    font-size: 0.9rem;
     font-weight: bold;
     text-align: center;
     padding: 8px 5px 8px 5px;
@@ -9881,7 +9898,7 @@ div#dvMaintxtTruePledgeNoOfInstallmentFieldDetails .bbDonationInputField {
         height: 50px;
         border-radius: 50%;
         font-family: "Arial";
-        font-size: 14px;
+        font-size: 0.9rem;
         font-weight: normal;
         text-align: center;
         display: table-cell;
@@ -10103,7 +10120,7 @@ fieldset {
 fieldset.donationInformation,
 fieldset.billingInformation {
 	margin: 0 0 1rem !important;
-	padding-top: 0 !important;
+	/* padding-top: 0 !important; */
 }
 
 @media (max-width: 700px) {
@@ -10114,7 +10131,7 @@ fieldset.billingInformation {
 	fieldset.donationInformation,
 	fieldset.billingInformation {
 		margin: 0 !important;
-		padding: 0 !important;
+		/* padding: 0 !important; */
 	}
 }
 
@@ -10123,7 +10140,7 @@ fieldset.billingInformation {
 	width: 100%;
 	height: 34px;
 	padding: 6px 12px;
-	font-size: 14px;
+	font-size: 0.9rem;
 	line-height: 1.42857143;
 	color: #555;
 	background-color: var(--color-white);
@@ -10303,9 +10320,9 @@ fieldset.billingInformation {
 
 .donationForm .input-helper {
 	color: var(--color-dkGray) !important;
-	font-size: 14px !important;
+	font-size: 0.9rem !important;
 	width: 100%;
-	margin: 0 0 7px 5px;
+	margin: 0;
 }
 
 .donationForm p {
@@ -10564,7 +10581,8 @@ body .body_section .donationForm {
   font-family: "Oswald", Helvetica, Arial, sans-serif;
 } */
    
-div.BBDonationApiContainer ::placeholder {
+div.BBDonationApiContainer ::placeholder,
+div[id*="_UpdatePanel"] ::placeholder {
 	color: #767676; /* This color has a 4.5:1 contrast ratio against white */
    	opacity: 1; /* Firefox sets opacity to 0.54 by default */
 }
@@ -10588,13 +10606,13 @@ section#donation-form {
 
 .donationForm .confirmation p {
 	color: #484848;
-	font-size: 15px;
+	font-size: 0.95rem;
 	line-height: 1.6;
 }
 
 .donationForm .confirmation h2 {
 	color: #484848;
-	font-size: 22px;
+	font-size: 1.4rem;
 	font-weight: 700;
 	text-transform: none;
 	font-style: normal;
@@ -10640,7 +10658,7 @@ section#donation-form {
 
 .body_section .donationForm .step2 h3,
 .body_section .donationForm .step1 h3 {
-	font-size: 28px;
+	font-size: 1.75rem;
 }
 
 /* .body_section .donationForm .gift-count-indicator {
@@ -10720,13 +10738,13 @@ a.add-gift:hover {
 
 .donationForm #confirmation p {
 	color: #484848;
-	font-size: 15px;
+	font-size: 0.95rem;
 	line-height: 1.6;
 }
 
 .donationForm #confirmation h2 {
 	color: #484848;
-	font-size: 22px;
+	font-size: 1.4rem;
 	font-weight: 700;
 	text-transform: none;
 	font-style: normal;
@@ -10836,7 +10854,7 @@ a.add-gift:hover {
 	display: inline-block;
 	min-width: 10px;
 	padding: 3px 7px;
-	font-size: 14px;
+	font-size: 0.9rem;
 	font-weight: 700;
 	color: var(--color-white);
 	line-height: 1;
@@ -10941,7 +10959,7 @@ h1 a:visited {
     display: block;
     font-weight: 400;
     position: absolute;
-    font-size: 18px;
+    font-size: 1.125rem;
     color: var(--color-bearcats-black);
     top: -5px;
     left: 0;
@@ -10984,6 +11002,12 @@ h1 a:visited {
 	display: inline-table;
 	width: 100%;
 }
+   
+@media (min-width: 500px) {
+    .donationForm .formrow:has(input[type="checkbox"]) > label {
+        width: max-content !important;
+    }
+}
 
 .donationForm .formrow.end-input label {
 	display: inline;
@@ -11012,7 +11036,7 @@ h1 a:visited {
 .req {
 	color: var(--color-uc-dark-red);
 	/* #c00; */
-	margin-left: 5px;
+	margin-left: 0px;
 	position: absolute;
 	line-height: 2.5;
 	display: none;
@@ -11033,9 +11057,9 @@ li {
 
 .donationForm .input-helper {
 	color: var(--color-dkGray);
-	font-size: 14px;
+	font-size: 0.9rem;
 	width: 100%;
-	margin: 0 0 7px 5px;
+	margin: 0;
 }
 
 /* .donationForm input[type=text],
@@ -11057,7 +11081,9 @@ li {
 }
 
 .donationForm select,
-.donationForm input[type="text"] {
+.donationForm input[type="text"],
+.donationForm input[type="tel"],
+.donationForm input[type="email"] {
 	width: 100%;
    	height: 47px !important;
 }
@@ -11067,7 +11093,7 @@ li {
 }
 
 #donation-form .donationForm .formrow label {
-	font-size: 15px !important;
+	font-size: 0.95rem !important;
 	font-weight: 500;
 }
 
@@ -11138,7 +11164,7 @@ li {
 
 @media screen and (max-width: 480px) {
 	.designation-categories {
-		font-size: 12px;
+		font-size: 0.8rem;
 	}
 }
 
@@ -11161,8 +11187,6 @@ li {
 	line-height: 1.5;
 	display: inline-block;
 	text-align: center;
-	/* margin-bottom: 5px;
-    width: 24%; */
 }
 
 .amounts a {
@@ -11257,13 +11281,13 @@ li {
 .line-item.total {
 	text-align: right;
 	line-height: 1.8;
-	font-size: 18px;
+	font-size: 1.125rem;
 	color: var(--color-bearcats-black);
 }
 
 .line-item-amount {
 	float: right;
-	font-size: 18px;
+	font-size: 1.125rem;
 	color: var(--color-bearcats-black);
 	line-height: 1.8;
 	position: relative;
@@ -11523,6 +11547,8 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
 	background-color: var(--color-uc-dark-red) !important;
     border-color: var(--color-uc-dark-red) !important;
 }
+   
+.PaymentPart_CartCell.PaymentPart_CartRemoveCell .PaymentPart_CartItemRemoveText:hover {}
 
 .PaymentPart_Cart .PaymentPart_CartList .PaymentPart_CartHeader .PaymentPart_CartRows.PaymentPart_CartHeaderRow th,
 .PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {
@@ -11713,7 +11739,7 @@ td.PaymentPart_CartCell.PaymentPart_CartCurrencyCell {
 .breadcrumbs .breadcrumb span.text {
    	padding: 10px 0 5px;
    	line-height: 1;
-   	font-size: 16px;
+   	font-size: 1rem;
 }
 
 .breadcrumbs {
@@ -12043,14 +12069,14 @@ a.complete .checkmark__circle {
 	background-color: var(--color-brand-black);
 	color: #ffffff;
 	border: none;
-	border-radius: none;
+	border-radius: 0;
 	font-size: 0.9em;
 	cursor: pointer;
 	width: auto;
 }
 
 .donationForm .steps .step-button.btn {
-	border-radius: none !important;
+	border-radius: 0 !important;
 }
 
 .donationForm .steps .step-button:hover {
@@ -12108,7 +12134,7 @@ a.complete .checkmark__circle {
 	color: var(--color-white);
 	width: 30px;
 	height: 30px;
-	font-size: 14px;
+	font-size: 0.9rem;
 	/* float: right; */
 	line-height: 25px;
 	/* text-align: center; */
@@ -12202,7 +12228,7 @@ input#tributeCheckbox {
 }
 
 #donation-form h1 {
-	font-size: 26px;
+	font-size: 1.625rem;
 	font-weight: 500;
 	color: var(--color-bearcats-black);
 	margin-bottom: 20px;
@@ -12243,7 +12269,7 @@ input#tributeCheckbox {
     padding-top: 20px; */
 	text-transform: uppercase;
 	letter-spacing: 0.5px;
-	font-size: 16px;
+	font-size: 1rem;
 	font-weight: 700;
 	color: var(--color-brand-red);
 	display: block;
@@ -12252,7 +12278,7 @@ input#tributeCheckbox {
 #donation-form .tributeSpan {
 	padding-left: 0;
 	/* padding-top: 15px; */
-	font-size: 14px;
+	font-size: 0.9rem;
 }
 
 #donation-form .c-radio.form-group.flex {
@@ -12287,13 +12313,13 @@ input#tributeCheckbox {
 
 .donationForm.givingTuesday18 .designations .feature-masthead h3 {
 	color: var(--color-bearcats-black) !important;
-	font-size: 28px;
+	font-size: 1.75rem;
 	font-weight: 600;
 }
 
 @media only screen and (max-width: 500px) {
 	.donationForm.givingTuesday18 .designations .feature-masthead h3 {
-		font-size: 21px;
+		font-size: 1.3125rem;
 		margin-bottom: 20px;
 	}
 }
@@ -12317,7 +12343,7 @@ input#tributeCheckbox {
 	background: #e5e5e5;
 	color: var(--color-bearcats-black);
 	padding: 5px 10px;
-   	line-height: 33px;
+   	line-height: 37px;
    	font-weight: bold;   
    	border: none;
 }
@@ -12478,7 +12504,7 @@ input#tributeCheckbox {
 	overflow: auto;
 	padding: 0;
 	visibility: visible;
-   	z-index: 100;
+   	z-index: 9;
 }
 
 @media (max-width: 980px) {
@@ -14270,7 +14296,7 @@ div[id*="_DesignPanePanel"] {
    		top: 5%;
    		width: 65%;
    		margin: auto;
-   		font-size: 16px;
+   		font-size: 1rem;
    	}
    
    	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li > a, 
@@ -14863,7 +14889,7 @@ div[id*="_DesignPanePanel"] {
   margin: auto;
   text-align: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 1.25rem;
   border: 1px solid var(--color-brand-red);
   border-right: none;
   font-style: normal;
@@ -15060,7 +15086,7 @@ main:has(#donation-form .steps)  h2.top-heading {
 }
   
 #donation-form.version2 .steps.step3.active select.form-control {
-  	height: 48.8px !important;
+  	height: 47px !important;
 }
   
 #donation-form .steps #giftSummaryLineItems .line-item.total {
@@ -15194,8 +15220,14 @@ main:has(#donation-form .steps)  h2.top-heading {
 
 #donation-form .steps .tt-cursor,
 #donation-form .steps .tt-suggestion:hover {
-    color: var(--color-white) !important;
+    color: var(--color-bearcats-black) !important;
     background-color: var(--color-grey);
+}
+   
+.tt-suggestion {
+    white-space: normal; /* Enables text wrapping */
+    word-break: break-word; /* Breaks long words */
+    overflow-wrap: anywhere; /* Handles overflow */
 }
 
 #donation-form .steps .tt-hierarchy {
@@ -15220,7 +15252,7 @@ main:has(#donation-form .steps)  h2.top-heading {
 }
    
 .BBDonationApiContainer h2.accordion__heading {
-   	font-size: 22px !important;
+   	font-size: 1.4rem !important;
    	font-weight: 400 !important;
 }
    
@@ -15242,4 +15274,214 @@ main:has(#donation-form .steps)  h2.top-heading {
 .CaptchaName sup {
     vertical-align: super;
     font-size: smaller !important;
+}
+   
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor tr:has(label),
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor tr:has(span[id*="_DonationCapture1_MultipleEmailCtl_AddressTypeLabel"]),
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor tr:has(span[id*="_DonationCapture1_MultipleEmailCtl_EmailLabel"]) {
+   	display: flex;
+   	flex-direction: column;
+}
+   
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor input[type=text],
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor textarea,
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor select {
+   	height: 47px;
+}
+   
+div[id*="_UpdatePanel"] label,
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor span[id*="_DonationCapture1_MultipleEmailCtl_AddressTypeLabel"],
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor span[id*="_DonationCapture1_MultipleEmailCtl_EmailLabel"],
+.BBMessage.DonationMessage span {
+   	font-weight: 400 !important;
+   	line-height: 1.1 !important;
+}
+   
+tbody.BBFormTable.DonationCaptureFormTable.pnlDonor textarea {
+	overflow: hidden;   
+}
+   
+@media (min-width: 768px) {
+    div[id*="_UpdatePanel" ] td.BBListingHeading > span {
+        font-size: 2.074em !important;
+   		letter-spacing: 0.25px !important;
+    }
+}
+   
+tr[id*="_trSpouse"] > td:first-child {
+	display: none;   
+}
+
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(2),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(3),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(4),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(7), 
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(8),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_AddressCtl_lbl_zipUS"]), 
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(label[id*="_lblPhone"]),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_addressTypeCaptionCell"]), 
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_emailAddressCaptionCell"]),
+   
+tbody > tr:has(td[id*="_tdTributeFirstName"]), 
+tbody > tr:has(td[id*="_tdTributeLastName"]),
+tbody > tr[id*="_trTributeDesc"], 
+tbody > tr[id*="_trTributeDesc2"] {
+	width: 48%;   
+}   
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(3),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(4),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(7), 
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(8),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_AddressCtl_lbl_zipUS"]), 
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(label[id*="_lblPhone"]),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_addressTypeCaptionCell"]), 
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_emailAddressCaptionCell"]),
+   
+tbody > tr:has(td[id*="_tdTributeFirstName"]), 
+tbody > tr:has(td[id*="_tdTributeLastName"]),
+tbody > tr[id*="_trTributeDesc"], 
+tbody > tr[id*="_trTributeDesc2"] {
+	display: inline-block !important;   
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr td:first-child,
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr td:nth-child(2),
+   
+tbody > tr:has(span[id*="_lblTributeHeading"]),
+tbody > tr:has(span[id*="_lblTributeSectionDescription"]),
+tbody > tr[id*="_trTributeFirstName"] > td[id*="_tdTributeFirstName"],
+tbody > tr[id*="_trTributeLastName"] > td:not(:last-child),
+tbody > tr[id*="_trTributeDesc"] > td:not(:last-child),
+tbody > tr[id*="_trTributeDesc2"] > td:not(:last-child) {
+	width: 100% !important;
+   	display: block !important;
+}
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(3),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(7),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_AddressCtl_lbl_zipUS"]),
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_addressTypeCaptionCell"]),
+   
+tbody > tr:has(td[id*="_tdTributeFirstName"]),
+tbody > tr[id$="_trTributeDesc"] {
+	margin-right: 3.3%;   
+}
+   
+tr[id*="_trTribute"] > td:first-child {
+	height: 30px;   
+}
+   
+   
+/*
+.BBFormTable.DonationCaptureFormTable.pnlDonor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(10, 1fr);
+    grid-column-gap: 18px;
+    grid-row-gap: 10px;
+}
+
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(9) {
+   	display: none;
+}
+
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:first-child { grid-area: 1 / 1 / 2 / 3; } /* Heading * /
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(label[id="_DonationCapture1_lblTitle1"]) { grid-area: 2 / 1 / 3 / 2; } /* Title * /
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(3) { grid-area: 3 / 1 / 4 / 2; }
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(4) { grid-area: 3 / 2 / 4 / 3; }
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(6) { grid-area: 4 / 1 / 5 / 3; }
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(5) { grid-area: 5 / 1 / 6 / 2; }
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_AddressCtl_lbl_zipUS"]) { grid-area: 5 / 2 / 6 / 3; }
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_AddressCtl_lbl_cityUS"]) { grid-area: 6 / 1 / 7 / 2; }
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr[id*="_DonationCapture1_AddressCtl_tr_stateUS"] { grid-area: 6 / 2 / 7 / 3; }
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_MultipleEmailCtl_emailAddressCaptionCell"]) { grid-area: 7 / 1 / 8 / 2; }
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_MultipleEmailCtl_addressTypeCaptionCell"]) { grid-area: 7 / 2 / 8 / 3; }
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(label[id*="_DonationCapture1_lblPhone"]) { grid-area: 8 / 1 / 9 / 2; }
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr > td {
+	width: 100% !important;
+}
+   
+tr[id*="_trAnonymous"] { grid-area: 9 / 1 / 10 / 3; } /* Anonymous * /
+
+tr[id*="_trSpouse"] { grid-area: 10 / 1 / 11 / 3; } /* Joint gift * / */
+   
+/* SKIP LINK */
+.visually-hidden:not(:focus):not(:active) {
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0); 
+    clip-path: inset(50%);
+    position: absolute;
+    white-space: nowrap;  
+}
+
+#skip-link {
+	text-decoration: none;
+	background: #fff;
+	color: var(--color-bearcats-black);
+	padding: .5rem 1rem;
+	border: 1px solid #aaa;
+	border-radius: 2px;
+	box-shadow: 4px 4px 1px 2px rgba(0,0,0,0.1);
+	margin: .25rem;
+	width: max-content;
+	z-index: 100;
+}
+   
+#skip-link:focus-visible {
+   	outline: 3px solid black;
+}
+
+.off-screen {
+	position: absolute;
+	top: -100vh;
+}
+   
+.off-screen:focus-visible {
+   	top: 0;
+}
+
+/* 
+#skip-link.visually-hidden:focus {
+	position: absolute;
+	top: 1rem;
+	left: 1rem;
+	z-index: 100;
+}*/
+   
+.bbcommunicationpreference-divConsentItemRow {
+	display: flex !important;
+   	gap: 1em;
+   	flex-direction: row;
+   	flex-wrap: nowrap;
+}
+   
+.bbcommunicationpreference-divConsentItem {
+	display: flex !important;
+   	gap: 1em;
+   	flex-direction: row;
+   	flex-wrap: nowrap;
+}
+ 
+.bbcommunicationpreference-rbPreference input[type="radio"] {
+ 	margin: 0 !important;  
+}
+   
+footer a {
+	border-bottom: none !important;
+   	padding: 10.5px 0 !important;;
+}
+   
+footer a:not(.navbar-link) {
+   	text-decoration: underline !important;
 }
