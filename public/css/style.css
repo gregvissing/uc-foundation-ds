@@ -1383,6 +1383,10 @@ p.intro-text a {
 	display: table-cell;
 }
 
+.contact-card .body .address > a {
+	vertical-align: bottom;
+}
+
 .contact-card .body p:first-class {
 	line-height: 0.9;
 }
@@ -1663,7 +1667,7 @@ blockquote p {
 	color: var(--color-bearcats-black);
 	font-size: calc(2.6em);
     font-weight: 600;
-    line-height: 1.2em;
+    line-height: 1.5;
     letter-spacing: 0.95px;
     margin-bottom: 30px;
     text-wrap: pretty;
@@ -1729,6 +1733,10 @@ blockquote:after {
     font-size: 1.25em;
     font-weight: 700;
     line-height: 1.05em;
+}
+
+.card .pull-quote-attribution span {
+	font-size: 1em;
 }
 
 .pull-quote-attribution > span {
@@ -3910,12 +3918,12 @@ body.modal-open {
 }
 
 .c-stacked-block__title {
-	/* margin-top: 35px; */
 	margin: 0 !important;
 	letter-spacing: 1px;
 	color: var(--color-bearcats-black);
 	transition: color 0.15s ease-out;
-	font-size: 1.375rem !important;
+	font-size: 1.175rem !important;
+   	font-weight: bold;
 }
 
 a.c-stacked-block .c-stacked-block__title:hover {
@@ -4022,6 +4030,11 @@ a.c-stacked-block:hover * {
 
 .c-stacked-block.quote .pull-quote p {
 	font-size: 2.5rem !important;
+	line-height: 1.6;
+}
+   
+.card.c-stacked-block.quote .pull-quote p {
+	font-size: 1.5rem !important;
 	line-height: 1.6;
 }
 
@@ -4204,7 +4217,7 @@ a.c-stacked-block:hover * {
  * 1) Global block at the bottom of each page that contains a navigation and other information
  */
 .c-footer {
-	padding: 2em 0;
+	padding: 2em 0 3em;
 	/* background: rgba(0, 0, 0, 0.85); */   	
 	position: relative;
 	border-top: 5px solid var(--color-brand-red);
@@ -4313,7 +4326,7 @@ footer .social-media li * {
 footer .social-media li a {
 	height: 44px;
 	width: 44px;
-	padding: 5px;
+	padding: 0 !important;
 	background-position: center;
 	background-size: 80%;
 	background-repeat: no-repeat;
@@ -7757,6 +7770,24 @@ div[id*="_UpdatePanel"] span.BBFormRequiredFieldMarker.DonationRequiredFieldMark
 }
    
 /* BILLING INFORMATION */
+.BBFormTable.DonationCaptureFormTable.pnlDonor,
+tbody.tributeInfo {
+	display: flex;   	
+    flex-wrap: wrap;
+}  
+   
+@media (max-width: 500px) {
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor,
+tbody.tributeInfo {
+        flex-direction: column;
+    }  
+   
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr,
+tbody.tributeInfo > tr {
+        width: 100% !important
+    }
+}
+  
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr,
 tbody.BBFormTable.DonationCaptureFormTable > tr {
    	display: flex;
@@ -8289,6 +8320,10 @@ tbody[id*="_tbdCart"] tr[id*="_trAddToCart"] td * {
 	display: inline-block;
 	width: unset;
 }
+   
+div[id*="_UpdatePanel"] tr:has(.BBFormButtonCell.DonationButtonCell) {
+   	width: 100%;
+}   
 
 div[id*="_UpdatePanel"] .BBFormButtonCell.DonationButtonCell {
    	padding: 1em 0 !important;
@@ -15358,6 +15393,22 @@ tbody > tr[id*="_trTributeDesc2"] > td:not(:last-child) {
    	display: block !important;
 }
    
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(2) {
+   	width: 100% !important;
+   	display: flex;
+   	flex-direction: column;
+}   
+   
+.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(2) > td {
+   	width: 48% !important;
+}  
+   
+@media (max-width: 500px) {
+   	.BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(2) > td {
+        width: 100% !important;
+    }  
+}
+   
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(3),
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:nth-child(7),
 .BBFormTable.DonationCaptureFormTable.pnlDonor > tr:has(td[id*="_DonationCapture1_AddressCtl_lbl_zipUS"]),
@@ -15479,9 +15530,13 @@ tr[id*="_trSpouse"] { grid-area: 10 / 1 / 11 / 3; } /* Joint gift * / */
    
 footer a {
 	border-bottom: none !important;
-   	padding: 10.5px 0 !important;;
+   	padding: 10.5px 0;
 }
    
 footer a:not(.navbar-link) {
    	text-decoration: underline !important;
+}
+   
+div.l-container:has(> p:first-child) > p {
+    margin-top: 1em;
 }
