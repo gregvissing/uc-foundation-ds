@@ -1382,7 +1382,7 @@ p.intro-text a {
     width: max-content;
 }
 
-.contact-card .body .address a[href^=“tel:”] {
+.contact-card .body .address a[href^="tel:"] {
 	display: inline-block;
     width: max-content;
 }
@@ -12583,7 +12583,7 @@ a.complete .checkmark__circle {
 @media (max-width: 980px) {
 	.search-toggle[aria-hidden="false"] {
 		z-index: 10;
-		top: 55vh;
+		top: 32vh;
 	}
 }
 
@@ -14321,6 +14321,7 @@ div[id*="_DesignPanePanel"] {
        	display: flex;
 		flex-direction: row;
    		justify-content: center;
+   		gap: 20px;
     }
    
    	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {  
@@ -14494,18 +14495,26 @@ div[id*="_DesignPanePanel"] {
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:before {
+   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:after,
+   	.mega-menu > .nccUlMenuSub1 > li.priorities > a:after {
    		content: "";
    		display: block;
    		width: 150px;
    		height: 200px;
    		margin: 0 auto 5px;
-   		background: url(https://foundation.uc.edu/image/2025AnnualReport.jpg);
-   		background-repeat: no-repeat;
-   		background-position: center;
-   		background-size: cover;
+   		background-repeat: no-repeat !important;
+   		background-position: center !important;
+   		background-size: cover !important;
    		border-radius: 16px;
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:after {
+   		background: url(https://foundation.uc.edu/image/2025AnnualReport.jpg);
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 > li.priorities > a:after {
+   		background: url(https://foundation.uc.edu/image/Arts-Sciences-Vision_thumbnail.jpg);
    	}
    
    	.mega-menu > .nccUlMenuSub1 li.featured-story > a:before {
@@ -14546,7 +14555,14 @@ div[id*="_DesignPanePanel"] {
    
    	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li > a,
    	.mega-menu.single-column.parent > .nccUlMenuSub1 > li > a {
-   		color: var(--color-bearcats-black) !important;
+   		color: var(--color-brand-red) !important;
+        text-decoration: none !important;
+        border-bottom: 1px solid var(--color-brand-red) !important;
+   	}
+   
+   	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li > a:hover,
+   	.mega-menu.single-column.parent > .nccUlMenuSub1 > li > a:hover {
+   		border-bottom: 1px solid var(--color-brand-red) !important;
    	}
    
    	.mega-menu.single-column > .nccUlMenuSub1 > li.featured > a:hover,
