@@ -1034,7 +1034,7 @@ input[type="radio"]:checked:after {
 	left: 0;
 	right: 0;
 	margin: auto;
-	background: var(--color-white);
+	/* background: var(--color-white); */
 	border: 1px solid var(--color-brand-black);
 	z-index: 1;
 	border-radius: 50%;
@@ -4732,6 +4732,10 @@ header {
 		display: flex;
 		justify-content: space-between;
 		padding: 10px !important;
+   		font-weight: 400;
+        background: var(--color-bearcats-black);
+        color: var(--color-white);
+   		font-size: 1.11rem;
 	}
 
 	header nav ul.main > li:not(:last-child) {
@@ -11624,8 +11628,6 @@ div[id*="_ctl00_CartGrid_cartPanel"] > .PaymentPart_CartOptions .PaymentPartSubm
 	background-color: var(--color-uc-dark-red) !important;
     border-color: var(--color-uc-dark-red) !important;
 }
-   
-.PaymentPart_CartCell.PaymentPart_CartRemoveCell .PaymentPart_CartItemRemoveText:hover {}
 
 .PaymentPart_Cart .PaymentPart_CartList .PaymentPart_CartHeader .PaymentPart_CartRows.PaymentPart_CartHeaderRow th,
 .PaymentPart_CartRows.PaymentPart_CartItemTypeRow .PaymentPart_CartItemType {
@@ -14097,10 +14099,6 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 	margin-top: var(--flow-space, 1em) !important;
 }
    
-/* .bbformbuilder-form-part .bbcommunicationpreference-divOptOutContainer .bbcommunicationpreference-cbPreference > label {
-   
-} */
-   
 .bbcommunicationpreference-cbPreference {
 	display: flex;
    	align-items: center;
@@ -14333,9 +14331,9 @@ div[id*="_DesignPanePanel"] {
    		margin-top: 52px;
    	}
    
-   	.menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {
+   	/* .menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {
    		margin-top: 52px;
-   	}
+   	} */
    
    	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu > .nccUlMenuSub2 {  
    		display: flex;
@@ -14356,7 +14354,7 @@ div[id*="_DesignPanePanel"] {
    		text-align: center;
    	}
    
-  	.menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1:before {
+  	/* .menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1:before {
    		content: "Explore UC and UC Health’s key areas where philanthropy can drive impact and empower our next generation of innovators and leaders. Click on the links below to learn more.";
    		display: block;
    		position: absolute;
@@ -14364,7 +14362,7 @@ div[id*="_DesignPanePanel"] {
    		width: 65%;
    		margin: auto;
    		font-size: 1rem;
-   	}
+   	} */
    
    	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li > a, 
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > a {  
@@ -14380,8 +14378,8 @@ div[id*="_DesignPanePanel"] {
    		padding: 0 !important;
    	}
    
-   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success) > a:hover,
-   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success) > a:hover {
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success):not(.annual-report):not(.priorities) > a:hover,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success):not(.annual-report):not(.priorities) > a:hover {
    		border-bottom: 2px solid var(--color-brand-red) !important;
    		background-color: unset;
    	}
@@ -14401,6 +14399,11 @@ div[id*="_DesignPanePanel"] {
    
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 a:hover {
    		border-bottom: 2px solid var(--color-brand-red) !important;
+   	}
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 li.annual-report a:hover,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 li.priorities a:hover {
+   		border-bottom: 0 !important;
    	}
    	   
    	/* .mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 > li:not(.last) { 
@@ -14495,25 +14498,37 @@ div[id*="_DesignPanePanel"] {
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:after,
-   	.mega-menu > .nccUlMenuSub1 > li.priorities > a:after {
+   	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li.annual-report > a,
+   	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li.priorities > a {
+   		color: var(--color-white) !important;
+   		border-bottom: 0 !important;
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 li.annual-report > a:hover,
+   	.mega-menu > .nccUlMenuSub1 li.priorities > a:hover {
+   		background-color: transparent !important;
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 li.annual-report > a:after,
+   	.mega-menu > .nccUlMenuSub1 li.priorities > a:after {
    		content: "";
    		display: block;
    		width: 150px;
    		height: 200px;
-   		margin: 0 auto 5px;
+   		margin: -28px auto 5px 0;
    		background-repeat: no-repeat !important;
    		background-position: center !important;
    		background-size: cover !important;
    		border-radius: 16px;
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
+   		position: relative;
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:after {
+   	.mega-menu > .nccUlMenuSub1 li.annual-report > a:after {
    		background: url(https://foundation.uc.edu/image/2025AnnualReport.jpg);
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.priorities > a:after {
+   	.mega-menu > .nccUlMenuSub1 li.priorities > a:after {
    		background: url(https://foundation.uc.edu/image/Arts-Sciences-Vision_thumbnail.jpg);
    	}
    
@@ -14727,7 +14742,7 @@ div[id*="_DesignPanePanel"] {
 @media (max-width: 980px) {
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 {
    		display: block !important;
-   		background-color: var(--color-white);
+   		/* background-color: var(--color-white); */
    		border: 1px solid var(--color-brand-black) !important;
    	}
    
@@ -14736,10 +14751,11 @@ div[id*="_DesignPanePanel"] {
    		padding: 10px !important;
    		color: var(--color-bearcats-black) !important;
    		border-bottom: none !important;
+   		font-weight: 400;
    	}
    
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 > li:not(.last) > a {
-   		border-bottom: 1px solid rgb(239, 239, 239) !important;
+   		border-bottom: 1px solid var(--color-brand-black) !important;
    	}
    
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2[hidden] {
@@ -15682,4 +15698,23 @@ div[class*="--ResultsAttribution"] {
    	.flex {
    		display: block !important;
    	}
+}
+   
+@media (max-width: 500px) {
+   	.remove-menu-link p {
+        padding: 10px;
+   		font-weight: 400;
+	}
+}
+   
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
+   	top: 0;
+   	bottom: 0;
+   	margin: auto;
+}
+   
+#overlayText.bbminform-centerText {
+   	font-weight: 400;
+	font-family: "Open Sans", sans-serif !important;   
 }
