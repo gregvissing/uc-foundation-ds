@@ -382,7 +382,8 @@ header,
 footer,
 nav,
 section,
-figure {
+figure,
+#HeaderLbl {
 	margin: 0;
 	padding: 0;
 }
@@ -743,7 +744,8 @@ h2,
 h3,
 .h3,
 h4,
-.h4 {
+.h4,
+#HeaderLbl {
 	font-family: "Jost", sans-serif;
 	letter-spacing: 0.25px;
 	line-height: 1.2;
@@ -768,14 +770,14 @@ h4,
 /**
  * Heading 2 base styles
  */
-/* h2 {
+/* h2, #HeaderLbl {
   font-size: 2.5rem;
   font-weight: normal;
   line-height: 1.2;
 }
 
 @media all and (min-width: 47em) {
-  h2 {
+  h2, #HeaderLbl {
     font-size: 3.5rem;
   }
 } */
@@ -818,7 +820,8 @@ h1,
 }
 
 h2,
-.h2 {
+.h2,
+#HeaderLbl {
 	font-size: 1.602em !important;
 	font-weight: 700 !important;
 	color: var(--color-brand-red);
@@ -843,7 +846,8 @@ h4,
 	}
 
 	h2,
-	.h2 {
+	.h2,
+	#HeaderLbl {
 		font-size: 2.074em !important;
 	}
 
@@ -1048,7 +1052,7 @@ input[type="radio"]:checked:after {
 	left: 0;
 	right: 0;
 	margin: auto;
-	background: var(--color-white);
+	/* background: var(--color-white); */
 	border: 1px solid var(--color-brand-black);
 	z-index: 1;
 	border-radius: 50%;
@@ -4746,6 +4750,10 @@ header {
 		display: flex;
 		justify-content: space-between;
 		padding: 10px !important;
+   		font-weight: 400;
+        background: var(--color-bearcats-black);
+        color: var(--color-white);
+   		font-size: 1.11rem;
 	}
 
 	header nav ul.main > li:not(:last-child) {
@@ -8358,6 +8366,12 @@ table[id*="_rdoGiftType"] > tbody > tr > td input:focus ~ label:after {
 	right: -0.25em;
 	top: -0.25em;
 }
+   
+.ui-datepicker .ui-datepicker-title {
+   	display: flex;
+    justify-content: center;
+    gap: 1em;
+}
 
 /* DESIGNATION */
 tr[id*="_trDesignation"] {
@@ -8451,10 +8465,6 @@ tr[id*="_trRecurrence"] {
 	display: flex;
 	flex-direction: column;
 	/* gap: 10px; */
-}
-
-tr[id*="_trRecurrence"] > td:last-child {
-	padding: 10px;
 }
 
 div[id*="_Recurrence_divFrequency"] > table > tbody {
@@ -12450,6 +12460,18 @@ a.complete .checkmark__circle {
    	flex-direction: column;
 }
    
+.bbcommunicationpreference-divCommunicationElement {
+	margin-bottom: 0px !important;   
+}
+   
+.bbcommunicationpreference-divCommunicationElement > span {
+	font-weight: bold;   
+}
+   
+.bbformbuilder-element-block.bbformbuilder-text {
+   	margin-bottom: 1em;
+}
+   
 .bbformbuilder-validator-boundry,
 .bbformbuilder-validator-boundry .bbformbuilder-inputandmsg-container,
 .bbformbuilder-validator-boundry .bbformbuilder-inputandmsg-container .bbformbuilder-input-container.bbformbuilder-float-none,
@@ -12477,7 +12499,7 @@ a.complete .checkmark__circle {
    
 @media (max-width: 768px) {
    	.bbformbuilder-form-part > div {
-   		padding: 0 1em !important;
+   		padding: 0 !important;
    	}
    
     .x-form-text.x-form-field {
@@ -12601,7 +12623,7 @@ a.complete .checkmark__circle {
 @media (max-width: 980px) {
 	.search-toggle[aria-hidden="false"] {
 		z-index: 10;
-		top: 32vh;
+		top: 300px;
 	}
 }
 
@@ -14098,10 +14120,45 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 /* 
   	#BBIS - FORM PARTS (Ex: Unsubscribe)
 */
+
+div[id*="S1_SOLICITCODEPREFERENCE_M_"] .bbcommunicationpreference-divCommunicationItemContainer,
+#S1_SOLICITCODEPREFERENCE_commPrefs_cont .bbcommunicationpreference-divCommunicationItemContainer,
+div[id*="S1_SOLICITCODEPREFERENCE_M_"] .bbcommunicationpreference-divCommunicationItemContainer {
+	float: none !important;
+   	display: flex;
+   	flex-direction: row !important;
+   	gap: 0.5rem;
+   	align-items: center;
+}
+   
+div[id$="_commPrefs_rptPrefs_divCommunication_0"] > div:not(:has(span)) {
+   	display: none;
+}
    
 .bbformbuilder-form-part .bbcommunicationpreference-divOptOutContainer {
-	width: 100% !important;
+	width: unset !important;
    	float: none !important;
+   	min-height: unset;
+   	order: -1;
+}
+   
+@media (max-width: 600px) {
+	.bbformbuilder-form-part .bbcommunicationpreference-divOptOutContainer {
+   		margin-right: 0.5rem;
+  	}
+}
+   
+.bbformbuilder-element-block > * + * {
+   margin-top: var(--flow-space, 1em) !important
+}
+   
+.bbformbuilder-element-block.commPrefGlobalOptOut .bbcommunicationpreference-divOptOutContainer {
+   	width: 100% !important;
+}
+   
+.bbformbuilder-element-block.commPrefGlobalOptOut .bbcommunicationpreference-divOptOutContainer span.bbcommunicationpreference-cbPreference {
+   	width: unset !important;
+   	height: unset !important;
 }
 
 .bbformbuilder-form-part .bbformbuilder-section-header {
@@ -14115,19 +14172,27 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 	margin-top: var(--flow-space, 1em) !important;
 }
    
-/* .bbformbuilder-form-part .bbcommunicationpreference-divOptOutContainer .bbcommunicationpreference-cbPreference > label {
+.bbformbuilder-section > * + * {
+    margin-top: var(--flow-space,1em) !important
+}
    
-} */
+.bbcommunicationpreference-divSpace {
+	display: none;   
+}
    
 .bbcommunicationpreference-cbPreference {
 	display: flex;
    	align-items: center;
+  	padding: 5px 0;
+    gap: 0.5rem;
+    flex-direction: row !important;
+   	width: 20px !important;
+   	height: 20px;
 }
  
 .bbcommunicationpreference-cbPreference > input {
-   	width: 20px !important;
-    height: 20px !important;
-    /* margin-right: 0.3rem; */
+   	width: 30px !important;
+    height: 30px !important;
    	margin: 0 !important;
     border-color: var(--color-brand-black);
     position: relative;
@@ -14136,7 +14201,7 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 }
    
 .bbcommunicationpreference-cbPreference > input[type="checkbox"]:checked:before {
-    position: absolute;
+   	position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
@@ -14160,11 +14225,35 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
     z-index: 1;
     border-radius: var(--button-border-radius);
     width: 100%;
-    height: 100%;
+    height: 75%;
+   	margin: auto;
+   
+    /* content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--color-brand-black);
+    z-index: 1;
+    border-radius: var(--button-border-radius);
+    width: 100%;
+    height: 100%; */
 }
    
+.bbcommunicationpreference-globalOptOut {
+	width: unset !important;
+   	margin-left: 0 !important;
+}
+   
+/* @media (max-width: 600px) {
+   	.bbcommunicationpreference-cbPreference > input {
+   		width: 40px !important;
+   	}
+} */
+   
 .bbcommunicationpreference-cbPreference > label {
-	padding: 5px 10px;   
+	padding: 0;   
 }
    
 .BBSequenceMapCommandContainer .BBSequenceMapNavigationContainer {
@@ -14172,7 +14261,29 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
 }
    
 .BBSequenceMapCommandContainer .BBSequenceMapNavigationContainer .BBSequenceMapNavigationButton.BBSequenceMapNavigationFinishButton {
-   	color: var(--color-white) !important;
+  	border-radius: 0 !important;
+   	display: inline-block;
+   	border-color: var(--color-brand-red) !important;
+    background-color: var(--color-brand-red) !important;
+   	color: var(--color-white);
+   	border: none;
+   	cursor: pointer;
+   	width: auto;
+   	margin: 0;
+   	padding: 7px 32px !important;
+    box-shadow: 8px 8px 10px rgba(0, 0, 0, .25);
+   	border-width: 2px !important;
+    border-style: solid !important;
+    font-family: "Jost", sans-serif;
+    font-weight: bold;
+    font-size: 1em !important;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-align: center;
+    transition: background .1s;
+    height: unset;
+   
+   	/* color: var(--color-white) !important;
     border-color: var(--color-brand-red);
     background-color: var(--color-brand-red);
     text-decoration: none;
@@ -14183,14 +14294,13 @@ div.ui-dialog.ui-corner-all.ui-widget.ui-widget-content.ui-front.ui-dialog-butto
     border-width: 2px !important;
     border-style: solid;
     font-family: Jost, sans-serif;
-    /* font-weight: 500; */
     font-size: 1em;
     text-transform: uppercase;
     text-align: center;
     transition: background 0.1s;
     display: inline-block;
    	width: 150px;
-   	cursor: pointer;
+   	cursor: pointer; */
 }
    
 .BBSequenceMapCommandContainer .BBSequenceMapNavigationContainer .BBSequenceMapNavigationButton.BBSequenceMapNavigationFinishButton:hover {
@@ -14339,7 +14449,7 @@ div[id*="_DesignPanePanel"] {
        	display: flex;
 		flex-direction: row;
    		justify-content: center;
-		gap: 20px;
+   		gap: 20px;
     }
    
    	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {  
@@ -14351,9 +14461,9 @@ div[id*="_DesignPanePanel"] {
    		margin-top: 52px;
    	}
    
-   	.menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {
+   	/* .menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li {
    		margin-top: 52px;
-   	}
+   	} */
    
    	.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1 > li.one-half-width-menu > .nccUlMenuSub2 {  
    		display: flex;
@@ -14374,7 +14484,7 @@ div[id*="_DesignPanePanel"] {
    		text-align: center;
    	}
    
-  	.menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1:before {
+  	/* .menuItem2.mega-menu.parent:not(.single-column) button[aria-expanded=true] + .nccUlMenuSub1:before {
    		content: "Explore UC and UC Health’s key areas where philanthropy can drive impact and empower our next generation of innovators and leaders. Click on the links below to learn more.";
    		display: block;
    		position: absolute;
@@ -14382,7 +14492,7 @@ div[id*="_DesignPanePanel"] {
    		width: 65%;
    		margin: auto;
    		font-size: 1rem;
-   	}
+   	} */
    
    	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li > a, 
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > a {  
@@ -14398,8 +14508,8 @@ div[id*="_DesignPanePanel"] {
    		padding: 0 !important;
    	}
    
-   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success) > a:hover,
-   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success) > a:hover {
+   	.nav.flex.main.c-primary-nav__list li.mega-menu.parent > .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success):not(.annual-report):not(.priorities) > a:hover,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li:not(.parent):not(.featured):not(.student-success):not(.annual-report):not(.priorities) > a:hover {
    		border-bottom: 2px solid var(--color-brand-red) !important;
    		background-color: unset;
    	}
@@ -14419,6 +14529,11 @@ div[id*="_DesignPanePanel"] {
    
    	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 a:hover {
    		border-bottom: 2px solid var(--color-brand-red) !important;
+   	}
+   
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 li.annual-report a:hover,
+   	.mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 li.priorities a:hover {
+   		border-bottom: 0 !important;
    	}
    	   
    	/* .mega-menu.parent button[aria-expanded=true] + .nccUlMenuSub1 > li > ul.nccUlMenuSub2 > li:not(.last) { 
@@ -14513,25 +14628,39 @@ div[id*="_DesignPanePanel"] {
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:after,
-   	.mega-menu > .nccUlMenuSub1 > li.priorities > a:after {
+   	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li.annual-report > a,
+   	.mega-menu.parent .nccUlMenuSub1 .nccUlMenuSub2 > li.priorities > a {
+   		color: var(--color-white) !important;
+   		border-bottom: 0 !important;
+   		width: max-content;
+    	display: block;
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 li.annual-report > a:hover,
+   	.mega-menu > .nccUlMenuSub1 li.priorities > a:hover {
+   		background-color: transparent !important;
+   	}
+   
+   	.mega-menu > .nccUlMenuSub1 li.annual-report > a:after,
+   	.mega-menu > .nccUlMenuSub1 li.priorities > a:after {
    		content: "";
    		display: block;
    		width: 150px;
    		height: 200px;
-   		margin: 0 auto 5px;
+   		margin: -28px auto 5px 0;
    		background-repeat: no-repeat !important;
    		background-position: center !important;
    		background-size: cover !important;
    		border-radius: 16px;
    		box-shadow: 3px 3px 16px 4px rgba(0, 0, 0, .15);
+   		position: relative;
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.annual-report > a:after {
+   	.mega-menu > .nccUlMenuSub1 li.annual-report > a:after {
    		background: url(https://foundation.uc.edu/image/2025AnnualReport.jpg);
    	}
    
-   	.mega-menu > .nccUlMenuSub1 > li.priorities > a:after {
+   	.mega-menu > .nccUlMenuSub1 li.priorities > a:after {
    		background: url(https://foundation.uc.edu/image/Arts-Sciences-Vision_thumbnail.jpg);
    	}
    
@@ -14745,7 +14874,7 @@ div[id*="_DesignPanePanel"] {
 @media (max-width: 980px) {
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 {
    		display: block !important;
-   		background-color: var(--color-white);
+   		/* background-color: var(--color-white); */
    		border: 1px solid var(--color-brand-black) !important;
    	}
    
@@ -14754,10 +14883,11 @@ div[id*="_DesignPanePanel"] {
    		padding: 10px !important;
    		color: var(--color-bearcats-black) !important;
    		border-bottom: none !important;
+   		font-weight: 400;
    	}
    
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2 > li:not(.last) > a {
-   		border-bottom: 1px solid rgb(239, 239, 239) !important;
+   		border-bottom: 1px solid var(--color-brand-black) !important;
    	}
    
    	.mega-menu .nccUlMenuSub1 > li.parent > .nccUlMenuSub2[hidden] {
@@ -15613,6 +15743,38 @@ tbody#pnlAcknowledgee tr:has(td[id*="_AddressCtl_lbl_zipUS"]) {
  	margin: 0 !important;  
 }
    
+/* UC Foundation Email sign up part */ 
+   
+.bbcommunicationpreference-divSendTo {
+	width: 100% !important;
+}
+   
+div[id*="_commPrefs_rptPrefs_divCommunication_0"] > div {
+	margin: 10px 0;
+}
+   
+div[id*="_commPrefs_rptPrefs_divCommunication_0"] div > span {
+	min-height: unset;
+   	float: none;
+}
+   
+div[id*="_commPrefs_rptPrefs_divConsentStatement"]:has(span:empty) {
+   	padding-bottom: 0;
+}
+   
+.bbformbuilder-form-part .BBSequenceMapContentContainer #S1_EMAIL_cont #S1_EMAIL_EmailAddress_inputandmsg_cont #S1_EMAIL_EmailAddress_input_cont > input#S1_EMAIL_EmailAddress_TextBox1 {
+   	width: 100% !important;
+   	background-image: none !important;
+   	border: 1px solid #444 !important;
+   	padding: .5rem !important;
+}   
+   
+.bbformbuilder-form-part .BBSequenceMapContentContainer #S1_EMAIL_cont .bbformbuilder-required-mark {
+   	color: var(--color-uc-dark-red) !important;
+}   
+
+/* END: UC Foundation Email sign up part */  
+   
 footer a {
 	border-bottom: none !important;
    	padding: 10.5px 0;
@@ -15700,4 +15862,262 @@ div[class*="--ResultsAttribution"] {
    	.flex {
    		display: block !important;
    	}
+}
+   
+@media (max-width: 500px) {
+   	.remove-menu-link p {
+        padding: 10px;
+   		font-weight: 400;
+	}
+}
+   
+.ui-datepicker .ui-datepicker-prev, 
+.ui-datepicker .ui-datepicker-next {
+   	top: 0;
+   	bottom: 0;
+   	margin: auto;
+}
+   
+#overlayText.bbminform-centerText {
+   	font-weight: 400;
+	font-family: "Open Sans", sans-serif !important;   
+}
+   
+main input:-webkit-autofill,
+main input:-webkit-autofill:hover,
+main input:-webkit-autofill:focus,
+main input:-webkit-autofill:active,
+main textarea:-webkit-autofill,
+main textarea:-webkit-autofill:hover,
+main textarea:-webkit-autofill:focus,
+main textarea:-webkit-autofill:active,
+main select:-webkit-autofill,
+main select:-webkit-autofill:hover,
+main select:-webkit-autofill:focus,
+main select:-webkit-autofill:active {
+        -webkit-box-shadow: 0 0 0px 1000px white inset !important;
+        transition: background-color 5000s ease-in-out 0s;
+}
+   
+#search-container-toggle[aria-expanded="false"] {
+   display: none !important;
+}
+     
+/* START: Fold content */
+.expand-read {
+   	color: var(--color-brand-red);
+   	text-decoration: none;
+   	border-bottom: 1px solid var(--color-brand-red);
+}
+
+.expand-read:hover {
+   	border-bottom: 2px solid var(--color-brand-red) !important;
+}
+
+.checkbox-toggle {
+   	opacity: 0;
+   	position: absolute !important;
+   	visibility: hidden;
+}
+
+.fold__content {
+	position: absolute;
+   	clip: rect(1px, 1px, 1px, 1px);
+}
+
+.flow:has(input[id=will-fold]:checked) label.more[for="will-fold"] {
+	display: none;
+}
+
+input[id=will-fold]:checked ~ .fold__content {
+   	position: static;
+}
+   
+input[id=will-fold]:checked ~ .fold__label:before {
+   	margin-left: -0.75em;
+   	margin-top: -0.4em;
+   	transform: rotate(-90deg);
+}
+   
+input[id=will-fold]:checked ~ .fold__label:after {
+   	background-color: #F3787A;
+}
+
+.fold__label {
+   	position: relative;
+   	cursor: pointer;
+   	display: block;
+   	text-align: center;
+}
+   
+.fold__label:before {
+   	color: #F3787A;
+   	content: "›";
+   	font-size: 2rem;
+   	font-weight: bold;
+   	height: 0.5em;
+   	margin-left: 0.75em;
+   	position: absolute;
+   	transform: rotate(90deg);
+}
+   
+.fold__label:after {
+   	background-color: #ddd;
+   	content: "";
+   	height: 4px;
+   	left: 17%;
+   	position: absolute;
+   	transition: all 0.2s ease-out;
+   	width: 66%;
+}
+   
+.fold__label:hover:after {
+   	background-color: #F3787A;
+}
+/* END: Fold content */
+   
+main > div:empty {
+	display: none;   
+}
+   
+.bbformbuilder-form-part span {
+	color: var(--color-bearcats-black) !important;   
+}
+
+/* Survey part styles */
+   
+.BBFormTable.SurveyFormTable td:has(> .BBFormValidatorSummary) {
+ 	position: relative;  
+}
+   
+.BBFormTable.SurveyFormTable td.BBFormTitle:has(span.SurveyTitle) {
+   	margin: 24px 0 20px !important;
+   	display: block;
+   	font-size: unset;
+}
+   
+.BBFormTable.SurveyFormTable span.SurveyTitle {
+ 	margin-top: 24px !important;
+   	font-size: 2em !important;
+   	font-weight: 700 !important;
+    color: var(--color-brand-red);
+   	font-family: "Jost", sans-serif;
+    letter-spacing: .25px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+   
+.BBFormTable.SurveyFormTable tr[id*="trReqFldIndicator"] .BBFormRequiredFieldMarker {
+   	position: relative;
+   	color: var(--color-uc-dark-red) !important;
+   	top: 0 !important;
+   	left: 0 !important;
+}
+   
+.BBFormTable.SurveyFormTable .BBFormValidatorSummary {
+   	padding: 0 !important;
+   	background-color: transparent;
+   	display: inline-block;
+   	height: 15px;
+   	width: 15px;
+   	position: absolute;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable {
+	position: relative;   
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable .BBFormRequiredFieldMarker {
+   	color: var(--color-uc-dark-red) !important;
+   	left: 0;
+   	top: 0;
+   	position: relative;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable > tbody > tr:nth-child(2) {
+   	display: flex;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable > tbody > tr:nth-child(2) > td:nth-child(2) {
+   	order: 1;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable > tbody > tr:last-child > td:not(:last-child) {
+  	display: none;
+}
+   
+.BBFormTable.SurveyFormTable .SurveyButtonsRow {
+   	display: flex;
+}
+   
+.BBFormTable.SurveyFormTable .SurveyButtonsRow > .BBFormSubmitButton.SurveyButton {
+   	float: none;
+   	order: -1
+}
+   
+.BBFormTable.SurveyFormTable .SurveyButtonsRow:not(:has(input)) {
+   	display: none;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable td:has(> input[type="radio"]) {
+   	display: flex !important;
+   	gap: 0.5rem;
+    flex-direction: row !important;
+   	width: 100%;
+   	align-items: center;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable td > input[type="radio"] {
+   	width: 20px;
+    height: 20px;
+    border-color: var(--color-brand-black);
+    position: relative;
+    overflow: hidden;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable td span.SurveyQuestionSequence,
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable td span.SurveyQuestion {
+   	font-weight: 400;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable td:has(> .BBFormTextbox.SurveyOpenEndedAnswerTextbox) > span:empty {
+   	display: none;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable:has(input[type="radio"]) > tbody > tr:last-child > td:last-child > table > tbody {
+   	display: flex;
+   	flex-direction: column !important;
+   	gap: 0.5em;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable tr[id*="_trErrMsg"] > td:not(:last-child) {
+   	display: none;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable tr[id*="_trErrMsg"] > td:last-child span {
+   	height: unset;
+   	width: 100%;
+   	display: block;
+   	position: relative;
+   	color: var(--color-uc-dark-red);
+    font-size: 1em;
+   	font-weight: 300;
+} 
+
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable > tbody {
+   	display: flex;
+   	flex-direction: column !important;
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable > tbody > tr[id*="_trErrMsg"] {
+   	order: 1
+}
+   
+.BBFormTable.SurveyFormTable .w100p.BBFormTable.SurveyQuestionTable > tbody > tr:last-child > td:last-child {
+   	display: block;
+}
+   
+.BBFormTable.SurveyFormTable .SurveyCompleteMessage {
+   	display: block;
+   	margin-bottom: 1em;
 }
